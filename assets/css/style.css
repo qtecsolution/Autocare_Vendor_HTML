@@ -2100,6 +2100,108 @@ body {
   margin-top: 0.125rem;
 }
 
+.add-product-content {
+  padding: 2.5rem 4.25rem 0 4.25rem;
+}
+.add-product-content .add-product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  padding: 1.25rem;
+  /* Box Shadow/sm */
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+}
+.add-product-content .add-product-header .add-product-header-inner {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.add-product-content .add-product-header-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.add-product-content .add-product-header-item .number {
+  display: flex;
+  width: 24px;
+  padding: 4px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0.375rem;
+  background: #f3f4f6;
+  color: #1f2937;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+.add-product-content .add-product-header-item .number.active {
+  background: #0d9488;
+  color: #fff;
+}
+.add-product-content .add-product-header-item .text {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: 0.07px;
+  position: relative;
+}
+.add-product-content .add-product-header-item .text::after {
+  position: absolute;
+  content: "";
+  height: 0.0625rem;
+  width: 1.5rem;
+  background: #e5e7eb;
+  top: 0.625rem;
+  right: -2rem;
+}
+.add-product-content .add-product-header-item:last-child .text::after {
+  position: absolute;
+  content: "";
+  height: 0rem;
+  width: 0rem;
+}
+.add-product-content .add-product-header-item .text.active {
+  color: #1f2937;
+}
+.add-product-content .add-product-header .inner-bar-chart {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.add-product-content .add-product-header .inner-bar-chart .bar-chart {
+  width: 6.25rem;
+}
+.add-product-content .add-product-header .inner-bar-chart .bar-chart .bar {
+  height: 10px;
+  background-color: #f3f4f6;
+  margin: 5px 0;
+  position: relative;
+  border-radius: 6249.9375rem;
+}
+.add-product-content .add-product-header .inner-bar-chart .bar-chart .bar span {
+  display: block;
+  height: 100%;
+  background-color: #0d9488; /* Bar color */
+  border-radius: 6249.9375rem;
+}
+.add-product-content .add-product-header .inner-bar-chart .text {
+  color: #1f2937;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  letter-spacing: 0.07px;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;

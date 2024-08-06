@@ -1,2 +1,110 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.add-product-content {
+  padding: size(40) size(68) 0 size(68);
+  .add-product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include radius(12);
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    padding: size(20);
+
+    /* Box Shadow/sm */
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+
+    .add-product-header-inner {
+      display: flex;
+      gap: size(48);
+      align-items: center;
+    }
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: size(8);
+      .number {
+        display: flex;
+        width: 24px;
+        padding: 4px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        @include radius(6);
+        background: #f3f4f6;
+        color: #1f2937;
+        text-align: center;
+        font-family: $primaryFont;
+        font-size: size(12);
+        font-weight: 500;
+        line-height: size(16);
+      }
+      .number.active {
+        background: #0d9488;
+        color: #fff;
+      }
+      .text {
+        color: #7b7f95;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        letter-spacing: 0.07px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          height: size(1);
+          width: size(24);
+          background: #e5e7eb;
+          top: size(10);
+          right: size(-32);
+        }
+      }
+      &:last-child .text {
+        &::after {
+          position: absolute;
+          content: "";
+          height: size(0);
+          width: size(0);
+        }
+      }
+      .text.active {
+        color: #1f2937;
+      }
+    }
+    .inner-bar-chart {
+      display: flex;
+      align-items: center;
+      gap: size(10);
+      .bar-chart {
+        width: size(100);
+
+        .bar {
+          height: 10px;
+          background-color: #f3f4f6;
+          margin: 5px 0;
+          position: relative;
+          @include radius(99999);
+
+          span {
+            display: block;
+            height: 100%;
+            background-color: #0d9488; /* Bar color */
+            @include radius(99999);
+          }
+        }
+      }
+      .text {
+        color: #1f2937;
+        text-align: right;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 700;
+        line-height: size(14);
+        letter-spacing: 0.07px;
+      }
+    }
+  }
+}
