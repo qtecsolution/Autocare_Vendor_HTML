@@ -1,0 +1,41 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.tooltip {
+  &-inner {
+    background: $blue-green-800;
+    font-size: size(12);
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="top"] {
+    .tooltip-arrow {
+      &::before {
+        border-top-color: $blue-green-800;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="bottom"] {
+    .tooltip-arrow {
+      &::before {
+        border-bottom-color: $blue-green-800;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="left"] {
+    .tooltip-arrow {
+      &::before {
+        border-left-color: $blue-green-800;
+      }
+    }
+  }
+
+  &.bs-tooltip-auto[data-popper-placement^="right"] {
+    .tooltip-arrow {
+      &::before {
+        border-right-color: $blue-green-800;
+      }
+    }
+  }
+}

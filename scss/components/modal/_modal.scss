@@ -1,0 +1,44 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.modal {
+  &-content {
+    @include radius(20);
+  }
+
+  &-header {
+    border: 0;
+
+    .btn-close {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+      opacity: 1;
+
+      i {
+        // color: $primary;
+        font-size: size(24);
+      }
+
+      svg {
+        @include wh100;
+        @include transitiontransform;
+      }
+
+      @include hover {
+        opacity: 1;
+        @include rotate(180);
+
+        i {
+          // color: $danger;
+        }
+
+        svg {
+          path {
+            // stroke: $danger;
+          }
+        }
+      }
+    }
+  }
+}

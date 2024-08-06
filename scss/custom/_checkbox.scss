@@ -1,0 +1,74 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.customcheck {
+  .checkprivacy {
+    &:checked ~ .checklabel {
+      &::before {
+        // background: $primary;
+        // border-color: $primary;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .checklabel {
+    // color: $linktext;
+    cursor: pointer;
+    position: relative;
+    padding-left: size(30);
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      left: 0;
+      top: 50%;
+      @include translateY(-50%);
+      // background: $inputbg;
+      @include square(18);
+      // @include border(solid, 1, $menudivider);
+      @include radius(4);
+      @include transitionsall;
+    }
+
+    &::after {
+      width: size(10);
+      height: size(5);
+      @include border(solid, 1, $white);
+      border-top: 0;
+      left: size(4.5);
+      border-right: 0;
+      top: 50%;
+      @include transform(translateY(-70%) rotate(-45deg));
+      opacity: 0;
+      visibility: hidden;
+      @include transitiontransform;
+    }
+
+    &::selection {
+      // @include setBgColor(transparent, $primary);
+    }
+
+    .checklink {
+      // color: $primary;
+      @include transitionscolor;
+      text-decoration: none;
+
+      @include hover {
+        // color: $primarydark;
+      }
+
+      &::selection {
+        // @include setBgColor(transparent, $primary);
+      }
+    }
+  }
+}

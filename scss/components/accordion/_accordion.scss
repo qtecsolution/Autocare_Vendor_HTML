@@ -1,0 +1,73 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.accordion-button {
+  border-color: transparent !important;
+  border-width: 1px;
+  border-style: solid;
+  @include radius(4);
+  padding: size(8) size(12);
+}
+.accordion-item {
+  background-color: $neutral-50;
+  border: none;
+  margin-bottom: size(12);
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: $primary-color-base !important;
+  border-width: 1px;
+  border-style: solid;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: $white;
+  box-shadow: none;
+}
+.accordion-body {
+  padding: size(12) size(16);
+  background: $white;
+  margin: size(12) 0;
+  @include radius(4);
+}
+.category-header {
+  display: flex;
+  gap: size(12);
+  align-items: center;
+  &-img {
+    width: size(40);
+    height: size(40);
+    flex-shrink: 0;
+    @include radius(999999);
+  }
+  &-text {
+    color: $neutral-600;
+    font-family: $primaryFont;
+    font-size: size(16);
+    font-weight: 500;
+    line-height: size(24);
+  }
+}
+
+.category-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: size(12);
+  .category-item {
+    color: $neutral-600;
+    font-family: $primaryFont;
+    font-size: size(16);
+    font-weight: 500;
+    line-height: size(24);
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color-base;
+    }
+  }
+}

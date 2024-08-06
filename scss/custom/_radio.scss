@@ -1,0 +1,33 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.categoryradio {
+  .radioinput {
+    &:checked ~ .radiolabel {
+      // border-color: $primary;
+    }
+  }
+
+  .radiolabel {
+    // background: $contactinputbg;
+    // @include border(solid, 1, rgba($headingtext, 0.20));
+    @include radius(4);
+    cursor: pointer;
+    @include flex-center-column;
+    gap: size(8);
+    padding: size(24);
+    text-align: center;
+
+    .icon {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .categorytitle {
+      // color: $headingtext;
+      font-size: size(14);
+      font-weight: 500;
+    }
+  }
+}
