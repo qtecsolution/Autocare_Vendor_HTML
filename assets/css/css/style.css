@@ -1,0 +1,165 @@
+#sidebar {
+  min-width: 310px;
+  max-width: 310px;
+  background: #866ec7;
+  color: #000;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  position: relative
+}
+
+#sidebar .h6 {
+  color: #fff
+}
+
+.toggle-button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #E5E7EB;
+  border-radius: 100%;
+  background: #fff;
+}
+
+.sidebar-header {
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+}
+
+.search-input {
+  display: flex;
+  gap: 8px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 14px;
+  border-radius: 8px;
+}
+
+.search-input svg {
+  height: 20px;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.search-input input {
+  width: 100%;
+}
+
+
+#sidebar.active {
+  margin-left: -310px
+}
+
+#sidebar.active .custom-menu {
+  margin-right: -50px
+}
+
+
+#sidebar ul.components {
+  padding: 0
+}
+
+#sidebar ul li {
+  font-size: 16px
+}
+
+#sidebar ul li>ul {
+  margin-left: 10px
+}
+
+#sidebar ul li>ul li {
+  font-size: 14px
+}
+
+#sidebar ul li a {
+  padding: 10px 0;
+  display: block;
+  color: rgba(255, 255, 255, .8);
+  border-bottom: 1px solid rgba(255, 255, 255, .1)
+}
+
+#sidebar ul li a:hover {
+  color: #fff
+}
+
+#sidebar ul li.active>a {
+  background: 0 0;
+  color: #fff
+}
+
+@media(max-width:991.98px) {
+  #sidebar {
+    margin-left: -310px
+  }
+
+  #sidebar.active {
+    margin-left: 0
+  }
+
+  #sidebar .custom-menu {
+    margin-right: -50px !important;
+    top: 20px !important
+  }
+}
+
+#sidebar .custom-menu {
+  display: inline-block;
+  position: absolute;
+  top: 50px;
+  right: 5px;
+  margin-right: -20px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
+}
+
+@media(prefers-reduced-motion:reduce) {
+  #sidebar .custom-menu {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none
+  }
+}
+
+#sidebar .custom-menu .btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%
+}
+
+#sidebar .custom-menu .btn.btn-primary {
+  background: #6749b9;
+  border-color: #6749b9
+}
+
+#sidebar .custom-menu .btn.btn-primary:hover,
+#sidebar .custom-menu .btn.btn-primary:focus {
+  background: #6749b9 !important;
+  border-color: #6749b9 !important
+}
+
+a[data-toggle=collapse] {
+  position: relative
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+@media(max-width:991.98px) {
+  #sidebarCollapse span {
+    display: none
+  }
+}
+
+#content {
+  width: 100%;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s
+}
