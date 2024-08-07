@@ -1620,7 +1620,7 @@ body {
   padding-left: 0;
   display: flex;
   flex-direction: column;
-  padding: 0rem 0rem 1.5rem 0rem;
+  padding: 0rem 1rem 1.5rem 1rem;
 }
 .sidebar-footer ul .menu-list-link {
   background: hsl(0, 0%, 100%);
@@ -1678,7 +1678,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0rem 2rem 0rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
   border-top: 1px solid #e4e7ec;
 }
 .sidebar-footer .user-info .user-image {
@@ -1713,6 +1713,125 @@ body {
 .sidebar-footer .user-info .logout-icon svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.menu-list {
+  overflow-y: scroll;
+  height: 54vh;
+  padding: 0 1rem;
+}
+.menu-list .search-input {
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid #e5e7eb;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+}
+.menu-list .search-input svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  flex-shrink: 0;
+}
+.menu-list .search-input input {
+  width: 100%;
+}
+.menu-list .menu-list-link {
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  height: 3.125rem;
+  transition: all 500ms ease;
+  color: #344054;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.menu-list .menu-list-link:not(.collapsed) .arrowicon {
+  transform: rotateX(180deg);
+}
+.menu-list .menu-list-link:hover:not(.active) {
+  background: #f0fdfc;
+}
+.menu-list .menu-list-link:hover:not(.active) .linktitle {
+  color: #0d9488;
+}
+.menu-list .menu-list-link:hover:not(.active) .icon svg path {
+  fill: #0d9488;
+}
+.menu-list .menu-list-link:hover:not(.active) .arrowicon svg path {
+  stroke: #0d9488;
+}
+.menu-list .menu-list-link .icontitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.menu-list .menu-list-link .arrowicon svg path {
+  stroke: #141b34;
+}
+.menu-list .menu-list-link.active {
+  background: #f0fdfc;
+}
+.menu-list .menu-list-link.active .linktitle {
+  color: #0d9488;
+}
+.menu-list .menu-list-link.active .icon svg path {
+  fill: #0d9488;
+}
+.menu-list .menu-list-link.active .arrowicon svg path {
+  stroke: #0d9488;
+}
+.menu-list .menu-list-link.active .icontitle .icon svg path {
+  stroke: #0d9488;
+}
+.menu-list::-webkit-scrollbar {
+  background: hsl(0, 0%, 100%);
+  width: 0;
+}
+.menu-list::-webkit-scrollbar-thumb {
+  width: 0;
+}
+
+.submenu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 0;
+}
+.submenu .submenu-link {
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding-left: 48px;
+}
+.submenu .submenu-link .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submenu .submenu-link .icon svg path {
+  stroke: #141b34;
+}
+.submenu .submenu-link .text {
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.submenu .submenu-link:hover:not(.active) {
+  background-color: #f9fafb;
+}
+.submenu .submenu-link.active {
+  background-color: #f9fafb;
 }
 
 .sidebar.sidebar-mini {
