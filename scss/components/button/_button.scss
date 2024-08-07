@@ -34,7 +34,11 @@
   line-height: size(20);
   cursor: pointer;
 }
-
+.save-draft-btn.active {
+  background: #fff;
+  color: #1f2937;
+  cursor: pointer;
+}
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -52,4 +56,34 @@
   font-weight: 600;
   line-height: size(20);
   cursor: pointer;
+}
+.confirm-btn.active {
+  background: #0d9488;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.setMultipleLanguage-btn {
+  display: flex;
+  align-items: center;
+  padding: size(5) size(8);
+  justify-content: center;
+  align-items: center;
+  gap: size(4);
+  border-radius: size(6);
+  border: 0.5px solid #e7eaef;
+  background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
+
+  color: #030d18;
+  font-family: $primaryFont;
+  font-size: size(10);
+  font-weight: 600;
+  line-height: 100%;
+  svg {
+    margin-top: size(4);
+    width: size(14);
+    height: size(14);
+  }
 }

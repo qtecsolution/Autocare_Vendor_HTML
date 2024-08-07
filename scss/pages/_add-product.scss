@@ -26,18 +26,25 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: size(20);
     @include radius(12);
     border: 1px solid #e5e7eb;
     background: #fff;
     padding: size(20);
-
-    /* Box Shadow/sm */
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    overflow-x: scroll;
+    // scrollbar hide
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     .add-product-header-inner {
       display: flex;
       gap: size(48);
       align-items: center;
+      flex-shrink: 0;
     }
     &-item {
       display: flex;
@@ -189,6 +196,247 @@
       font-family: $primaryFont;
       font-size: size(14);
       font-weight: 500;
+    }
+
+    .input-field-languages {
+      @include radius(8);
+      border: 1px solid #e7eaef;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: size(8);
+      padding-right: size(16);
+      .languages-btn-select {
+        border: none;
+        padding: size(14) size(16);
+        color: #6b7280;
+        text-align: center;
+        font-family: $primaryFont;
+        font-size: size(15);
+        font-weight: 500;
+        letter-spacing: 0.075px;
+        background: $white;
+        @include single-radius(top, left, 8);
+        @include single-radius(bottom, left, 8);
+        border-right: 1px solid #e7eaef;
+      }
+      input {
+        flex-grow: 1;
+      }
+    }
+
+    .category-select {
+      display: flex;
+      flex-direction: column;
+      gap: size(10);
+      &-label {
+        color: #1f2937;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        margin-bottom: size(8);
+        span {
+          color: red !important;
+        }
+      }
+
+      .category-suggestions {
+        display: flex;
+        padding: size(20);
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: size(16);
+        @include radius(14);
+        border: size(1) solid #e2e8f0;
+        background: #f8fafc;
+        &-title {
+          color: #6b7280;
+          font-family: $primaryFont;
+          font-size: size(16);
+          font-weight: 600;
+          line-height: size(20);
+        }
+      }
+    }
+  }
+
+  .product-image-section {
+    @include radius(14);
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(30);
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        display: flex;
+        gap: size(4);
+        .star {
+          color: red;
+        }
+        svg {
+          width: 20px;
+          height: 20px;
+          flex-shrink: 0;
+        }
+      }
+
+      .link {
+        color: #0d9488;
+        text-align: right;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(20);
+      }
+    }
+    &-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: size(20);
+      flex-wrap: wrap;
+      .left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include breakpoint(mobile576) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint(desktop1200) {
+          grid-template-columns: repeat(5, 1fr);
+        }
+        gap: size(20);
+        .product-image-inner {
+          position: relative;
+          width: size(120);
+          height: size(120);
+          .image {
+            @include radius(14);
+            background: #d9d9d9;
+            width: size(120);
+            height: size(120);
+            flex-shrink: 0;
+          }
+          .close-btn {
+            width: size(30);
+            height: size(30);
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            cursor: pointer;
+          }
+        }
+        .product-image-inner-file {
+          width: size(120);
+          height: size(120);
+          @include radius(14);
+          border: 1.37px dashed #0d9488;
+          background: #fafafa;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          input {
+            display: none;
+          }
+          svg {
+            width: size(30);
+            height: size(30);
+            flex-shrink: 0;
+          }
+        }
+      }
+
+      .right {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: size(4);
+          li {
+            color: #6b7280;
+            font-family: $primaryFont;
+            font-size: size(12);
+            font-weight: 500;
+            line-height: size(16);
+          }
+        }
+      }
+    }
+  }
+
+  .promotion-image-video-section {
+    .promotion-image-inner {
+      @include radius(16);
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      padding: size(30);
+      display: flex;
+      flex-direction: column;
+      gap: size(20);
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+      .promotion-image-header {
+        display: flex;
+        gap: size(4);
+        h4 {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+        }
+        svg {
+          width: size(20);
+          height: size(20);
+          flex-shrink: 0;
+        }
+      }
+
+      .promotion-image-uploader {
+        border-radius: 14px;
+        border: 1.37px dashed var(--Primary-600, #0d9488);
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: size(120);
+        cursor: pointer;
+        .file {
+          display: none;
+        }
+        svg {
+          width: 30px;
+          height: 30px;
+          flex-shrink: 0;
+        }
+      }
+      .right {
+        // display: flex;
+        // justify-content: end;
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: size(4);
+          li {
+            color: #6b7280;
+            font-family: $primaryFont;
+            font-size: size(12);
+            font-weight: 500;
+            line-height: size(16);
+          }
+        }
+      }
     }
   }
 }

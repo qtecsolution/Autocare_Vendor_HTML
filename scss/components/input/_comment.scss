@@ -1,78 +1,111 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-// costome checkbox
-.form-checkbox {
-  position: relative;
-  display: block;
-  margin: 0 0 15px;
-  .checkbox {
-    position: absolute;
-    opacity: 0;
+// Variables
+$checkbox-size: 16px;
+$checkbox-border: #e5e7eb;
+$checkbox-selected: #0d9488;
 
-    // Text
+// checkbox demo html
+// <div class="form-checkbox">
+// <input class="checkbox" type="checkbox" id="checkbox4">
+// <label for="checkbox4" tabindex="4">Cameras</label>
+// </div>
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+
+  // Text
+  & + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: $checkbox-size;
+    padding-left: $checkbox-size + 6;
+    font-size: $checkbox-size - 2;
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-weight: 500;
+
+    // Checkbox
+    &:before {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      content: "";
+      background: transparent;
+      width: $checkbox-size;
+      height: $checkbox-size;
+
+      box-shadow: inset 0 0 0 1px $checkbox-border;
+      border-radius: 100%;
+      transition: 200ms ease-in-out all;
+    }
+
+    // Tick
+    &:after {
+      position: absolute;
+      display: block;
+      top: 3px;
+      left: 6px;
+      content: "";
+      width: 4px;
+      height: 8px;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transform: rotate(45deg);
+
+      transition: 200ms ease-in-out all;
+    }
+  }
+
+  // Hover
+  & + label:hover {
+    color: #333;
+  }
+
+  // Focus
+  & + label:focus {
+    outline: none;
+  }
+
+  // Checked
+  &:checked {
     & + label {
-      display: inline-block;
-      position: relative;
-      cursor: pointer;
-      line-height: 20px;
-      padding-left: 30px;
-      color: $neutral-500; // #6A6B70
-      font-family: $primaryFont;
-      font-size: size(14);
-
-      // Checkbox
       &:before {
-        position: absolute;
-        display: block;
-        left: 0;
-        top: 0;
-        content: "";
-        background: transparent;
-        width: 20px;
-        height: 20px;
-
-        box-shadow: inset 0 0 0 1px $neutral-200;
-        border-radius: 4px;
-        transition: 200ms ease-in-out all;
+        background: $checkbox-selected;
+        box-shadow: none;
       }
-
-      // Tick
       &:after {
-        position: absolute;
-        display: block;
-        top: 4px;
-        left: 7px;
-        content: "";
-        width: 6px;
-        height: 10px;
-        border-right: 3px solid transparent;
-        border-bottom: 3px solid transparent;
-        transform: rotate(45deg);
-        transition: 200ms ease-in-out all;
+        border-color: white;
       }
     }
+  }
 
-    // Hover
-    & + label:hover {
-      color: #333;
+  // Disabled
+  &:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2; // Disabled colour
+        box-shadow: none;
+      }
+      &:after {
+        border-color: transparent;
+      }
     }
+  }
 
-    // Focus
-    & + label:focus {
-      outline: none;
-    }
-
-    // Checked
-    &:checked {
-      & + label {
-        &:before {
-          background: $primary-color-base;
-          box-shadow: none;
-        }
-        &:after {
-          border-color: white;
-        }
+  // Disabled Checked
+  &:checked:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: #cecece;
       }
     }
   }
