@@ -8,6 +8,7 @@
   transition: all .3s;
   position: relative;
   border-right: 1px solid #E4E7EC;
+  height: 100vh;
 }
 
 #sidebar .h6 {

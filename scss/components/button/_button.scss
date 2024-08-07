@@ -16,74 +16,40 @@
     background: $primary-color-700;
   }
 }
-.blog-button {
-  padding: size(12) size(20);
-  @include radius(4);
-  background: $white;
-  border: 1px solid $primary-color-base;
-  color: $primary-color-base;
-  font-family: $primaryFont;
-  font-size: size(16);
-  font-weight: 500;
-  line-height: 24px;
-  transition: all 0.35s ease-in-out;
-  @include hover {
-    background: $primary-color-base;
-    color: $white;
-  }
-}
 
-.cart-button {
-  display: flex;
+.save-draft-btn {
+  display: inline-flex;
+  padding: size(10) size(16);
+  justify-content: center;
   align-items: center;
   gap: size(8);
-  padding: size(12) size(20);
-  background: $primary-color-base;
-  @include radius(4);
-  color: $white;
-  border: none;
-  transition: all 0.35s ease-in-out;
-  svg {
-    height: size(24);
-    width: size(24);
-  }
-  @include hover {
-    background: $primary-color-700;
-  }
-}
-
-.favorite-button {
-  display: flex;
-  align-items: center;
-  gap: size(8);
-  padding: size(12) size(20);
-  background: $neutral-200;
-  color: $neutral-900;
-  @include radius(4);
-  border: none;
-  transition: all 0.35s ease-in-out;
-  svg {
-    height: size(24);
-    width: size(24);
-  }
-  @include hover {
-    background: $neutral-300;
-  }
-}
-
-.footer-btn {
-  color: $white;
+  @include radius(8);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #d1d5db;
   font-family: $primaryFont;
   font-size: size(14);
-  font-weight: 500;
+  font-weight: 600;
   line-height: size(20);
-  @include radius(4);
-  background: $primary-color-base;
-  padding: size(8) size(16);
-  outline: none;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  display: inline-flex;
+  width: 145px;
+  padding: size(10) size(16);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include radius(8);
   border: none;
-  transition: all 0.35s ease-in-out;
-  @include hover {
-    background: $primary-color-700;
-  }
+  background: #d1d5db;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #fff;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+  cursor: pointer;
 }

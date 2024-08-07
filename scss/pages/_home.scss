@@ -599,34 +599,12 @@ body {
     &:hover {
       &:not(.active) {
         background-color: #f9fafb;
-        // .icon {
-        //   svg {
-        //     path {
-        //       stroke: #ff645a;
-        //     }
-        //   }
-        // }
-
-        // .text {
-        //   color: #ff645a;
-        // }
       }
     }
   }
 
   .submenu-link.active {
     background-color: #f9fafb;
-    // .icon {
-    //   svg {
-    //     path {
-    //       stroke: #ff645a;
-    //     }
-    //   }
-    // }
-
-    // .text {
-    //   color: #ff645a;
-    // }
   }
 }
 
@@ -813,7 +791,14 @@ body {
   }
   .sales-details {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+    @include breakpoint(mobile768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(desktop1200) {
+      grid-template-columns: repeat(3, 1fr);
+    }
     padding: size(32) size(68) 0 size(68);
     gap: size(24);
     &-cart {
@@ -894,7 +879,20 @@ body {
   }
   .dashboard-inner {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+
+    @include breakpoint(mobile576) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(mobile768) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(tab992) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include breakpoint(desktop1200) {
+      grid-template-columns: repeat(5, 1fr);
+    }
     gap: size(16);
     padding: size(40) size(68);
     .dashboard-cart {
