@@ -52,11 +52,11 @@
       gap: size(8);
       .number {
         display: flex;
-        width: 24px;
-        padding: 4px 8px;
+        width: size(24);
+        padding: size(4) size(8);
         justify-content: center;
         align-items: center;
-        gap: 10px;
+        gap: size(10);
         @include radius(6);
         background: #f3f4f6;
         color: #1f2937;
@@ -108,9 +108,9 @@
         width: size(100);
 
         .bar {
-          height: 10px;
+          height: size(10);
           background-color: #f3f4f6;
-          margin: 5px 0;
+          margin: size(5) 0;
           position: relative;
           @include radius(99999);
 
@@ -287,8 +287,8 @@
           color: red;
         }
         svg {
-          width: 20px;
-          height: 20px;
+          width: size(20);
+          height: size(20);
           flex-shrink: 0;
         }
       }
@@ -334,8 +334,8 @@
             width: size(30);
             height: size(30);
             position: absolute;
-            top: -12px;
-            right: -12px;
+            top: size(-12);
+            right: size(-12);
             cursor: pointer;
           }
         }
@@ -404,21 +404,37 @@
       }
 
       .promotion-image-uploader {
-        border-radius: 14px;
+        @include radius(14);
         border: 1.37px dashed var(--Primary-600, #0d9488);
         background: #fafafa;
         display: flex;
         align-items: center;
         justify-content: center;
         height: size(120);
+        padding: size(26);
         cursor: pointer;
         .file {
           display: none;
         }
         svg {
-          width: 30px;
-          height: 30px;
+          width: size(30);
+          height: size(30);
           flex-shrink: 0;
+        }
+        p {
+          color: #1f2937;
+          text-align: center;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 500;
+          line-height: size(20);
+        }
+        span {
+          color: #0d9488;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 700;
+          line-height: size(20);
         }
       }
       .right {
@@ -467,7 +483,7 @@
         }
       }
       .editor-container {
-        border-radius: 14px;
+        @include radius(16);
         border: 1px solid #e7eaef;
         background: #fff;
         #toolbar {
@@ -511,7 +527,7 @@
           }
 
           .link-example {
-            color:  #0d9488;
+            color: #0d9488;
             text-align: right;
             font-family: $primaryFont;
             font-size: size(14);
@@ -524,14 +540,14 @@
         #editor {
           height: size(330);
           background-color: #fff;
-          border-radius: 0 0 14px 14px;
+          border-radius: 0 0 size(14) size(14);
           padding: size(20);
-          font-size: 16px;
+          font-size: size(16);
           .ql-editor {
             // padding-left: 0;
             padding: 0;
             &::before {
-              margin-left: 5px;
+              margin-left: size(5);
             }
           }
         }
@@ -546,7 +562,7 @@
 
       .ql-container {
         border: none;
-        border-radius: 0 0 14px 14px;
+        border-radius: 0 0 size(14) size(14);
       }
 
       .ql-snow.ql-toolbar:after {
@@ -586,7 +602,7 @@
       }
 
       .box-input {
-        border-radius: 8px;
+        @include radius(8);
         border: size(1) solid #e7eaef;
         padding: size(8) size(20);
         background: $white;
@@ -597,6 +613,107 @@
           line-height: size(16);
           letter-spacing: 0.14px;
         }
+      }
+    }
+  }
+}
+
+.price-section {
+  padding: size(10) size(68) 0 size(68);
+  .inner-price-section {
+    @include radius(16);
+    border: size(1) solid #e5e7eb;
+    background: #fff;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(30);
+    .inner-input {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      .label {
+        color: #1f2937;
+
+        /* Text Base/Semi bold */
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(20); /* 142.857% */
+        span {
+          color: red;
+        }
+      }
+      .input {
+        @include radius(8);
+        border: 1px solid var(--Border-Color, #e7eaef);
+        background: #fff;
+        padding: size(12) size(20);
+        &::placeholder {
+          color: #72757b;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(16);
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
+
+.stock-section {
+  padding: size(16) size(68) 0 size(68);
+  .inner-stock-section {
+    .left {
+      @include radius(16);
+      border: size(1) solid #e5e7eb;
+      background: #fff;
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+      padding: size(30);
+      .inner-input {
+        display: flex;
+        flex-direction: column;
+        gap: size(8);
+        .label {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+          span {
+            color: red;
+          }
+        }
+        .input {
+          @include radius(8);
+          border: size(1) solid #e7eaef;
+          background: #fff;
+          padding: size(12) size(20);
+          &::placeholder {
+            color: #72757b;
+            font-family: $primaryFont;
+            font-size: size(14);
+            line-height: size(16);
+            letter-spacing: 0.14px;
+          }
+        }
+      }
+    }
+    .right {
+      @include radius(16);
+      border: size(1) solid #e5e7eb;
+      background: #fff;
+      box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+      padding: size(53) size(30);
+
+      display: flex;
+      align-items: center;
+      gap: size(30);
+      .text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
       }
     }
   }
