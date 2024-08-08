@@ -1,0 +1,64 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.congratulation-body {
+  max-width: 600px;
+  padding: size(60);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: size(20);
+  @include radius(24);
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+
+
+  .img {
+    width: size(200);
+    height: size(200);
+  }
+  .title {
+    color: #1f2937;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: size(24);
+    font-weight: 700;
+    letter-spacing: 0.12px;
+  }
+  .details {
+    color: #6b7280;
+    text-align: center;
+    font-family: $primaryFont;
+    font-size: size(16);
+    font-weight: 500;
+    line-height: size(24);
+    letter-spacing: 0.08px;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    gap: size(20);
+    .manage-btn,
+    .add-btn {
+      padding: size(10) size(16);
+      flex-shrink: 0;
+      @include radius(8);
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 600;
+      line-height: size(20);
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    }
+
+    .manage-btn {
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      color: #1f2937;
+    }
+    .add-btn {
+      background: #0d9488;
+      color: #fff;
+    }
+  }
+}
