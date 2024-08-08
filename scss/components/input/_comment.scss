@@ -200,3 +200,59 @@ $checkbox-selected: #0d9488;
     border-radius: 50%;
   }
 }
+
+// <label class="radio-button-container">None
+//   <input type="radio" checked="checked" name="radio">
+//   <span class="checkmark"></span>
+// </label>
+
+.radio-button-container {
+  color: #1f2937;
+  display: block;
+  position: relative;
+  padding-left: size(24);
+  font-family: $primaryFont;
+  font-size: size(14);
+  line-height: size(20);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked ~ .checkmark {
+      background: #2563eb;
+      border-color: #2563eb;
+      &::after {
+        display: block;
+      }
+    }
+  }
+
+  .checkmark {
+    position: absolute;
+    top: size(2);
+    left: 0;
+    height: size(16);
+    width: size(16);
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    border: size(1) solid #e5e7eb;
+    transition: all 0.3s;
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: size(3);
+      left: size(3);
+      width: size(8);
+      height: size(8);
+      border-radius: 50%;
+      background: $white;
+    }
+  }
+}

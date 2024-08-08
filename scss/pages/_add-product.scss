@@ -819,6 +819,106 @@
   }
 }
 
+.packaging-section {
+  padding: size(16) size(68) 0 size(68);
+  .inner-packaging-section {
+    @include radius(16);
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    padding: size(30);
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
+    .inner-input {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      .label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        span {
+          color: red;
+        }
+      }
+      .input {
+        @include radius(8);
+        border: size(1) solid #e7eaef;
+        background: #fff;
+        padding: size(12) size(20);
+        &::placeholder {
+          color: #72757b;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(16);
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
+
+.warranty-section {
+  padding: size(16) size(68) 0 size(68);
+  .inner-warranty-section {
+    @include radius(16);
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(30);
+    display: flex;
+    flex-direction: column;
+    gap: size(16);
+
+    .warranty-select {
+      &-label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        margin-bottom: size(8);
+      }
+    }
+
+    .inner-input {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      .label {
+        color: #1f2937;
+
+        /* Text Base/Semi bold */
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(20); /* 142.857% */
+        span {
+          color: red;
+        }
+      }
+      .input {
+        @include radius(8);
+        border: 1px solid var(--Border-Color, #e7eaef);
+        background: #fff;
+        padding: size(12) size(20);
+        &::placeholder {
+          color: #72757b;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(16);
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
+
 .add-product-footer {
   border-top: 1px solid #e5e7eb;
   background: #fff;
