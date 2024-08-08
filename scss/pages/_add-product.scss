@@ -440,6 +440,167 @@
     }
   }
 }
+.main-description-section {
+  padding: size(16) size(68) 0 size(68);
+  .main-description-content {
+    @include radius(16);
+    border: size(1) solid #e5e7eb;
+    background: $white;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(30);
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
+    .main-description {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      &-label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        span {
+          color: red;
+        }
+      }
+      .editor-container {
+        border-radius: 14px;
+        border: 1px solid #e7eaef;
+        background: #fff;
+        #toolbar {
+          display: flex;
+          align-content: center;
+          justify-content: space-between;
+          padding: size(20);
+          .toolbar-inner {
+            display: flex;
+            align-items: center;
+            gap: size(20);
+            .ql-redo {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                top: size(6);
+                right: size(-13);
+                width: size(0.7);
+                height: size(14);
+                background: #737373;
+              }
+            }
+
+            .ql-font,
+            .ql-size,
+            .ql-underline,
+            .ql-blockquote,
+            .ql-strike {
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                top: size(6);
+                right: size(-10);
+                width: size(0.7);
+                height: size(14);
+                background: #737373;
+              }
+            }
+          }
+
+          .link-example {
+            color:  #0d9488;
+            text-align: right;
+            font-family: $primaryFont;
+            font-size: size(14);
+            line-height: size(16);
+            letter-spacing: 0.14px;
+            text-decoration-line: underline;
+          }
+        }
+
+        #editor {
+          height: size(330);
+          background-color: #fff;
+          border-radius: 0 0 14px 14px;
+          padding: size(20);
+          font-size: 16px;
+          .ql-editor {
+            // padding-left: 0;
+            padding: 0;
+            &::before {
+              margin-left: 5px;
+            }
+          }
+        }
+      }
+
+      .ql-toolbar {
+        border: none;
+        border-bottom: 1px solid #e7eaef;
+        border-radius: 14px 14px 0 0;
+        background-color: #fff;
+      }
+
+      .ql-container {
+        border: none;
+        border-radius: 0 0 14px 14px;
+      }
+
+      .ql-snow.ql-toolbar:after {
+        clear: both;
+        content: "";
+        display: none;
+      }
+    }
+
+    .highlights {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      &-label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        span {
+          color: red;
+        }
+      }
+
+      &-input {
+        @include radius(12);
+        border: size(1) solid #e7eaef;
+        padding: size(20);
+        background: #fff;
+        &::placeholder {
+          color: #72757b;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(16);
+          letter-spacing: 0.14px;
+        }
+      }
+
+      .box-input {
+        border-radius: 8px;
+        border: size(1) solid #e7eaef;
+        padding: size(8) size(20);
+        background: $white;
+        &::placeholder {
+          color: #72757b;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(16);
+          letter-spacing: 0.14px;
+        }
+      }
+    }
+  }
+}
 
 .add-product-footer {
   border-top: 1px solid #e5e7eb;

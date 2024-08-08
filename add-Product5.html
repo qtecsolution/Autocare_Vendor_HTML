@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
   <!-- sidebar css -->
   <link rel="stylesheet" href="./assets/css/sidebar/sidebar.css">
-  <!--  -->
+  <!-- quill snow css -->
+  <link rel="stylesheet" href="./assets/css/quill-rich-text-editor/quill.snow.css">
+  <!-- nice-select css -->
   <link rel="stylesheet" href="./assets/css/nice-select2/nice-select2.css">
   <!-- New style -->
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -738,6 +740,71 @@
               </div>
             </div>
           </div>
+          <div class="main-description-section">
+            <div class="main-description-content">
+
+              <div class="main-description">
+                <label for="" class="main-description-label">
+                  Main Description <span>*</span>
+                </label>
+                <div class="editor-container">
+                  <div id="toolbar">
+                    <div class="toolbar-inner">
+                      <div class="d-flex align-items-center">
+                        <button class="ql-undo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                        <button class="ql-redo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="ql-font"></select>
+                      <select class="ql-size"></select>
+  
+                      <div class="d-flex align-items-center">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-align" value=""></button>
+                        <button class="ql-align" value="center"></button>
+                        <button class="ql-align" value="right"></button>
+                        <button class="ql-blockquote"></button>
+                      </div>
+                      <button class="ql-strike"></button>
+                      <button class="ql-clean"></button>
+                    </div>
+                    <a class="link-example" href="#">See Example</a>
+                  </div>
+                  <div id="editor"></div>
+                </div>
+              </div>
+
+              <div class="highlights">
+                <label class="highlights-label" for="highlights">Highlights <span>*</span></label>
+
+                <textarea class="highlights-input" name="" id="highlights" cols="30" rows="10"
+                  placeholder="Write here"></textarea>
+              </div>
+
+              <div class="highlights">
+                <label class="highlights-label" for="box">What's in the box <span>*</span></label>
+
+                <input class="box-input" type="text" name="" id="box">
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="add-product-footer mt-5">
@@ -761,7 +828,10 @@
   <script src="./assets/js/bootstrap.min.js"></script>
   <!-- sidebar -->
   <script src="./assets/js/sidebar.js"></script>
-  <!--  -->
+  <!-- quill js -->
+  <script src="./assets/js/quill-rich-text-editor/quill.js"></script>
+  <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
+  <!-- nice-select2.js -->
   <script src="./assets/js/nice-select2/nice-select2.js"></script>
   <!-- main js -->
   <script src="./assets/js/main.js"></script>
