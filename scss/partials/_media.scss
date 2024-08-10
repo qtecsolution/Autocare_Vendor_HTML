@@ -98,6 +98,10 @@ $breakpoints: (
     @media screen and (min-width: break(break-1100)) {
       @content;
     }
+  } @else if $breakpoints==desktop1169 {
+    @media screen and (min-width: break(break-1169)) {
+      @content;
+    }
   } @else if $breakpoints==desktop1170 {
     @media screen and (min-width: break(break-1170)) {
       @content;

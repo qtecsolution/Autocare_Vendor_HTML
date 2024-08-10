@@ -2,7 +2,10 @@
 @use "../partials" as *;
 
 .inner-content {
-  padding: size(0) size(68);
+  padding: size(0) size(30);
+  @include breakpoint(mobile768) {
+    padding: size(0) size(68);
+  }
 }
 
 .page-top-section {
@@ -11,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: size(10);
     .search-form {
       display: flex;
       align-items: center;
@@ -53,6 +57,11 @@
     justify-content: space-between;
     align-items: center;
     gap: size(20);
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile576) {
+      flex-wrap: nowrap;
+    }
     .heading-text {
       color: #101828;
       font-family: $primaryFont;
@@ -109,54 +118,66 @@
       }
     }
   }
+  .all-buttons-inner {
+    overflow-x: scroll;
 
-  .manage-products-btn {
-    display: flex;
-    padding: size(8) size(12);
-    align-items: center;
-    gap: size(8);
-    @include radius(8);
-    background: transparent;
-    color: #6b7280;
-    font-family: $primaryFont;
-    font-size: size(14);
-    font-weight: 500;
-    line-height: size(20);
-    letter-spacing: 0.07px;
-    border: none;
-    transition: all 0.35s ease-in-out;
-    span {
-      display: flex;
-      padding: size(1) size(5);
-      align-items: center;
-      border-radius: size(99999);
-      border: 1px solid #e5e7eb;
-      background: #e4e5e9;
-
-      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-      color: #1f2937;
-
-      font-family: $primaryFont;
-      font-size: size(10);
-      font-weight: 500;
-      line-height: size(16);
-      letter-spacing: 0.05px;
-      transition: all 0.35s ease-in-out;
+    @include breakpoint(desktop1100) {
+      // scrollbar hide
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
+    padding: size(10);
+    .manage-products-btn {
+      display: flex;
+      padding: size(8) size(12);
+      align-items: center;
+      gap: size(8);
+      @include radius(8);
+      background: transparent;
+      color: #6b7280;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 500;
+      line-height: size(20);
+      letter-spacing: 0.07px;
+      border: none;
+      transition: all 0.35s ease-in-out;
+      span {
+        display: flex;
+        padding: size(1) size(5);
+        align-items: center;
+        border-radius: size(99999);
+        border: 1px solid #e5e7eb;
+        background: #e4e5e9;
 
-    &:hover {
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        color: #1f2937;
+
+        font-family: $primaryFont;
+        font-size: size(10);
+        font-weight: 500;
+        line-height: size(16);
+        letter-spacing: 0.05px;
+        transition: all 0.35s ease-in-out;
+      }
+
+      &:hover {
+        background: #0f766d;
+        color: #fff;
+        span {
+          background: #fff;
+        }
+      }
+    }
+    .manage-products-btn.active {
       background: #0f766d;
       color: #fff;
       span {
         background: #fff;
       }
-    }
-  }
-  .manage-products-btn.active {
-    background: #0f766d;
-    color: #fff;
-    span {
-      background: #fff;
     }
   }
 }
@@ -173,7 +194,10 @@
       display: flex;
       justify-content: space-between;
       gap: size(20);
-
+      flex-direction: column;
+      @include breakpoint(mobile768) {
+        flex-direction: row;
+      }
       .all-products-form {
         display: flex;
         align-items: center;
@@ -184,17 +208,25 @@
         background: #fff;
         box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
         .search-svg {
+          flex-shrink: 0;
           svg {
             width: size(20);
             height: size(20);
           }
         }
         .page-search-input {
+          width: 100%;
           &::placeholder {
             color: #667085;
             font-family: $primaryFont;
             font-size: size(16);
             line-height: size(24);
+          }
+          @include breakpoint(tab992) {
+            width: size(128);
+          }
+          @include breakpoint(desktop1169) {
+            width: 100%;
           }
         }
       }
@@ -205,7 +237,7 @@
       gap: size(20);
       align-items: center;
       justify-content: center;
-      padding: size(120) 0;
+      padding: size(120) size(30);
       .title {
         color: #1f2937;
         text-align: center;
