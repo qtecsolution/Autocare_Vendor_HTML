@@ -3365,6 +3365,226 @@ body {
   color: #fff;
 }
 
+.inner-content {
+  padding: 0rem 4.25rem;
+}
+
+.page-top-section {
+  padding: 1.25rem 0rem;
+}
+.page-top-section-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.page-top-section-inner .search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.page-top-section-inner .search-form .search-svg svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.page-top-section-inner .search-form .page-search-input::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.page-top-section-inner .search-form .page-search-input::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.page-top-section-inner .notification-svg svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.manage-product-section {
+  padding: 1rem 0rem 0rem 0rem;
+}
+.manage-product-section-header {
+  padding: 0rem 0rem 3.125rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+}
+.manage-product-section-header .heading-text {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.manage-product-section-header .import-btn {
+  display: flex;
+  padding: 0.625rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  transition: all 0.35s ease-in-out;
+}
+.manage-product-section-header .import-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.manage-product-section-header .import-btn:hover {
+  background-color: #e9e8e8;
+}
+.manage-product-section-header .add-product-btn {
+  display: flex;
+  padding: 0.625rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: #0f766d;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  transition: all 0.35s ease-in-out;
+}
+.manage-product-section-header .add-product-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.manage-product-section-header .add-product-btn:hover {
+  background-color: #0a504a;
+}
+.manage-product-section .manage-products-btn {
+  display: flex;
+  padding: 0.5rem 0.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.07px;
+  border: none;
+  transition: all 0.35s ease-in-out;
+}
+.manage-product-section .manage-products-btn span {
+  display: flex;
+  padding: 0.0625rem 0.3125rem;
+  align-items: center;
+  border-radius: 6249.9375rem;
+  border: 1px solid #e5e7eb;
+  background: #e4e5e9;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.05px;
+  transition: all 0.35s ease-in-out;
+}
+.manage-product-section .manage-products-btn:hover {
+  background: #0f766d;
+  color: #fff;
+}
+.manage-product-section .manage-products-btn:hover span {
+  background: #fff;
+}
+.manage-product-section .manage-products-btn.active {
+  background: #0f766d;
+  color: #fff;
+}
+.manage-product-section .manage-products-btn.active span {
+  background: #fff;
+}
+
+.manage-all-product-section {
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+.manage-all-product-section-inner-header {
+  padding: 1.125rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+.manage-all-product-section-inner-header .all-products-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #d0d5dd;
+  background: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.manage-all-product-section-inner-header .all-products-form .search-svg svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.manage-all-product-section-inner-header .all-products-form .page-search-input::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.manage-all-product-section-inner-header .all-products-form .page-search-input::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.manage-all-product-section-inner-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  padding: 7.5rem 0;
+}
+.manage-all-product-section-inner-body .title {
+  color: #1f2937;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12px;
+}
+.manage-all-product-section-inner-body .details {
+  color: #6b7280;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+  max-width: 346px;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;

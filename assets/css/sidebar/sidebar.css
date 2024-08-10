@@ -133,5 +133,6 @@ a[data-toggle=collapse] {
   overflow-y: scroll;
   -webkit-transition: all .3s;
   -o-transition: all .3s;
-  transition: all .3s
+  transition: all .3s;
+  background: #FAFAFA;
 }
