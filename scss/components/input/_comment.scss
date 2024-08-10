@@ -111,6 +111,218 @@ $checkbox-selected: #0d9488;
   }
 }
 
+$table-checkbox-size: 16px;
+// $checkbox-border: #e5e7eb;
+// $checkbox-selected: #0d9488;
+
+.table-header-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  // Text
+  & + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: $table-checkbox-size;
+    padding-left: $table-checkbox-size + 15;
+
+    color: #6b7280;
+    font-family: $primaryFont;
+    font-size: size(12);
+    font-weight: 600;
+    line-height: size(16);
+    letter-spacing: 0.06px;
+    text-transform: uppercase;
+
+    // Checkbox
+    &:before {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      background: $white;
+      width: $table-checkbox-size;
+      border: 1px solid $checkbox-border;
+      height: $table-checkbox-size;
+      box-shadow: inset 0 0 0 1px $checkbox-border;
+      @include radius(4);
+      transition: 200ms ease-in-out all;
+    }
+
+    // Tick
+    &:after {
+      position: absolute;
+      display: block;
+      top: 3px;
+      left: 6px;
+      content: "";
+      width: 4px;
+      height: 8px;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transform: rotate(45deg);
+
+      transition: 200ms ease-in-out all;
+    }
+  }
+
+  // Hover
+  // & + label:hover {
+  //   color: #333;
+  // }
+
+  // Focus
+  & + label:focus {
+    outline: none;
+  }
+
+  // Checked
+  &:checked {
+    & + label {
+      &:before {
+        background: $checkbox-selected;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: white;
+      }
+    }
+  }
+
+  // Disabled
+  &:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2; // Disabled colour
+        box-shadow: none;
+      }
+      &:after {
+        border-color: transparent;
+      }
+    }
+  }
+
+  // Disabled Checked
+  &:checked:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: #cecece;
+      }
+    }
+  }
+}
+
+.table-body-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  // Text
+  & + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: $table-checkbox-size;
+    padding-left: $table-checkbox-size + 15;
+
+    color: #6b7280;
+    font-family: $primaryFont;
+    font-size: size(12);
+    font-weight: 600;
+    line-height: size(16);
+    letter-spacing: 0.06px;
+    text-transform: uppercase;
+
+    // Checkbox
+    &:before {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      background: $white;
+      width: $table-checkbox-size;
+      border: 1px solid $checkbox-border;
+      height: $table-checkbox-size;
+      box-shadow: inset 0 0 0 1px $checkbox-border;
+      @include radius(4);
+      transition: 200ms ease-in-out all;
+    }
+
+    // Tick
+    &:after {
+      position: absolute;
+      display: block;
+      top: 42%;
+      left: 6px;
+      content: "";
+      width: 4px;
+      height: 8px;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent; 
+      transform: rotate(45deg); 
+
+      transition: 200ms ease-in-out all; 
+    }
+  }
+
+  // Hover
+  // & + label:hover {
+  //   color: #333;
+  // }
+
+  // Focus
+  & + label:focus {
+    outline: none;
+  }
+
+  // Checked
+  &:checked {
+    & + label {
+      &:before {
+        background: $checkbox-selected;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: white;
+      }
+    }
+  }
+
+  // Disabled
+  &:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2; // Disabled colour
+        box-shadow: none;
+      }
+      &:after {
+        border-color: transparent;
+      }
+    }
+  }
+
+  // Disabled Checked
+  &:checked:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: #cecece;
+      }
+    }
+  }
+}
+
 // <label class="switch">
 //   <span class="close-btn">
 //     <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
