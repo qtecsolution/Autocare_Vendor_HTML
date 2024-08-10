@@ -46,6 +46,13 @@
         height: size(24);
       }
     }
+    .notification-svg.active {
+      svg {
+        path{
+          fill: #0f766d;
+        }
+      }
+    }
   }
 }
 
