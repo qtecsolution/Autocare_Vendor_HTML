@@ -1561,6 +1561,9 @@ table tr td {
   line-height: 1.25rem;
 }
 
+.setup-store-section {
+  margin-top: 3.125rem;
+}
 .setup-store-section-inner .title {
   color: #1f2937;
   text-align: center;
@@ -1586,6 +1589,7 @@ table tr td {
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
 }
 .setup-store-section-inner .center .setup-store-form {
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -1664,6 +1668,26 @@ table tr td {
   font-weight: 600;
   line-height: 1.25rem;
   margin-bottom: 0.625rem;
+}
+.setup-store-section-inner .center .setup-store-form .selectize {
+  height: 2.5rem;
+}
+.setup-store-section-inner .center .setup-store-form .login-btn {
+  border-radius: 0.625rem;
+  background: #0f766d;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+  padding: 0.75rem;
+  border: none;
+  transition: all 0.35s ease-in-out;
+}
+.setup-store-section-inner .center .setup-store-form .login-btn:hover {
+  background: #094641;
 }
 
 html {
