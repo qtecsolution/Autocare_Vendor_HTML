@@ -1,0 +1,106 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.primary-button {
+  padding: size(12) size(30);
+  @include radius(4);
+  background: $primary-color-base;
+  color: $white;
+  font-family: $primaryFont;
+  font-size: size(16);
+  font-weight: 500;
+  line-height: 24px;
+  border: none;
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-700;
+  }
+}
+.submit-button {
+  display: block;
+  text-align: center;
+  padding: size(12) size(30);
+  @include radius(4);
+  background: $primary-color-base;
+  color: $white;
+  font-family: $primaryFont;
+  font-size: size(16);
+  font-weight: 500;
+  line-height: 24px;
+  border: none;
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-700;
+  }
+}
+.blog-button {
+  padding: size(12) size(30);
+  @include radius(4);
+  background: $white;
+  border: 1px solid $primary-color-base;
+  color: $primary-color-base;
+  font-family: $primaryFont;
+  font-size: size(16);
+  font-weight: 500;
+  line-height: 24px;
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-base;
+    color: $white;
+  }
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: size(8);
+  padding: size(12) size(20);
+  background: $primary-color-base;
+  @include radius(4);
+  color: $white;
+  border: none;
+  transition: all 0.35s ease-in-out;
+  svg {
+    height: size(24);
+    width: size(24);
+  }
+  @include hover {
+    background: $primary-color-700;
+  }
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  gap: size(8);
+  padding: size(12) size(20);
+  background: $neutral-200;
+  color: $neutral-900;
+  @include radius(4);
+  border: none;
+  transition: all 0.35s ease-in-out;
+  svg {
+    height: size(24);
+    width: size(24);
+  }
+  @include hover {
+    background: $neutral-300;
+  }
+}
+
+.footer-btn {
+  color: $white;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 500;
+  line-height: size(20);
+  @include radius(4);
+  background: $primary-color-base;
+  padding: size(8) size(16);
+  outline: none;
+  border: none;
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-700;
+  }
+}

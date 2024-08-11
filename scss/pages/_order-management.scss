@@ -1,0 +1,65 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.all-buttons-inner {
+  overflow-x: scroll;
+
+  @include breakpoint(desktop1100) {
+    // scrollbar hide
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  padding: size(10);
+  .manage-products-btn {
+    display: flex;
+    padding: size(8) size(12);
+    align-items: center;
+    gap: size(8);
+    @include radius(8);
+    background: transparent;
+    color: #6b7280;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(20);
+    letter-spacing: 0.07px;
+    border: none;
+    transition: all 0.35s ease-in-out;
+    span {
+      display: flex;
+      padding: size(1) size(5);
+      align-items: center;
+      border-radius: size(99999);
+      border: 1px solid #e5e7eb;
+      background: #e4e5e9;
+
+      box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+      color: #1f2937;
+
+      font-family: $primaryFont;
+      font-size: size(10);
+      font-weight: 500;
+      line-height: size(16);
+      letter-spacing: 0.05px;
+      transition: all 0.35s ease-in-out;
+    }
+
+    &:hover {
+      background: #0f766d;
+      color: #fff;
+      span {
+        background: #fff;
+      }
+    }
+  }
+  .manage-products-btn.active {
+    background: #0f766d;
+    color: #fff;
+    span {
+      background: #fff;
+    }
+  }
+}

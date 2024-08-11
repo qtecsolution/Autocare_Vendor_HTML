@@ -1,0 +1,249 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.authform {
+  background: $white;
+  @include radius(36);
+  box-shadow: $authshadow;
+  @include flex-center-column;
+  gap: size(28);
+  padding: size(40);
+}
+
+.verifyform {
+  background: $white;
+  @include radius(36);
+  box-shadow: $authshadow;
+  @include flex-column;
+  gap: size(32);
+  padding: size(40);
+}
+
+.inputfield {
+  @include setBgColor($inputbg, $black);
+  @include border(solid, 1, $inputborder);
+  font-size: size(16);
+  font-weight: 400;
+  line-height: 1.625;
+  @include w100;
+  height: size(56);
+  @include radius(12);
+  padding: size(15) size(17);
+  @include transitionsall;
+
+  &:focus {
+    border-color: $blue-green-500;
+  }
+
+  &::placeholder {
+    color: $neutral-600;
+  }
+}
+
+.messagefield {
+  @include setBgColor($inputbg, $black);
+  @include border(solid, 1, $inputborder);
+  font-size: size(16);
+  font-weight: 400;
+  line-height: 1.625;
+  @include w100;
+  @include radius(12);
+  padding: size(15) size(17);
+  @include transitionsall;
+
+  &:focus {
+    border-color: $blue-green-500;
+  }
+
+  &::placeholder {
+    color: $neutral-600;
+  }
+  &.textareafield {
+    height: size(104);
+  }
+}
+
+.form-select {
+  background-color: $inputbg;
+  color: $neutral-600;
+  @include border(solid, 1, $inputborder);
+  font-size: size(16);
+  font-weight: 400;
+  line-height: 1.625;
+  @include w100;
+  height: size(56);
+  @include radius(12);
+  padding: size(15) size(17);
+  @include transitionsall;
+
+  &:focus {
+    border-color: $blue-green-500;
+  }
+}
+
+.contactform {
+  background: $white;
+  @include border(solid, 1, $neutral-50);
+  @include radius(24);
+  padding: size(24);
+
+  .messagebox {
+    position: relative;
+
+    .messagelength {
+      color: $neutral-300;
+      position: absolute;
+      bottom: size(14);
+      right: size(14);
+      font-size: size(13);
+      font-weight: 400;
+      z-index: 10;
+    }
+  }
+}
+
+.accountform {
+  @include flex-column;
+  gap: size(24);
+}
+
+.inputbox {
+  @include flex-column;
+  gap: size(12);
+
+  .inputlabel {
+    @include flex-center-vert;
+    gap: size(4);
+    color: $labelcolor;
+    font-size: size(16);
+    font-weight: 400;
+
+    .mylabeltext {
+      color: inherit;
+      font: inherit;
+    }
+
+    .icon {
+      @include square(20);
+      @include flex-center;
+      overflow: hidden;
+    }
+  }
+
+  .fieldbox {
+    background: $border-black-50;
+    @include border(solid, 1, $changeborder);
+    @include radius(8);
+    position: relative;
+    height: size(48);
+    @include transitionsall;
+
+    .inputfield {
+      background: transparent;
+      @include wh100;
+      border: none;
+      @include radius(0);
+    }
+
+    .changefield {
+      width: calc(100% - size(70));
+      margin-right: auto;
+    }
+
+    .btn-change {
+      font-size: size(14);
+      font-weight: 600;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      @include translateY(-50%);
+      right: size(18);
+      z-index: 100;
+
+      @include hover {
+        color: $blue-green-700;
+      }
+    }
+
+    &:focus-within {
+      border-color: $blue-green-600;
+    }
+  }
+}
+
+.searchform {
+  background: $white;
+  @include radius(10);
+  padding: size(8);
+  @include flex-center-vert;
+  height: size(65);
+
+  .searchfield {
+    color: $neutral-950;
+    font-size: size(16);
+    font-weight: 600;
+    padding: size(18) size(24);
+    width: calc(100% - size(60));
+
+    @include breakpoint(mobile768) {
+      width: calc(100% - size(232));
+    }
+
+    &::placeholder {
+      color: rgba($neutral-950, 0.5);
+    }
+  }
+
+  .btn-search {
+    @include setBgColor($hovergradient, $white);
+    @include radius(8);
+    @include flex-center;
+    gap: size(8);
+    padding: size(16) size(20);
+    width: size(60);
+    height: size(55);
+
+    @include breakpoint(mobile768) {
+      width: size(232);
+    }
+
+    @include breakpoint(desktop1200) {
+      width: size(300);
+    }
+
+    .searchicon {
+      @include square(19);
+      @include flex-center;
+      overflow: hidden;
+    }
+
+    .searchtext {
+      color: inherit;
+      font-size: size(16);
+      font-weight: 600;
+    }
+  }
+}
+.uploadbox {
+  @include flex;
+  gap: size(22);
+  align-items: center;
+
+  .title {
+    color: $black;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .customfile {
+    cursor: pointer;
+    background: linear-gradient(
+      180deg,
+      #f5f5f6 0%,
+      rgba(245, 245, 246, 0) 100%
+    );
+    padding: size(10) size(18);
+    @include radius(8);
+    @include border(solid, 1, $neutral-100);
+  }
+}

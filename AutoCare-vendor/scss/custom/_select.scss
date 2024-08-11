@@ -1,0 +1,25 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.langselect {
+  appearance: none;
+  background: $white url("data:image/svg+xml,%3Csvg width='24' height='20' viewBox='0 0 24 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 7.6521L12 12.3478L18 7.6521' stroke='%23543E93' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  background-origin: content-box;
+  background-position: center right 0;
+  background-repeat: no-repeat;
+  // @include border(solid, 1, $primary);
+  @include radius(5);
+  // color: rgba($selectcolor, 0.6);
+  font-size: size(14);
+  font-weight: 500;
+  line-height: normal;
+  width: size(74);
+  height: size(36);
+  padding: size(8) size(12);
+
+  @include breakpoint(tab992) {
+    width: size(140);
+    height: size(46);
+    padding: size(10) size(16);
+  }
+}

@@ -1,0 +1,42 @@
+.swiper {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important;
+  background: #00715D;
+  height: 48px;
+  width: 48px;
+  border-radius: 100%;
+  border: none;
+}
+
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1 !important;
+  cursor: auto;
+  pointer-events: none;
+  background-color: #E2E8F0 !important;
+  color: #64748B !important;
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: -101px !important;
+  right: auto;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: 5px !important;
+  left: auto;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px !important;
+
+}

@@ -1,0 +1,54 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.brandlogo {
+  width: size(150);
+  height: size(37);
+  @include flex-center;
+  overflow: hidden;
+
+  @include breakpoint(mobile768) {
+    width: size(212);
+  }
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.footerlogo {
+  width: size(212);
+  height: size(37);
+  @include flex-center;
+  overflow: hidden;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+.feedbacklink {
+  color: $white;
+  @include border-single(bottom, solid, 1.5, $white);
+  font-size: size(16);
+  font-weight: 700;
+  line-height: 1.75;
+  @include transitionsall;
+
+  @include hover {
+    border-color: $blue-green-100;
+    color: $blue-green-100;
+  }
+}
+
+.parallax {
+  position: relative;
+  @include translateY(size(48));
+  opacity: 1;
+  transition: 1s all ease;
+
+  &.active {
+    @include translateY(0);
+    opacity: 1;
+  }
+}
