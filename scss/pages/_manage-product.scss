@@ -2,7 +2,12 @@
 @use "../partials" as *;
 
 .inner-content {
-  padding: size(0) size(30);
+  padding: size(0) size(10);
+
+  @include breakpoint(mobile576) {
+    padding: size(0) size(30);
+  }
+
   @include breakpoint(mobile768) {
     padding: size(0) size(68);
   }
