@@ -4889,6 +4889,16 @@ table tr td {
   background-color: #26bf6a;
 }
 
+.seller-information-inner .general-information .title {
+  color: var(--Gray-700, #344054);
+  /* Text md/Semibold */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
