@@ -1,7 +1,7 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-body {
+.body {
   overflow: hidden;
 }
 
@@ -133,23 +133,27 @@ body {
   }
 
   .menu-list {
-    overflow-y: scroll;
-    height: 62vh;
+    // overflow-y: scroll;
+    // height: 62vh;
+
     .search-input {
       display: flex;
       gap: size(8);
       border: 1px solid #e5e7eb;
       padding: size(10) size(14);
       @include radius(8);
+
       svg {
         height: size(20);
         width: size(20);
         flex-shrink: 0;
       }
+
       input {
         width: 100%;
       }
     }
+
     .menu-list-link {
       background: $white;
       display: flex;
@@ -285,6 +289,7 @@ body {
       display: flex;
       flex-direction: column;
       padding: size(0) size(16) size(24) size(16);
+
       .menu-list-link {
         background: $white;
         display: flex;
@@ -388,16 +393,19 @@ body {
       align-items: center;
       padding: size(24) size(24) size(32) size(24);
       border-top: 1px solid #e4e7ec;
+
       .user-image {
         width: size(40);
         height: size(40);
         @include radius(40);
+
         img {
           width: size(40);
           height: size(40);
           @include radius(40);
         }
       }
+
       .user-name {
         color: #101828;
         font-family: $primaryFont;
@@ -405,17 +413,20 @@ body {
         font-weight: 600;
         line-height: size(20);
       }
+
       .user-email {
         color: #475467;
         font-family: $primaryFont;
         font-size: size(14);
         line-height: size(20);
       }
+
       .logout-icon {
         width: size(20);
         height: size(20);
         border: none;
         background: transparent;
+
         svg {
           width: size(20);
           height: size(20);
@@ -425,25 +436,46 @@ body {
   }
 }
 
+.sidebar-scroll {
+  overflow-y: scroll;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &::-webkit-scrollbar {
+    background: $white;
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    width: 0;
+  }
+}
+
 .menu-list {
   overflow-y: scroll;
-  height: 54vh;
   padding: 0 size(16);
+
+  flex-grow: 1;
+
   .search-input {
     display: flex;
     gap: size(8);
     border: 1px solid #e5e7eb;
     padding: size(10) size(14);
     @include radius(8);
+
     svg {
       height: size(20);
       width: size(20);
       flex-shrink: 0;
     }
+
     input {
       width: 100%;
     }
   }
+
   .menu-list-link {
     background: $white;
     display: flex;
@@ -775,6 +807,7 @@ body {
 
   .page-header {
     padding: size(32) size(68) 0 size(68);
+
     .page-title {
       color: #101828;
       font-family: $primaryFont;
@@ -782,6 +815,7 @@ body {
       font-weight: 700;
       line-height: size(28);
     }
+
     .page-text {
       color: #475467;
       font-family: $primaryFont;
@@ -789,6 +823,7 @@ body {
       line-height: size(20);
     }
   }
+
   .sales-details {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -796,11 +831,14 @@ body {
     @include breakpoint(mobile768) {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include breakpoint(desktop1200) {
       grid-template-columns: repeat(3, 1fr);
     }
+
     padding: size(32) size(68) 0 size(68);
     gap: size(24);
+
     &-cart {
       display: flex;
       flex-direction: column;
@@ -810,10 +848,12 @@ body {
       border: 1px solid #e4e7ec;
       background: #fff;
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
       .top-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         .title {
           color: #101828;
           font-family: Inter;
@@ -821,19 +861,23 @@ body {
           font-weight: 600;
           line-height: size(24);
         }
+
         .three-dots-icon {
           width: size(20);
           height: size(20);
         }
       }
+
       .bottom-content {
         display: flex;
         justify-content: space-between;
         align-items: end;
+
         &-text {
           display: flex;
           flex-direction: column;
           gap: size(16);
+
           .number {
             color: #101828;
             font-family: $primaryFont;
@@ -842,18 +886,22 @@ body {
             line-height: size(44);
             letter-spacing: -0.72px;
           }
+
           .increase-inner {
             display: flex;
             align-items: center;
             gap: size(4);
+
             .increase-icon {
               width: size(20);
               height: size(20);
+
               svg {
                 width: size(20);
                 height: size(20);
               }
             }
+
             .increase-text {
               color: #475467;
               font-family: $primaryFont;
@@ -861,6 +909,7 @@ body {
               font-weight: 500;
               line-height: size(20);
               margin-top: size(5);
+
               .increase {
                 color: #027a48;
                 display: inline-block;
@@ -869,6 +918,7 @@ body {
             }
           }
         }
+
         .increase-graph {
           width: size(96);
           // height: 48px;
@@ -877,6 +927,7 @@ body {
       }
     }
   }
+
   .dashboard-inner {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -884,17 +935,22 @@ body {
     @include breakpoint(mobile576) {
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include breakpoint(mobile768) {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include breakpoint(tab992) {
       grid-template-columns: repeat(4, 1fr);
     }
+
     @include breakpoint(desktop1200) {
       grid-template-columns: repeat(5, 1fr);
     }
+
     gap: size(16);
     padding: size(40) size(68);
+
     .dashboard-cart {
       padding: size(24);
       @include radius(12);
@@ -904,6 +960,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: size(12);
+
       &-title {
         color: #101828;
         font-family: $primaryFont;
@@ -926,10 +983,12 @@ body {
         display: flex;
         align-items: center;
         gap: size(4);
+
         svg {
           width: size(20);
           height: size(20);
         }
+
         p {
           color: #027a48;
           font-family: $primaryFont;
@@ -943,10 +1002,12 @@ body {
         display: flex;
         align-items: center;
         gap: size(4);
+
         svg {
           width: size(20);
           height: size(20);
         }
+
         p {
           color: #b42318;
           font-family: $primaryFont;
@@ -964,6 +1025,7 @@ body {
     gap: size(8);
     background-color: #fafafa;
     padding: size(40) size(68);
+
     &-cart {
       display: flex;
       justify-content: space-between;
@@ -972,16 +1034,19 @@ body {
       background: #fff;
       box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
       padding: size(16);
+
       .success-img {
         width: size(35);
         height: size(35);
         @include radius(35);
+
         img {
           width: size(35);
           height: size(35);
           @include radius(35);
         }
       }
+
       .cart-content {
         .title {
           color: #344054;
@@ -989,13 +1054,16 @@ body {
           font-size: size(16);
           font-weight: 600;
           line-height: size(24);
+
           .success {
             color: #0d9488;
           }
+
           .canceled {
             color: #ff3e50;
           }
         }
+
         .details {
           color: #475467;
           font-family: $primaryFont;
@@ -1010,6 +1078,7 @@ body {
           font-weight: 600;
           line-height: size(20);
         }
+
         .viewChanges-btn {
           color: #0d9488;
           font-family: $primaryFont;
@@ -1018,15 +1087,18 @@ body {
           line-height: size(20);
         }
       }
+
       &-right {
         display: flex;
         flex-direction: column;
         gap: size(40);
+
         .close-btn {
           cursor: pointer;
           border: none;
           background: transparent;
           align-self: flex-end;
+
           svg {
             width: size(12);
             height: size(12);
@@ -1039,6 +1111,7 @@ body {
             height: size(14);
           }
         }
+
         .notification-time {
           color: #6b7280;
           text-align: right;

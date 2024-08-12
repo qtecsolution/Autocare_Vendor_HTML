@@ -30,6 +30,8 @@
   gap: 24px;
   position: sticky;
   top: 0;
+  background: #fff;
+  z-index: 2;
 }
 
 .search-input {
@@ -84,7 +86,8 @@
   margin-right: -20px;
   -webkit-transition: .3s;
   -o-transition: .3s;
-  transition: .3s
+  transition: .3s;
+  z-index: 9;
 }
 
 @media(prefers-reduced-motion:reduce) {
