@@ -33,6 +33,11 @@
         display: flex;
         align-items: center;
         gap: size(20);
+        flex-direction: column;
+
+        @include breakpoint(mobile576) {
+          flex-direction: row;
+        }
 
         &-img {
           display: flex;
@@ -60,6 +65,10 @@
 
     .right {
       .login-form {
+        padding: size(20);
+        @include breakpoint(mobile576) {
+          padding: size(50);
+        }
         @include breakpoint(tab992) {
           width: size(450);
         }
@@ -68,7 +77,6 @@
           width: size(500);
         }
 
-        padding: size(50);
         flex-shrink: 0;
         @include radius(24);
         border: 1px solid #e5e7eb;
@@ -176,6 +184,7 @@
           .login-btn {
             @include radius(10);
             background: #0f766d;
+            text-align: center;
             color: #fff;
             font-family: $primaryFont;
             font-size: size(16);
@@ -208,6 +217,12 @@
                 border: 1px solid #0f766d;
               }
             }
+          }
+
+          .login-checkbox-inner {
+            display: flex;
+            flex-direction: column;
+            gap: size(10);
           }
         }
       }
@@ -317,8 +332,12 @@
     }
 
     .center {
-      width: 500px;
-      padding: size(50);
+      width: 100%;
+      padding: size(20);
+      @include breakpoint(mobile576) {
+        padding: size(50);
+        width: 500px;
+      }
       flex-shrink: 0;
       @include radius(24);
       border: 1px solid #e5e7eb;
@@ -428,6 +447,12 @@
           &:hover {
             background: #094641;
           }
+        }
+
+        .login-checkbox-inner {
+          display: flex;
+          flex-direction: column;
+          gap: size(10);
         }
       }
     }

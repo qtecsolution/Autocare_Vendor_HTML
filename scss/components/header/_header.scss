@@ -1,61 +1,44 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-.header {
+.header-section {
+  padding: size(20) 0;
+  border-bottom: 1px solid #e5e7eb;
   position: sticky;
-  background: #000;
-  width: 100%;
-  z-index: 20;
-  // background: $white url('../../../assets/images/home/Banner.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   top: 0;
-  .header-nav {
-    align-items: center;
-    border-bottom: 1px solid #cbd5e1;
-    padding: 10px 0;
-    .desktop-menu {
-      list-style: none;
-      gap: 40px;
-      align-items: center;
-      .desktop-menu-list {
-        .desktop-menu-link {
-          color: $neutral-900;
-          font-family: Onest;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px; /* 150% */
-        }
+  z-index: 2;
+  background: #fafafa;
+  &-inner {
+    .logo {
+      img {
+        width: size(94);
+        height: size(60);
       }
     }
-    .right-nav {
-      list-style: none;
-      gap: 20px;
-      align-items: center;
-      padding: 0;
-      @include breakpoint(mobile576) {
-        gap: 40px;
-      }
-    }
-    .mobile-menu {
-      list-style: none;
-      flex-direction: column;
-      gap: 10px;
-      padding-left: 0;
-      .mobile-menu-list {
-        .mobile-menu-link {
-          color: $neutral-900;
-          font-family: "Onest ", sans-serif;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px; /* 150% */
+
+    .header-button {
+      .login-btn,
+      .signUp-btn {
+        padding: size(10) size(16);
+        @include radius(8);
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        background: transparent;
+        transition: all 0.35s ease-in-out;
+        &:hover {
+          background: #0f766d;
+          color: $white;
         }
+      }
+
+      .active {
+        background: #0f766d;
+        color: $white;
       }
     }
   }
-}
-.menu-active{
-  color: $primary-color-700 !important;
 }
