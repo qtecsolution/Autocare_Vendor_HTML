@@ -1,89 +1,110 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-.primary-button {
-  padding: size(12) size(20);
-  @include radius(4);
-  background: $primary-color-base;
-  color: $white;
-  font-family: $primaryFont;
-  font-size: size(16);
-  font-weight: 500;
-  line-height: 24px;
-  border: none;
-  transition: all 0.35s ease-in-out;
-  @include hover {
-    background: $primary-color-700;
-  }
-}
+// .primary-button {
+//   padding: size(12) size(20);
+//   @include radius(4);
+//   background: $primary-color-base;
+//   color: $white;
+//   font-family: $primaryFont;
+//   font-size: size(16);
+//   font-weight: 500;
+//   line-height: 24px;
+//   border: none;
+//   transition: all 0.35s ease-in-out;
+//   @include hover {
+//     background: $primary-color-700;
+//   }
+// }
 
-.save-draft-btn {
-  display: inline-flex;
-  padding: size(10) size(16);
+// .save-draft-btn {
+//   display: inline-flex;
+//   padding: size(10) size(16);
+//   justify-content: center;
+//   align-items: center;
+//   gap: size(8);
+//   @include radius(8);
+//   border: 1px solid #e5e7eb;
+//   background: #fff;
+//   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+//   color: #d1d5db;
+//   font-family: $primaryFont;
+//   font-size: size(14);
+//   font-weight: 600;
+//   line-height: size(20);
+//   cursor: pointer;
+// }
+// .save-draft-btn.active {
+//   background: #fff;
+//   color: #1f2937;
+//   cursor: pointer;
+// }
+// .confirm-btn {
+//   display: inline-flex;
+//   width: 145px;
+//   padding: size(10) size(16);
+//   justify-content: center;
+//   align-items: center;
+//   gap: 8px;
+//   @include radius(8);
+//   border: none;
+//   background: #d1d5db;
+//   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+//   color: #fff;
+//   font-family: $primaryFont;
+//   font-size: size(14);
+//   font-weight: 600;
+//   line-height: size(20);
+//   cursor: pointer;
+// }
+// .confirm-btn.active {
+//   background: #0d9488;
+//   cursor: pointer;
+//   &:hover {
+//     color: #fff;
+//   }
+// }
+
+// .setMultipleLanguage-btn {
+//   display: flex;
+//   align-items: center;
+//   padding: size(5) size(8);
+//   justify-content: center;
+//   align-items: center;
+//   gap: size(4);
+//   border-radius: size(6);
+//   border: 0.5px solid #e7eaef;
+//   background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
+
+//   color: #030d18;
+//   font-family: $primaryFont;
+//   font-size: size(10);
+//   font-weight: 600;
+//   line-height: 100%;
+//   svg {
+//     margin-top: size(4);
+//     width: size(14);
+//     height: size(14);
+//   }
+// }
+
+.new-campaign-btn {
+  border: none;
+  display: flex;
+  padding: size(10) size(10);
   justify-content: center;
   align-items: center;
   gap: size(8);
   @include radius(8);
-  border: 1px solid #e5e7eb;
-  background: #fff;
+  background: #0f766d;
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #d1d5db;
+  color: $white;
   font-family: $primaryFont;
   font-size: size(14);
   font-weight: 600;
   line-height: size(20);
-  cursor: pointer;
-}
-.save-draft-btn.active {
-  background: #fff;
-  color: #1f2937;
-  cursor: pointer;
-}
-.confirm-btn {
-  display: inline-flex;
-  width: 145px;
-  padding: size(10) size(16);
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  @include radius(8);
-  border: none;
-  background: #d1d5db;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #fff;
-  font-family: $primaryFont;
-  font-size: size(14);
-  font-weight: 600;
-  line-height: size(20);
-  cursor: pointer;
-}
-.confirm-btn.active {
-  background: #0d9488;
-  cursor: pointer;
-  &:hover {
-    color: #fff;
-  }
-}
-
-.setMultipleLanguage-btn {
-  display: flex;
-  align-items: center;
-  padding: size(5) size(8);
-  justify-content: center;
-  align-items: center;
-  gap: size(4);
-  border-radius: size(6);
-  border: 0.5px solid #e7eaef;
-  background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
-
-  color: #030d18;
-  font-family: $primaryFont;
-  font-size: size(10);
-  font-weight: 600;
-  line-height: 100%;
   svg {
-    margin-top: size(4);
-    width: size(14);
-    height: size(14);
+    height: size(20);
+    width: size(20);
   }
 }

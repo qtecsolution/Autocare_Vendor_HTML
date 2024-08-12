@@ -91,6 +91,61 @@
           }
         }
       }
+
+      .new-registration {
+        @include radius(16);
+        background: linear-gradient(180deg, #0d9488 0%, #0f766d 100%);
+        box-shadow: 0px 0px 1px 0px rgba(12, 26, 75, 0.1), 0px 4px 20px -2px rgba(50, 50, 71, 0.08);
+        padding: size(30) size(40);
+
+        .left-content {
+          display: flex;
+          flex-direction: column;
+          gap: size(10);
+          .title {
+            color: $white;
+            font-family: $primaryFont;
+            font-size: size(24);
+            font-weight: 700;
+            line-height: size(32);
+          }
+          .details {
+            color: #fff;
+            font-family: $primaryFont;
+            font-size: size(16);
+            font-weight: 500;
+            line-height: size(24);
+          }
+        }
+
+        .right-content {
+
+          @include breakpoint(mobile576){
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .check-now-btn {
+            @include radius(8);
+            background: $white;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+            color: #0f766d;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 600;
+            line-height: size(20);
+            padding: size(10) size(16);
+            border: none;
+
+            svg {
+              height: size(20);
+              width: size(20);
+            }
+          }
+        }
+      }
     }
 
     .order-management-body {
@@ -283,6 +338,38 @@
           }
         }
       }
+
+      .flash-sales-content {
+        padding: size(15);
+        @include breakpoint(mobile576) {
+          padding: size(40);
+        }
+        display: flex;
+        flex-direction: column;
+        gap: size(20);
+        .details {
+          color: #6b7280;
+          font-family: $primaryFont;
+          font-size: size(16);
+          line-height: size(24);
+        }
+
+        .list {
+          padding-left: size(16);
+          li {
+            color: #1f2937;
+            font-family: $primaryFont;
+            font-size: size(16);
+            font-weight: 500;
+            line-height: size(24);
+
+            span {
+              color: #6b7280;
+              font-weight: 400;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -437,7 +524,7 @@
   .violation {
     background-color: #ff3e50;
   }
-  .delivered{
-    background-color: #26BF6A;
+  .delivered {
+    background-color: #26bf6a;
   }
 }
