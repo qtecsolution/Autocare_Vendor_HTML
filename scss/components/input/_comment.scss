@@ -4,7 +4,8 @@
 // Variables
 $checkbox-size: 16px;
 $checkbox-border: #e5e7eb;
-$checkbox-selected: #0F766D;
+$checkbox-selected: #0f766d;
+$table-checkbox-size: 16px;
 
 // checkbox demo html
 // <div class="form-checkbox">
@@ -111,7 +112,108 @@ $checkbox-selected: #0F766D;
   }
 }
 
-$table-checkbox-size: 16px;
+.box-checkbox {
+  position: absolute;
+  opacity: 0;
+
+  // Text
+  & + label {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    line-height: $table-checkbox-size;
+    padding-left: $table-checkbox-size + 15;
+
+    color: #7b7f95;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(16);
+    letter-spacing: 0.14px;
+
+    // Checkbox
+    &:before {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      background: $white;
+      width: $table-checkbox-size;
+      border: 1px solid $checkbox-border;
+      height: $table-checkbox-size;
+      box-shadow: inset 0 0 0 1px $checkbox-border;
+      @include radius(4);
+      transition: 200ms ease-in-out all;
+    }
+
+    // Tick
+    &:after {
+      position: absolute;
+      display: block;
+      top: 3px;
+      left: 6px;
+      content: "";
+      width: 4px;
+      height: 8px;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      transform: rotate(45deg);
+
+      transition: 200ms ease-in-out all;
+    }
+  }
+  // Hover
+  // & + label:hover {
+  //   color: #333;
+  // }
+
+  // Focus
+  & + label:focus {
+    outline: none;
+  }
+
+  // Checked
+  &:checked {
+    & + label {
+      &:before {
+        background: $checkbox-selected;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: white;
+      }
+    }
+  }
+
+  // Disabled
+  &:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2; // Disabled colour
+        box-shadow: none;
+      }
+      &:after {
+        border-color: transparent;
+      }
+    }
+  }
+
+  // Disabled Checked
+  &:checked:disabled {
+    & + label {
+      &:before {
+        background: #f2f2f2;
+        box-shadow: none;
+      }
+      &:after {
+        border-color: #cecece;
+      }
+    }
+  }
+}
+
 // $checkbox-border: #e5e7eb;
 // $checkbox-selected: #0d9488;
 
@@ -168,7 +270,6 @@ $table-checkbox-size: 16px;
       transition: 200ms ease-in-out all;
     }
   }
-
   // Hover
   // & + label:hover {
   //   color: #333;
@@ -324,7 +425,7 @@ $table-checkbox-size: 16px;
 }
 
 // login-checkbox
-$login-checkbox-size : 16px;
+$login-checkbox-size: 16px;
 .login-checkbox {
   position: absolute;
   opacity: 0;
@@ -337,11 +438,11 @@ $login-checkbox-size : 16px;
     line-height: $login-checkbox-size;
     padding: size(15) 0;
     padding-left: $login-checkbox-size + 29;
-    border: 1px solid #E7EAEF;
+    border: 1px solid #e7eaef;
     @include radius(8);
     background: $white;
 
-    color: #1F2937;
+    color: #1f2937;
     font-family: $primaryFont;
     font-size: size(16);
     line-height: size(16);
@@ -382,7 +483,6 @@ $login-checkbox-size : 16px;
       transition: 200ms ease-in-out all;
     }
   }
-
 
   // Focus
   & + label:focus {
@@ -439,7 +539,7 @@ $login-checkbox-size : 16px;
 //   <input type="checkbox" checked>
 //   <span class="slider round"></span>
 // </label>
-
+$switch-bg-color: #0f766d;
 .switch {
   position: relative;
   display: inline-block;
@@ -456,7 +556,7 @@ $login-checkbox-size : 16px;
     width: 0;
     height: 0;
     &:checked + .slider {
-      background-color: #2563eb;
+      background-color: $switch-bg-color;
       &::before {
         -webkit-transform: translateX(22px);
         -ms-transform: translateX(22px);
@@ -464,12 +564,12 @@ $login-checkbox-size : 16px;
       }
 
       &::after {
-        border-right: 1px solid #2563eb;
-        border-bottom: 1px solid #2563eb;
+        border-right: 1px solid $switch-bg-color;
+        border-bottom: 1px solid $switch-bg-color;
       }
     }
     &:focus + .slider {
-      box-shadow: 0 0 1px #2563eb;
+      box-shadow: 0 0 1px $switch-bg-color;
     }
   }
 

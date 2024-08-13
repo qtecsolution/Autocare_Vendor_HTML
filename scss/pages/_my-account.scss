@@ -76,6 +76,9 @@
 .user-management-section {
   margin-top: size(40);
   &-inner {
+    display: flex;
+    gap: size(30);
+    flex-direction: column;
     .user-management-all-btn {
       display: flex;
       align-items: center;
@@ -105,12 +108,186 @@
     }
 
     .user-management-inner {
-      border-radius: 16px;
-      border: 1px solid var(--Border-Border-Color, #e5e7eb);
-      background: var(--Text-Title-Light-Color, #fff);
-      &-top{
+      @include radius(16);
+      border: 1px solid #e5e7eb;
+      background: $white;
+      padding-bottom: size(10);
+      &-top {
         padding: size(18) size(22);
+        border-bottom: 1px solid #e5e7eb;
+        display: flex;
+        flex-direction: column;
+        gap: size(10);
+        @include breakpoint(mobile576) {
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .right {
+          .reset-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: size(8);
+            padding: size(10) size(12);
+            @include radius(8);
+            background: #f2f2f7;
+            color: #6b7280;
+            text-align: center;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 500;
+            letter-spacing: 0.07px;
+            border: none;
+            svg {
+              height: size(14);
+              width: size(14);
+            }
+          }
+        }
       }
+    }
+  }
+}
+
+.user-management-body-inner {
+  .table-container {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .product-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    thead {
+      border-bottom: 1px solid #e5e7eb;
+      background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    th {
+      padding: 15px;
+      text-align: left;
+      color: #6b7280;
+      font-family: $primaryFont;
+      font-size: size(12);
+      font-weight: 600;
+      line-height: size(16);
+      letter-spacing: 0.06px;
+      text-transform: uppercase;
+    }
+    td {
+      padding: 15px;
+      text-align: left;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    tr {
+      border-bottom: 1px solid #dddddd;
+      &:last-child {
+        border-bottom: none;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+    }
+  }
+  .product-info-header {
+    width: 370px;
+  }
+  .product-info-inner {
+    width: 370px;
+    .product-info {
+      display: flex;
+      align-items: center;
+      gap: size(8);
+
+      .product-image {
+        width: 74px;
+        height: 60px;
+        @include radius(8);
+      }
+
+      .product-details {
+        .title {
+          width: 214px;
+          color: var(--Text-Title-Color, #1f2937);
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px; /* 128.571% */
+        }
+        .buy-product,
+        .see-product {
+          svg {
+            width: size(14);
+            height: size(14);
+          }
+          p {
+            color: #0f766d;
+            font-family: $primaryFont;
+            font-size: size(12);
+            font-weight: 500;
+            line-height: size(16);
+          }
+        }
+      }
+    }
+  }
+
+  .pice-text {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 600;
+    line-height: size(20);
+    letter-spacing: 0.07px;
+  }
+
+  .delete-btn,
+  .edit-btn {
+    display: flex;
+    padding: size(4);
+    align-items: center;
+    @include radius(6);
+    border: 1px solid #d0d5dd;
+    background: #f9fafb;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    svg {
+      width: 12px;
+      height: 12px;
+      flex-shrink: 0;
+    }
+  }
+  .name-text {
+    width: size(214);
+  }
+  .name-text,
+  .email-text,
+  .roles-text {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(18);
+  }
+  .roles-text {
+    color: #0f766d;
+  }
+  .owner-icon {
+    svg {
+      width: size(20);
+      height: size(20);
+    }
+  }
+
+  .action-btn {
+    svg {
+      width: size(5);
+      height: size(21);
     }
   }
 }

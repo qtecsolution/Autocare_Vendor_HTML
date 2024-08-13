@@ -103,6 +103,11 @@
   font-size: size(14);
   font-weight: 600;
   line-height: size(20);
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    color: $white;
+    background: #074b45;
+  }
   svg {
     height: size(20);
     width: size(20);
