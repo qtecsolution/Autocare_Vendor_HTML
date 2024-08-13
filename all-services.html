@@ -68,7 +68,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
+            <a class="menu-list-link collapsed" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -92,7 +92,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-1">
+            <div class="collapse" id="dropdownmenu-1">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./add-Product.html" class="submenu-link">
@@ -101,8 +101,8 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./manage-product-empty.html" class="submenu-link active">
-                    <span class="text">Manage Product</span>
+                  <a href="./all-products-empty.html" class="submenu-link">
+                    <span class="text">All Products</span>
                   </a>
                 </li>
 
@@ -141,7 +141,7 @@
             <div class="collapse" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./order-management-empty.html" class="submenu-link active">
+                  <a href="./order-management-empty.html" class="submenu-link">
                     <span class="text">Orders</span>
                   </a>
                 </li>
@@ -162,7 +162,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-8" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-8" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
@@ -190,7 +190,7 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-8">
+            <div class="collapse show" id="dropdownmenu-8">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./add-services.html" class="submenu-link">
@@ -199,7 +199,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./all-services-empty.html" class="submenu-link">
+                  <a href="./all-services-empty.html" class="submenu-link active">
                     <span class="text">Manage Services</span>
                   </a>
                 </li>
@@ -723,30 +723,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -824,30 +813,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            658
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -925,30 +903,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -1026,30 +993,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -1127,30 +1083,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -1228,30 +1173,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -1329,30 +1263,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">
@@ -1430,30 +1353,19 @@
                       </td>
 
                       <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            230
-                          </p>
-
-                          <div class="d-flex align-items-center gap-2">
-                            <button class="edit-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M5.99999 10.0001H10.5M1.5 10.0001H2.33727C2.58186 10.0001 2.70416 10.0001 2.81925 9.97248C2.92128 9.94799 3.01883 9.90758 3.1083 9.85275C3.20921 9.79091 3.29569 9.70444 3.46864 9.53148L9.75001 3.25011C10.1642 2.8359 10.1642 2.16433 9.75001 1.75011C9.3358 1.3359 8.66423 1.3359 8.25001 1.75011L1.96863 8.03148C1.79568 8.20444 1.7092 8.29091 1.64736 8.39183C1.59253 8.4813 1.55213 8.57885 1.52763 8.68088C1.5 8.79597 1.5 8.91826 1.5 9.16286V10.0001Z"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                            <button class="delete-btn">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                fill="none">
-                                <path
-                                  d="M8 3V2.6C8 2.03995 8 1.75992 7.89101 1.54601C7.79513 1.35785 7.64215 1.20487 7.45399 1.10899C7.24008 1 6.96005 1 6.4 1H5.6C5.03995 1 4.75992 1 4.54601 1.10899C4.35785 1.20487 4.20487 1.35785 4.10899 1.54601C4 1.75992 4 2.03995 4 2.6V3M1.5 3H10.5M9.5 3V8.6C9.5 9.44008 9.5 9.86012 9.33651 10.181C9.1927 10.4632 8.96323 10.6927 8.68099 10.8365C8.36012 11 7.94008 11 7.1 11H4.9C4.05992 11 3.63988 11 3.31901 10.8365C3.03677 10.6927 2.8073 10.4632 2.66349 10.181C2.5 9.86012 2.5 9.44008 2.5 8.6V3"
-                                  stroke="#A7AAB9" stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
+                        <label class="switch">
+                          <span class="close-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"
+                              fill="none">
+                              <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <input type="checkbox" checked>
+                          <span class="slider round"></span>
+                        </label>
                       </td>
 
                       <td class="text-center">

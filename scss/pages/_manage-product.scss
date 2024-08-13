@@ -53,7 +53,7 @@
     }
     .notification-svg.active {
       svg {
-        path{
+        path {
           fill: #0f766d;
         }
       }
@@ -245,6 +245,38 @@
         }
       }
     }
+    &-empty-body {
+      padding: size(100) 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: size(20);
+      figure {
+        img {
+          width: size(200);
+          height: size(200);
+        }
+      }
+
+      .title {
+        color: #1f2937;
+        text-align: center;
+        font-family: $primaryFont;
+        font-size: size(24);
+        font-weight: 700;
+        letter-spacing: 0.12px;
+      }
+      .details {
+        color: #6b7280;
+        text-align: center;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 500;
+        line-height: size(24);
+        letter-spacing: 0.08px;
+        max-width: size(346);
+      }
+    }
     &-body {
       .table-container {
         width: 100%;
@@ -284,8 +316,8 @@
           border-bottom: 1px solid #dddddd;
           &:last-child {
             border-bottom: none;
-            border-bottom-left-radius: 16px;
-            border-bottom-right-radius: 16px;
+            border-bottom-left-radius: size(16);
+            border-bottom-right-radius: size(16);
           }
         }
       }
@@ -309,7 +341,7 @@
             .title {
               width: 214px;
               color: var(--Text-Title-Color, #1f2937);
-              font-family: Inter;
+              font-family: $primaryFont;
               font-size: 14px;
               font-style: normal;
               font-weight: 500;
@@ -369,7 +401,7 @@
         padding: 3px 10px;
         border-radius: 999px;
         color: #fff;
-        font-family: Inter;
+        font-family: $primaryFont;
         font-size: size(10);
         font-weight: 500;
         line-height: size(16);
@@ -407,14 +439,11 @@
     gap: size(10);
     .left {
       .text {
-        color: var(--Text-Secondary-Text-Color, #6b7280);
-
-        /* XS/Medium */
-        font-family: Inter;
-        font-size: 12px;
-        font-style: normal;
+        color: #6b7280;
+        font-family: $primaryFont;
+        font-size: size(12);
         font-weight: 500;
-        line-height: 16px; /* 133.333% */
+        line-height: size(16);
         letter-spacing: 0.06px;
       }
     }
