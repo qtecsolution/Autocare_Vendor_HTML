@@ -2,17 +2,114 @@
 @use "../partials" as *;
 
 .seller-information {
+  margin-bottom: size(40);
   &-inner {
     .general-information {
+      @include radius(16);
+      border: 1px solid #e5e7eb;
+      background: #fff;
       .title {
-        color: var(--Gray-700, #344054);
-
-        /* Text md/Semibold */
-        font-family: Inter;
-        font-size: 16px;
-        font-style: normal;
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(16);
         font-weight: 600;
-        line-height: 24px; /* 150% */
+        line-height: size(24);
+        padding: size(15) size(30);
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .information-body {
+        padding: size(20) size(30) size(30) size(30);
+        display: flex;
+        flex-direction: column;
+        gap: size(20);
+        .information-inner {
+          display: flex;
+          justify-content: space-between;
+          .left {
+            display: flex;
+            align-items: center;
+            gap: size(12);
+            figure {
+              padding: size(13);
+              background: #f4f5f7;
+              border: 1px solid #e5e7eb;
+              display: inline-block;
+              @include radius(99999);
+              svg {
+                height: size(24);
+                width: size(24);
+              }
+            }
+            .text {
+              display: flex;
+              flex-direction: column;
+              gap: size(6);
+              .paragraph {
+                color: #7b7f95;
+                font-family: $primaryFont;
+                font-size: size(14);
+                font-weight: 500;
+                line-height: size(20);
+              }
+
+              .heading {
+                color: #1f2937;
+                font-family: $primaryFont;
+                font-size: size(16);
+                font-weight: 700;
+                line-height: size(24);
+              }
+            }
+          }
+          .right {
+            svg {
+              height: size(20);
+              width: size(20);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.user-management-section {
+  margin-top: size(40);
+  &-inner {
+    .user-management-all-btn {
+      display: flex;
+      align-items: center;
+      gap: size(20);
+      .user-management-btn {
+        @include radius(8);
+        color: #6b7280;
+        background: transparent;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(20);
+        letter-spacing: 0.07px;
+        padding: size(8) size(12);
+        border: none;
+        transition: all 0.35s ease-in-out;
+        &:hover {
+          color: $white;
+          background: #0f766d;
+        }
+      }
+
+      .active {
+        background: #0f766d;
+        color: $white;
+      }
+    }
+
+    .user-management-inner {
+      border-radius: 16px;
+      border: 1px solid var(--Border-Border-Color, #e5e7eb);
+      background: var(--Text-Title-Light-Color, #fff);
+      &-top{
+        padding: size(18) size(22);
       }
     }
   }

@@ -210,7 +210,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-4" role="button"
+            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-4" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -232,7 +232,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-4">
+            <div class="collapse" id="dropdownmenu-4">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./campaign-management-emply.html" class="submenu-link">
@@ -247,7 +247,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./flash-sales.html" class="submenu-link active">
+                  <a href="./flash-sales.html" class="submenu-link">
                     <span class="text">Flash Sales</span>
                   </a>
                 </li>
@@ -357,7 +357,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-7" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-7" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -379,7 +379,7 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-7">
+            <div class="collapse show" id="dropdownmenu-7">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./seller-profile.html" class="submenu-link">
@@ -400,7 +400,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./user-management.html" class="submenu-link">
+                  <a href="./user-management.html" class="submenu-link active">
                     <span class="text">User Management</span>
                   </a>
                 </li>
@@ -502,68 +502,106 @@
         <section class="order-management-section">
           <div class="order-management-section-inner">
             <div class="order-management-header">
-              <h1 class="title">Flash Sales</h1>
+              <div class="d-flex justify-content-between align-items-center">
+                <h1 class="title">User Management</h1>
+                <button class="new-campaign-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9.99984 4.16675V15.8334M4.1665 10.0001H15.8332" stroke="white" stroke-width="1.67"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span>
+                    Add Sub Account
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <div class="new-registration">
-                <div class="row g-3">
-                  <div class="col-sm-8">
-                    <div class="left-content">
-                      <h1 class="title">
-                        New Registration Entrance of Autocare Flash Sales. <br> Check Now!
-                      </h1>
+        <section class="user-management-section">
+          <div class="user-management-section-inner">
+            <div class="user-management-all-btn">
+              <button class="user-management-btn active">Manage Sub Account</button>
+              <button class="user-management-btn ">Manage Roles</button>
+            </div>
 
-                      <p class="details">
-                        Get 10% extra on joining.
-                      </p>
-                    </div>
+            <div class="user-management-inner">
+              <div class="user-management-inner-top">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="box">
+                    <select class="wide selectize">
+                      <option data-display="Select">Role</option>
+                      <option value="1">Role 1</option>
+                      <option value="2">Role 2</option>
+                      <option value="4">Role 3</option>
+                    </select>
                   </div>
-                  <div class="col-sm-4">
-                    <div class="right-content">
-                      <button class="check-now-btn">
-                        <span>Check Now</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M3 10C3 9.80109 3.07902 9.61033 3.21967 9.46968C3.36032 9.32903 3.55109 9.25001 3.75 9.25001H14.388L10.23 5.29001C10.1557 5.22257 10.0956 5.1409 10.0534 5.04983C10.0112 4.95875 9.98771 4.86014 9.98432 4.75982C9.98093 4.65951 9.99771 4.55953 10.0337 4.46582C10.0696 4.37211 10.124 4.28657 10.1937 4.21427C10.2633 4.14196 10.3467 4.08437 10.439 4.04491C10.5313 4.00544 10.6306 3.9849 10.7309 3.9845C10.8313 3.98411 10.9307 4.00386 11.0233 4.0426C11.1159 4.08133 11.1998 4.13826 11.27 4.21001L16.77 9.46001C16.8426 9.52997 16.9003 9.61385 16.9398 9.70663C16.9792 9.79941 16.9995 9.89919 16.9995 10C16.9995 10.1008 16.9792 10.2006 16.9398 10.2934C16.9003 10.3862 16.8426 10.47 16.77 10.54L11.27 15.79C11.1998 15.8618 11.1159 15.9187 11.0233 15.9574C10.9307 15.9962 10.8313 16.0159 10.7309 16.0155C10.6306 16.0151 10.5313 15.9946 10.439 15.9551C10.3467 15.9156 10.2633 15.8581 10.1937 15.7857C10.124 15.7134 10.0696 15.6279 10.0337 15.5342C9.99771 15.4405 9.98093 15.3405 9.98432 15.2402C9.98771 15.1399 10.0112 15.0413 10.0534 14.9502C10.0956 14.8591 10.1557 14.7774 10.23 14.71L14.388 10.75H3.75C3.55109 10.75 3.36032 10.671 3.21967 10.5303C3.07902 10.3897 3 10.1989 3 10Z"
-                            fill="#0F766D" />
-                        </svg>
-                      </button>
-                    </div>
+
+                  <div class="box">
+                    <select class="wide selectize">
+                      <option data-display="Select">Status</option>
+                      <option value="1">Status 1</option>
+                      <option value="2">Status 2</option>
+                      <option value="4">Status 3</option>
+                    </select>
                   </div>
+
+                  <div class="box">
+                    <select class="wide selectize">
+                      <option data-display="Select">Email</option>
+                      <option value="1">Email 1</option>
+                      <option value="2">Email 2</option>
+                      <option value="4">Email 3</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="">
+                  <button>
+                    <span>Reset Filters</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M3.5 10.5002L10.5 3.50024M3.5 3.50024L10.5 10.5002" stroke="#1F2937"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
 
-            <div class="order-management-body">
-
-              <div class="flash-sales-content">
-
-                <p class="details">
-                  Flash sales are short-term promotions offering significant discounts on selected products or services,
-                  usually lasting for a few hours or days. These sales create a sense of urgency, encouraging quick
-                  purchases and driving a surge in sales within a limited timeframe.
-                </p>
-
-                <ol class="list">
-                  <li>
-                    Boosts Sales Quickly: <span>Generates a rapid increase in sales and revenue.</span>
-                  </li>
-                  <li>
-                    Clears Inventory: <span>Helps move excess or slow-moving stock quickly.</span>
-                  </li>
-                  <li>
-                    Attracts New Customers: <span>Draws in customers who may not have purchased otherwise.</span>
-                  </li>
-                  <li>
-                    Enhances Brand Visibility: <span>Creates buzz and increases brand awareness.</span>
-                  </li>
-                  <li>
-                    Encourages Repeat Business: <span>Often leads to follow-up purchases from satisfied
-                      customers.</span>
-                  </li>
-                </ol>
+            <!-- <div class="user-management-table">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Phone</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Role</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Name">Hassan</td>
+                      <td data-label="Email">hassan</td>
+                      <td data-label="Phone">123456789</td>
+                      <td data-label="Status">Active</td>
+                      <td data-label="Role">Admin</td>
+                      <td data-label="Action">
+                        <button class="edit-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M9.99984 4.16675V15.8334M4.1665 10.0001H15.8332" stroke="white" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div> -->
 
-            </div>
+
           </div>
         </section>
 

@@ -4889,14 +4889,109 @@ table tr td {
   background-color: #26bf6a;
 }
 
+.seller-information {
+  margin-bottom: 2.5rem;
+}
+.seller-information-inner .general-information {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
 .seller-information-inner .general-information .title {
-  color: var(--Gray-700, #344054);
-  /* Text md/Semibold */
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 24px; /* 150% */
+  line-height: 1.5rem;
+  padding: 0.9375rem 1.875rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.seller-information-inner .general-information .information-body {
+  padding: 1.25rem 1.875rem 1.875rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.seller-information-inner .general-information .information-body .information-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.seller-information-inner .general-information .information-body .information-inner .left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .left figure {
+  padding: 0.8125rem;
+  background: #f4f5f7;
+  border: 1px solid #e5e7eb;
+  display: inline-block;
+  border-radius: 6249.9375rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .left figure svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .left .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .left .text .paragraph {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .left .text .heading {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.seller-information-inner .general-information .information-body .information-inner .right svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.user-management-section {
+  margin-top: 2.5rem;
+}
+.user-management-section-inner .user-management-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.user-management-section-inner .user-management-all-btn .user-management-btn {
+  border-radius: 0.5rem;
+  color: #6b7280;
+  background: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.07px;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  transition: all 0.35s ease-in-out;
+}
+.user-management-section-inner .user-management-all-btn .user-management-btn:hover {
+  color: hsl(0, 0%, 100%);
+  background: #0f766d;
+}
+.user-management-section-inner .user-management-all-btn .active {
+  background: #0f766d;
+  color: hsl(0, 0%, 100%);
+}
+.user-management-section-inner .user-management-inner {
+  border-radius: 16px;
+  border: 1px solid var(--Border-Border-Color, #e5e7eb);
+  background: var(--Text-Title-Light-Color, #fff);
+}
+.user-management-section-inner .user-management-inner-top {
+  padding: 1.125rem 1.375rem;
 }
 
 html {

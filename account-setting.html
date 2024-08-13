@@ -210,7 +210,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-4" role="button"
+            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-4" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -232,7 +232,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-4">
+            <div class="collapse" id="dropdownmenu-4">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./campaign-management-emply.html" class="submenu-link">
@@ -247,7 +247,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./flash-sales.html" class="submenu-link active">
+                  <a href="./flash-sales.html" class="submenu-link">
                     <span class="text">Flash Sales</span>
                   </a>
                 </li>
@@ -357,7 +357,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-7" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-7" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -379,7 +379,7 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-7">
+            <div class="collapse show" id="dropdownmenu-7">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./seller-profile.html" class="submenu-link">
@@ -388,7 +388,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./account-setting.html" class="submenu-link">
+                  <a href="./account-setting.html" class="submenu-link active">
                     <span class="text">Account Setting</span>
                   </a>
                 </li>
@@ -502,67 +502,90 @@
         <section class="order-management-section">
           <div class="order-management-section-inner">
             <div class="order-management-header">
-              <h1 class="title">Flash Sales</h1>
+              <div class="d-flex justify-content-between align-items-center">
+                <h1 class="title">Account Setting</h1>
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <div class="new-registration">
-                <div class="row g-3">
-                  <div class="col-sm-8">
-                    <div class="left-content">
-                      <h1 class="title">
-                        New Registration Entrance of Autocare Flash Sales. <br> Check Now!
-                      </h1>
 
-                      <p class="details">
-                        Get 10% extra on joining.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="right-content">
-                      <button class="check-now-btn">
-                        <span>Check Now</span>
+        <section class="seller-information">
+          <div class="seller-information-inner">
+            <div class="row g-4">
+              <div class="col-lg-6">
+                <div class="general-information">
+                  <h3 class="title">Information</h3>
+                  <div class="information-body">
+                    <div class="information-inner">
+                      <div class="left">
+                        <div class="text">
+                          <p class="paragraph">Email Address</p>
+                          <h4 class="heading">nasif.nahil@gmail.com</h4>
+                        </div>
+                      </div>
+
+                      <div class="right">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                          <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M3 10C3 9.80109 3.07902 9.61033 3.21967 9.46968C3.36032 9.32903 3.55109 9.25001 3.75 9.25001H14.388L10.23 5.29001C10.1557 5.22257 10.0956 5.1409 10.0534 5.04983C10.0112 4.95875 9.98771 4.86014 9.98432 4.75982C9.98093 4.65951 9.99771 4.55953 10.0337 4.46582C10.0696 4.37211 10.124 4.28657 10.1937 4.21427C10.2633 4.14196 10.3467 4.08437 10.439 4.04491C10.5313 4.00544 10.6306 3.9849 10.7309 3.9845C10.8313 3.98411 10.9307 4.00386 11.0233 4.0426C11.1159 4.08133 11.1998 4.13826 11.27 4.21001L16.77 9.46001C16.8426 9.52997 16.9003 9.61385 16.9398 9.70663C16.9792 9.79941 16.9995 9.89919 16.9995 10C16.9995 10.1008 16.9792 10.2006 16.9398 10.2934C16.9003 10.3862 16.8426 10.47 16.77 10.54L11.27 15.79C11.1998 15.8618 11.1159 15.9187 11.0233 15.9574C10.9307 15.9962 10.8313 16.0159 10.7309 16.0155C10.6306 16.0151 10.5313 15.9946 10.439 15.9551C10.3467 15.9156 10.2633 15.8581 10.1937 15.7857C10.124 15.7134 10.0696 15.6279 10.0337 15.5342C9.99771 15.4405 9.98093 15.3405 9.98432 15.2402C9.98771 15.1399 10.0112 15.0413 10.0534 14.9502C10.0956 14.8591 10.1557 14.7774 10.23 14.71L14.388 10.75H3.75C3.55109 10.75 3.36032 10.671 3.21967 10.5303C3.07902 10.3897 3 10.1989 3 10Z"
+                          <path
+                            d="M18.1091 1.89082C17.6989 1.48066 17.1426 1.25024 16.5625 1.25024C15.9824 1.25024 15.426 1.48066 15.0158 1.89082L14.0516 2.85499L17.145 5.94832L18.1091 4.98415C18.5193 4.57393 18.7497 4.01758 18.7497 3.43749C18.7497 2.85739 18.5193 2.30104 18.1091 1.89082ZM16.2608 6.83249L13.1675 3.73915L6.16747 10.7392C5.65318 11.2532 5.27512 11.8873 5.06747 12.5842L4.4008 14.8217C4.36861 14.9296 4.36621 15.0443 4.39385 15.1535C4.42149 15.2627 4.47814 15.3625 4.55781 15.4421C4.63748 15.5218 4.73721 15.5785 4.84643 15.6061C4.95566 15.6337 5.07033 15.6313 5.1783 15.5992L7.4158 14.9325C8.11266 14.7248 8.74677 14.3468 9.2608 13.8325L16.2608 6.83249Z"
+                            fill="#0F766D" />
+                          <path
+                            d="M4.375 4.375C3.71196 4.375 3.07607 4.63839 2.60723 5.10723C2.13839 5.57607 1.875 6.21196 1.875 6.875V15.625C1.875 16.288 2.13839 16.9239 2.60723 17.3928C3.07607 17.8616 3.71196 18.125 4.375 18.125H13.125C13.788 18.125 14.4239 17.8616 14.8928 17.3928C15.3616 16.9239 15.625 16.288 15.625 15.625V11.25C15.625 11.0842 15.5592 10.9253 15.4419 10.8081C15.3247 10.6908 15.1658 10.625 15 10.625C14.8342 10.625 14.6753 10.6908 14.5581 10.8081C14.4408 10.9253 14.375 11.0842 14.375 11.25V15.625C14.375 15.9565 14.2433 16.2745 14.0089 16.5089C13.7745 16.7433 13.4565 16.875 13.125 16.875H4.375C4.04348 16.875 3.72554 16.7433 3.49112 16.5089C3.2567 16.2745 3.125 15.9565 3.125 15.625V6.875C3.125 6.54348 3.2567 6.22554 3.49112 5.99112C3.72554 5.7567 4.04348 5.625 4.375 5.625H8.75C8.91576 5.625 9.07473 5.55915 9.19194 5.44194C9.30915 5.32473 9.375 5.16576 9.375 5C9.375 4.83424 9.30915 4.67527 9.19194 4.55806C9.07473 4.44085 8.91576 4.375 8.75 4.375H4.375Z"
                             fill="#0F766D" />
                         </svg>
-                      </button>
+                      </div>
+                    </div>
+
+                    <div class="information-inner">
+                      <div class="left">
+                        <div class="text">
+                          <p class="paragraph">Phone Number</p>
+                          <h4 class="heading">+880 1900 000000</h4>
+                        </div>
+                      </div>
+
+                      <div class="right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path
+                            d="M18.1091 1.89082C17.6989 1.48066 17.1426 1.25024 16.5625 1.25024C15.9824 1.25024 15.426 1.48066 15.0158 1.89082L14.0516 2.85499L17.145 5.94832L18.1091 4.98415C18.5193 4.57393 18.7497 4.01758 18.7497 3.43749C18.7497 2.85739 18.5193 2.30104 18.1091 1.89082ZM16.2608 6.83249L13.1675 3.73915L6.16747 10.7392C5.65318 11.2532 5.27512 11.8873 5.06747 12.5842L4.4008 14.8217C4.36861 14.9296 4.36621 15.0443 4.39385 15.1535C4.42149 15.2627 4.47814 15.3625 4.55781 15.4421C4.63748 15.5218 4.73721 15.5785 4.84643 15.6061C4.95566 15.6337 5.07033 15.6313 5.1783 15.5992L7.4158 14.9325C8.11266 14.7248 8.74677 14.3468 9.2608 13.8325L16.2608 6.83249Z"
+                            fill="#0F766D" />
+                          <path
+                            d="M4.375 4.375C3.71196 4.375 3.07607 4.63839 2.60723 5.10723C2.13839 5.57607 1.875 6.21196 1.875 6.875V15.625C1.875 16.288 2.13839 16.9239 2.60723 17.3928C3.07607 17.8616 3.71196 18.125 4.375 18.125H13.125C13.788 18.125 14.4239 17.8616 14.8928 17.3928C15.3616 16.9239 15.625 16.288 15.625 15.625V11.25C15.625 11.0842 15.5592 10.9253 15.4419 10.8081C15.3247 10.6908 15.1658 10.625 15 10.625C14.8342 10.625 14.6753 10.6908 14.5581 10.8081C14.4408 10.9253 14.375 11.0842 14.375 11.25V15.625C14.375 15.9565 14.2433 16.2745 14.0089 16.5089C13.7745 16.7433 13.4565 16.875 13.125 16.875H4.375C4.04348 16.875 3.72554 16.7433 3.49112 16.5089C3.2567 16.2745 3.125 15.9565 3.125 15.625V6.875C3.125 6.54348 3.2567 6.22554 3.49112 5.99112C3.72554 5.7567 4.04348 5.625 4.375 5.625H8.75C8.91576 5.625 9.07473 5.55915 9.19194 5.44194C9.30915 5.32473 9.375 5.16576 9.375 5C9.375 4.83424 9.30915 4.67527 9.19194 4.55806C9.07473 4.44085 8.91576 4.375 8.75 4.375H4.375Z"
+                            fill="#0F766D" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="order-management-body">
+              <div class="col-lg-6">
+                <div class="general-information">
+                  <h3 class="title">Security</h3>
+                  <div class="information-body">
+                    <div class="information-inner">
+                      <div class="left">
+                        <div class="text">
+                          <p class="paragraph">Password</p>
+                          <h4 class="heading">****************</h4>
+                        </div>
+                      </div>
 
-              <div class="flash-sales-content">
-
-                <p class="details">
-                  Flash sales are short-term promotions offering significant discounts on selected products or services,
-                  usually lasting for a few hours or days. These sales create a sense of urgency, encouraging quick
-                  purchases and driving a surge in sales within a limited timeframe.
-                </p>
-
-                <ol class="list">
-                  <li>
-                    Boosts Sales Quickly: <span>Generates a rapid increase in sales and revenue.</span>
-                  </li>
-                  <li>
-                    Clears Inventory: <span>Helps move excess or slow-moving stock quickly.</span>
-                  </li>
-                  <li>
-                    Attracts New Customers: <span>Draws in customers who may not have purchased otherwise.</span>
-                  </li>
-                  <li>
-                    Enhances Brand Visibility: <span>Creates buzz and increases brand awareness.</span>
-                  </li>
-                  <li>
-                    Encourages Repeat Business: <span>Often leads to follow-up purchases from satisfied
-                      customers.</span>
-                  </li>
-                </ol>
+                      <div class="right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path
+                            d="M18.1091 1.89082C17.6989 1.48066 17.1426 1.25024 16.5625 1.25024C15.9824 1.25024 15.426 1.48066 15.0158 1.89082L14.0516 2.85499L17.145 5.94832L18.1091 4.98415C18.5193 4.57393 18.7497 4.01758 18.7497 3.43749C18.7497 2.85739 18.5193 2.30104 18.1091 1.89082ZM16.2608 6.83249L13.1675 3.73915L6.16747 10.7392C5.65318 11.2532 5.27512 11.8873 5.06747 12.5842L4.4008 14.8217C4.36861 14.9296 4.36621 15.0443 4.39385 15.1535C4.42149 15.2627 4.47814 15.3625 4.55781 15.4421C4.63748 15.5218 4.73721 15.5785 4.84643 15.6061C4.95566 15.6337 5.07033 15.6313 5.1783 15.5992L7.4158 14.9325C8.11266 14.7248 8.74677 14.3468 9.2608 13.8325L16.2608 6.83249Z"
+                            fill="#0F766D" />
+                          <path
+                            d="M4.375 4.375C3.71196 4.375 3.07607 4.63839 2.60723 5.10723C2.13839 5.57607 1.875 6.21196 1.875 6.875V15.625C1.875 16.288 2.13839 16.9239 2.60723 17.3928C3.07607 17.8616 3.71196 18.125 4.375 18.125H13.125C13.788 18.125 14.4239 17.8616 14.8928 17.3928C15.3616 16.9239 15.625 16.288 15.625 15.625V11.25C15.625 11.0842 15.5592 10.9253 15.4419 10.8081C15.3247 10.6908 15.1658 10.625 15 10.625C14.8342 10.625 14.6753 10.6908 14.5581 10.8081C14.4408 10.9253 14.375 11.0842 14.375 11.25V15.625C14.375 15.9565 14.2433 16.2745 14.0089 16.5089C13.7745 16.7433 13.4565 16.875 13.125 16.875H4.375C4.04348 16.875 3.72554 16.7433 3.49112 16.5089C3.2567 16.2745 3.125 15.9565 3.125 15.625V6.875C3.125 6.54348 3.2567 6.22554 3.49112 5.99112C3.72554 5.7567 4.04348 5.625 4.375 5.625H8.75C8.91576 5.625 9.07473 5.55915 9.19194 5.44194C9.30915 5.32473 9.375 5.16576 9.375 5C9.375 4.83424 9.30915 4.67527 9.19194 4.55806C9.07473 4.44085 8.91576 4.375 8.75 4.375H4.375Z"
+                            fill="#0F766D" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-
             </div>
           </div>
         </section>
