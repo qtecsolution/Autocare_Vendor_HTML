@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .tag-container {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin: 20px;
+    }
+
+    label {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .tags-input {
+      display: flex;
+      flex-wrap: wrap;
+      border: 1px solid #ccc;
+      padding: 5px;
+      border-radius: 8px;
+    }
+
+    .tags-input input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 5px;
+    }
+
+    .tag {
+      background-color: #e2e8f0;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      margin: 3px;
+      font-size: 14px;
+    }
+
+    .tag .remove-tag {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tag-container">
+    <label for="tag-input-1">Vehicle Type 1*</label>
+    <div class="tags-input" id="tags-input-1">
+      <input type="text" id="tag-input-1" placeholder="Type and press enter" />
+    </div>
+  </div>
+
+  <div class="tag-container">
+    <label for="tag-input-2">Vehicle Type 2*</label>
+    <div class="tags-input" id="tags-input-2">
+      <input type="text" id="tag-input-2" placeholder="Type and press enter" />
+    </div>
+  </div>
+
+  <div class="tag-container">
+    <label for="tag-input-3">Vehicle Type 3*</label>
+    <div class="tags-input" id="tags-input-3">
+      <input type="text" id="tag-input-3" placeholder="Type and press enter" />
+    </div>
+  </div>
+
+  <div class="tag-container">
+    <label for="tag-input-4">Vehicle Type 4*</label>
+    <div class="tags-input" id="tags-input-4">
+      <input type="text" id="tag-input-4" placeholder="Type and press enter" />
+    </div>
+  </div>
+
+  <div class="tag-container">
+    <label for="tag-input-5">Vehicle Type 5*</label>
+    <div class="tags-input" id="tags-input-5">
+      <input type="text" id="tag-input-5" placeholder="Type and press enter" />
+    </div>
+  </div>
+
+
+  <script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    //   // Initialize default tags for each input
+    //   // addTag('Car', 'tags-input-1');
+    //   // addTag('Bike', 'tags-input-1');
+
+    //   // addTag('Truck', 'tags-input-2');
+    //   // addTag('Scooter', 'tags-input-2');
+
+    //   // addTag('Boat', 'tags-input-3');
+    //   // addTag('Plane', 'tags-input-3');
+
+    //   // addTag('Train', 'tags-input-4');
+    //   // addTag('Bus', 'tags-input-4');
+
+    //   // addTag('Subway', 'tags-input-5');
+    //   // addTag('Helicopter', 'tags-input-5');
+    // });
+
+    function setupInputListeners(inputId, containerId) {
+      document.getElementById(inputId).addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+          const input = event.target;
+          const tagText = input.value.trim();
+
+          if (tagText) {
+            addTag(tagText, containerId);
+            input.value = '';
+          }
+        }
+      });
+    }
+
+    function addTag(tagText, containerId) {
+      const tagsInput = document.getElementById(containerId);
+      const tag = document.createElement('div');
+      tag.className = 'tag';
+      tag.textContent = tagText;
+
+      const removeBtn = document.createElement('button');
+      removeBtn.className = 'remove-tag';
+      removeBtn.innerHTML = 'x';
+      removeBtn.addEventListener('click', function () {
+        tagsInput.removeChild(tag);
+      });
+
+      tag.appendChild(removeBtn);
+      tagsInput.insertBefore(tag, tagsInput.querySelector('input'));
+    }
+
+    // Set up input listeners for all five inputs
+    setupInputListeners('tag-input-1', 'tags-input-1');
+    setupInputListeners('tag-input-2', 'tags-input-2');
+    setupInputListeners('tag-input-3', 'tags-input-3');
+    setupInputListeners('tag-input-4', 'tags-input-4');
+    setupInputListeners('tag-input-5', 'tags-input-5');
+
+
+
+  </script>
+
+</body>
+
+</html>

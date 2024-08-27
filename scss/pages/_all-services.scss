@@ -1,0 +1,227 @@
+@use "../global" as *;
+@use "../partials" as *;
+.tag-container {
+  display: flex;
+  flex-direction: column;
+  gap: size(8);
+
+  label {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 600;
+    line-height: size(20);
+    span {
+      color: #ff3e50;
+    }
+  }
+
+  .tags-input {
+    display: flex;
+    flex-wrap: wrap;
+    @include radius(8);
+    border: 1px solid #e7eaef;
+    background: #fff;
+    padding: size(8);
+    gap: size(6);
+
+    input {
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 5px;
+    }
+  }
+
+  .tag {
+    background-color: #e2e8f0;
+    @include radius(6);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: size(3) size(3) size(3) size(10);
+    border: 1px solid #d0d5dd;
+    background: $white;
+    color: #344054;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(20);
+
+    .remove-tag {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+  }
+}
+
+.custom-field-section {
+  padding: size(16) size(68) 0 size(68);
+  &-inner {
+    @include radius(16);
+    border: size(1) solid #e5e7eb;
+    background: $white;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(30);
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
+    .custom-field-btn {
+      display: inline-flex;
+      padding: size(10) size(16);
+      justify-content: center;
+      align-items: center;
+      gap: size(8);
+      @include radius(8);
+      border: 1px solid #e5e7eb;
+      background: #fff;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 600;
+      line-height: size(20);
+      svg {
+        width: size(14);
+        height: size(14);
+      }
+    }
+
+    .material {
+      @include radius(8);
+      border: 1px solid #e7eaef;
+      background: rgba(244, 245, 247, 0.3);
+      padding: size(12) size(20);
+      display: flex;
+      justify-content: space-between;
+      .text {
+        color: #8e8e93;
+        font-family: Inter;
+        font-size: size(12);
+        font-weight: 500;
+        line-height: size(16);
+        span {
+          color: #1f2937;
+          font-weight: 700;
+        }
+      }
+
+      .action-svg {
+        display: flex;
+        align-items: center;
+        gap: size(16);
+        svg {
+          width: size(16);
+          height: size(16);
+        }
+      }
+    }
+  }
+}
+
+.main-description {
+  display: flex;
+  flex-direction: column;
+  gap: size(8);
+  &-label {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 600;
+    line-height: size(20);
+    span {
+      color: red;
+    }
+  }
+  .editor-container {
+    @include radius(16);
+    border: 1px solid #e7eaef;
+    background: #fff;
+    .toolbar {
+      display: flex;
+      align-content: center;
+      justify-content: space-between;
+      padding: size(20);
+      .toolbar-inner {
+        display: flex;
+        align-items: center;
+        gap: size(20);
+        .ql-redo {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: size(6);
+            right: size(-13);
+            width: size(0.7);
+            height: size(14);
+            background: #737373;
+          }
+        }
+
+        .ql-font,
+        .ql-size,
+        .ql-underline,
+        .ql-blockquote,
+        .ql-strike {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: size(6);
+            right: size(-10);
+            width: size(0.7);
+            height: size(14);
+            background: #737373;
+          }
+        }
+      }
+
+      .link-example {
+        color: #0d9488;
+        text-align: right;
+        font-family: $primaryFont;
+        font-size: size(14);
+        line-height: size(16);
+        letter-spacing: 0.14px;
+        text-decoration-line: underline;
+      }
+    }
+
+    .editor {
+      height: size(150);
+      background-color: #fff;
+      border-radius: 0 0 size(14) size(14);
+      padding: size(20);
+      font-size: size(16);
+      .ql-editor {
+        // padding-left: 0;
+        padding: 0;
+        &::before {
+          margin-left: size(5);
+        }
+      }
+    }
+  }
+
+  .ql-toolbar {
+    border: none;
+    border-bottom: 1px solid #e7eaef;
+    border-radius: 14px 14px 0 0;
+    background-color: #fff;
+  }
+
+  .ql-container {
+    border: none;
+    border-radius: 0 0 size(14) size(14);
+  }
+
+  .ql-snow.ql-toolbar:after {
+    clear: both;
+    content: "";
+    display: none;
+  }
+}
