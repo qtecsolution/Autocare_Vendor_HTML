@@ -1,0 +1,206 @@
+@use "../global" as *;
+@use "../partials" as *;
+.store-info-section {
+  // margin-top: size(10);
+  &-inner {
+    @include radius(16);
+    border: 1px solid #e4e7ec;
+    background: $white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
+
+    .store-name {
+      display: flex;
+      align-items: center;
+      gap: size(15);
+      .text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(20);
+        font-weight: 700;
+        line-height: size(28);
+      }
+      svg {
+        width: size(20);
+        height: size(20);
+      }
+    }
+
+    .store-address {
+      .text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 500;
+        line-height: size(24);
+        width: size(295);
+      }
+    }
+    .business-hours {
+      display: flex;
+      flex-direction: column;
+      gap: size(12);
+      @include breakpoint(mobile576) {
+        flex-direction: row;
+        gap: size(120);
+      }
+      &-inner {
+        display: flex;
+        flex-direction: column;
+        gap: size(12);
+        .hedding {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(18);
+          font-weight: 700;
+          line-height: size(28);
+        }
+        .pra {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+        }
+      }
+    }
+  }
+}
+
+.profile-photo-section {
+  margin-top: size(10);
+  &-inner {
+    @include radius(16);
+    border: 1px solid #e4e7ec;
+    background: $white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
+    .profile-photo-inner {
+      display: flex;
+      flex-direction: column;
+      gap: size(10);
+      .text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+      }
+      .profile-photo-label {
+        display: inline-block;
+        padding: size(33);
+        border: 1.37px dashed #0f766d;
+        @include radius(9999999);
+        cursor: pointer;
+        svg {
+          width: size(34);
+          height: size(34);
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+
+    .cover-photo-inner {
+      display: flex;
+      flex-direction: column;
+      gap: size(10);
+      .text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+      }
+      .cover-photo-label {
+        padding: size(26);
+        border: 1.37px dashed #0f766d;
+        @include radius(14);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        .text {
+          width: 159px;
+          color: #1f2937;
+          text-align: center;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 500;
+          line-height: size(20);
+          span {
+            color: #0f766d;
+            font-weight: 700;
+          }
+        }
+
+        svg {
+          width: size(34);
+          height: size(34);
+        }
+        input {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.service-categories-section {
+  margin-top: size(10);
+  margin-bottom: size(20);
+  &-inner {
+    @include radius(16);
+    border: 1px solid #e4e7ec;
+    background: $white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
+
+    .heading-text {
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(18);
+      font-weight: 700;
+      line-height: size(28);
+    }
+
+    .categories {
+      display: flex;
+      align-items: center;
+      gap: size(10);
+      flex-wrap: wrap;
+      &-inner {
+        display: flex;
+        align-items: center;
+        gap: size(4);
+        @include radius(6);
+        border: 1px solid #d0d5dd;
+        background: $white;
+        padding: size(4) size(10);
+        .text {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+        }
+        svg {
+          width: size(14);
+          height: size(14);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

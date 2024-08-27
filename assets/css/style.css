@@ -288,6 +288,43 @@
   border: none;
 }
 
+.store-btn {
+  border-radius: 1.3125rem;
+  background: rgba(159, 122, 234, 0.2);
+  color: #8355de;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 0.875rem;
+  padding: 0.4375rem 0.5625rem;
+  border: none;
+}
+
+.categories-add-btn {
+  display: flex;
+  padding: 0.25rem 0.625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1875rem;
+  border-radius: 0.375rem;
+  background: #0f766d;
+  border: none;
+}
+.categories-add-btn .text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  color: hsl(0, 0%, 100%);
+}
+.categories-add-btn svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+.categories-add-btn svg path {
+  stroke: hsl(0, 0%, 100%);
+}
+
 .header-section {
   padding: 1.25rem 0;
   border-bottom: 1px solid #e5e7eb;
@@ -5893,6 +5930,208 @@ table tr td {
 }
 .manage-all-brand-section-inner-body .violation {
   background-color: #ff3e50;
+}
+
+.store-info-section-inner {
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .store-info-section-inner {
+    padding: 1.875rem;
+  }
+}
+.store-info-section-inner .store-name {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+}
+.store-info-section-inner .store-name .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.store-info-section-inner .store-name svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.store-info-section-inner .store-address .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  width: 18.4375rem;
+}
+.store-info-section-inner .business-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 36rem) {
+  .store-info-section-inner .business-hours {
+    flex-direction: row;
+    gap: 7.5rem;
+  }
+}
+.store-info-section-inner .business-hours-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.store-info-section-inner .business-hours-inner .hedding {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.store-info-section-inner .business-hours-inner .pra {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.profile-photo-section {
+  margin-top: 0.625rem;
+}
+.profile-photo-section-inner {
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .profile-photo-section-inner {
+    padding: 1.875rem;
+  }
+}
+.profile-photo-section-inner .profile-photo-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.profile-photo-section-inner .profile-photo-inner .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.profile-photo-section-inner .profile-photo-inner .profile-photo-label {
+  display: inline-block;
+  padding: 2.0625rem;
+  border: 1.37px dashed #0f766d;
+  border-radius: 624999.9375rem;
+  cursor: pointer;
+}
+.profile-photo-section-inner .profile-photo-inner .profile-photo-label svg {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+.profile-photo-section-inner .profile-photo-inner .profile-photo-label input {
+  display: none;
+}
+.profile-photo-section-inner .cover-photo-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.profile-photo-section-inner .cover-photo-inner .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.profile-photo-section-inner .cover-photo-inner .cover-photo-label {
+  padding: 1.625rem;
+  border: 1.37px dashed #0f766d;
+  border-radius: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.profile-photo-section-inner .cover-photo-inner .cover-photo-label .text {
+  width: 159px;
+  color: #1f2937;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.profile-photo-section-inner .cover-photo-inner .cover-photo-label .text span {
+  color: #0f766d;
+  font-weight: 700;
+}
+.profile-photo-section-inner .cover-photo-inner .cover-photo-label svg {
+  width: 2.125rem;
+  height: 2.125rem;
+}
+.profile-photo-section-inner .cover-photo-inner .cover-photo-label input {
+  display: none;
+}
+
+.service-categories-section {
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+.service-categories-section-inner {
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .service-categories-section-inner {
+    padding: 1.875rem;
+  }
+}
+.service-categories-section-inner .heading-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.service-categories-section-inner .categories {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+.service-categories-section-inner .categories-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.375rem;
+  border: 1px solid #d0d5dd;
+  background: hsl(0, 0%, 100%);
+  padding: 0.25rem 0.625rem;
+}
+.service-categories-section-inner .categories-inner .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.service-categories-section-inner .categories-inner svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  cursor: pointer;
 }
 
 html {
