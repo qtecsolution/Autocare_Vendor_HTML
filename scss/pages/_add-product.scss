@@ -3,7 +3,7 @@
 
 .page-header {
   padding: size(32) size(10) 0 size(10);
-  @include breakpoint(mobile576){
+  @include breakpoint(mobile576) {
     padding: size(32) size(68) 0 size(68);
   }
   .page-title {
@@ -25,7 +25,7 @@
   flex-direction: column;
   gap: size(20);
   padding: size(40) size(10) 0 size(10);
-  @include breakpoint(mobile576){
+  @include breakpoint(mobile576) {
     padding: size(40) size(68) 0 size(68);
   }
   .add-product-header {
@@ -150,7 +150,7 @@
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
     padding: size(10);
 
-    @include breakpoint(mobile576){
+    @include breakpoint(mobile576) {
       padding: size(30);
     }
 
@@ -268,6 +268,16 @@
           font-weight: 600;
           line-height: size(20);
         }
+      }
+    }
+
+    .label-short-description {
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(14);
+      line-height: size(20);
+      &::after {
+        top: size(5);
       }
     }
   }
@@ -935,7 +945,7 @@
   background: #fff;
   padding: size(27) size(10);
 
-  @include breakpoint(mobile576){
+  @include breakpoint(mobile576) {
     padding: size(27) size(68);
   }
 
