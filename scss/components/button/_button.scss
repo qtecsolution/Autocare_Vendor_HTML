@@ -39,6 +39,19 @@
   color: #1f2937;
   cursor: pointer;
 }
+
+.save-changes-btn {
+  padding: size(10) size(16);
+  @include radius(8);
+  background: #a7aab9;
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: $white;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+}
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -58,7 +71,7 @@
   cursor: pointer;
 }
 .confirm-btn.active {
-  background: #0d9488;
+  background: #0f766d;
   cursor: pointer;
   &:hover {
     color: #fff;

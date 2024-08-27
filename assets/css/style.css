@@ -157,6 +157,19 @@
   cursor: pointer;
 }
 
+.save-changes-btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  background: #a7aab9;
+  border: none;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -177,7 +190,7 @@
 }
 
 .confirm-btn.active {
-  background: #0d9488;
+  background: #0f766d;
   cursor: pointer;
 }
 .confirm-btn.active:hover {
@@ -6132,6 +6145,181 @@ table tr td {
   width: 0.875rem;
   height: 0.875rem;
   cursor: pointer;
+}
+
+.edit-garage-header {
+  margin-top: 3.125rem;
+}
+.edit-garage-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.25rem;
+}
+.edit-garage-header-inner .header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.edit-garage-header-inner .header-text .title {
+  color: var(--Gray-900, #101828);
+  /* text-2xl/bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+.edit-garage-header-inner .header-text .details {
+  color: var(--Gray-600, #475467);
+  /* Text Base/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.edit-garage-body {
+  margin-top: 2.5rem;
+}
+.edit-garage-body-inner {
+  padding: 0 4.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.edit-garage-body-inner .nav-tabs {
+  border-radius: 8px;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
+}
+.edit-garage-body-inner .nav-tabs .basic-info {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  background: transparent;
+}
+.edit-garage-body-inner .nav-tabs .active {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #d0d5dd;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 8px 12px;
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.edit-garage-body-inner .input-field {
+  border-radius: 0.5rem;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
+}
+.edit-garage-body-inner .input-field input {
+  background: transparent;
+}
+.edit-garage-body-inner .input-field input::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.edit-garage-body-inner .input-field input::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.edit-garage-body-inner .store-name-section-inner {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+  padding: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-label {
+  color: var(--Text-Title-Color, #1f2937);
+  /* Text Base/Semi bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field {
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.75rem 1.25rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.75rem 1.25rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field-inner input {
+  flex-grow: 1;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field-inner .location {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field-inner .location svg {
+  width: 1rem;
+  height: 1rem;
+}
+.edit-garage-body-inner .store-name-section-inner .input-inner .input-field-inner .location .text {
+  color: var(--Nutral-Color-400, #7b7f95);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 114.286% */
+  letter-spacing: 0.14px;
+}
+.edit-garage-body-inner .store-name-section-inner .box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.edit-garage-body-inner .store-name-section-inner .box .category-select-label {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.edit-garage-footer {
+  border-top: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  padding: 1.75rem 0;
+}
+.edit-garage-footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 html {

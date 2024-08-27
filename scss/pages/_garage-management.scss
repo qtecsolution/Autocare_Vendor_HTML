@@ -1,5 +1,7 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+//garage-management
 .store-info-section {
   // margin-top: size(10);
   &-inner {
@@ -202,5 +204,186 @@
         }
       }
     }
+  }
+}
+
+// edit-garage page
+.edit-garage-header {
+  margin-top: size(50);
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 size(68);
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      gap: size(4);
+      .title {
+        color: var(--Gray-900, #101828);
+
+        /* text-2xl/bold */
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 140% */
+      }
+      .details {
+        color: var(--Gray-600, #475467);
+
+        /* Text Base/Regular */
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+      }
+    }
+  }
+}
+
+.edit-garage-body {
+  margin-top: size(40);
+  &-inner {
+    padding: 0 size(68);
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
+    .nav-tabs {
+      border-radius: 8px;
+      border: 1px solid #e4e7ec;
+      background: #f9fafb;
+      .basic-info {
+        padding: size(8) size(12);
+        border: none;
+        color: #667085;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+        background: transparent;
+      }
+      .active {
+        @include radius(8);
+        border: size(1) solid #d0d5dd;
+        background: $white;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        padding: 8px 12px;
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+      }
+    }
+
+    .input-field {
+      @include radius(8);
+      border: 1px solid #e4e7ec;
+      background: #f9fafb;
+
+      input {
+        background: transparent;
+        &::placeholder {
+          color: #667085;
+          font-family: $primaryFont;
+          font-size: size(16);
+          font-weight: 600;
+          line-height: size(24);
+        }
+      }
+    }
+
+    .store-name-section {
+      &-inner {
+        @include radius(16);
+        border: 1px solid #e5e7eb;
+        background: $white;
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+        padding: size(30);
+        display: flex;
+        flex-direction: column;
+        gap: size(20);
+        .input-inner {
+          display: flex;
+          flex-direction: column;
+          gap: size(10);
+          .input-label {
+            color: var(--Text-Title-Color, #1f2937);
+
+            /* Text Base/Semi bold */
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px; /* 142.857% */
+          }
+          .input-field {
+            border-radius: 8px;
+            border: 1px solid var(--Border-Color, #e7eaef);
+            background: #fff;
+            padding: size(12) size(20);
+          }
+
+          .input-field-inner {
+            display: flex;
+            align-items: center;
+            gap: size(10);
+            border-radius: 8px;
+            border: 1px solid var(--Border-Color, #e7eaef);
+            background: #fff;
+            padding: size(12) size(20);
+            input {
+              flex-grow: 1;
+            }
+            .location {
+              display: flex;
+              align-items: center;
+              gap: size(10);
+
+              svg {
+                width: size(16);
+                height: size(16);
+              }
+              .text {
+                color: var(--Nutral-Color-400, #7b7f95);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 16px; /* 114.286% */
+                letter-spacing: 0.14px;
+              }
+            }
+          }
+        }
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          gap: size(6);
+          .category-select-label {
+            color: #1f2937;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 600;
+            line-height: size(20);
+          }
+        }
+      }
+    }
+  }
+}
+
+.edit-garage-footer {
+  border-top: 1px solid #e5e7eb;
+  background: $white;
+  padding: size(28) 0;
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
