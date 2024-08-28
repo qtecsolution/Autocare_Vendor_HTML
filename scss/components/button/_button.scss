@@ -52,6 +52,18 @@
   font-weight: 600;
   line-height: size(20);
 }
+.save-changes-btn.active {
+  background: #0f766d;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+  }
+
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-700;
+  }
+}
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -75,6 +87,11 @@
   cursor: pointer;
   &:hover {
     color: #fff;
+  }
+
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: $primary-color-700;
   }
 }
 

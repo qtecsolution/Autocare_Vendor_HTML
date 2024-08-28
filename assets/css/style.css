@@ -170,6 +170,18 @@
   line-height: 1.25rem;
 }
 
+.save-changes-btn.active {
+  background: #0f766d;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+.save-changes-btn.active:hover {
+  color: #fff;
+}
+.save-changes-btn.active:not([disabled]):hover {
+  background: #005042;
+}
+
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -192,9 +204,13 @@
 .confirm-btn.active {
   background: #0f766d;
   cursor: pointer;
+  transition: all 0.35s ease-in-out;
 }
 .confirm-btn.active:hover {
   color: #fff;
+}
+.confirm-btn.active:not([disabled]):hover {
+  background: #005042;
 }
 
 .setMultipleLanguage-btn {
@@ -6054,7 +6070,12 @@ table tr td {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4.25rem;
+  padding: 0 0;
+}
+@media screen and (min-width: 64rem) {
+  .edit-garage-header-inner {
+    padding: 0 4.25rem;
+  }
 }
 .edit-garage-header-inner .header-text {
   display: flex;
@@ -6084,15 +6105,23 @@ table tr td {
   margin-top: 2.5rem;
 }
 .edit-garage-body-inner {
-  padding: 0 4.25rem;
+  padding: 0 0;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 64rem) {
+  .edit-garage-body-inner {
+    padding: 0 4.25rem;
+  }
 }
 .edit-garage-body-inner .nav-tabs {
   border-radius: 8px;
   border: 1px solid #e4e7ec;
   background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 .edit-garage-body-inner .nav-tabs .basic-info {
   padding: 0.5rem 0.75rem;
@@ -6115,6 +6144,14 @@ table tr td {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
+}
+.edit-garage-body-inner .nav-tabs .counter {
+  display: flex;
+  padding: 0 0.4375rem;
+  align-items: center;
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
 }
 .edit-garage-body-inner .input-field {
   border-radius: 0.5rem;
@@ -6632,7 +6669,7 @@ table tr td {
   width: 100%;
 }
 
-.product-image {
+.product-image-section {
   border-radius: 1rem;
   border: 1px solid #e5e7eb;
   background: #fff;
@@ -6642,58 +6679,58 @@ table tr td {
   flex-direction: column;
   gap: 1.25rem;
 }
-.product-image .product-img-head {
+.product-image-section .product-img-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.product-image .product-img-head .title {
+.product-image-section .product-img-head .title {
   color: #1f2937;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
 }
-.product-image .product-img-head .title span {
+.product-image-section .product-img-head .title span {
   color: #ff3e50;
 }
-.product-image .product-img-head svg {
+.product-image-section .product-img-head svg {
   width: 1.25rem;
   height: 1.25rem;
 }
-.product-image .product-img-head .example-text {
+.product-image-section .product-img-head .example-text {
   color: #0f766d;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.25rem;
 }
-.product-image .product-img-body {
+.product-image-section .product-img-body {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.product-image .product-img-body .uplod-img {
+.product-image-section .product-img-body .uplod-img {
   display: flex;
   flex-wrap: wrap;
   gap: 1.25rem;
 }
-.product-image .product-img-body .uplod-img .product-img {
+.product-image-section .product-img-body .uplod-img .product-img {
   width: 120px;
   height: 120px;
   position: relative;
   border-radius: 0.875rem;
 }
-.product-image .product-img-body .uplod-img .product-img .img-close-btn {
+.product-image-section .product-img-body .uplod-img .product-img .img-close-btn {
   position: absolute;
   top: -15px;
   right: -15px;
 }
-.product-image .product-img-body .uplod-img .product-img .img-close-btn svg {
+.product-image-section .product-img-body .uplod-img .product-img .img-close-btn svg {
   width: 1.875rem;
   height: 1.875rem;
 }
-.product-image .product-img-body .uplod-img .add-product-img-inner .add-product-img {
+.product-image-section .product-img-body .uplod-img .add-product-img-inner .add-product-img {
   border-radius: 14px;
   border: 1.37px dashed var(--Primary-700, #0f766d);
   background: rgba(240, 253, 252, 0.3);
@@ -6704,14 +6741,14 @@ table tr td {
   justify-content: center;
   cursor: pointer;
 }
-.product-image .product-img-body .uplod-img .add-product-img-inner .add-product-img .add-product-img-input {
+.product-image-section .product-img-body .uplod-img .add-product-img-inner .add-product-img .add-product-img-input {
   display: none;
 }
-.product-image .product-img-body .uplod-img .add-product-img-inner .add-product-img svg {
+.product-image-section .product-img-body .uplod-img .add-product-img-inner .add-product-img svg {
   width: 1.875rem;
   height: 1.875rem;
 }
-.product-image .product-img-body .add-product-img-list li {
+.product-image-section .product-img-body .add-product-img-list li {
   color: #6b7280;
   font-family: "Inter", sans-serif;
   font-size: 0.75rem;
@@ -6815,16 +6852,211 @@ table tr td {
   height: 1.25rem;
 }
 
-.description {
-  border-radius: 16px;
-  border: 1px solid var(--Border-Border-Color, #e5e7eb);
-  background: var(--Text-Title-Light-Color, #fff);
-  /* Box Shadow/sm */
+.description,
+.price-stock,
+.vehicle-information,
+.shipping-warranty {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
   padding: 1.875rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.price-stock .inner-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.price-stock .inner-input .label-short-description {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.price-stock .inner-input .label-short-description::after {
+  top: 0.3125rem;
+}
+.price-stock .inner-input .label-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.price-stock .inner-input .label-text span {
+  color: #ff3e50;
+}
+.price-stock .inner-input .label-text svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.price-stock .inner-input .input {
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+}
+.price-stock .meta-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.price-stock .meta-description .label-text {
+  color: var(--Text-Title-Color, #1f2937);
+  /* Text Base/Semi bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.price-stock .meta-description .input {
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+}
+
+.vehicle-information .inner-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.vehicle-information .inner-input .label-short-description {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.vehicle-information .inner-input .label-short-description::after {
+  top: 0.3125rem;
+}
+.vehicle-information .inner-input .label-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.vehicle-information .inner-input .label-text span {
+  color: #ff3e50;
+}
+.vehicle-information .inner-input .label-text svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.vehicle-information .inner-input .input {
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+}
+.vehicle-information .inner-input .weight-input {
+  border-radius: 8px;
+  border: 1px solid #e7eaef;
+  background: #fff;
+  padding-right: 1.25rem;
+  width: 100%;
+}
+.vehicle-information .inner-input .weight-input .selectize {
+  border: none;
+  background: transparent;
+}
+.vehicle-information .inner-input .weight-input svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.shipping-warranty .shipping-charge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.shipping-warranty .shipping-charge .label-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.shipping-warranty .shipping-charge .input-field {
+  border-radius: 8px;
+  border: 1px solid #e7eaef;
+  background: #f2f2f7;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.shipping-warranty .shipping-charge .input-field input::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.shipping-warranty .shipping-charge .input-field input::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.shipping-warranty .shipping-charge .input-field svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.shipping-warranty .custom-shipping-charge {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.shipping-warranty .custom-shipping-charge .label-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.shipping-warranty .custom-shipping-charge .input-field {
+  border-radius: 8px;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.shipping-warranty .custom-shipping-charge .input-field input::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.shipping-warranty .custom-shipping-charge .input-field input::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.shipping-warranty .custom-shipping-charge .input-field svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 html {

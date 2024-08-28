@@ -214,7 +214,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 size(68);
+    padding: 0 0;
+    @include breakpoint(desktop1024) {
+      padding: 0 size(68);
+    }
     .header-text {
       display: flex;
       flex-direction: column;
@@ -246,7 +249,10 @@
 .edit-garage-body {
   margin-top: size(40);
   &-inner {
-    padding: 0 size(68);
+    padding: 0 0;
+    @include breakpoint(desktop1024) {
+      padding: 0 size(68);
+    }
     display: flex;
     flex-direction: column;
     gap: size(20);
@@ -255,6 +261,9 @@
       border-radius: 8px;
       border: 1px solid #e4e7ec;
       background: #f9fafb;
+      display: flex;
+      align-items: center;
+      gap: size(20);
       .basic-info {
         padding: size(8) size(12);
         border: none;
@@ -276,6 +285,15 @@
         font-size: size(16);
         font-weight: 600;
         line-height: size(24);
+      }
+
+      .counter {
+        display: flex;
+        padding: 0 size(7);
+        align-items: center;
+        @include radius(16);
+        border: 1px solid #e4e7ec;
+        background: #f9fafb;
       }
     }
 
