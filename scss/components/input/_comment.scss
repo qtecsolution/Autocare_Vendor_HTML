@@ -746,8 +746,8 @@ $switch-bg-color: #0f766d;
     opacity: 0;
     cursor: pointer;
     &:checked ~ .checkmark {
-      background: #2563eb;
-      border-color: #2563eb;
+      background: #0f766d;
+      border-color: #0f766d;
       &::after {
         display: block;
       }

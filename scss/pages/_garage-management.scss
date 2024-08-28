@@ -405,3 +405,25 @@
     justify-content: space-between;
   }
 }
+
+.form-group {
+  position: relative;
+
+  label {
+    font-weight: 500;
+  }
+
+  .calendar-icon {
+    width: 16px;
+    height: 16px;
+    background: url("calendar-icon.svg") no-repeat center center;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  input {
+    padding-right: 30px; // To make space for the calendar icon
+  }
+}

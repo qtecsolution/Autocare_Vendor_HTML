@@ -980,8 +980,8 @@ input[type=search]::-webkit-search-results-decoration:focus {
   cursor: pointer;
 }
 .radio-button-container input:checked ~ .checkmark {
-  background: #2563eb;
-  border-color: #2563eb;
+  background: #0f766d;
+  border-color: #0f766d;
 }
 .radio-button-container input:checked ~ .checkmark::after {
   display: block;
@@ -6257,6 +6257,25 @@ table tr td {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.form-group {
+  position: relative;
+}
+.form-group label {
+  font-weight: 500;
+}
+.form-group .calendar-icon {
+  width: 16px;
+  height: 16px;
+  background: url("calendar-icon.svg") no-repeat center center;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.form-group input {
+  padding-right: 30px;
 }
 
 .tag-container {
