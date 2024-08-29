@@ -1851,41 +1851,6 @@ table tr td {
   fill: #f59e0b;
 }
 
-.accordion-button {
-  border-color: transparent !important;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
-}
-
-.accordion-item {
-  background-color: #F8FAFC;
-  border: none;
-  margin-bottom: 0.75rem;
-}
-
-.accordion-button:focus {
-  z-index: 3;
-  border-color: #00715d !important;
-  border-width: 1px;
-  border-style: solid;
-  outline: 0;
-  box-shadow: none !important;
-}
-
-.accordion-button:not(.collapsed) {
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: none;
-}
-
-.accordion-body {
-  padding: 0.75rem 1rem;
-  background: hsl(0, 0%, 100%);
-  margin: 0.75rem 0;
-  border-radius: 0.25rem;
-}
-
 .category-header {
   display: flex;
   gap: 0.75rem;
@@ -7522,13 +7487,11 @@ table tr td {
   height: 3.25rem;
 }
 .accordion-section-inner .accordion-card-header .title {
-  color: var(--Nutral-Color-950, #09090b);
-  /* text-xl/bold */
+  color: #09090b;
   font-family: Inter;
   font-size: 18px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 28px; /* 155.556% */
+  line-height: 28px;
 }
 .accordion-section-inner .accordion-card .accordion {
   padding-bottom: 1.25rem;
@@ -7537,6 +7500,7 @@ table tr td {
   background-color: hsl(0, 0%, 100%);
   margin-bottom: 0;
   padding: 0 1.25rem;
+  border: none;
 }
 .accordion-section-inner .accordion-card .accordion .accordion-item .accordion-header .accordion-button {
   border-bottom: 1px solid #e5e7eb !important;
@@ -7549,13 +7513,24 @@ table tr td {
   line-height: 1.5rem;
 }
 .accordion-section-inner .accordion-card .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
-  box-shadow: none;
+  background-color: transparent;
 }
 .accordion-section-inner .accordion-card .accordion .accordion-item .accordion-header .accordion-button:focus {
   z-index: 3;
   border: none;
   outline: 0;
   box-shadow: none !important;
+}
+.accordion-section-inner .accordion-card .accordion .accordion-item .accordion-header .accordion-button::after {
+  background-image: url(../../assets/images/right-array.png);
+  transform: rotate(-270deg) !important;
+}
+.accordion-section-inner .accordion-card .accordion .accordion-item .accordion-header .accordion-button.collapsed::after {
+  transform: rotate(-360deg) !important;
+  background-image: url(../../assets/images/right-array.png);
+}
+.accordion-section-inner .accordion-card .accordion .accordion-item .accordion-body {
+  padding: 1rem 0.5rem;
 }
 
 .contact-section {
@@ -7595,6 +7570,59 @@ table tr td {
   line-height: 1.75rem;
 }
 .contact-section-inner .contact-card-inner .contact-detail .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+
+.questions-section {
+  margin-bottom: 2.5rem;
+}
+.questions-section-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.questions-section-inner .title {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.questions-section-inner .accordion .accordion-item .accordion-header .accordion-button {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.08px;
+}
+.questions-section-inner .accordion .accordion-item .accordion-header .accordion-button::after {
+  margin-left: 0;
+  margin-right: 0.625rem;
+  background-image: url(../../assets/images/minus.png);
+  transition: none;
+}
+.questions-section-inner .accordion .accordion-item .accordion-header .accordion-button.collapsed::after {
+  transform: none;
+  background-image: url(../../assets/images/plus.png);
+}
+.questions-section-inner .accordion .accordion-item .accordion-header .accordion-button:focus {
+  box-shadow: none;
+}
+.questions-section-inner .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  color: #0f766d;
+  background-color: transparent;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: none;
+}
+.questions-section-inner .accordion .accordion-item .accordion-body {
+  background: #fafafa;
   color: #1f2937;
   font-family: "Inter", sans-serif;
   font-size: 1rem;

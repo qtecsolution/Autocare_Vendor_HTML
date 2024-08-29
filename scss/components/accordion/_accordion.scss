@@ -1,38 +1,38 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-.accordion-button {
-  border-color: transparent !important;
-  border-width: 1px;
-  border-style: solid;
-  @include radius(4);
-  padding: size(8) size(12);
-}
-.accordion-item {
-  background-color: $neutral-50;
-  border: none;
-  margin-bottom: size(12);
-}
+// .accordion-button {
+//   border-color: transparent !important;
+//   border-width: 1px;
+//   border-style: solid;
+//   @include radius(4);
+//   padding: size(8) size(12);
+// }
+// .accordion-item {
+//   background-color: $neutral-50;
+//   border: none;
+//   margin-bottom: size(12);
+// }
 
-.accordion-button:focus {
-  z-index: 3;
-  border-color: $primary-color-base !important;
-  border-width: 1px;
-  border-style: solid;
-  outline: 0;
-  box-shadow: none !important;
-}
+// .accordion-button:focus {
+//   z-index: 3;
+//   border-color: $primary-color-base !important;
+//   border-width: 1px;
+//   border-style: solid;
+//   outline: 0;
+//   box-shadow: none !important;
+// }
 
-.accordion-button:not(.collapsed) {
-  background-color: $white;
-  box-shadow: none;
-}
-.accordion-body {
-  padding: size(12) size(16);
-  background: $white;
-  margin: size(12) 0;
-  @include radius(4);
-}
+// .accordion-button:not(.collapsed) {
+//   background-color: $white;
+//   box-shadow: none;
+// }
+// .accordion-body {
+//   padding: size(12) size(16);
+//   background: $white;
+//   margin: size(12) 0;
+//   @include radius(4);
+// }
 .category-header {
   display: flex;
   gap: size(12);
