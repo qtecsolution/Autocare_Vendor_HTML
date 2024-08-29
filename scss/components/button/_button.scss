@@ -243,3 +243,20 @@
     }
   }
 }
+
+.verification-btn {
+  width: 100%;
+  padding: size(12) size(20);
+  @include radius(10);
+  background: #0f766d;
+  color: $white;
+  font-family: Inter;
+  font-size: size(16);
+  font-weight: 600;
+  border: none;
+  line-height: size(24);
+  transition: all 0.35s ease-in-out;
+  @include hover {
+    background: #074b45;
+  }
+}

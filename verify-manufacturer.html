@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <title>AutoCare vendor-Login</title>
+  <!-- FAVICON-ICON -->
+  <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/svg+xml" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- BOOTSTRAP-CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+  <!--  -->
+  <link rel="stylesheet" href="./assets/css/nice-select2/nice-select2.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="./assets/css/jquery-ui/jquery-ui.css">
+  <!-- CUSTOM-CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="container">
+      <div class="header-section-inner d-flex align-items-center justify-content-between gap-4">
+        <div class="logo">
+          <a href="./login.html">
+            <img src="./assets/images/Logo-2.png" alt="logo" />
+          </a>
+        </div>
+
+        <ul class="header-button list-unstyled d-flex align-items-center gap-3">
+          <li>
+            <a class="signUp-btn " href="">Cancel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="manufacturer-section">
+    <div class="container">
+      <div class="manufacturer-section-inner">
+        <div class="d-flex flex-column gap-4">
+          <h1 class="title">Verify as Brand / Manufacturer</h1>
+
+          <form class="form">
+            <label class="form-label" for="trademark-number">Trademark Number <span class="text-danger">*</span></label>
+            <input class="form-input" type="text" name="" id="trademark-number" placeholder="Type here">
+          </form>
+
+          <div class="">
+            <div class="row g-3">
+              <div class="col-md-8">
+                <div class="row g-4">
+                  <div class="col-lg-6">
+                    <div class="file-uploder-inner">
+                      <p class="label-title">
+                        Trade License <span class="text-danger">*</span>
+                      </p>
+
+                      <div class="">
+                        <label class="file-uploader-label" for="trade-license">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                              fill="none">
+                              <path
+                                d="M16.9991 23.3745V13.812M16.9991 13.812L21.2491 18.062M16.9991 13.812L12.7491 18.062M9.56162 27.6245C8.04498 27.6262 6.57744 27.0871 5.42254 26.104C4.26764 25.1209 3.50105 23.7583 3.26044 22.2609C3.01983 20.7635 3.32096 19.2293 4.10975 17.9339C4.89854 16.6386 6.12331 15.6668 7.56412 15.1933C7.19395 13.2966 7.57653 11.3303 8.63085 9.7108C9.68517 8.09128 11.3284 6.94572 13.2127 6.51669C15.0969 6.08766 17.0742 6.40885 18.7257 7.41225C20.3772 8.41565 21.5734 10.0225 22.0609 11.8924C22.8145 11.6473 23.6218 11.6178 24.3913 11.8073C25.1609 11.9968 25.8621 12.3976 26.4159 12.9646C26.9696 13.5316 27.3538 14.2422 27.525 15.016C27.6962 15.7898 27.6476 16.5961 27.3847 17.3438C28.5445 17.7868 29.5126 18.6217 30.1211 19.7039C30.7296 20.786 30.9401 22.047 30.7162 23.2681C30.4922 24.4892 29.8479 25.5934 28.8949 26.3891C27.942 27.1849 26.7406 27.6219 25.4991 27.6245H9.56162Z"
+                                stroke="#0F766D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+
+                          <div class="d-flex align-items-center gap-1">
+                            <p class="color-text">Click to upload</p>
+                            <p class="text">or drag and drop</p>
+                          </div>
+                          <p class="text-sm">PDF, PNG, or JPG (max. 800x400px)</p>
+                          <input class="file" type="file" name="" id="trade-license">
+                        </label>
+                      </div>
+
+                      <p class="text-sm">Please submit updated recent file</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="file-uploder-inner">
+                      <p class="label-title">
+                        TIN Certificate / BIN Certificate <span class="text-danger">*</span>
+                      </p>
+
+                      <div class="">
+                        <label class="file-uploader-label" for="tin-certificate">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                              fill="none">
+                              <path
+                                d="M16.9991 23.3745V13.812M16.9991 13.812L21.2491 18.062M16.9991 13.812L12.7491 18.062M9.56162 27.6245C8.04498 27.6262 6.57744 27.0871 5.42254 26.104C4.26764 25.1209 3.50105 23.7583 3.26044 22.2609C3.01983 20.7635 3.32096 19.2293 4.10975 17.9339C4.89854 16.6386 6.12331 15.6668 7.56412 15.1933C7.19395 13.2966 7.57653 11.3303 8.63085 9.7108C9.68517 8.09128 11.3284 6.94572 13.2127 6.51669C15.0969 6.08766 17.0742 6.40885 18.7257 7.41225C20.3772 8.41565 21.5734 10.0225 22.0609 11.8924C22.8145 11.6473 23.6218 11.6178 24.3913 11.8073C25.1609 11.9968 25.8621 12.3976 26.4159 12.9646C26.9696 13.5316 27.3538 14.2422 27.525 15.016C27.6962 15.7898 27.6476 16.5961 27.3847 17.3438C28.5445 17.7868 29.5126 18.6217 30.1211 19.7039C30.7296 20.786 30.9401 22.047 30.7162 23.2681C30.4922 24.4892 29.8479 25.5934 28.8949 26.3891C27.942 27.1849 26.7406 27.6219 25.4991 27.6245H9.56162Z"
+                                stroke="#0F766D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+
+                          <div class="d-flex align-items-center gap-1">
+                            <p class="color-text">Click to upload</p>
+                            <p class="text">or drag and drop</p>
+                          </div>
+                          <p class="text-sm">PDF, PNG, or JPG (max. 800x400px)</p>
+                          <input class="file" type="file" name="" id="tin-certificate">
+                        </label>
+                      </div>
+
+                      <p class="text-sm">As per trade license</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="file-uploder-inner">
+                      <p class="label-title">
+                        Trade Mark Document <span class="text-danger">*</span>
+                      </p>
+
+                      <div class="">
+                        <label class="file-uploader-label" for="tin-certificate">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                              fill="none">
+                              <path
+                                d="M16.9991 23.3745V13.812M16.9991 13.812L21.2491 18.062M16.9991 13.812L12.7491 18.062M9.56162 27.6245C8.04498 27.6262 6.57744 27.0871 5.42254 26.104C4.26764 25.1209 3.50105 23.7583 3.26044 22.2609C3.01983 20.7635 3.32096 19.2293 4.10975 17.9339C4.89854 16.6386 6.12331 15.6668 7.56412 15.1933C7.19395 13.2966 7.57653 11.3303 8.63085 9.7108C9.68517 8.09128 11.3284 6.94572 13.2127 6.51669C15.0969 6.08766 17.0742 6.40885 18.7257 7.41225C20.3772 8.41565 21.5734 10.0225 22.0609 11.8924C22.8145 11.6473 23.6218 11.6178 24.3913 11.8073C25.1609 11.9968 25.8621 12.3976 26.4159 12.9646C26.9696 13.5316 27.3538 14.2422 27.525 15.016C27.6962 15.7898 27.6476 16.5961 27.3847 17.3438C28.5445 17.7868 29.5126 18.6217 30.1211 19.7039C30.7296 20.786 30.9401 22.047 30.7162 23.2681C30.4922 24.4892 29.8479 25.5934 28.8949 26.3891C27.942 27.1849 26.7406 27.6219 25.4991 27.6245H9.56162Z"
+                                stroke="#0F766D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+
+                          <div class="d-flex align-items-center gap-1">
+                            <p class="color-text">Click to upload</p>
+                            <p class="text">or drag and drop</p>
+                          </div>
+                          <p class="text-sm">PDF, PNG, or JPG (max. 800x400px)</p>
+                          <input class="file" type="file" name="" id="tin-certificate">
+                        </label>
+                      </div>
+
+                      <p class="text-sm">Submitted application form is acceptable</p>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-6">
+                    <div class="file-uploder-inner">
+                      <p class="label-title">
+                        Manufacturer License <span class="text-danger">*</span>
+                      </p>
+
+                      <div class="">
+                        <label class="file-uploader-label" for="tin-certificate">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                              fill="none">
+                              <path
+                                d="M16.9991 23.3745V13.812M16.9991 13.812L21.2491 18.062M16.9991 13.812L12.7491 18.062M9.56162 27.6245C8.04498 27.6262 6.57744 27.0871 5.42254 26.104C4.26764 25.1209 3.50105 23.7583 3.26044 22.2609C3.01983 20.7635 3.32096 19.2293 4.10975 17.9339C4.89854 16.6386 6.12331 15.6668 7.56412 15.1933C7.19395 13.2966 7.57653 11.3303 8.63085 9.7108C9.68517 8.09128 11.3284 6.94572 13.2127 6.51669C15.0969 6.08766 17.0742 6.40885 18.7257 7.41225C20.3772 8.41565 21.5734 10.0225 22.0609 11.8924C22.8145 11.6473 23.6218 11.6178 24.3913 11.8073C25.1609 11.9968 25.8621 12.3976 26.4159 12.9646C26.9696 13.5316 27.3538 14.2422 27.525 15.016C27.6962 15.7898 27.6476 16.5961 27.3847 17.3438C28.5445 17.7868 29.5126 18.6217 30.1211 19.7039C30.7296 20.786 30.9401 22.047 30.7162 23.2681C30.4922 24.4892 29.8479 25.5934 28.8949 26.3891C27.942 27.1849 26.7406 27.6219 25.4991 27.6245H9.56162Z"
+                                stroke="#0F766D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+
+                          <div class="d-flex align-items-center gap-1">
+                            <p class="color-text">Click to upload</p>
+                            <p class="text">or drag and drop</p>
+                          </div>
+                          <p class="text-sm">PDF, PNG, or JPG (max. 800x400px)</p>
+                          <input class="file" type="file" name="" id="tin-certificate">
+                        </label>
+                      </div>
+
+                      <p class="text-sm">Submit License or Factory Registration Certificate</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="">
+                      <button class="verification-btn">
+                        Apply For Verification
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="d-flex justify-content-end">
+                  <div class="example-documents">
+                    <h4 class="title">See Example Documents</h4>
+
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <img class="image" src="./assets/images/Documents1.png" alt="" />
+                      </div>
+                      <div class="col-6">
+                        <img class="image" src="./assets/images/Documents2.png" alt="" />
+                      </div>
+                      <div class="col-6">
+                        <img class="image" src="./assets/images/Documents3.png" alt="" />
+                      </div>
+                      <div class="col-6">
+                        <img class="image" src="./assets/images/Documents4.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOTSTRAP-JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- nice-select -->
+  <script src="./assets/js/nice-select2/nice-select2.js"></script>
+
+  <!-- main js -->
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

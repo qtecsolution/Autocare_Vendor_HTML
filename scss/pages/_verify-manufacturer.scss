@@ -1,0 +1,131 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.manufacturer-section {
+  margin-top: size(50);
+  &-inner {
+    @include radius(24);
+    border: 1px solid #e5e7eb;
+    background: $white;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    padding: size(20);
+    @include breakpoint(mobile576) {
+      padding: size(50);
+    }
+    .title {
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(19);
+      @include breakpoint(mobile576) {
+        font-size: size(36);
+        line-height: size(40);
+      }
+      font-weight: 700;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: size(10);
+      &-label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        margin-bottom: 0;
+      }
+      &-input {
+        @include radius(8);
+        border: 1px solid #e7eaef;
+        background: $primaryFont;
+        padding: size(10) size(16);
+      }
+    }
+
+    .file-uploder-inner {
+      display: flex;
+      flex-direction: column;
+      gap: size(10);
+
+      .label-title {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+      }
+      .file-uploader-label {
+        @include radius(14);
+        border: 1.37px dashed #0f766d;
+        background: rgba(240, 253, 252, 0.3);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: size(4);
+        padding: size(20);
+        figure {
+          svg {
+            width: size(34);
+            height: size(34);
+          }
+        }
+        .color-text {
+          color: #0f766d;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+        }
+        .text {
+          color: #475467;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(20);
+        }
+        .text-sm {
+          color: #475467;
+          text-align: center;
+          font-family: $primaryFont;
+          font-size: size(12);
+          line-height: size(18);
+        }
+        .file {
+          display: none;
+        }
+      }
+    }
+
+    .text-sm {
+      color: #475467;
+      font-family: $primaryFont;
+      font-size: size(12);
+      line-height: size(18);
+    }
+
+    .example-documents {
+      @include radius(14);
+      background: #f8fafc;
+      @include breakpoint(mobile768) {
+        width: 248px;
+      }
+      padding: size(20);
+      display: flex;
+      flex-direction: column;
+      gap: size(20);
+      .title {
+        color: #0f766d;
+        font-family: Inter;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(20);
+      }
+      .image {
+        height: size(132);
+        @include radius(6);
+      }
+    }
+  }
+}
