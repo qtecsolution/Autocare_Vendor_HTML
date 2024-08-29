@@ -42,3 +42,76 @@
     }
   }
 }
+
+.header-section1 {
+  padding: size(20) 0;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, #edf6f6 0%, #fff 100%);
+  &-inner {
+    .logo {
+      img {
+        width: size(94);
+        height: size(60);
+      }
+    }
+    .title {
+      color: #101828;
+      font-family: $primaryFont;
+      font-size: size(20);
+      font-weight: 700;
+      line-height: size(28);
+    }
+
+    .header-button {
+      .login-btn,
+      .signUp-btn {
+        padding: size(10) size(16);
+        @include radius(8);
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+        background: transparent;
+        transition: all 0.35s ease-in-out;
+        &:hover {
+          background: #0f766d;
+          color: $white;
+        }
+      }
+
+      .active {
+        background: #0f766d;
+        color: $white;
+      }
+    }
+  }
+
+  .inner-form {
+    .form-title {
+      color: #101828;
+      text-align: center;
+      font-family: $primaryFont;
+      font-size: size(20);
+      font-weight: 700;
+      line-height: size(28);
+    }
+    .search-form {
+      @include radius(8);
+      border: 1px solid #d0d5dd;
+      background: $white;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      padding: size(10) size(14);
+      max-width: size(472);
+      width: 100%;
+      svg {
+        width: size(20);
+        height: size(20);
+      }
+    }
+  }
+}
