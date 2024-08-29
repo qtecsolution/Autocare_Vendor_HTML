@@ -4192,6 +4192,202 @@ table tr td {
   }
 }
 
+.inner-content-1 {
+  padding: 0rem 0.625rem;
+  background-color: #fafafa;
+}
+@media screen and (min-width: 36rem) {
+  .inner-content-1 {
+    padding: 0rem 1.875rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .inner-content-1 {
+    padding: 0rem 4.25rem;
+  }
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .title {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .text {
+  color: #475467;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .inner-bar-chart {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .inner-bar-chart .bar-chart {
+  width: 6.25rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .inner-bar-chart .bar-chart .bar {
+  height: 0.625rem;
+  background-color: #f3f4f6;
+  margin: 0.3125rem 0;
+  position: relative;
+  border-radius: 6249.9375rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .inner-bar-chart .bar-chart .bar span {
+  display: block;
+  height: 100%;
+  background-color: #0d9488; /* Bar color */
+  border-radius: 6249.9375rem;
+}
+.inner-content-1 .dashboard-empty-section .dashboard-empty-header .inner-bar-chart .text {
+  color: #1f2937;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 0.875rem;
+  letter-spacing: 0.07px;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation {
+  border-radius: 0.75rem;
+  border: 1px solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 0px 1px 0px rgba(12, 26, 75, 0.1), 0px 4px 20px -2px rgba(50, 50, 71, 0.08);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  gap: 0.625rem;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .text {
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1rem;
+  letter-spacing: 0.06px;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left figure svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left .title {
+  color: #1f2937;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.08px;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left .text {
+  border-radius: 62499.9375rem;
+  padding: 3px 6px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.05px;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left .bg-green {
+  background: #26bf6a;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .left .bg-red {
+  background: #ff3e50;
+}
+.inner-content-1 .dashboard-empty-section .profile-creation .right svg {
+  width: 1rem;
+  height: 1rem;
+}
+.inner-content-1 .dashboard-empty-section .help-title {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  letter-spacing: 0.08px;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card .video-thumb {
+  position: relative;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card .video-thumb .thumb-img {
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 0.625rem;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card .video-thumb .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card .title {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: 0.07px;
+}
+.inner-content-1 .dashboard-empty-section .help-video-card .details {
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.06px;
+}
+.inner-content-1 .dashboard-empty-section .faq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 0.875rem;
+}
+.inner-content-1 .dashboard-empty-section .faq-section .title {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.inner-content-1 .dashboard-empty-section .faq-section .faq-inner {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+}
+.inner-content-1 .dashboard-empty-section .faq-section .faq-inner .faq-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.9375rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.inner-content-1 .dashboard-empty-section .faq-section .faq-inner .faq-item:last-child {
+  border-bottom: none;
+}
+.inner-content-1 .dashboard-empty-section .faq-section .faq-inner .faq-item figure svg {
+  width: 1rem;
+  height: 1rem;
+}
+.inner-content-1 .dashboard-empty-section .faq-section .faq-inner .faq-item .text {
+  color: #1f2937;
+  font-family: Inter;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 0.08px;
+}
+
 .page-top-section {
   padding: 1.25rem 0rem;
 }
@@ -4227,9 +4423,30 @@ table tr td {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.page-top-section-inner .notification-svg {
+  position: relative;
+}
 .page-top-section-inner .notification-svg svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+.page-top-section-inner .notification-svg .text {
+  position: absolute;
+  top: -0.1875rem;
+  right: -0.1875rem;
+  border: 0.5px solid #0f766d;
+  background: hsl(0, 0%, 100%);
+  border-radius: 62499.9375rem;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
 }
 .page-top-section-inner .notification-svg.active svg path {
   fill: #0f766d;
