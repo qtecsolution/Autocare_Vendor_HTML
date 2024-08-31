@@ -16,10 +16,12 @@
         border-radius: size(16) size(16) 0px 0px;
         border-bottom: 1px solid #e5e7eb;
         background: #fafafa;
+
         img {
           width: size(52);
           height: size(52);
         }
+
         .title {
           color: #09090b;
           font-family: Inter;
@@ -31,11 +33,13 @@
 
       .accordion {
         padding-bottom: size(20);
+
         .accordion-item {
           background-color: $white;
           margin-bottom: 0;
           padding: 0 size(20);
           border: none;
+
           .accordion-header {
             .accordion-button {
               border-bottom: 1px solid #e5e7eb !important;
@@ -50,6 +54,7 @@
               &:not(.collapsed) {
                 background-color: transparent;
               }
+
               &:focus {
                 z-index: 3;
                 border: none;
@@ -61,12 +66,14 @@
                 background-image: url(../../assets/images/right-array.png);
                 transform: rotate(-270deg) !important;
               }
+
               &.collapsed::after {
                 transform: rotate(-360deg) !important;
                 background-image: url(../../assets/images/right-array.png);
               }
             }
           }
+
           .accordion-body {
             padding: size(16) size(8);
           }
@@ -78,11 +85,13 @@
 
 .contact-section {
   margin: size(40) 0;
+
   &-inner {
     .contact-card {
       display: flex;
       flex-direction: column;
       gap: size(12);
+
       .title {
         color: #101828;
         font-family: $primaryFont;
@@ -90,6 +99,7 @@
         font-weight: 700;
         line-height: size(28);
       }
+
       &-inner {
         display: flex;
         align-items: center;
@@ -104,6 +114,7 @@
           width: size(24);
           height: size(24);
         }
+
         .contact-detail {
           .number {
             color: #0f766d;
@@ -112,6 +123,7 @@
             font-weight: 700;
             line-height: size(28);
           }
+
           .text {
             color: #1f2937;
             font-family: $primaryFont;
@@ -127,10 +139,12 @@
 
 .questions-section {
   margin-bottom: size(40);
+
   &-inner {
     display: flex;
     flex-direction: column;
     gap: size(20);
+
     .title {
       color: #101828;
       font-family: $primaryFont;
@@ -151,19 +165,23 @@
             font-weight: 600;
             line-height: size(24);
             letter-spacing: 0.08px;
+
             &::after {
               margin-left: 0;
               margin-right: size(10);
               background-image: url(../../assets/images/minus.png);
               transition: none;
             }
+
             &.collapsed::after {
               transform: none;
               background-image: url(../../assets/images/plus.png);
             }
+
             &:focus {
               box-shadow: none;
             }
+
             &:not(.collapsed) {
               color: #0f766d;
               background-color: transparent;
@@ -180,6 +198,95 @@
           font-size: size(16);
           font-weight: 500;
           line-height: size(24);
+        }
+      }
+    }
+  }
+}
+
+.payment-section {
+  &-inner {
+    // .accordion{
+    //   &-item{
+    //     .accordion-header{
+    //       .accordion-button{}
+    //     }
+
+    //     .accordion-body{
+
+    //     }
+    //   }
+    // }
+    .accordion {
+      padding-bottom: size(20);
+
+      .accordion-item {
+        background-color: #FAFAFA;
+
+        .accordion-header {
+          .accordion-button {
+            border-bottom: 1px solid #e5e7eb !important;
+            border-radius: 0.25rem;
+            color: #1f2937;
+            font-family: $primaryFont;
+            font-size: size(16);
+            font-weight: 600;
+            line-height: size(24);
+
+            &:not(.collapsed) {
+              background-color: $white;
+              color: #0F766D;
+            }
+
+            &:focus {
+              box-shadow: none !important;
+            }
+
+            &::after {
+              background-image: url(../../assets/images/up-arrow.svg );
+              transform: rotate(0);
+            }
+
+            &.collapsed::after {
+              background-image: url(../../assets/images/down-arrow.svg);
+              transform: rotate(0);
+            }
+
+          }
+        }
+
+        .accordion-body {
+          padding: size(16) size(0);
+
+          ul {
+            padding-left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: size(4);
+
+            li {
+              font-family: $primaryFont;
+              color: #1F2937;
+              font-size: size(16);
+              line-height: size(24);
+              padding: size(5) size(20);
+              transition: all .35s ease-in-out;
+              border-left: size(2) solid transparent;
+
+              &.active {
+                border-left: size(2) solid #0F766D;
+                background: $white;
+                color: #0F766D;
+              }
+
+              &:hover {
+                border-left: size(2) solid #0F766D;
+                background: $white;
+                color: #0F766D;
+              }
+            }
+          }
         }
       }
     }

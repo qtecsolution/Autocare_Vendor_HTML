@@ -12,6 +12,7 @@
   line-height: 24px;
   border: none;
   transition: all 0.35s ease-in-out;
+
   @include hover {
     background: $primary-color-700;
   }
@@ -34,6 +35,7 @@
   line-height: size(20);
   cursor: pointer;
 }
+
 .save-draft-btn.active {
   background: #fff;
   color: #1f2937;
@@ -52,18 +54,22 @@
   font-weight: 600;
   line-height: size(20);
 }
+
 .save-changes-btn.active {
   background: #0f766d;
   cursor: pointer;
+
   &:hover {
     color: #fff;
   }
 
   transition: all 0.35s ease-in-out;
+
   @include hover {
     background: $primary-color-700;
   }
 }
+
 .confirm-btn {
   display: inline-flex;
   width: 145px;
@@ -82,14 +88,17 @@
   line-height: size(20);
   cursor: pointer;
 }
+
 .confirm-btn.active {
   background: #0f766d;
   cursor: pointer;
+
   &:hover {
     color: #fff;
   }
 
   transition: all 0.35s ease-in-out;
+
   @include hover {
     background: $primary-color-700;
   }
@@ -111,6 +120,7 @@
   font-size: size(10);
   font-weight: 600;
   line-height: 100%;
+
   svg {
     margin-top: size(4);
     width: size(14);
@@ -134,10 +144,12 @@
   font-weight: 600;
   line-height: size(20);
   transition: all 0.35s ease-in-out;
+
   &:hover {
     color: $white;
     background: #074b45;
   }
+
   svg {
     height: size(20);
     width: size(20);
@@ -163,6 +175,7 @@
   svg {
     width: size(20);
     height: size(20);
+
     path {
       fill: #6b7280;
       transition: all 0.35s ease-in-out;
@@ -172,6 +185,7 @@
   &:hover {
     background: #0f766d;
     color: $white;
+
     svg {
       path {
         fill: $white;
@@ -182,6 +196,7 @@
   &.active {
     background: #0f766d;
     color: $white;
+
     svg {
       path {
         fill: $white;
@@ -228,6 +243,7 @@
   @include radius(6);
   background: #0f766d;
   border: none;
+
   .text {
     font-family: $primaryFont;
     font-size: size(14);
@@ -235,9 +251,11 @@
     line-height: size(20);
     color: $white;
   }
+
   svg {
     width: size(14);
     height: size(14);
+
     path {
       stroke: $white;
     }
@@ -249,6 +267,7 @@
   padding: size(12) size(20);
   @include radius(10);
   background: #0f766d;
+  text-align: center;
   color: $white;
   font-family: Inter;
   font-size: size(16);
@@ -256,7 +275,9 @@
   border: none;
   line-height: size(24);
   transition: all 0.35s ease-in-out;
+
   @include hover {
     background: #074b45;
+    color: $white;
   }
 }
