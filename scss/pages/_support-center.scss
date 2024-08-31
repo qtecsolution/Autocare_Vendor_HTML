@@ -206,17 +206,7 @@
 
 .payment-section {
   &-inner {
-    // .accordion{
-    //   &-item{
-    //     .accordion-header{
-    //       .accordion-button{}
-    //     }
 
-    //     .accordion-body{
-
-    //     }
-    //   }
-    // }
     .accordion {
       padding-bottom: size(20);
 
@@ -287,6 +277,63 @@
               }
             }
           }
+        }
+      }
+    }
+
+    .accounts-section {
+      @include radius(16);
+      border: size(1) solid #E5E7EB;
+      background: $white;
+      padding: size(30);
+
+      .title {
+        color: #1F2937;
+        font-family: $primaryFont;
+        font-size: size(24);
+        font-weight: 700;
+        letter-spacing: 0.12px;
+      }
+
+      .details {
+        color: #6B7280;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 500;
+        line-height: size(24);
+        letter-spacing: 0.08px;
+      }
+    }
+
+    .information-section {
+      display: flex;
+      flex-direction: column;
+      gap: size(20);
+
+      .title {
+        color: #101828;
+        font-family: $primaryFont;
+        font-size: size(20);
+        font-weight: 700;
+        line-height: size(28);
+      }
+
+      .similar-questions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: size(13) size(20);
+        justify-content: space-between;
+        @include radius(8);
+        border: size(1) solid #E5E7EB;
+        background: $white;
+
+        .question {
+          color: #6B7280;
+          font-family: $primaryFont;
+          font-size: size(16);
+          font-weight: 500;
+          line-height: size(24);
         }
       }
     }

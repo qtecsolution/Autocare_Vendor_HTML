@@ -7759,6 +7759,56 @@ table tr td {
   background: hsl(0, 0%, 100%);
   color: #0F766D;
 }
+.payment-section-inner .accounts-section {
+  border-radius: 1rem;
+  border: 0.0625rem solid #E5E7EB;
+  background: hsl(0, 0%, 100%);
+  padding: 1.875rem;
+}
+.payment-section-inner .accounts-section .title {
+  color: #1F2937;
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12px;
+}
+.payment-section-inner .accounts-section .details {
+  color: #6B7280;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  letter-spacing: 0.08px;
+}
+.payment-section-inner .information-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.payment-section-inner .information-section .title {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.payment-section-inner .information-section .similar-questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8125rem 1.25rem;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #E5E7EB;
+  background: hsl(0, 0%, 100%);
+}
+.payment-section-inner .information-section .similar-questions .question {
+  color: #6B7280;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
 
 html {
   box-sizing: border-box;
