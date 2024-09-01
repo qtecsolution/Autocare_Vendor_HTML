@@ -194,10 +194,8 @@
     }
 
     .languages-btn {
-      display: flex;
       padding: size(13) size(16);
-      justify-content: center;
-      align-items: center;
+      text-align: center;
       @include radius(8);
       border: 0.5px solid #e7eaef;
       background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
@@ -206,6 +204,15 @@
       font-family: $primaryFont;
       font-size: size(14);
       font-weight: 500;
+
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 100%;
+      display: block;
     }
 
     .input-field-languages {
@@ -232,7 +239,7 @@
         border-right: 1px solid #e7eaef;
       }
       input {
-        flex-grow: 1;
+        width: 100%;
       }
     }
 
@@ -287,7 +294,10 @@
     border: 1px solid #e5e7eb;
     background: #fff;
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-    padding: size(30);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
     display: flex;
     flex-direction: column;
     gap: size(20);
@@ -477,13 +487,19 @@
   }
 }
 .main-description-section {
-  padding: size(16) size(68) 0 size(68);
+  padding: size(16) size(10) 0 size(10);
+  @include breakpoint(mobile576) {
+    padding: size(16) size(68) 0 size(68);
+  }
   .main-description-content {
     @include radius(16);
     border: size(1) solid #e5e7eb;
     background: $white;
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-    padding: size(30);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
     display: flex;
     flex-direction: column;
     gap: size(20);
@@ -639,13 +655,24 @@
 }
 
 .price-section {
-  padding: size(10) size(68) 0 size(68);
+  padding: size(10) size(10) 0 size(10);
+  @include breakpoint(mobile576) {
+    padding: size(10) size(68) 0 size(68);
+  }
   .inner-price-section {
     @include radius(16);
     border: size(1) solid #e5e7eb;
     background: #fff;
     box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-    padding: size(30);
+    padding: size(10);
+    @include breakpoint(mobile576) {
+      padding: size(30);
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
     .inner-input {
       display: flex;
       flex-direction: column;
@@ -951,4 +978,11 @@
 
   display: flex;
   justify-content: end;
+}
+
+.vehicle-information-section {
+  padding: size(16) size(10) 0 size(10);
+  @include breakpoint(mobile576) {
+    padding: size(16) size(68) 0 size(68);
+  }
 }

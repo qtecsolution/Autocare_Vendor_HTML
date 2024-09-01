@@ -3,6 +3,9 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  // height: size(20);
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .line-clamp2 {
   overflow: hidden;

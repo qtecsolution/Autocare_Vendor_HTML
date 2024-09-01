@@ -539,15 +539,15 @@
                   <div class="input-field-name">
                     <label for="product-name">Product Name <span>*</span></label>
                   </div>
-                  <div class="row g-2">
-                    <div class="col-md-8  col-lg-7 col-xl-8 col-xxl-9">
+                  <div class="row">
+                    <div class="col-9">
                       <div class="input-field">
                         <input type="text" name="product-name" id="product-name"
                           placeholder="Ex. Sony a6400 mirrorless camera" />
                         <p class="text">82/100</p>
                       </div>
                     </div>
-                    <div class="col-md-4  col-lg-5 col-xl-4 col-xxl-3 align-self-center">
+                    <div class="col-3 align-self-center">
                       <a class="languages-btn" href="#">
                         Translate to other Languages
                       </a>
@@ -568,13 +568,33 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="d-flex flex-column gap-2">
+                    <div class="input-field-name">
+                      <label for="product-name">Short Description</label>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="input-field">
+                          <input type="text" name="product-name" id="product-name"
+                            placeholder="High-quality ceramic brake pads designed for a quieter and cleaner braking experience." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <input class="box-checkbox" checked type="checkbox" id="checkbox4">
+                    <label class="label-short-description" for="checkbox4" tabindex="4">Is short description
+                      active</label>
+                  </div>
                 </div>
 
                 <div class="category-select">
                   <div class="box">
                     <label class="category-select-label">Select Category <span>*</span></label>
                     <select class="wide selectize">
-                      <option data-display="Select">Nothing</option>
+                      <option data-display="Select">Please select category or search with keyword</option>
                       <option value="1">Some option</option>
                       <option value="2">Another option</option>
                       <option value="4">Potato</option>
@@ -582,8 +602,80 @@
                   </div>
                 </div>
               </form>
+            </div>
 
+            <div class="brand-name">
+              <div class="row g-3">
+                <div class="col-sm-6 col-lg-6 col-xl-3">
+                  <div class="inner-input">
+                    <div class="box">
+                      <label class="category-select-label">Brand <span>*</span></label>
+                      <select class="wide selectize">
+                        <option data-display="Select">Ford</option>
+                        <option value="1">Ford 1</option>
+                        <option value="2">Ford 2</option>
+                        <option value="4">Ford 3</option>
+                      </select>
+                    </div>
+                    <div>
+                      <input class="box-checkbox" checked type="checkbox" id="brandActive">
+                      <label class="label-short-description" for="brandActive" tabindex="4">
+                        Is Brand active
+                      </label>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="col-sm-6 col-lg-6 col-xl-3">
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="manufacturer">Manufacturer</label>
+                      <input class="input" type="text" name="" id="manufacturer" placeholder="Ford" />
+                    </div>
+                    <div>
+                      <input class="box-checkbox" checked type="checkbox" id="manufacturerActive">
+                      <label class="label-short-description" for="manufacturerActive" tabindex="4">
+                        Is manufacturer active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-6 col-xl-3">
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="part">Part Number</label>
+                      <input class="input" type="text" name="" id="part" placeholder="XYZ-6789" />
+                    </div>
+                    <div>
+                      <input class="box-checkbox" checked type="checkbox" id="partActive">
+                      <label class="label-short-description" for="partActive" tabindex="4">
+                        Is part number active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-6 col-xl-3">
+                  <div class="inner-input">
+                    <div class="box">
+                      <label class="category-select-label">Warranty</label>
+                      <select class="wide selectize">
+                        <option data-display="Select">Nothing</option>
+                        <option value="1">Some option</option>
+                        <option value="2">Another option</option>
+                        <option value="4">Potato</option>
+                      </select>
+                    </div>
+                    <div>
+                      <input class="box-checkbox" checked type="checkbox" id="warrantyActive">
+                      <label class="label-short-description" for="warrantyActive" tabindex="4">
+                        Is warranty active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="product-image-section">
@@ -675,6 +767,42 @@
                     </div>
                   </figure>
 
+                  <figure class="product-image-inner">
+                    <img class="image" src="./assets/images/product-image2.png" alt="product-img" />
+                    <div class="close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <g filter="url(#filter0_dd_1_14868)">
+                          <circle cx="21" cy="20" r="15" fill="white" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.7224 14.738C15.8359 14.6247 15.9897 14.561 16.1501 14.561C16.3105 14.561 16.4644 14.6247 16.5778 14.738L20.9921 19.1523L25.4064 14.738C25.4619 14.6786 25.5287 14.6309 25.6029 14.5978C25.6772 14.5647 25.7573 14.5469 25.8386 14.5455C25.9198 14.5441 26.0006 14.559 26.0759 14.5895C26.1513 14.6199 26.2198 14.6652 26.2772 14.7227C26.3347 14.7802 26.38 14.8486 26.4105 14.924C26.4409 14.9993 26.4558 15.0801 26.4544 15.1613C26.453 15.2426 26.4352 15.3228 26.4021 15.397C26.369 15.4712 26.3213 15.5381 26.2619 15.5935L21.8476 20.0078L26.2619 24.4221C26.3213 24.4775 26.369 24.5443 26.4021 24.6185C26.4352 24.6928 26.453 24.7729 26.4544 24.8542C26.4558 24.9355 26.4409 25.0162 26.4105 25.0916C26.38 25.1669 26.3347 25.2354 26.2772 25.2929C26.2198 25.3503 26.1513 25.3956 26.0759 25.4261C26.0006 25.4565 25.9198 25.4715 25.8386 25.47C25.7573 25.4686 25.6772 25.4508 25.6029 25.4177C25.5287 25.3847 25.4619 25.337 25.4064 25.2775L20.9921 20.8632L16.5778 25.2775C16.4631 25.3844 16.3114 25.4426 16.1545 25.4398C15.9977 25.4371 15.8481 25.3736 15.7372 25.2627C15.6264 25.1518 15.5628 25.0022 15.5601 24.8454C15.5573 24.6886 15.6155 24.5368 15.7224 24.4221L20.1367 20.0078L15.7224 15.5935C15.6091 15.48 15.5454 15.3262 15.5454 15.1658C15.5454 15.0054 15.6091 14.8515 15.7224 14.738Z"
+                          fill="#525468" />
+                        <defs>
+                          <filter id="filter0_dd_1_14868" x="0.545455" y="0.909091" width="40.9091" height="40.9091"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feMorphology radius="1.36364" operator="dilate" in="SourceAlpha"
+                              result="effect1_dropShadow_1_14868" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="2.04545" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1_14868" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="1.36364" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                            <feBlend mode="normal" in2="effect1_dropShadow_1_14868"
+                              result="effect2_dropShadow_1_14868" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1_14868" result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </figure>
+
                   <label for="upplode-img1" class="product-image-inner-file">
                     <input type="file" id="upplode-img1">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
@@ -685,14 +813,6 @@
 
                   <label for="upplode-img2" class="product-image-inner-file">
                     <input type="file" id="upplode-img2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                      <path d="M15 5.625V24.375M24.375 15H5.625" stroke="#0D9488" stroke-width="1.875"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </label>
-
-                  <label for="upplode-img3" class="product-image-inner-file">
-                    <input type="file" id="upplode-img3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                       <path d="M15 5.625V24.375M24.375 15H5.625" stroke="#0D9488" stroke-width="1.875"
                         stroke-linecap="round" stroke-linejoin="round" />
@@ -710,167 +830,218 @@
               </div>
             </div>
 
-            <div class="promotion-image-video-section">
-              <div class="row g-4">
-                <div class="col-xl-6">
-                  <div class="promotion-image-inner">
-                    <div class="promotion-image-header">
-                      <h4>Promotion Image</h4>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path
-                          d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
-                          stroke="#6B7280" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </div>
-
-                    <div class="row g-4 align-items-center justify-content-between">
-                      <div class="col-md-8">
-                        <label class="promotion-image-uploader" for="promotion-image">
-                          <input class="file" type="file" name="" id="promotion-image" />
-                          <div class="d-flex align-items-center flex-column gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
-                              fill="none">
-                              <path
-                                d="M17.0001 23.375V13.8125M17.0001 13.8125L21.2501 18.0625M17.0001 13.8125L12.7501 18.0625M9.5626 27.625C8.04596 27.6267 6.57842 27.0875 5.42352 26.1045C4.26862 25.1214 3.50203 23.7588 3.26142 22.2614C3.0208 20.764 3.32193 19.2298 4.11072 17.9344C4.89951 16.6391 6.12429 15.6673 7.5651 15.1938C7.19492 13.2971 7.5775 11.3308 8.63182 9.71129C9.68614 8.09177 11.3294 6.94621 13.2137 6.51718C15.0979 6.08815 17.0751 6.40934 18.7267 7.41274C20.3782 8.41614 21.5744 10.023 22.0618 11.8929C22.8155 11.6478 23.6227 11.6183 24.3923 11.8078C25.1618 11.9972 25.8631 12.3981 26.4168 12.9651C26.9706 13.5321 27.3547 14.2427 27.5259 15.0165C27.6971 15.7903 27.6486 16.5966 27.3857 17.3443C28.5454 17.7873 29.5135 18.6222 30.1221 19.7044C30.7306 20.7865 30.9411 22.0475 30.7172 23.2686C30.4932 24.4897 29.8489 25.5939 28.8959 26.3896C27.943 27.1854 26.7416 27.6224 25.5001 27.625H9.5626Z"
-                                stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p>Drop your video here or</p>
-                            <span>Browse</span>
-                          </div>
-                        </label>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="right">
-                          <ul>
-                            <li>Image Ration </li>
-                            <li>Max file size: 1MB.</li>
-                            <li>Format: png, jpg</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="youtube-thumbnail">
+              <div class="product-img-head">
+                <div class="d-flex align-items-center gap-1">
+                  <h1 class="title">Youtube thumbnail</h1>
                 </div>
 
-                <div class="col-xl-6">
-                  <div class="promotion-image-inner">
-                    <div class="promotion-image-header">
-                      <h4>Video</h4>
-                    </div>
+                <h1 class="example-text">
+                  See Example
+                </h1>
+              </div>
 
-                    <div class="row g-4 align-items-center justify-content-between">
-                      <div class="col-md-6">
-                        <label class="promotion-image-uploader" for="promotion-image">
-                          <input class="file" type="file" name="" id="promotion-image" />
-                          <div class="d-flex align-items-center flex-column gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
-                              fill="none">
-                              <path
-                                d="M17.0001 23.375V13.8125M17.0001 13.8125L21.2501 18.0625M17.0001 13.8125L12.7501 18.0625M9.5626 27.625C8.04596 27.6267 6.57842 27.0875 5.42352 26.1045C4.26862 25.1214 3.50203 23.7588 3.26142 22.2614C3.0208 20.764 3.32193 19.2298 4.11072 17.9344C4.89951 16.6391 6.12429 15.6673 7.5651 15.1938C7.19492 13.2971 7.5775 11.3308 8.63182 9.71129C9.68614 8.09177 11.3294 6.94621 13.2137 6.51718C15.0979 6.08815 17.0751 6.40934 18.7267 7.41274C20.3782 8.41614 21.5744 10.023 22.0618 11.8929C22.8155 11.6478 23.6227 11.6183 24.3923 11.8078C25.1618 11.9972 25.8631 12.3981 26.4168 12.9651C26.9706 13.5321 27.3547 14.2427 27.5259 15.0165C27.6971 15.7903 27.6486 16.5966 27.3857 17.3443C28.5454 17.7873 29.5135 18.6222 30.1221 19.7044C30.7306 20.7865 30.9411 22.0475 30.7172 23.2686C30.4932 24.4897 29.8489 25.5939 28.8959 26.3896C27.943 27.1854 26.7416 27.6224 25.5001 27.625H9.5626Z"
-                                stroke="#0D9488" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                            <p>Drop your video here or</p>
-                            <span>Browse</span>
-                          </div>
-                        </label>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="right">
-                          <ul>
-                            <li>Min size: 480x480 px. </li>
-                            <li>Max video length: 60 seconds. </li>
-                            <li>Max file size: 100MB.</li>
-                            <li>Supported Format: mp4</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+              <div class="product-img-body">
+                <div class="product-thumbnail">
+                  <img src="./assets/images/thumbnail.png" alt="" />
+                </div>
+
+                <div class="">
+                  <ul class="add-product-img-list">
+                    <li>Image Ration </li>
+                    <li>Max file size: 1MB.</li>
+                    <li>Format: png, jpg</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-img-footer">
+                <label class="input-label" for="youtube-link">Youtube Link</label>
+                <div class="input-inner">
+                  <p class="text">http://www.youtube.com/</p>
+                  <input class="input" type="text" name="" id="youtube-link" placeholder="Type here" />
+
+                  <figure class="input-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                        stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </figure>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="main-description-section">
-            <div class="main-description-content">
+            <div class="description">
+              <div class="main-description">
+                <label for="" class="main-description-label">
+                  Main Description
+                </label>
+                <div class="editor-container">
+                  <div class="toolbar" id="toolbar">
+                    <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                      <div class="toolbar-inner">
+                        <div class="d-flex align-items-center">
+                          <button class="ql-undo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                          <button class="ql-redo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                        </div>
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
+
+                        <div class="d-flex align-items-center">
+                          <button class="ql-bold"></button>
+                          <button class="ql-italic"></button>
+                          <button class="ql-underline"></button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <button class="ql-list" value="ordered"></button>
+                          <button class="ql-list" value="bullet"></button>
+                          <button class="ql-align" value=""></button>
+                          <button class="ql-align" value="center"></button>
+                          <button class="ql-align" value="right"></button>
+                          <button class="ql-blockquote"></button>
+                        </div>
+                        <button class="ql-strike"></button>
+                        <button class="ql-clean"></button>
+                      </div>
+
+                      <a href="#" class="link-example">See Example</a>
+                    </div>
+                  </div>
+                  <div class="editor" id="editor"></div>
+                </div>
+              </div>
 
               <div class="main-description">
                 <label for="" class="main-description-label">
-                  Main Description <span>*</span>
+                  Specification
                 </label>
                 <div class="editor-container">
-                  <div id="toolbar">
-                    <div class="toolbar-inner">
-                      <div class="d-flex align-items-center">
-                        <button class="ql-undo">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                            fill="none">
-                            <path
-                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
-                              fill="#0A0A0A" />
-                          </svg>
-                        </button>
-                        <button class="ql-redo">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
-                            fill="none">
-                            <path
-                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
-                              fill="#0A0A0A" />
-                          </svg>
-                        </button>
-                      </div>
-                      <select class="ql-font"></select>
-                      <select class="ql-size"></select>
+                  <div class="toolbar" id="toolbar1">
+                    <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                      <div class="toolbar-inner">
+                        <div class="d-flex align-items-center">
+                          <button class="ql-undo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                          <button class="ql-redo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                        </div>
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
 
-                      <div class="d-flex align-items-center">
-                        <button class="ql-bold"></button>
-                        <button class="ql-italic"></button>
-                        <button class="ql-underline"></button>
+                        <div class="d-flex align-items-center">
+                          <button class="ql-bold"></button>
+                          <button class="ql-italic"></button>
+                          <button class="ql-underline"></button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <button class="ql-list" value="ordered"></button>
+                          <button class="ql-list" value="bullet"></button>
+                          <button class="ql-align" value=""></button>
+                          <button class="ql-align" value="center"></button>
+                          <button class="ql-align" value="right"></button>
+                          <button class="ql-blockquote"></button>
+                        </div>
+                        <button class="ql-strike"></button>
+                        <button class="ql-clean"></button>
                       </div>
-                      <div class="d-flex align-items-center">
-                        <button class="ql-list" value="ordered"></button>
-                        <button class="ql-list" value="bullet"></button>
-                        <button class="ql-align" value=""></button>
-                        <button class="ql-align" value="center"></button>
-                        <button class="ql-align" value="right"></button>
-                        <button class="ql-blockquote"></button>
-                      </div>
-                      <button class="ql-strike"></button>
-                      <button class="ql-clean"></button>
+
+                      <a href="#" class="link-example">See Example</a>
                     </div>
-                    <a class="link-example" href="#">See Example</a>
                   </div>
-                  <div id="editor"></div>
+                  <div class="editor" id="editor1"></div>
                 </div>
               </div>
 
-              <div class="highlights">
-                <label class="highlights-label" for="highlights">Highlights <span>*</span></label>
+              <div class="main-description">
+                <label for="" class="main-description-label">
+                  Compatibility
+                </label>
+                <div class="editor-container">
+                  <div class="toolbar" id="toolbar2">
+                    <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                      <div class="toolbar-inner">
+                        <div class="d-flex align-items-center">
+                          <button class="ql-undo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                          <button class="ql-redo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                              fill="none">
+                              <path
+                                d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                                fill="#0A0A0A" />
+                            </svg>
+                          </button>
+                        </div>
+                        <select class="ql-font"></select>
+                        <select class="ql-size"></select>
 
-                <textarea class="highlights-input" name="" id="highlights" cols="30" rows="10"
-                  placeholder="Write here"></textarea>
-              </div>
+                        <div class="d-flex align-items-center">
+                          <button class="ql-bold"></button>
+                          <button class="ql-italic"></button>
+                          <button class="ql-underline"></button>
+                        </div>
+                        <div class="d-flex align-items-center">
+                          <button class="ql-list" value="ordered"></button>
+                          <button class="ql-list" value="bullet"></button>
+                          <button class="ql-align" value=""></button>
+                          <button class="ql-align" value="center"></button>
+                          <button class="ql-align" value="right"></button>
+                          <button class="ql-blockquote"></button>
+                        </div>
+                        <button class="ql-strike"></button>
+                        <button class="ql-clean"></button>
+                      </div>
 
-              <div class="highlights">
-                <label class="highlights-label" for="box">What's in the box <span>*</span></label>
-
-                <input class="box-input" type="text" name="" id="box">
+                      <a href="#" class="link-example">See Example</a>
+                    </div>
+                  </div>
+                  <div class="editor" id="editor2"></div>
+                </div>
               </div>
             </div>
           </div>
+
 
           <div class="price-section">
             <div class="inner-price-section">
-              <div class="row">
-                <div class="col-3">
+              <div class="row g-3">
+                <div class="col-sm-6 col-lg-3">
                   <div class="inner-input">
-                    <label class="label" for="">Price <span>*</span></label>
-                    <input class="input" type="text" name="" id="" placeholder="৳" />
-                  </div>
-                </div>
-                <div class="col-3">
-                  <div class="inner-input">
-                    <label class="label" for="">Special Price
+                    <label class="label" for="">Price
+                      <span>*</span>
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
@@ -882,9 +1053,25 @@
                     <input class="input" type="text" name="" id="" placeholder="৳" />
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-6 col-lg-3">
+                  <div class="inner-input">
+                    <label class="label" for="">Special Price
+
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path
+                            d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                            stroke="#0D9488" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </span>
+                    </label>
+                    <input class="input" type="text" name="" id="" placeholder="৳" />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
                   <div class="inner-input">
                     <label class="label" for="">Free Items
+                      <span>*</span>
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
@@ -896,9 +1083,10 @@
                     <input class="input" type="text" name="" id="" placeholder="" />
                   </div>
                 </div>
-                <div class="col-3">
+                <div class="col-sm-6 col-lg-3">
                   <div class="inner-input">
                     <label class="label" for="">Discount
+                      <span>*</span>
                       <span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path
@@ -911,10 +1099,28 @@
                   </div>
                 </div>
               </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="inner-input">
+                    <label class="label" for="">Meta description</label>
+                    <textarea class="input" name="" id="" cols="30" placeholder="Write here" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-12">
+                  <div class="inner-input">
+                    <label class="label" for="">Meta Keywords</label>
+                    <textarea class="input" name="" id="" cols="30" placeholder="Write here" rows="3"></textarea>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="stock-section">
+          <!-- <div class="stock-section">
             <div class="inner-stock-section">
               <div class="row">
                 <div class="col-6">
@@ -1086,16 +1292,6 @@
 
           <div class="packaging-section">
             <div class="inner-packaging-section">
-              <!-- <div class="row">
-                <div class="col-4">
-                  <label for="">
-                    Package Weight <span>*</span>
-                  </label>
-
-                  <input type="text" name="" id="">
-                </div>
-              </div> -->
-
               <div class="row">
                 <div class="col-4">
                   <div class="inner-input">
@@ -1182,7 +1378,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <div class="add-product-footer mt-5">
@@ -1191,7 +1387,7 @@
               Save Draft
             </a>
 
-            <a href="./Add-product-congratulation.html" class="confirm-btn active">
+            <a href="./add-Product8.html" class="confirm-btn active">
               Confirm
             </a>
           </div>

@@ -2031,6 +2031,8 @@ table tr td {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .line-clamp2 {
@@ -3547,10 +3549,8 @@ table tr td {
   line-height: 1.125rem;
 }
 .add-product-content .add-product-body .languages-btn {
-  display: flex;
   padding: 0.8125rem 1rem;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-radius: 0.5rem;
   border: 0.5px solid #e7eaef;
   background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
@@ -3558,6 +3558,14 @@ table tr td {
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
 }
 .add-product-content .add-product-body .input-field-languages {
   border-radius: 0.5rem;
@@ -3586,7 +3594,7 @@ table tr td {
   border-right: 1px solid #e7eaef;
 }
 .add-product-content .add-product-body .input-field-languages input {
-  flex-grow: 1;
+  width: 100%;
 }
 .add-product-content .add-product-body .category-select {
   display: flex;
@@ -3635,10 +3643,15 @@ table tr td {
   border: 1px solid #e5e7eb;
   background: #fff;
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .add-product-content .product-image-section {
+    padding: 1.875rem;
+  }
 }
 .add-product-content .product-image-section-header {
   display: flex;
@@ -3816,17 +3829,27 @@ table tr td {
 }
 
 .main-description-section {
-  padding: 1rem 4.25rem 0 4.25rem;
+  padding: 1rem 0.625rem 0 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .main-description-section {
+    padding: 1rem 4.25rem 0 4.25rem;
+  }
 }
 .main-description-section .main-description-content {
   border-radius: 1rem;
   border: 0.0625rem solid #e5e7eb;
   background: hsl(0, 0%, 100%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .main-description-section .main-description-content {
+    padding: 1.875rem;
+  }
 }
 .main-description-section .main-description-content .highlights {
   display: flex;
@@ -3885,14 +3908,27 @@ table tr td {
 }
 
 .price-section {
-  padding: 0.625rem 4.25rem 0 4.25rem;
+  padding: 0.625rem 0.625rem 0 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .price-section {
+    padding: 0.625rem 4.25rem 0 4.25rem;
+  }
 }
 .price-section .inner-price-section {
   border-radius: 1rem;
   border: 0.0625rem solid #e5e7eb;
   background: #fff;
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .price-section .inner-price-section {
+    padding: 1.875rem;
+  }
 }
 .price-section .inner-price-section .inner-input {
   display: flex;
@@ -4206,6 +4242,15 @@ table tr td {
 @media screen and (min-width: 36rem) {
   .add-product-footer {
     padding: 1.6875rem 4.25rem;
+  }
+}
+
+.vehicle-information-section {
+  padding: 1rem 0.625rem 0 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .vehicle-information-section {
+    padding: 1rem 4.25rem 0 4.25rem;
   }
 }
 
@@ -6663,17 +6708,27 @@ table tr td {
 }
 
 .custom-field-section {
-  padding: 1rem 4.25rem 0 4.25rem;
+  padding: 1rem 0.625rem 0 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .custom-field-section {
+    padding: 1rem 4.25rem 0 4.25rem;
+  }
 }
 .custom-field-section-inner {
   border-radius: 1rem;
   border: 0.0625rem solid #e5e7eb;
   background: hsl(0, 0%, 100%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .custom-field-section-inner {
+    padding: 1.875rem;
+  }
 }
 .custom-field-section-inner .custom-field-btn {
   display: inline-flex;
@@ -6723,6 +6778,43 @@ table tr td {
   width: 1rem;
   height: 1rem;
 }
+.custom-field-section-inner .inner-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.custom-field-section-inner .inner-input .label {
+  color: #1f2937;
+  /* Text Base/Semi bold */
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.25rem; /* 142.857% */
+}
+.custom-field-section-inner .inner-input .label span {
+  color: red;
+}
+.custom-field-section-inner .inner-input .input {
+  border-radius: 0.5rem;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.75rem 1.25rem;
+}
+.custom-field-section-inner .inner-input .input::-moz-placeholder {
+  color: #72757b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.14px;
+}
+.custom-field-section-inner .inner-input .input::placeholder {
+  color: #72757b;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  letter-spacing: 0.14px;
+}
 
 .main-description {
   display: flex;
@@ -6748,12 +6840,23 @@ table tr td {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 1.25rem;
+  padding: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .main-description .editor-container .toolbar {
+    padding: 1.25rem;
+  }
 }
 .main-description .editor-container .toolbar .toolbar-inner {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .main-description .editor-container .toolbar .toolbar-inner {
+    gap: 1.25rem;
+  }
 }
 .main-description .editor-container .toolbar .toolbar-inner .ql-redo {
   position: relative;
@@ -6883,10 +6986,8 @@ table tr td {
   line-height: 1.125rem;
 }
 .edit-product .languages-btn {
-  display: flex;
   padding: 0.8125rem 1rem;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   border-radius: 0.5rem;
   border: 0.5px solid #e7eaef;
   background: linear-gradient(180deg, #fff 0%, #f8f8fa 100%);
@@ -6894,6 +6995,14 @@ table tr td {
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  display: block;
 }
 .edit-product .input-field-languages {
   border-radius: 0.5rem;
@@ -6972,7 +7081,12 @@ table tr td {
   border: 0.0625rem solid #e5e7eb;
   background: hsl(0, 0%, 100%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .brand-name {
+    padding: 1.875rem;
+  }
 }
 .brand-name .inner-input {
   display: flex;
@@ -7025,10 +7139,15 @@ table tr td {
   border: 1px solid #e5e7eb;
   background: #fff;
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .product-image-section {
+    padding: 1.875rem;
+  }
 }
 .product-image-section .product-img-head {
   display: flex;
@@ -7112,10 +7231,15 @@ table tr td {
   border: 1px solid #e5e7eb;
   background: #fff;
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .youtube-thumbnail {
+    padding: 1.875rem;
+  }
 }
 .youtube-thumbnail .product-img-head {
   display: flex;
@@ -7145,13 +7269,50 @@ table tr td {
 }
 .youtube-thumbnail .product-img-body {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 36rem) {
+  .youtube-thumbnail .product-img-body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .youtube-thumbnail .product-img-body .product-thumbnail {
   width: 240px;
   height: 130px;
   border-radius: 0.875rem;
+}
+.youtube-thumbnail .product-img-body .product-thumbnail-inner {
+  border-radius: 14px;
+  border: 1.37px dashed var(--Primary-700, #0f766d);
+  background: rgba(240, 253, 252, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 1.625rem 1.5625rem;
+}
+.youtube-thumbnail .product-img-body .product-thumbnail-inner input {
+  display: none;
+}
+.youtube-thumbnail .product-img-body .product-thumbnail-inner figure svg {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.youtube-thumbnail .product-img-body .product-thumbnail-inner .text {
+  color: #1f2937;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.youtube-thumbnail .product-img-body .product-thumbnail-inner .text span {
+  color: #0f766d;
+  font-weight: 700;
 }
 .youtube-thumbnail .product-img-body .add-product-img-list li {
   color: #6b7280;
@@ -7193,7 +7354,7 @@ table tr td {
 .youtube-thumbnail .product-img-footer .input-inner .input {
   padding: 0.5rem 0.75rem;
   background: transparent;
-  flex-grow: 1;
+  width: 100%;
 }
 .youtube-thumbnail .product-img-footer .input-inner .input-icon {
   padding-right: 0.75rem;
@@ -7211,10 +7372,18 @@ table tr td {
   border: 1px solid #e5e7eb;
   background: hsl(0, 0%, 100%);
   box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
-  padding: 1.875rem;
+  padding: 0.625rem;
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .description,
+  .price-stock,
+  .vehicle-information,
+  .shipping-warranty {
+    padding: 1.875rem;
+  }
 }
 
 .price-stock .inner-input {
@@ -7329,6 +7498,9 @@ table tr td {
 .vehicle-information .inner-input .weight-input svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+.vehicle-information .inner-input .weight-input input {
+  width: 100%;
 }
 
 .shipping-warranty .shipping-charge {
