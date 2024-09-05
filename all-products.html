@@ -643,32 +643,33 @@
             </div>
 
             <div class="manage-all-product-section-inner-body">
-              <div class="table-container">
-                <table class="product-table">
-                  <thead>
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="thead-light">
                     <tr>
-                      <th class="product-info-header">
+                      <th scope="col">
                         <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox" />
                         <label for="table-header-checkbox" tabindex="4">Product</label>
                       </th>
-                      <th>Price</th>
-                      <th>In Stock</th>
-                      <th class="text-center">sold</th>
-                      <th class="text-center">Wishlist</th>
-                      <th class="text-center">STATUS</th>
-                      <th class="text-center">ACTIONS</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">In Stock</th>
+                      <th scope="col" class="text-center">sold</th>
+                      <th scope="col" class="text-center">Wishlist</th>
+                      <th scope="col" class="text-center">STATUS</th>
+                      <th scope="col" class="text-center">ACTIONS</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td class="product-info-inner">
                         <div class="product-info">
-                          <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox">
-                          <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox" tabindex="4">
-                            <img class="product-image" src="./assets/images/products1.png" alt="Product Image">
+                          <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox1">
+                          <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox1"
+                            tabindex="4">
+                            <img class="product-image" src="./assets/images/products2.png" alt="Product Image">
                           </label>
 
-                          <div class="product-details d-flex flex-column gap-2">
+                          <div class="product-details d-flex flex-column gap-2 flex-shrink-0">
                             <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
 
                             <div class="d-flex align-items-center gap-3">
@@ -710,7 +711,7 @@
                       <td>
                         <div class="d-flex align-items-center gap-4">
                           <p class="pice-text">
-                            230
+                            658
                           </p>
 
                           <div class="d-flex align-items-center gap-2">
@@ -747,7 +748,7 @@
                       </td>
 
                       <td class="text-center">
-                        <span class="status active">Active</span>
+                        <span class="status inactive">Inactive</span>
                       </td>
                       <td class="text-center">
                         <figure class="action-btn">
@@ -1466,6 +1467,7 @@
                         </figure>
                       </td>
                     </tr>
+
                   </tbody>
                 </table>
               </div>

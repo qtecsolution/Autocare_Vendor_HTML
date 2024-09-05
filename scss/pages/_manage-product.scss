@@ -570,54 +570,17 @@
     }
 
     &-body {
-      .table-container {
-        width: 100%;
-        overflow: auto;
+      .table-responsive {
+        position: relative;
+        max-height: 500px;
+        overflow-y: auto;
       }
 
-      .product-table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #ffffff;
-
-        thead {
-          border-bottom: 1px solid #e5e7eb;
-          background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
-          position: sticky;
-          top: 0;
-          z-index: 1;
-        }
-
-        th {
-          padding: 15px;
-          text-align: left;
-          color: #6b7280;
-          font-family: $primaryFont;
-          font-size: size(12);
-          font-weight: 600;
-          line-height: size(16);
-          letter-spacing: 0.06px;
-          text-transform: uppercase;
-        }
-
-        td {
-          padding: 15px;
-          text-align: left;
-
-          &:last-child {
-            border-bottom: none;
-          }
-        }
-
-        tr {
-          border-bottom: 1px solid #dddddd;
-
-          &:last-child {
-            border-bottom: none;
-            border-bottom-left-radius: size(16);
-            border-bottom-right-radius: size(16);
-          }
-        }
+      .thead-light th {
+        position: sticky;
+        background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+        top: 0;
+        z-index: 10;
       }
 
       .product-info-header {
