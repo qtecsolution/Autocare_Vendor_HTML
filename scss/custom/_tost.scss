@@ -1,0 +1,31 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.alert-tost {
+  @include radius(12);
+  border: 1px solid #fef08a;
+  background: #fef9c3;
+  padding: size(16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .alert-icon {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+  }
+  .alert-text {
+    color: #4b5563;
+    font-family: Inter;
+    font-size: size(18);
+    font-weight: 600;
+    letter-spacing: 0.09px;
+  }
+  .alert-close {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+  }
+}
