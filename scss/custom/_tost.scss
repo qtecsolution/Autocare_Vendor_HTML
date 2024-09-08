@@ -23,9 +23,70 @@
     letter-spacing: 0.09px;
   }
   .alert-close {
+    cursor: pointer;
     svg {
       width: size(16);
       height: size(16);
     }
+  }
+}
+
+.success-tost {
+  @include radius(12);
+  border: 1px solid #99f6e4;
+  background: #ccfbf1;
+  padding: size(16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .success-icon {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+  }
+  .success-text {
+    color: #115e59;
+    font-family: $primaryFont;
+    font-size: size(18);
+    font-weight: 600;
+    letter-spacing: 0.09px;
+  }
+  .success-close {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+    cursor: pointer;
+  }
+}
+
+.warning-tost {
+  @include radius(12);
+  border: 1px solid #fecaca;
+  background: #fee2e2;
+  padding: size(16);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .warning-icon {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+  }
+  .warning-text {
+    color: #b91c1c;
+    font-family: $primaryFont;
+    font-size: size(18);
+    font-weight: 600;
+    letter-spacing: 0.09px;
+  }
+  .warning-close {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+    cursor: pointer;
   }
 }
