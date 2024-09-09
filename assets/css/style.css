@@ -3335,6 +3335,13 @@ table tr td {
 .login-section-inner .right .login-form .upload-card input {
   display: none;
 }
+.login-section-inner .right .login-form .light-text {
+  color: #475467;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
 .login-section-inner .center {
   padding: 2.5rem 0rem 6.25rem 0rem;
   width: 600px;

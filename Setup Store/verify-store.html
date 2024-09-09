@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <title>AutoCare vendor-Login</title>
+  <!-- FAVICON-ICON -->
+  <link rel="shortcut icon" href="../assets/images/logo.png/favicon.png" type="image/svg+xml" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- BOOTSTRAP-CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+  <!-- CUSTOM-CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="container">
+      <div class="header-section-inner d-flex align-items-center justify-content-between gap-4">
+        <div class="logo">
+          <a href="../login.html">
+            <img src="../assets/images/Logo-2.png" alt="logo" />
+          </a>
+        </div>
+
+        <ul class="header-button list-unstyled d-flex align-items-center gap-3">
+          <li>
+            <a class="login-btn active" href="">Login</a>
+          </li>
+
+          <li>
+            <a class="signUp-btn " href="">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="login-section">
+    <div class="container">
+      <div class="login-section-inner d-flex justify-content-center align-items-center">
+        <div class="right">
+          <div class="login-form">
+            <div class="d-flex flex-column gap-3">
+              <h1 class="form-title">
+                Verify Store
+              </h1>
+
+              <p class="form-details">
+                Help Us verifiy your Store by providing more info
+              </p>
+            </div>
+
+            <form class="form-inner">
+              <div class="d-flex flex-column gap-4">
+                <div class="d-flex flex-column gap-2">
+                  <p class="text">
+                    Trade License <span class="text-danger">*</span>
+                  </p>
+                  <label for="frontPart" class="upload-card">
+                    <figure>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M6.66675 13.3333L10.0001 10M10.0001 10L13.3334 13.3333M10.0001 10V17.5M16.6667 13.9524C17.6847 13.1117 18.3334 11.8399 18.3334 10.4167C18.3334 7.88536 16.2814 5.83333 13.7501 5.83333C13.568 5.83333 13.3976 5.73833 13.3052 5.58145C12.2185 3.73736 10.2121 2.5 7.91675 2.5C4.46497 2.5 1.66675 5.29822 1.66675 8.75C1.66675 10.4718 2.36295 12.0309 3.48921 13.1613"
+                          stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </figure>
+                    <div class="d-flex align-items-center gap-1">
+                      <p class="color-text">Click to upload</p>
+                      <p class="paragraph">or drag and drop</p>
+                    </div>
+                    <p class="paragraph">CSV, DOC, PDF, PNG & JPG</p>
+                    <input type="file" name="" id="frontPart">
+                  </label>
+                  <p class="light-text">
+                    Please submit updated recent file
+                  </p>
+                </div>
+
+                <div class="d-flex flex-column gap-2">
+                  <p class="text">
+                    TIN Certificate / BIN Certificate *
+                  </p>
+                  <label for="backPart" class="upload-card">
+                    <figure>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M6.66675 13.3333L10.0001 10M10.0001 10L13.3334 13.3333M10.0001 10V17.5M16.6667 13.9524C17.6847 13.1117 18.3334 11.8399 18.3334 10.4167C18.3334 7.88536 16.2814 5.83333 13.7501 5.83333C13.568 5.83333 13.3976 5.73833 13.3052 5.58145C12.2185 3.73736 10.2121 2.5 7.91675 2.5C4.46497 2.5 1.66675 5.29822 1.66675 8.75C1.66675 10.4718 2.36295 12.0309 3.48921 13.1613"
+                          stroke="#475467" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </figure>
+                    <div class="d-flex align-items-center gap-1">
+                      <p class="color-text">Click to upload</p>
+                      <p class="paragraph">or drag and drop</p>
+                    </div>
+                    <p class="paragraph">CSV, DOC, PDF, PNG & JPG</p>
+                    <input type="file" name="" id="backPart">
+                  </label>
+                  <p class="light-text">Please submit updated recent file</p>
+                </div>
+              </div>
+
+
+              <a href="./store-successful-status.html" class="login-btn">
+                Submit Application
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- main js -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
