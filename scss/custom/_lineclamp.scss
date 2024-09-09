@@ -1,9 +1,9 @@
 .line-clamp1 {
+  // width: 250px;
   overflow: hidden;
-  display: -webkit-box;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
-  // height: size(20);
   text-overflow: ellipsis;
   white-space: nowrap;
 }

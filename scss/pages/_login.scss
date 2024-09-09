@@ -226,6 +226,70 @@
             flex-direction: column;
             gap: size(10);
           }
+          .file-uploder {
+            border-radius: 12px;
+
+            border: 1px solid var(--Gray-200, #e4e7ec);
+
+            background: var(--Base-White, #fff);
+
+            display: flex;
+            align-items: flex-start;
+            gap: size(12);
+            padding: size(16);
+            .file-icon {
+              flex-shrink: 0;
+            }
+            .file-name {
+              color: #344054;
+              font-family: $primaryFont;
+              font-size: size(14);
+              font-weight: 500;
+              line-height: size(20);
+
+              width: size(250);
+              overflow: hidden;
+              display: block;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .file-size {
+              overflow: hidden;
+              color: #475467;
+              text-overflow: ellipsis;
+              font-family: $primaryFont;
+              font-size: size(14);
+              font-style: normal;
+              font-weight: 400;
+              line-height: size(20);
+
+              width: size(250);
+              overflow: hidden;
+              display: block;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+            .progress {
+              border-radius: var(--Components-Progress-Border-Radius, 999px);
+              background: #f3f4f6;
+              height: 8px;
+              width: 100%;
+              .progress-bar {
+                background: #0f766d;
+              }
+            }
+            .progress-percentage {
+              color: #344054;
+              font-family: $primaryFont;
+              font-size: size(12);
+              font-weight: 500;
+              line-height: size(20);
+            }
+          }
         }
         .text {
           color: #1f2937;
@@ -517,6 +581,22 @@
           display: flex;
           flex-direction: column;
           gap: size(10);
+        }
+        .input-wrapper {
+          display: flex;
+          align-items: center;
+          gap: size(10);
+          @include radius(8);
+          border: 1px solid #e7eaef;
+          background: $white;
+          padding: size(16) size(20);
+          input {
+            width: 100%;
+          }
+          svg {
+            width: size(20);
+            height: size(20);
+          }
         }
       }
     }
