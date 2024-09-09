@@ -943,7 +943,7 @@
               margin-top: size(5);
 
               .decrease {
-                color: #B42318;
+                color: #b42318;
                 display: inline-block;
                 margin-right: size(8);
               }
@@ -1059,7 +1059,7 @@
     }
   }
 
-  .notification-inner {
+  .notifications-badges {
     display: flex;
     flex-direction: column;
     gap: size(8);
@@ -1073,101 +1073,193 @@
     @include breakpoint(mobile768) {
       padding: size(40) size(68);
     }
-
-    &-cart {
+    .title {
+      color: #101828;
+      font-family: $primaryFont;
+      font-size: size(20);
+      font-style: normal;
+      font-weight: 700;
+      line-height: size(28);
+    }
+    .recent-notification-inner {
       display: flex;
-      justify-content: space-between;
-      @include radius(12);
-      border: 1px solid #e4e7ec;
-      background: #fff;
-      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-      padding: size(16);
+      flex-direction: column;
+      gap: size(8);
+      &-cart {
+        display: flex;
+        justify-content: space-between;
+        @include radius(12);
+        border: 1px solid #e4e7ec;
+        background: #fff;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        padding: size(16);
 
-      .success-img {
-        width: size(35);
-        height: size(35);
-        @include radius(35);
-
-        img {
+        .success-img {
           width: size(35);
           height: size(35);
           @include radius(35);
+
+          img {
+            width: size(35);
+            height: size(35);
+            @include radius(35);
+          }
         }
-      }
 
-      .cart-content {
-        .title {
-          color: #344054;
-          font-family: $primaryFont;
-          font-size: size(16);
-          font-weight: 600;
-          line-height: size(24);
+        .cart-content {
+          .title {
+            color: #344054;
+            font-family: $primaryFont;
+            font-size: size(16);
+            font-weight: 600;
+            line-height: size(24);
 
-          .success {
+            .success {
+              color: #0d9488;
+            }
+
+            .canceled {
+              color: #ff3e50;
+            }
+          }
+
+          .details {
+            color: #475467;
+            font-family: $primaryFont;
+            font-size: size(14);
+            line-height: size(20);
+          }
+
+          .dsismiss-btn {
+            color: #475467;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 600;
+            line-height: size(20);
+          }
+
+          .viewChanges-btn {
             color: #0d9488;
+            font-family: $primaryFont;
+            font-size: size(14);
+            font-weight: 600;
+            line-height: size(20);
+          }
+        }
+
+        &-right {
+          display: flex;
+          flex-direction: column;
+          gap: size(40);
+
+          .close-btn {
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            align-self: flex-end;
+
+            svg {
+              width: size(12);
+              height: size(12);
+            }
           }
 
-          .canceled {
-            color: #ff3e50;
+          .date-icon {
+            svg {
+              width: size(14);
+              height: size(14);
+            }
           }
-        }
 
-        .details {
-          color: #475467;
-          font-family: $primaryFont;
-          font-size: size(14);
-          line-height: size(20);
-        }
-
-        .dsismiss-btn {
-          color: #475467;
-          font-family: $primaryFont;
-          font-size: size(14);
-          font-weight: 600;
-          line-height: size(20);
-        }
-
-        .viewChanges-btn {
-          color: #0d9488;
-          font-family: $primaryFont;
-          font-size: size(14);
-          font-weight: 600;
-          line-height: size(20);
+          .notification-time {
+            color: #6b7280;
+            text-align: right;
+            font-family: $primaryFont;
+            font-size: size(12);
+            font-weight: 500;
+            line-height: size(16);
+            margin-top: size(2);
+          }
         }
       }
+    }
 
-      &-right {
+    .badges-inner {
+      @include radius(12);
+      border: 1px solid #e4e7ec;
+      background: $white;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      padding: size(20) size(20) size(40) size(20);
+      display: flex;
+      gap: size(20);
+      flex-direction: column;
+      .sub-title {
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: size(24);
+      }
+      .badge {
+        gap: size(6);
         display: flex;
-        flex-direction: column;
-        gap: size(40);
+        padding: size(7) size(20);
+        justify-content: center;
+        align-items: center;
+        background: #e4e5e9;
+        @include radius(21);
 
-        .close-btn {
-          cursor: pointer;
-          border: none;
-          background: transparent;
-          align-self: flex-end;
-
+        .badge-img {
           svg {
-            width: size(12);
-            height: size(12);
+            width: size(16);
+            height: size(16);
           }
         }
-
-        .date-icon {
-          svg {
-            width: size(14);
-            height: size(14);
-          }
-        }
-
-        .notification-time {
-          color: #6b7280;
-          text-align: right;
+        .title {
+          color: #7b7f95;
           font-family: $primaryFont;
           font-size: size(12);
+          font-style: normal;
           font-weight: 500;
-          line-height: size(16);
-          margin-top: size(2);
+          line-height: size(14);
+        }
+      }
+
+      .flagship-store {
+        background: rgba(159, 122, 234, 0.2);
+        .title {
+          color: #af52de;
+        }
+      }
+      .certified-store {
+        background: rgba(55, 134, 252, 0.1);
+        .title {
+          color: #3786fc;
+        }
+      }
+      .top-seller {
+        background: rgba(38, 191, 106, 0.1);
+        .title {
+          color: #26bf6a;
+        }
+      }
+      .new-arrival {
+        background: rgba(13, 148, 136, 0.1);
+        .title {
+          color: #0d9488;
+        }
+      }
+      .customer-favorite {
+        background: rgba(49, 188, 198, 0.1);
+        .title {
+          color: #31bcc6;
+        }
+      }
+      .fast-shipper {
+        background: rgba(249, 133, 26, 0.1);
+        .title {
+          color: #f9851a;
         }
       }
     }
