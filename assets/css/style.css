@@ -917,7 +917,6 @@ input[type=search]::-webkit-search-results-decoration:focus {
   line-height: 1rem;
   font-weight: 500;
   letter-spacing: 0.06px;
-  text-transform: uppercase;
 }
 .login-checkbox + label:before {
   position: absolute;
