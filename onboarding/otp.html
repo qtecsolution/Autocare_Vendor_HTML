@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/favicon_io/favicon.ico" type="image/x-icon">
   <title>AutoCare vendor-Login</title>
   <!-- FAVICON-ICON -->
-  <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/svg+xml" />
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/svg+xml" />
   <!-- font awesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- BOOTSTRAP-CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
   <!-- CUSTOM-CSS -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 
 </head>
 
@@ -23,7 +23,7 @@
       <div class="header-section-inner d-flex align-items-center justify-content-between gap-4">
         <div class="logo">
           <a href="./login.html">
-            <img src="./assets/images/Logo-2.png" alt="logo" />
+            <img src="../assets/images/Logo-2.png" alt="logo" />
           </a>
         </div>
 
@@ -58,10 +58,10 @@
 
               <div class="user">
                 <div class="user-img">
-                  <img src="./assets/images/user1.png" alt="userImg" />
-                  <img class="img-left" src="./assets/images/user2.png" alt="userImg" />
-                  <img class="img-left" src="./assets/images/user3.png" alt="userImg" />
-                  <img class="img-left" src="./assets/images/user4.png" alt="userImg" />
+                  <img src="../assets/images/user1.png" alt="userImg" />
+                  <img class="img-left" src="../assets/images/user2.png" alt="userImg" />
+                  <img class="img-left" src="../assets/images/user3.png" alt="userImg" />
+                  <img class="img-left" src="../assets/images/user4.png" alt="userImg" />
                 </div>
 
                 <p class="user-text">
@@ -76,41 +76,33 @@
               <div class="login-form">
                 <div class="d-flex flex-column gap-3">
                   <h1 class="form-title">
-                    Account Type
+                    Verify
                   </h1>
 
                   <p class="form-details">
-                    Select your account preferences
+
+                    Enter the 6-digit code send to <span>+8801765821451</span>
                   </p>
                 </div>
 
                 <form class="form-inner">
-                  <div class="login-checkbox-inner">
-                    <div>
-                      <input class="login-checkbox" type="radio" name="account-type" id="login-checkbox1">
-                      <label class="label-border" for="login-checkbox1" tabindex="4">Store</label>
-                    </div>
-
-                    <div>
-                      <input class="login-checkbox" type="radio" name="account-type" id="login-checkbox2">
-                      <label class="label-border" for="login-checkbox2" tabindex="4">Garage</label>
-                    </div>
-
-                    <div>
-                      <input class="login-checkbox" type="radio" name="account-type" id="login-checkbox3">
-                      <label class="label-border" for="login-checkbox3" tabindex="4">Both</label>
-                    </div>
+                  <div class="otp-inputs">
+                    <input autofocus placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-1"
+                      onkeyup="moveToNext(this, 'otp-2')" />
+                    <input placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-2"
+                      onkeyup="moveToNext(this, 'otp-3')" />
+                    <input placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-3"
+                      onkeyup="moveToNext(this, 'otp-4')" />
+                    <input placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-4"
+                      onkeyup="moveToNext(this, 'otp-5')" />
+                    <input placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-5"
+                      onkeyup="moveToNext(this, 'otp-6')" />
+                    <input placeholder="-" type="text" maxlength="1" class="otp-input" id="otp-6"
+                      onkeyup="submitCode()" />
                   </div>
 
-                  <div class="inner-input">
-                    <label class="input-label" for="email">Email Address</label>
-                    <div class="input-field">
-                      <input type="email" name="" id="email" placeholder="Type here" />
-                    </div>
-                  </div>
-
-                  <a href="./successful-status.html" class="login-btn">
-                    Finish
+                  <a href="./create-account.html" class="login-btn">
+                    Verify
                   </a>
                 </form>
               </div>
@@ -122,9 +114,11 @@
   </section>
 
   <!-- BOOTSTRAP-JS -->
-  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- input-otp -->
+  <script src="../assets/js/input-otp.js"></script>
   <!-- main js -->
-  <script src="./assets/js/main.js"></script>
+  <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

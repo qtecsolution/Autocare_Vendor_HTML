@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/favicon_io/favicon.ico" type="image/x-icon">
+  <title>AutoCare vendor-Login</title>
+  <!-- FAVICON-ICON -->
+  <link rel="shortcut icon" href="../assets/images/logo.png/favicon.png" type="image/svg+xml" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- BOOTSTRAP-CSS -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+  <!-- CUSTOM-CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+</head>
+
+<body>
+  <header class="header-section">
+    <div class="container">
+      <div class="header-section-inner d-flex align-items-center justify-content-between gap-4">
+        <div class="logo">
+          <a href="../login.html">
+            <img src="../assets/images/Logo-2.png" alt="logo" />
+          </a>
+        </div>
+
+        <ul class="header-button list-unstyled d-flex align-items-center gap-3">
+          <li>
+            <a class="login-btn active" href="">Login</a>
+          </li>
+
+          <li>
+            <a class="signUp-btn " href="">Signup</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="login-section">
+    <div class="container">
+      <div class="login-section-inner d-flex justify-content-center align-items-center">
+        <div class="right">
+          <div class="login-form">
+            <div class="d-flex flex-column gap-3">
+              <h1 class="form-title">
+                Identity Verification
+              </h1>
+
+              <p class="form-details">
+                Help Us verify your Identity by providing more info
+              </p>
+            </div>
+
+            <form class="form-inner">
+              <div class="login-checkbox-inner">
+                <p class="text">
+                  Choose ID type
+                </p>
+                <div>
+                  <input class="login-radio" type="radio" name="account-type" id="login-checkbox1">
+                  <label class="label-border" for="login-checkbox1" tabindex="4">Government ID</label>
+                </div>
+
+                <div>
+                  <input class="login-radio" type="radio" name="account-type" id="login-checkbox2">
+                  <label class="label-border" for="login-checkbox2" tabindex="4">Passport</label>
+                </div>
+
+                <div>
+                  <input class="login-radio" type="radio" name="account-type" id="login-checkbox3">
+                  <label class="label-border" for="login-checkbox3" tabindex="4">Driver's license</label>
+                </div>
+              </div>
+
+              <a href="./upload-id-card.html" class="login-btn">
+                Continue
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- main js -->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
