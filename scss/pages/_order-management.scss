@@ -393,6 +393,18 @@
     letter-spacing: 0.06px;
     text-transform: uppercase;
   }
+  .rating-header {
+    border-top-left-radius: size(16);
+  }
+  .action-header {
+    border-top-right-radius: size(16);
+  }
+  .rating-data {
+    svg {
+      width: size(16);
+      height: size(16);
+    }
+  }
   .product-info-header {
     width: 370px;
   }
@@ -444,6 +456,19 @@
     font-weight: 600;
     line-height: size(20);
     letter-spacing: 0.07px;
+  }
+  .review-text {
+    width: size(400);
+  }
+  .review-content {
+    max-width: size(350);
+  }
+  .review-img {
+    img {
+      width: size(36);
+      height: size(36);
+      @include radius(6);
+    }
   }
   .id-text {
     color: var(--Text-Title-Color, #1f2937);

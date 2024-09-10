@@ -5939,6 +5939,16 @@ table tr td {
   letter-spacing: 0.06px;
   text-transform: uppercase;
 }
+.order-management-body-inner .rating-header {
+  border-top-left-radius: 1rem;
+}
+.order-management-body-inner .action-header {
+  border-top-right-radius: 1rem;
+}
+.order-management-body-inner .rating-data svg {
+  width: 1rem;
+  height: 1rem;
+}
 .order-management-body-inner .product-info-header {
   width: 370px;
 }
@@ -5984,6 +5994,17 @@ table tr td {
   font-weight: 600;
   line-height: 1.25rem;
   letter-spacing: 0.07px;
+}
+.order-management-body-inner .review-text {
+  width: 25rem;
+}
+.order-management-body-inner .review-content {
+  max-width: 21.875rem;
+}
+.order-management-body-inner .review-img img {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.375rem;
 }
 .order-management-body-inner .id-text {
   color: var(--Text-Title-Color, #1f2937);
