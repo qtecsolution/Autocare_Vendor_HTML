@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Category Search</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search Category" autocomplete="off">
+    <ul id="searchSuggestions" class="suggestions-list"></ul>
+  </div>
+  <div class="categories-container">
+    <ul id="mainCategoryList" class="category-list"></ul>
+    <ul id="subCategoryList" class="subcategory-list"></ul>
+    <ul id="subSubCategoryList" class="subsubcategory-list"></ul>
+  </div>
+  <div class="actions">
+    <p id="selectedCategory">Selected: None</p>
+    <button id="confirmBtn">Confirm</button>
+    <button id="cancelBtn">Cancel</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -7724,6 +7724,31 @@ table tr td {
   padding: 0.5rem 1.25rem;
   width: 100%;
 }
+.price-stock .inner-input .commission {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fafafa;
+  padding: 0.625rem 1.25rem;
+}
+.price-stock .inner-input .commission .text {
+  color: var(--Grays-Gray, var(--Grays-Gray, #8e8e93)); /* text-sm/Medium */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 133.333% */
+}
+.price-stock .inner-input .commission .price {
+  color: var(--Text-Title-Color, #1f2937); /* text-sm/Bold */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+}
 .price-stock .meta-description {
   display: flex;
   flex-direction: column;

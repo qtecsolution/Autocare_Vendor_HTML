@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.suggestions-list {
+  border: 1px solid #ddd;
+  width: 300px;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  /* Hide by default */
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-list,
+.subcategory-list,
+.subsubcategory-list {
+  list-style-type: none;
+  padding: 0;
+  width: 200px;
+}
+
+.category-list li,
+.subcategory-list li,
+.subsubcategory-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.category-list li:hover,
+.subcategory-list li:hover,
+.subsubcategory-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
