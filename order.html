@@ -143,7 +143,7 @@
             <div class="collapse show" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./order-management-empty.html" class="submenu-link active">
+                  <a href="./order-empty.html" class="submenu-link active">
                     <span class="text">Orders</span>
                   </a>
                 </li>
@@ -554,7 +554,13 @@
         <section class="order-management-section">
           <div class="order-management-section-inner">
             <div class="order-management-header">
-              <h1 class="title">Order Management</h1>
+              <div class="d-flex justify-content-between align-items-center">
+                <h1 class="title">Order</h1>
+                <div class="d-flex align-items-center gap-3">
+                  <a href="" class="primary-50-button">Export Orders</a>
+                  <a href="" class="save-changes-btn active">Custom Order</a>
+                </div>
+              </div>
 
               <div class="d-flex align-items-center gap-3 all-buttons-inner">
                 <button class="manage-products-btn active">
@@ -593,7 +599,8 @@
                 </button>
 
                 <button class="manage-products-btn">
-                  <span class="text">Return Or Refund</span> <span>0</span>
+                  <span class="text">Return Or Refund</span>
+                  <span class="number">0</span>
                 </button>
               </div>
             </div>
@@ -619,7 +626,7 @@
                           d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
                           stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
-                      <input type="text" name="" id="" placeholder="Order No" />
+                      <input type="text" name="" id="" placeholder="Tracking No" />
                     </div>
                   </form>
                 </div>
@@ -673,6 +680,10 @@
                       Last 30 Days
                     </button>
 
+                    <button class="order-date-btn">
+                      Custom
+                    </button>
+
                     <div class="date-picker">
                       <input type="text" id="start-date" placeholder="Start Date">
                       <input type="text" id="end-date" placeholder="End Date">
@@ -693,6 +704,9 @@
                     <button class="order-date-btn">
                       Normal
                     </button>
+                    <button class="order-date-btn">
+                      Express
+                    </button>
                   </div>
                 </div>
               </div>
@@ -702,45 +716,59 @@
                   <table class="table">
                     <thead class="thead-light">
                       <tr>
-                        <th class="product-info-header">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox" />
-                          <label for="table-header-checkbox" tabindex="4">Product</label>
-                        </th>
-                        <th class="text-center">Total amount</th>
-                        <th class="text-center">delivery</th>
-                        <th class="text-center">STATUS</th>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th class="text-center">Item</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th class="text-center">Payment</th>
+                        <th>Tracking</th>
+                        <th>status</th>
                         <th class="text-center">ACTIONS</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products1.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
-                        </td>
-
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text">
+                            #23042
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
 
-                        <td class="text-center">
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
                           <span class="status delivered">Delivered</span>
                         </td>
 
@@ -757,77 +785,49 @@
                       </tr>
 
                       <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox1">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox1"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products2.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2 flex-shrink-0">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
-                        </td>
-
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text">
+                            #23042
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
-                          </p>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Delivered</span>
-                        </td>
-                        <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox2">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox2"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products3.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
                           </p>
                         </td>
 
-                        <td class="text-center">
-                          <span class="status delivered">Delivered</span>
+                        <td>
+                          <span class="status pending">Pending</span>
                         </td>
+
                         <td class="text-center">
                           <figure class="action-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
@@ -841,35 +841,49 @@
                       </tr>
 
                       <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox3">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox3"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products1.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
-                        </td>
-
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text">
+                            #23042
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
 
-                        <td class="text-center">
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
                           <span class="status delivered">Delivered</span>
                         </td>
+
                         <td class="text-center">
                           <figure class="action-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
@@ -883,35 +897,49 @@
                       </tr>
 
                       <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox4">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox4"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products4.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
-                        </td>
-
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text">
+                            #23042
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
 
-                        <td class="text-center">
-                          <span class="status delivered">Delivered</span>
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
                         </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status cancelled">Cancelled</span>
+                        </td>
+
                         <td class="text-center">
                           <figure class="action-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
@@ -925,35 +953,49 @@
                       </tr>
 
                       <tr>
-                        <td class="product-info-inner">
-                          <div class="product-info">
-                            <input class="table-body-checkbox" type="checkbox" id="table-body-checkbox5">
-                            <label class="d-flex align-items-center flex-shrink-0" for="table-body-checkbox5"
-                              tabindex="4">
-                              <img class="product-image" src="./assets/images/products5.png" alt="Product Image">
-                            </label>
-
-                            <div class="product-details d-flex flex-column gap-2">
-                              <p class="title">Purolator Oil Filter 133500I99 - Fits Toyota Qualis</p>
-                            </div>
-                          </div>
-                        </td>
-
                         <td>
-                          <p class="pice-text text-center">
-                            ৳ 1,889
+                          <p class="id-text">
+                            #23042
                           </p>
                         </td>
 
                         <td>
-                          <p class="pice-text text-center">
-                            236
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
 
-                        <td class="text-center">
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
                           <span class="status delivered">Delivered</span>
                         </td>
+
                         <td class="text-center">
                           <figure class="action-btn">
                             <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
@@ -965,6 +1007,511 @@
                           </figure>
                         </td>
                       </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status pending">Pending</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <p class="id-text">
+                            #23042
+                          </p>
+                        </td>
+
+                        <td>
+                          <a href="./order-details.html" class="itemName-text">
+                            Purolator Oil Filter 13350 Purolator Oil Filter 13350 Purolator Oil Filter 13350
+                          </a>
+                        </td>
+
+                        <td>
+                          <p class="id-text text-center">
+                            2
+                          </p>
+                        </td>
+
+                        <td>
+                          <p class="id-text">
+                            10,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            20,000 tk
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text text-center">
+                            COD
+                          </p>
+                        </td>
+                        <td>
+                          <p class="id-text">
+                            TA264W
+                          </p>
+                        </td>
+
+                        <td>
+                          <span class="status delivered">Delivered</span>
+                        </td>
+
+                        <td class="text-center">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
+                        </td>
+                      </tr>
+
                     </tbody>
                   </table>
                 </div>

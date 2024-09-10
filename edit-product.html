@@ -718,10 +718,16 @@
                       placeholder="Enter meta description"></textarea>
                   </div>
 
-                  <div class="meta-description">
+                  <!-- <div class="meta-description">
                     <label class="label-text" for="Meta-keywords">Meta Keywords</label>
                     <textarea class="input" name="" id="Meta-keywords" cols="30" rows="3"
                       placeholder="Enter meta Keywords"></textarea>
+                  </div> -->
+                  <div class="tag-container">
+                    <label for="tag-meta">Meta Keywords</label>
+                    <div class="tags-input" id="tags-meta">
+                      <input type="text" id="tag-meta" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -777,12 +783,9 @@
                           <label class="label-text" for="Weight">Weight</label>
                           <div class="d-flex align-items-center weight-input">
                             <select class="selectize">
-                              <option data-display="Select">Nothing</option>
-                              <option value="1">Some option</option>
-                              <option value="2">Another option</option>
-                              <option value="4">Potato</option>
+                              <option data-display="Select">Kilogram</option>
                             </select>
-                            <input class="flex-grow-1" type="text" name="" id="Weight" placeholder="" />
+                            <input class="flex-grow-1" type="text" name="" id="Weight" placeholder="4" />
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
                               fill="none">
                               <path

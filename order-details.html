@@ -118,7 +118,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-2" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-2" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
@@ -140,10 +140,10 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-2">
+            <div class="collapse show" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./order-empty.html" class="submenu-link">
+                  <a href="./order-empty.html" class="submenu-link active">
                     <span class="text">Orders</span>
                   </a>
                 </li>
@@ -409,7 +409,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-7" role="button"
+            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-7" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -431,7 +431,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-7">
+            <div class="collapse" id="dropdownmenu-7">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./seller-profile.html" class="submenu-link">
@@ -452,7 +452,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./user-management.html" class="submenu-link active">
+                  <a href="./user-management.html" class="submenu-link">
                     <span class="text">User Management</span>
                   </a>
                 </li>
@@ -554,458 +554,304 @@
         <section class="order-management-section">
           <div class="order-management-section-inner">
             <div class="order-management-header">
-              <div class="d-flex justify-content-between align-items-center">
-                <h1 class="title">User Management</h1>
-                <a href="./add-new-role.html" class="new-campaign-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M9.99984 4.16675V15.8334M4.1665 10.0001H15.8332" stroke="white" stroke-width="1.67"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <span>
-                    Add New Role
-                  </span>
-                </a>
+              <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+                <div class="d-flex flex-column gap-2">
+                  <h1 class="title">Order Details</h1>
+                  <div class="breadcrumb-inner">
+                    <ul class="list-unstyled d-flex align-items-center">
+                      <li class="shopping-icon">
+                        <a href="/">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M6.24958 5V5.625H4.59374C3.79374 5.625 3.12374 6.22833 3.03958 7.02417L1.98708 17.0242C1.96418 17.242 1.98733 17.4621 2.05501 17.6704C2.12268 17.8787 2.23338 18.0704 2.37993 18.2331C2.52647 18.3958 2.70558 18.5259 2.90564 18.615C3.10571 18.704 3.32226 18.75 3.54124 18.75H16.4579C16.6769 18.75 16.8934 18.704 17.0935 18.615C17.2936 18.5259 17.4727 18.3958 17.6192 18.2331C17.7658 18.0704 17.8765 17.8787 17.9441 17.6704C18.0118 17.4621 18.035 17.242 18.0121 17.0242L16.9596 7.02417C16.9192 6.64012 16.7381 6.28463 16.4511 6.02626C16.1641 5.76789 15.7916 5.62494 15.4054 5.625H13.7496V5C13.7496 4.00544 13.3545 3.05161 12.6512 2.34835C11.948 1.64509 10.9941 1.25 9.99958 1.25C9.00501 1.25 8.05119 1.64509 7.34793 2.34835C6.64466 3.05161 6.24958 4.00544 6.24958 5ZM9.99958 2.5C9.33654 2.5 8.70065 2.76339 8.23181 3.23223C7.76297 3.70107 7.49958 4.33696 7.49958 5V5.625H12.4996V5C12.4996 4.33696 12.2362 3.70107 11.7673 3.23223C11.2985 2.76339 10.6626 2.5 9.99958 2.5ZM7.49958 9.375C7.49958 10.038 7.76297 10.6739 8.23181 11.1428C8.70065 11.6116 9.33654 11.875 9.99958 11.875C10.6626 11.875 11.2985 11.6116 11.7673 11.1428C12.2362 10.6739 12.4996 10.038 12.4996 9.375V8.75C12.4996 8.58424 12.5654 8.42527 12.6826 8.30806C12.7998 8.19085 12.9588 8.125 13.1246 8.125C13.2903 8.125 13.4493 8.19085 13.5665 8.30806C13.6837 8.42527 13.7496 8.58424 13.7496 8.75V9.375C13.7496 10.3696 13.3545 11.3234 12.6512 12.0266C11.948 12.7299 10.9941 13.125 9.99958 13.125C9.00501 13.125 8.05119 12.7299 7.34793 12.0266C6.64466 11.3234 6.24958 10.3696 6.24958 9.375V8.75C6.24958 8.58424 6.31542 8.42527 6.43263 8.30806C6.54984 8.19085 6.70882 8.125 6.87458 8.125C7.04034 8.125 7.19931 8.19085 7.31652 8.30806C7.43373 8.42527 7.49958 8.58424 7.49958 8.75V9.375Z"
+                              fill="#7B7F95" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="breadcrumb-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </li>
+
+                      <li>
+                        <a href="#" class="breadcrumb-text">
+                          Order Management
+                        </a>
+                      </li>
+                      <li class="breadcrumb-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </li>
+
+                      <li>
+                        <a href="#" class="breadcrumb-text">
+                          Orders
+                        </a>
+                      </li>
+                      <li class="breadcrumb-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </li>
+
+                      <li class="breadcrumb-active">
+                        Details
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                  <a href="" class="primary-50-button">Create Invoice</a>
+                  <a href="" class="save-changes-btn active">Edit Order</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="user-management-section">
-          <div class="user-management-section-inner">
-            <div class="user-management-all-btn">
-              <a href="./user-management.html" class="user-management-btn">Manage Sub Account</a>
-              <a href="./manage-roles.html" class="user-management-btn active">Manage Roles</a>
-            </div>
+        <section class="mt-5">
+          <div class="order-details">
+            <div class="order-details-inner">
+              <div class="order-details-inner-head">
+                <h1 class="heading">
+                  Order Details
+                </h1>
+              </div>
+              <div class="order-details-inner-body">
+                <div class="row g-4 g-xl-5">
+                  <div class="col-xl-4">
+                    <div class="d-flex flex-column gap-1">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Time
+                        </p>
+                        <p class="bold-text">
+                          6/6/24
+                        </p>
+                      </div>
 
-            <div class="user-management-inner">
-              <div class="user-role-body-inner">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Order ID
+                        </p>
+                        <p class="bold-text">
+                          #5498504
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Tracking No
+                        </p>
+                        <p class="bold-text">
+                          TA264W
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="d-flex flex-column gap-1">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Customer
+                        </p>
+                        <p class="bold-text">
+                          Md Mamunur Rashid
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Contact
+                        </p>
+                        <p class="bold-text">
+                          +8801970000000
+                        </p>
+                      </div>
+
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p class="light-text">
+                          Email
+                        </p>
+                        <p class="bold-text">
+                          email@gmail.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="d-flex justify-content-end align-items-center h-100">
+                      <div class="d-flex align-items-center gap-2">
+                        <p class="light-text">Status</p>
+                        <p class="status pending">Pending</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-3">
+          <div class="order-details">
+            <div class="order-details-inner">
+              <div class="order-details-inner-head">
+                <h1 class="heading">
+                  Delivery Information
+                </h1>
+              </div>
+              <div class="order-details-inner-body">
+                <div class="row g-4 g-xl-5">
+                  <div class="col-xl-4">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="d-flex flex-column gap-1">
+                          <p class="light-text">
+                            Shipping Status
+                          </p>
+                          <p class="bold-text">
+                            Warehouse
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="d-flex flex-column gap-1">
+                          <p class="light-text">
+                            Delivery Method
+                          </p>
+                          <p class="bold-text">
+                            Express
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-4">
+                    <div class="d-flex flex-column gap-1">
+                      <p class="light-text">
+                        Shipping Address
+                      </p>
+                      <p class="bold-text">
+                        28/88 Nurpur, South Donia, Kodomtoli, Dhaka-1236
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-3">
+          <div class="order-details">
+            <div class="order-details-inner">
+              <div class="order-details-inner-head">
+                <h1 class="heading">
+                  Payment Details
+                </h1>
+              </div>
+              <div class="order-details-inner-body">
+                <div class="row g-4 g-xl-5">
+                  <div class="col-xl-4">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="d-flex flex-column gap-1">
+                          <p class="light-text">
+                            Method
+                          </p>
+                          <p class="bold-text">
+                            Bkash
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="col-6">
+                        <div class="d-flex flex-column gap-1">
+                          <p class="light-text">
+                            Payment Status:
+                          </p>
+                          <p class="bold-text">
+                            Paid
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-5">
+          <div class="order-details">
+            <div class="order-details-inner">
+              <div class="order-details-inner-head">
+                <h1 class="heading">
+                  Purchase Details
+                </h1>
+              </div>
+
+              <div class="order-management-body-inner">
                 <div class="table-responsive">
-                  <table class="table">
+                  <table class="table mb-0">
                     <thead class="thead-light">
                       <tr>
-                        <th scope="col">Roles</th>
-                        <th scope="col">Role Description</th>
-                        <th scope="col" class="text-center">ACTIONS</th>
+                        <th>Product</th>
+                        <th class="text-center">SKU</th>
+                        <th class="text-center">Quantity</th>
+                        <th class="text-center">rice per Unit</th>
+                        <th>Total Price</th>
+                        <th class="text-center">Action</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
+                        <td class="border-bottom-0">
+                          <p class="itemName-text">
+                            Purolator Oil Filter 133500I99 – Fits Toyota Qualis
                           </p>
                         </td>
 
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
+                        <td class="border-bottom-0">
+                          <p class="id-text text-center">
+                            90000W40
                           </p>
                         </td>
 
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
+                        <td class="border-bottom-0">
+                          <p class="id-text text-center">
+                            2
                           </p>
                         </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
+                        <td class="border-bottom-0">
+                          <p class="id-text text-center">
+                            10,000 Tk
                           </p>
                         </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
+                        <td class="border-bottom-0">
+                          <p class="id-text">
+                            20,000 Tk
                           </p>
                         </td>
 
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <p class="email-text">
-                            Full Access
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="email-text">
-                            The Seller Full Access role aims to manage his whole account like products, orders, reports,
-                            settings.
-                          </p>
-                        </td>
-
-                        <td>
-                          <p class="text-center roles-text">
-                            View Permission
-                          </p>
+                        <td class="text-center border-bottom-0">
+                          <figure class="action-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
+                              fill="none">
+                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
+                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
+                            </svg>
+                          </figure>
                         </td>
                       </tr>
                     </tbody>
@@ -1015,26 +861,96 @@
             </div>
           </div>
         </section>
-        <div class="mb-5"></div>
+
+        <section class="my-5">
+          <div class="row g-4 g-xl-5">
+            <div class="col-lg-6">
+              <div class="order-details">
+                <div class="order-details-inner">
+                  <div class="order-details-inner-head">
+                    <h1 class="heading">
+                      Additional Note
+                    </h1>
+                  </div>
+
+                  <div class="order-details-inner-body">
+                    <div class="row g-4 g-xl-5">
+                      <p class="bold-text">Please deliver as soon as possible..</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="total-summary">
+                <h1 class="heading">
+                  Total Summary
+                </h1>
+
+                <div class="d-flex flex-column gap-3">
+                  <div class="d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <p class="light-text">Subtotal</p>
+                      <p class="bold-text">10,000 Tk</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <p class="light-text">Shipping Cost</p>
+                      <p class="bold-text">+ 200 Tk</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <p class="light-text">Discount</p>
+                      <p class="color-text">- 500 Tk</p>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <p class="light-text">Commission</p>
+                      <p class="color-text">- 200 Tk</p>
+                    </div>
+                  </div>
+
+                  <div class="border-top pt-3">
+                    <div class="d-flex justify-content-between align-items-center gap-3">
+                      <p class="total-text">Subtotal</p>
+                      <p class="total-color-text">10,000 Tk</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="add-product-footer">
+        <div class="d-flex justify-content-between align-items-center gap-3 w-100">
+          <button class="cancel-order-btn">
+            Cancel Order
+          </button>
+
+          <button class="print-invoice-btn">
+            Print Invoice
+          </button>
+        </div>
       </div>
     </main>
-
-    <!-- jquery js -->
-    <script src="./assets/js/jquery.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- sidebar -->
-    <script src="./assets/js/sidebar.js"></script>
-    <!-- quill js -->
-    <script src="./assets/js/quill-rich-text-editor/quill.js"></script>
-    <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
-    <!-- nice-select2.js -->
-    <script src="./assets/js/nice-select2/nice-select2.js"></script>
-    <!-- jquery-ui -->
-    <script src="./assets/js/jquery-ui/jquery-ui.min.js"></script>
-    <script src="./assets/js/jquery-ui/custom-jquery-ui.js"></script>
-    <!-- main js -->
-    <script src="./assets/js/main.js"></script>
+  </div>
+  <!-- jquery js -->
+  <script src="./assets/js/jquery.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- sidebar -->
+  <script src="./assets/js/sidebar.js"></script>
+  <!-- quill js -->
+  <script src="./assets/js/quill-rich-text-editor/quill.js"></script>
+  <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
+  <!-- nice-select2.js -->
+  <script src="./assets/js/nice-select2/nice-select2.js"></script>
+  <!-- jquery-ui -->
+  <script src="./assets/js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="./assets/js/jquery-ui/custom-jquery-ui.js"></script>
+  <!-- main js -->
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

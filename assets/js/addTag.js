@@ -1,5 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize default tags for each input
+  addTag("Toyota Camry", "tags-meta");
+  addTag("Honda Accord", "tags-meta");
+  addTag("Ford Mustang", "tags-meta");
+  addTag("Chevrolet Malibu", "tags-meta");
+
   addTag("Random", "tags-input-1");
   addTag("Special", "tags-input-1");
 
@@ -53,6 +58,7 @@ function addTag(tagText, containerId) {
 }
 
 // Set up input listeners for all five inputs
+setupInputListeners("tag-meta", "tags-meta");
 setupInputListeners("tag-input-1", "tags-input-1");
 setupInputListeners("tag-input-2", "tags-input-2");
 setupInputListeners("tag-input-3", "tags-input-3");

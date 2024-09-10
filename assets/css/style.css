@@ -133,6 +133,25 @@
   background: #005042;
 }
 
+.primary-50-button {
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  background: #f0fdfc;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+.primary-50-button:hover {
+  color: #0f766d;
+  background: #d6eceb;
+}
+
 .save-draft-btn {
   display: inline-flex;
   padding: 0.625rem 1rem;
@@ -391,6 +410,37 @@
 .disabled-btn:hover {
   color: hsl(0, 0%, 100%);
   background: #75767c;
+}
+
+.cancel-order-btn,
+.print-invoice-btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba 16, 24, 40, 0.05;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.cancel-order-btn {
+  color: #ff3e50;
+  transition: all 0.35s ease-in-out;
+}
+.cancel-order-btn:hover {
+  background: #ff3e50;
+  color: hsl(0, 0%, 100%);
+}
+
+.print-invoice-btn {
+  color: #0f766d;
+  transition: all 0.35s ease-in-out;
+}
+.print-invoice-btn:hover {
+  background: #0f766d;
+  color: hsl(0, 0%, 100%);
 }
 
 .header-section {
@@ -5880,7 +5930,14 @@ table tr td {
   position: sticky;
   background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
   top: 0;
-  z-index: 10;
+  z-index: 2;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.06px;
+  text-transform: uppercase;
 }
 .order-management-body-inner .product-info-header {
   width: 370px;
@@ -5928,6 +5985,29 @@ table tr td {
   line-height: 1.25rem;
   letter-spacing: 0.07px;
 }
+.order-management-body-inner .id-text {
+  color: var(--Text-Title-Color, #1f2937);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+}
+.order-management-body-inner .itemName-text {
+  color: var(--Primary-700, #0f766d);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+  max-width: 12.5rem;
+  overflow: hidden;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .order-management-body-inner .delete-btn,
 .order-management-body-inner .edit-btn {
   display: flex;
@@ -5952,7 +6032,7 @@ table tr td {
   padding: 3px 10px;
   border-radius: 999px;
   color: #fff;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 0.625rem;
   font-weight: 500;
   line-height: 1rem;
@@ -5967,14 +6047,185 @@ table tr td {
 .order-management-body-inner .draft {
   background-color: #9ca3af;
 }
-.order-management-body-inner .pending {
-  background-color: #eab308;
-}
 .order-management-body-inner .violation {
   background-color: #ff3e50;
 }
+.order-management-body-inner .cancelled {
+  background-color: #fef3f2;
+  color: #b42318;
+}
+.order-management-body-inner .pending {
+  background-color: #fffaeb;
+  color: #b54708;
+}
 .order-management-body-inner .delivered {
-  background-color: #26bf6a;
+  background-color: #ecfdf3;
+  color: #067647;
+}
+
+.breadcrumb-inner ul {
+  gap: 0.3125rem;
+}
+@media screen and (min-width: 36rem) {
+  .breadcrumb-inner ul {
+    gap: 0.625rem;
+  }
+}
+.breadcrumb-inner ul .shopping-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.breadcrumb-inner ul .breadcrumb-arrow svg {
+  width: 1rem;
+  height: 1rem;
+}
+.breadcrumb-inner ul .breadcrumb-text {
+  color: #475467;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  transition: all 0.3s ease;
+}
+.breadcrumb-inner ul .breadcrumb-text:hover {
+  color: #0f766d;
+}
+.breadcrumb-inner ul .breadcrumb-active {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.order-details {
+  border-radius: 16px;
+  border: 1px solid var(--Border-Border-Color, #e5e7eb);
+  background: var(--Text-Title-Light-Color, #fff);
+}
+.order-details-inner-head {
+  padding: 0.9375rem 1.875rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.order-details-inner-head .heading {
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.order-details-inner-body {
+  padding: 1.25rem 1.875rem;
+}
+.order-details-inner-body .light-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+.order-details-inner-body .bold-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+.order-details-inner-body .status {
+  padding: 3px 10px;
+  border-radius: 999px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 0.625rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.05px;
+}
+.order-details-inner-body .active {
+  background-color: #2563eb;
+}
+.order-details-inner-body .inactive {
+  background-color: #f9851a;
+}
+.order-details-inner-body .draft {
+  background-color: #9ca3af;
+}
+.order-details-inner-body .violation {
+  background-color: #ff3e50;
+}
+.order-details-inner-body .cancelled {
+  background-color: #fef3f2;
+  color: #b42318;
+}
+.order-details-inner-body .pending {
+  background-color: #fffaeb;
+  color: #b54708;
+}
+.order-details-inner-body .delivered {
+  background-color: #ecfdf3;
+  color: #067647;
+}
+
+.total-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-right: 1.875rem;
+}
+@media screen and (min-width: 36rem) {
+  .total-summary {
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .total-summary {
+    padding-right: 6.5625rem;
+  }
+}
+.total-summary .heading {
+  color: #09090b;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.total-summary .light-text {
+  color: #525468;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.total-summary .bold-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.total-summary .color-text {
+  color: #ff3e50;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+.total-summary .total-text {
+  color: #09090b;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.total-summary .total-color-text {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+#ui-datepicker-div {
+  z-index: 5 !important;
 }
 
 .seller-information {
@@ -7728,26 +7979,24 @@ table tr td {
   display: flex;
   align-items: center;
   gap: 0.3125rem;
-  border-radius: 8px;
-  border: 1px solid var(--Border-Color, #e7eaef);
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
   background: #fafafa;
   padding: 0.625rem 1.25rem;
 }
 .price-stock .inner-input .commission .text {
-  color: var(--Grays-Gray, var(--Grays-Gray, #8e8e93)); /* text-sm/Medium */
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
+  color: #8e8e93;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 16px; /* 133.333% */
+  line-height: 1rem;
 }
 .price-stock .inner-input .commission .price {
-  color: var(--Text-Title-Color, #1f2937); /* text-sm/Bold */
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1rem;
 }
 .price-stock .meta-description {
   display: flex;
@@ -7755,17 +8004,15 @@ table tr td {
   gap: 0.625rem;
 }
 .price-stock .meta-description .label-text {
-  color: var(--Text-Title-Color, #1f2937);
-  /* Text Base/Semi bold */
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 1.25rem;
 }
 .price-stock .meta-description .input {
   border-radius: 8px;
-  border: 1px solid var(--Border-Color, #e7eaef);
+  border: 1px solid #e7eaef;
   background: #fff;
   padding: 0.5rem 1.25rem;
   width: 100%;

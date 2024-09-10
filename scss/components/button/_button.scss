@@ -18,6 +18,25 @@
   }
 }
 
+.primary-50-button {
+  padding: size(10) size(16);
+  @include radius(8);
+  background: #f0fdfc;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #0f766d;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+  cursor: pointer;
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    color: #0f766d;
+    background: #d6eceb;
+  }
+}
+
 .save-draft-btn {
   display: inline-flex;
   padding: size(10) size(16);
@@ -299,5 +318,34 @@
   &:hover {
     color: $white;
     background: #75767c;
+  }
+}
+
+.cancel-order-btn,
+.print-invoice-btn {
+  padding: size(10) size(16);
+  @include radius(8);
+  border: 1px solid #e5e7eb;
+  background: $white;
+  box-shadow: 0px 1px 2px 0px rgba (16, 24, 40, 0.05);
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+}
+.cancel-order-btn {
+  color: #ff3e50;
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    background: #ff3e50;
+    color: $white;
+  }
+}
+.print-invoice-btn {
+  color: #0f766d;
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    background: #0f766d;
+    color: $white;
   }
 }

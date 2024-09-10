@@ -374,49 +374,6 @@
 }
 
 .order-management-body-inner {
-  // .table-container {
-  //   width: 100%;
-  //   overflow: auto;
-  // }
-
-  // .product-table {
-  //   width: 100%;
-  //   border-collapse: collapse;
-  //   background-color: #ffffff;
-  //   thead {
-  //     border-bottom: 1px solid #e5e7eb;
-  //     background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
-  //     position: sticky;
-  //     top: 0;
-  //     z-index: 1;
-  //   }
-  //   th {
-  //     padding: 15px;
-  //     text-align: left;
-  //     color: #6b7280;
-  //     font-family: $primaryFont;
-  //     font-size: size(12);
-  //     font-weight: 600;
-  //     line-height: size(16);
-  //     letter-spacing: 0.06px;
-  //     text-transform: uppercase;
-  //   }
-  //   td {
-  //     padding: 15px;
-  //     text-align: left;
-  //     &:last-child {
-  //       border-bottom: none;
-  //     }
-  //   }
-  //   tr {
-  //     border-bottom: 1px solid #dddddd;
-  //     &:last-child {
-  //       border-bottom: none;
-  //       border-bottom-left-radius: 16px;
-  //       border-bottom-right-radius: 16px;
-  //     }
-  //   }
-  // }
   .table-responsive {
     position: relative;
     max-height: 500px;
@@ -427,7 +384,14 @@
     position: sticky;
     background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
     top: 0;
-    z-index: 10;
+    z-index: 2;
+    color: #6b7280;
+    font-family: $primaryFont;
+    font-size: size(12);
+    font-weight: 600;
+    line-height: size(16);
+    letter-spacing: 0.06px;
+    text-transform: uppercase;
   }
   .product-info-header {
     width: 370px;
@@ -481,6 +445,29 @@
     line-height: size(20);
     letter-spacing: 0.07px;
   }
+  .id-text {
+    color: var(--Text-Title-Color, #1f2937);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+  }
+  .itemName-text {
+    color: var(--Primary-700, #0f766d);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    max-width: size(200);
+    overflow: hidden;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 
   .delete-btn,
   .edit-btn {
@@ -509,7 +496,7 @@
     padding: 3px 10px;
     border-radius: 999px;
     color: #fff;
-    font-family: Inter;
+    font-family: $primaryFont;
     font-size: size(10);
     font-weight: 500;
     line-height: size(16);
@@ -528,14 +515,199 @@
     background-color: #9ca3af;
   }
 
-  .pending {
-    background-color: #eab308;
-  }
-
   .violation {
     background-color: #ff3e50;
   }
-  .delivered {
-    background-color: #26bf6a;
+
+  .cancelled {
+    background-color: #fef3f2;
+    color: #b42318;
   }
+
+  .pending {
+    background-color: #fffaeb;
+    color: #b54708;
+  }
+
+  .delivered {
+    background-color: #ecfdf3;
+    color: #067647;
+  }
+}
+
+.breadcrumb-inner {
+  ul {
+    gap: size(5);
+    @include breakpoint(mobile576) {
+      gap: size(10);
+    }
+    .shopping-icon {
+      svg {
+        width: size(20);
+        height: size(20);
+      }
+    }
+    .breadcrumb-arrow {
+      svg {
+        width: size(16);
+        height: size(16);
+      }
+    }
+    .breadcrumb-text {
+      color: #475467;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 500;
+      line-height: size(20);
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #0f766d;
+      }
+    }
+    .breadcrumb-active {
+      color: #0f766d;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 600;
+      line-height: size(20);
+    }
+  }
+}
+
+.order-details {
+  border-radius: 16px;
+  border: 1px solid var(--Border-Border-Color, #e5e7eb);
+  background: var(--Text-Title-Light-Color, #fff);
+  &-inner {
+    &-head {
+      padding: size(15) size(30);
+      border-bottom: 1px solid #e5e7eb;
+      .heading {
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+      }
+    }
+    &-body {
+      padding: size(20) size(30);
+      .light-text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(12);
+        font-weight: 400;
+        line-height: size(18);
+      }
+      .bold-text {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(12);
+        font-weight: 700;
+        line-height: size(16);
+      }
+      .status {
+        padding: 3px 10px;
+        border-radius: 999px;
+        color: #fff;
+        font-family: $primaryFont;
+        font-size: size(10);
+        font-weight: 500;
+        line-height: size(16);
+        letter-spacing: 0.05px;
+      }
+
+      .active {
+        background-color: #2563eb;
+      }
+
+      .inactive {
+        background-color: #f9851a;
+      }
+
+      .draft {
+        background-color: #9ca3af;
+      }
+
+      .violation {
+        background-color: #ff3e50;
+      }
+
+      .cancelled {
+        background-color: #fef3f2;
+        color: #b42318;
+      }
+
+      .pending {
+        background-color: #fffaeb;
+        color: #b54708;
+      }
+
+      .delivered {
+        background-color: #ecfdf3;
+        color: #067647;
+      }
+    }
+  }
+}
+
+.total-summary {
+  display: flex;
+  flex-direction: column;
+  gap: size(20);
+  padding-right: size(30);
+
+  @include breakpoint(mobile576) {
+    gap: size(40);
+  }
+  @include breakpoint(tab992) {
+    padding-right: size(105);
+  }
+  .heading {
+    color: #09090b;
+    font-family: $primaryFont;
+    font-size: size(18);
+    font-weight: 700;
+    line-height: size(28);
+  }
+  .light-text {
+    color: #525468;
+    font-family: $primaryFont;
+    font-size: size(16);
+    line-height: size(24);
+  }
+  .bold-text {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(15);
+    font-weight: 500;
+    line-height: size(24);
+  }
+  .color-text {
+    color: #ff3e50;
+    font-family: $primaryFont;
+    font-size: size(15);
+    font-weight: 500;
+    line-height: size(24);
+  }
+
+  .total-text {
+    color: #09090b;
+    font-family: $primaryFont;
+    font-size: size(18);
+    font-weight: 700;
+    line-height: size(28);
+  }
+  .total-color-text {
+    color: #0f766d;
+    font-family: $primaryFont;
+    font-size: size(15);
+    font-weight: 700;
+    line-height: size(24);
+  }
+}
+
+#ui-datepicker-div {
+  z-index: 5 !important;
 }
