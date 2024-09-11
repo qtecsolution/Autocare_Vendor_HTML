@@ -563,44 +563,95 @@
           <div class="order-management-section-inner">
             <div class="order-management-header">
               <div class="d-flex justify-content-between align-items-center">
-                <h1 class="title">Campaign</h1>
-                <!-- <button class="new-campaign-btn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M10.0001 4.16663V15.8333M4.16675 9.99996H15.8334" stroke="white" stroke-width="1.67"
-                      stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <span>
-                    New Campaign
-                  </span>
-                </button> -->
+                <div class="d-flex flex-column gap-2">
+                  <h1 class="title">Campaign Details</h1>
+                  <div class="breadcrumb-inner">
+                    <ul class="list-unstyled d-flex align-items-center">
+                      <li class="shopping-icon">
+                        <a href="/">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                            fill="none">
+                            <path
+                              d="M14.068 3.62105C11.7807 4.53655 9.33911 5.00474 6.87547 5.00021H6.25047C5.15275 4.99863 4.09454 5.40976 3.28582 6.15202C2.4771 6.89429 1.97696 7.91345 1.88465 9.00728C1.79233 10.1011 2.11458 11.1897 2.78746 12.057C3.46034 12.9243 4.43468 13.507 5.51713 13.6894C5.79298 14.8183 6.17756 15.9179 6.66547 16.9727C7.05213 17.8094 8.06047 18.0727 8.81713 17.636L9.36463 17.3202C10.098 16.8969 10.3355 15.9927 10.008 15.2635C9.81112 14.8262 9.63645 14.3793 9.48463 13.9244C11.083 14.1394 12.618 14.5494 14.068 15.1294C14.6875 13.2743 15.0025 11.331 15.0005 9.37521C15.0005 7.36355 14.673 5.42938 14.068 3.62105ZM15.2171 3.11688C15.9035 5.13195 16.2526 7.24646 16.2505 9.37521C16.2528 11.647 15.8551 13.9014 15.0755 16.0352C15.0472 16.1123 15.0345 16.1942 15.0379 16.2762C15.0413 16.3583 15.0608 16.4388 15.0954 16.5133C15.1299 16.5878 15.1788 16.6547 15.2393 16.7103C15.2997 16.7659 15.3705 16.8091 15.4476 16.8373C15.5246 16.8655 15.6066 16.8783 15.6886 16.8749C15.7706 16.8715 15.8512 16.8519 15.9257 16.8174C16.0001 16.7828 16.0671 16.7339 16.1227 16.6735C16.1783 16.6131 16.2214 16.5423 16.2496 16.4652C16.8814 14.7401 17.2781 12.9378 17.4288 11.1069C17.8765 10.6416 18.1262 10.0209 18.1255 9.37521C18.1255 8.70271 17.8596 8.09188 17.4288 7.64355C17.2771 5.81274 16.8805 4.01056 16.2496 2.28521C16.2214 2.20812 16.1783 2.13734 16.1227 2.07691C16.0671 2.01649 16.0001 1.96761 15.9257 1.93305C15.7752 1.86328 15.6033 1.85611 15.4476 1.91313C15.2918 1.97015 15.1652 2.08669 15.0954 2.23711C15.0256 2.38753 15.0184 2.55951 15.0755 2.71521C15.1246 2.84855 15.1721 2.98188 15.2171 3.11688Z"
+                              fill="#7B7F95" />
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="breadcrumb-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </li>
+
+                      <li>
+                        <a href="#" class="breadcrumb-text">
+                          Campaign
+                        </a>
+                      </li>
+                      <li class="breadcrumb-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                          <path d="M6 12L10 8L6 4" stroke="#D0D5DD" stroke-width="1.33333" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </li>
+
+                      <li class="breadcrumb-active">
+                        Campaign Details
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
-              <div class="d-flex align-items-center gap-3 all-buttons-inner">
-                <button class="manage-products-btn active">
-                  <span class="text">All</span>
-                  <span class="number">365</span>
-                </button>
+              <div class="campaign-details">
+                <div class="campaign-details-inner">
+                  <div class="row">
+                    <div class="col-2">
+                      <figure class="campaign-details-img">
+                        <img src="./assets/images/campaign-details.png" alt="campaign-details" />
+                      </figure>
+                    </div>
+                    <div class="col-10">
+                      <div class="campaign-details-content">
+                        <p class="details">
+                          Flash sales are short-term promotions offering significant discounts on selected products or
+                          services, usually lasting for a few hours or days. These sales create a sense of urgency,
+                          encouraging quick purchases and driving a surge in sales within a limited timeframe.
+                        </p>
 
-                <button class="manage-products-btn">
-                  <span class="text">Available Campaign</span>
-                  <span class="number">0</span>
-                </button>
+                        <div class="d-flex flex-column gap-1">
+                          <p class="details">
+                            <b>1. Boosts Sales Quickly:</b> Generates a rapid increase in sales and revenue.
+                          </p>
+                          <p class="details">
+                            <b>2. Clears Inventory:</b> Helps move excess or slow-moving stock quickly.
+                          </p>
+                        </div>
 
-                <button class="manage-products-btn">
-                  <span class="text">Registered Campaign</span>
-                  <span class="number">0</span>
-                </button>
+                        <div class="d-flex justify-content-end">
+                          <a href="" class="read-more">
+                            <span>Read More</span>
 
-                <button class="manage-products-btn">
-                  <span class="text">Ineligible Campaign</span>
-                  <span class="number">0</span>
-                </button>
-
-                <button class="manage-products-btn">
-                  <span class="text">Daily Sales</span>
-                  <span class="number">0</span>
-                </button>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path
+                                d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332Z"
+                                stroke="#0F766D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path d="M7.0835 10H12.0835" stroke="#0F766D" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M10.4165 12.5L12.9165 10L10.4165 7.5" stroke="#0F766D" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <h1 class="title">Your Products (30)</h1>
             </div>
 
             <div class="order-management-body">
@@ -619,19 +670,15 @@
                 </div>
 
                 <div class="d-flex align-items-center gap-3">
-                  <div class="w-100">
-                    <select class="wide selectize">
-                      <option data-display="Select">Status</option>
-                      <option value="1">Status 1</option>
-                    </select>
-                  </div>
-
-                  <div class="w-100">
-                    <select class="wide selectize">
-                      <option data-display="Select">Newest</option>
-                      <option value="1">Oldest</option>
-                    </select>
-                  </div>
+                  <button class="new-campaign-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M10.0001 4.16663V15.8333M4.16675 9.99996H15.8334" stroke="white" stroke-width="1.67"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>
+                      New Campaign
+                    </span>
+                  </button>
                 </div>
               </div>
 
@@ -640,299 +687,250 @@
                   <table class="table">
                     <thead class="thead-light">
                       <tr>
-                        <th>Campaign Banner</th>
-                        <th>Campaign Name</th>
-                        <th class="text-center">Status</th>
-                        <th class="text-center">Registration Close in</th>
-                        <th class="text-center">Campaign Live Period</th>
-                        <th class="text-center">Action</th>
+                        <th>Added PRODUCTS</th>
+                        <th class="text-center">In Stock</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign1.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Flash
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status delivered">Approved</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign2.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Black friday Sale
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status pending">Pending</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign3.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Special Event Nov
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status cancelled">Rejected</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign4.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Special Event Nov
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status delivered">Approved</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign5.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Special Event Nov
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status delivered">Approved</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign6.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Special Event Nov
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status pending">Pending</span>
                         </td>
                       </tr>
 
                       <tr>
-                        <td>
-                          <figure class="campaign-img">
-                            <img src="./assets/images/Campaign1.png" alt="Flash sell" />
-                          </figure>
-                        </td>
-
-                        <td>
-                          <a href="./campaign-details.html" class="itemName-text">
-                            Special Event Nov
-                          </a>
-                        </td>
-
-                        <td class="text-center">
-                          <span class="status delivered">Active</span>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 August 2024
+                            230
                           </p>
                         </td>
 
                         <td class="text-center">
                           <p class="id-text">
-                            10 Days
+                            5,000 Tk
                           </p>
                         </td>
 
                         <td class="text-center">
-                          <figure class="action-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21"
-                              fill="none">
-                              <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                              <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                            </svg>
-                          </figure>
+                          <span class="status cancelled">Rejected</span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="campaign-product">
+                          <div class="d-flex align-items-center gap-2">
+                            <figure class="campaign-img">
+                              <img src="./assets/images/campaign-img.png" alt="Flash sell" />
+                            </figure>
+                            <p class="campaign-title">
+                              Purolator Oil Filter 133500I99 – Fits Toyota Qualis
+                              Purolator Oil Filter
+                            </p>
+                          </div>
+                        </td>
+
+                        <td class="text-center">
+                          <p class="id-text">
+                            230
+                          </p>
+                        </td>
+
+                        <td class="text-center">
+                          <p class="id-text">
+                            5,000 Tk
+                          </p>
+                        </td>
+
+                        <td class="text-center">
+                          <span class="status delivered">Approved</span>
                         </td>
                       </tr>
                     </tbody>
