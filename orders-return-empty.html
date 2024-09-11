@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./assets/css/quill-rich-text-editor/quill.snow.css">
   <!-- nice-select css -->
   <link rel="stylesheet" href="./assets/css/nice-select2/nice-select2.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="./assets/css/jquery-ui/jquery-ui.css">
   <!-- New style -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -68,7 +70,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
+            <a class="menu-list-link collapsed" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -92,7 +94,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-1">
+            <div class="collapse" id="dropdownmenu-1">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./add-Product.html" class="submenu-link">
@@ -101,13 +103,13 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./manage-product-empty.html" class="submenu-link">
+                  <a href="./all-products-empty.html" class="submenu-link">
                     <span class="text">Manage Product</span>
                   </a>
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./brand-management-empty.html" class="submenu-link active">
+                  <a href="./brand-management-empty.html" class="submenu-link">
                     <span class="text">Brand Management</span>
                   </a>
                 </li>
@@ -116,7 +118,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-2" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-2" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
@@ -138,7 +140,7 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-2">
+            <div class="collapse show" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./order-empty.html" class="submenu-link">
@@ -147,7 +149,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./orders-return-empty.html" class="submenu-link">
+                  <a href="./orders-return-empty.html" class="submenu-link active">
                     <span class="text">Order Return</span>
                   </a>
                 </li>
@@ -549,816 +551,115 @@
           </div>
         </section>
 
-        <section class="manage-product-section">
-          <div class="manage-product-section-header">
-            <h3 class="heading-text">
-              Brand Management
-            </h3>
-
-            <div class="d-flex align-items-center gap-3">
-              <a href="./apply-for-brand.html" class="add-product-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M9.99984 4.1665V15.8332M4.1665 9.99984H15.8332" stroke="white" stroke-width="1.67"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Apply For New Brand</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-center gap-3 all-buttons-inner">
-            <button class="manage-products-btn active">
-              All <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Active <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Inactive <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Draft <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Pending <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Rejected <span>0</span>
-            </button>
-
-            <button class="manage-products-btn">
-              Deleted <span>0</span>
-            </button>
-          </div>
-        </section>
-
-        <section class="manage-all-brand-section">
-          <div class="manage-all-brand-section-inner">
-            <div class="manage-all-brand-section-inner-header">
-              <form class="all-products-form">
-                <label for="search-svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                      stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </label>
-
-                <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
-              </form>
-            </div>
-
-            <div class="manage-all-brand-section-inner-body">
-              <div class="table-responsive">
-                <table class="table">
-                  <thead class="thead-light">
-                    <tr scope="col">
-                      <th class="product-info-header">
-                        <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox" />
-                        <label for="table-header-checkbox" tabindex="4">Brand Details</label>
-                      </th>
-                      <th scope="col">Relation</th>
-                      <th scope="col">Category</th>
-                      <th scope="col" class="text-center">Authorization Date</th>
-                      <th scope="col" class="text-center">STATUS</th>
-                      <th scope="col" class="text-center">ACTIONS</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox1" />
-                          <label class="label-text" for="table-header-checkbox1" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox2" />
-                          <label class="label-text" for="table-header-checkbox2" tabindex="4">Ford</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Brakes & Suspension
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status inactive">Inactive</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox3" />
-                          <label class="label-text" for="table-header-checkbox3" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Brand / Manufacturer
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Tires & Wheels
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status violation">Rejected</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox4" />
-                          <label class="label-text" for="table-header-checkbox4" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Fuel System
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status pending">Pending</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox5" />
-                          <label class="label-text" for="table-header-checkbox5" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox1" />
-                          <label class="label-text" for="table-header-checkbox1" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox2" />
-                          <label class="label-text" for="table-header-checkbox2" tabindex="4">Ford</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Brakes & Suspension
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status inactive">Inactive</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox3" />
-                          <label class="label-text" for="table-header-checkbox3" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Brand / Manufacturer
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Tires & Wheels
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status violation">Rejected</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox4" />
-                          <label class="label-text" for="table-header-checkbox4" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Fuel System
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status pending">Pending</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox5" />
-                          <label class="label-text" for="table-header-checkbox5" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox1" />
-                          <label class="label-text" for="table-header-checkbox1" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox2" />
-                          <label class="label-text" for="table-header-checkbox2" tabindex="4">Ford</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Brakes & Suspension
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status inactive">Inactive</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox3" />
-                          <label class="label-text" for="table-header-checkbox3" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Brand / Manufacturer
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Tires & Wheels
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status violation">Rejected</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox4" />
-                          <label class="label-text" for="table-header-checkbox4" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Fuel System
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status pending">Pending</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-
-                    <tr>
-                      <td class="product-info-inner">
-                        <div class="product-info">
-                          <input class="table-header-checkbox" type="checkbox" id="table-header-checkbox5" />
-                          <label class="label-text" for="table-header-checkbox5" tabindex="4">Toyota</label>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div>
-                          <p class="relation-text">
-                            Exclusive Distributor
-                          </p>
-                        </div>
-                      </td>
-
-                      <td>
-                        <div class="d-flex align-items-center gap-4">
-                          <p class="pice-text">
-                            Engine & Transmission
-                          </p>
-                        </div>
-                      </td>
-
-                      <td class="text-center">
-                        <p class="pice-text ">
-                          20/12/2000
-                        </p>
-                      </td>
-
-                      <td class="text-center">
-                        <span class="status active">Active</span>
-                      </td>
-
-                      <td class="text-center">
-                        <figure class="action-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="5" height="21" viewBox="0 0 5 21" fill="none">
-                            <circle cx="2.5" cy="2.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="10.5" r="2.5" fill="#D9D9D9" />
-                            <circle cx="2.5" cy="18.5" r="2.5" fill="#D9D9D9" />
-                          </svg>
-                        </figure>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+        <section class="order-management-section">
+          <div class="order-management-section-inner">
+            <div class="order-management-header">
+              <h1 class="title">Return Orders</h1>
+
+              <div class="d-flex align-items-center gap-3 all-buttons-inner">
+                <button class="manage-products-btn active">
+                  <span class="text">All</span>
+                  <span class="number">0</span>
+                </button>
+
+                <button class="manage-products-btn">
+                  <span class="text">Requested</span>
+                  <span class="number">0</span>
+                </button>
+
+                <button class="manage-products-btn">
+                  <span class="text">Approved</span>
+                  <span class="number">0</span>
+                </button>
+
+                <button class="manage-products-btn">
+                  <span class="text">Rejected</span>
+                  <span class="number">0</span>
+                </button>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section class="pagination-section">
-          <div class="pagination-section-inner">
-            <div class="left">
-              <p class="text">Showing 1 to 10 of 23 entries</p>
-            </div>
-            <div class="right">
-              <nav class="pagination-nav">
-                <ul class="list-unstyled d-flex align-items-center gap-2">
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link previous" href="">
-                      « Previous
-                    </a>
-                  </li>
+            <div class="order-management-body">
+              <div class="order-management-body-top">
+                <div class="order-management-search-inner">
+                  <form action="" class="order-form">
+                    <div class="order-input">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                          stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <input type="text" name="" id="" placeholder="Search" />
+                    </div>
+                  </form>
+                </div>
+              </div>
 
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link" href="">
-                      1
-                    </a>
-                  </li>
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link" href="">
-                      2
-                    </a>
-                  </li>
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link" href="">
-                      3
-                    </a>
-                  </li>
+              <!-- <div class="order-management-body-middle">
+                <div class="content">
+                  <p class="text">
+                    Order Date:
+                  </p>
 
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link" href="">
-                      •••
-                    </a>
-                  </li>
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link" href="">
-                      10
-                    </a>
-                  </li>
+                  <div class="content-all-btn">
+                    <button class="order-date-btn active">
+                      Today
+                    </button>
 
-                  <li class="pagination-nav-list">
-                    <a class="pagination-nav-link next" href="">
-                      Next »
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+                    <button class="order-date-btn">
+                      Yesterday
+                    </button>
+
+                    <button class="order-date-btn">
+                      Last 7 Days
+                    </button>
+
+                    <button class="order-date-btn">
+                      Last 30 Days
+                    </button>
+                    <button class="order-date-btn">
+                      Custom
+                    </button>
+
+                    <div class="date-picker">
+                      <input type="text" id="start-date" placeholder="Start Date">
+                      <input type="text" id="end-date" placeholder="End Date">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="content">
+                  <p class="text">
+                    Order Type:
+                  </p>
+
+                  <div class="content-all-btn">
+                    <button class="order-date-btn active">
+                      All
+                    </button>
+
+                    <button class="order-date-btn">
+                      Normal
+                    </button>
+
+                    <button class="order-date-btn">
+                      Express
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+
+              <div class="order-management-body-main-content">
+                <div class="main-content-inner">
+                  <img src="./assets/images/no-return-item.svg" alt="No Order Found img" />
+                  <h3 class="title">
+                    No Return Items
+                  </h3>
+                  <p class="details">
+                    You didn’t upload any product yet. All of your products will show here.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -1377,6 +678,9 @@
     <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
     <!-- nice-select2.js -->
     <script src="./assets/js/nice-select2/nice-select2.js"></script>
+    <!-- jquery-ui -->
+    <script src="./assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./assets/js/jquery-ui/custom-jquery-ui.js"></script>
     <!-- main js -->
     <script src="./assets/js/main.js"></script>
 </body>

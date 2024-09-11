@@ -378,6 +378,10 @@
     position: relative;
     max-height: 500px;
     overflow-y: auto;
+    .table {
+      min-width: 800px;
+      width: 100%;
+    }
   }
 
   .thead-light th {
@@ -398,15 +402,17 @@
   }
   .action-header {
     border-top-right-radius: size(16);
+    padding-right: size(30);
   }
   .rating-data {
+    width: 160px;
     svg {
       width: size(16);
       height: size(16);
     }
   }
   .product-info-header {
-    width: 370px;
+    width: size(370);
   }
   .product-info-inner {
     width: 370px;
@@ -458,12 +464,13 @@
     letter-spacing: 0.07px;
   }
   .review-text {
-    width: size(400);
+    width: size(500);
   }
   .review-content {
     max-width: size(350);
   }
   .review-img {
+    width: size(350);
     img {
       width: size(36);
       height: size(36);
@@ -511,6 +518,9 @@
   }
 
   .action-btn {
+    &.review {
+      padding-right: size(35);
+    }
     svg {
       width: 5px;
       height: 21px;
@@ -557,6 +567,10 @@
   .delivered {
     background-color: #ecfdf3;
     color: #067647;
+  }
+  .approved {
+    background-color: #eef4ff;
+    color: #3538cd;
   }
 }
 
