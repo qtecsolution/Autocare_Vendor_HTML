@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
   <!-- sidebar css -->
   <link rel="stylesheet" href="./assets/css/sidebar/sidebar.css">
+  <!-- quill snow css -->
+  <link rel="stylesheet" href="./assets/css/quill-rich-text-editor/quill.snow.css">
   <!--  -->
   <link rel="stylesheet" href="./assets/css/nice-select2/nice-select2.css">
   <!-- New style -->
@@ -531,126 +533,930 @@
       </div>
     </nav>
 
-    <div id="content">
-      <div class="inner-content">
-        <div class="page-top-section">
-          <div class="page-top-section-inner">
-            <form class="search-form">
-              <label for="search-svg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                    stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </label>
-
-              <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
-            </form>
-
-            <a href="./notification.html" class="notification-svg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                  d="M5.25022 9C5.25022 7.20979 5.96138 5.4929 7.22725 4.22703C8.49312 2.96116 10.21 2.25 12.0002 2.25C13.7904 2.25 15.5073 2.96116 16.7732 4.22703C18.0391 5.4929 18.7502 7.20979 18.7502 9V9.75C18.7502 11.873 19.5502 13.807 20.8682 15.27C20.9503 15.361 21.0089 15.4707 21.0388 15.5896C21.0686 15.7084 21.0689 15.8328 21.0396 15.9518C21.0103 16.0708 20.9523 16.1808 20.8707 16.2722C20.789 16.3636 20.6862 16.4335 20.5712 16.476C19.0272 17.046 17.4112 17.466 15.7402 17.719C15.7778 18.2331 15.7091 18.7495 15.5381 19.2359C15.3672 19.7222 15.0979 20.1681 14.7469 20.5457C14.396 20.9233 13.9709 21.2245 13.4983 21.4304C13.0257 21.6364 12.5157 21.7427 12.0002 21.7427C11.4847 21.7427 10.9747 21.6364 10.5021 21.4304C10.0295 21.2245 9.60448 20.9233 9.25351 20.5457C8.90254 20.1681 8.63319 19.7222 8.46229 19.2359C8.29138 18.7495 8.22259 18.2331 8.26022 17.719C6.61187 17.4692 4.99321 17.0524 3.42922 16.475C3.31435 16.4326 3.21161 16.3627 3.12998 16.2715C3.04834 16.1802 2.99029 16.0703 2.9609 15.9515C2.9315 15.8326 2.93166 15.7084 2.96135 15.5896C2.99103 15.4708 3.04936 15.3611 3.13122 15.27C4.49802 13.7567 5.2533 11.7892 5.25022 9.75V9ZM9.75222 17.9C9.73942 18.2032 9.7881 18.5058 9.8953 18.7897C10.0025 19.0736 10.166 19.3329 10.376 19.5519C10.586 19.771 10.8382 19.9453 11.1173 20.0644C11.3964 20.1835 11.6968 20.2448 12.0002 20.2448C12.3037 20.2448 12.604 20.1835 12.8831 20.0644C13.1622 19.9453 13.4144 19.771 13.6244 19.5519C13.8344 19.3329 13.9979 19.0736 14.1051 18.7897C14.2123 18.5058 14.261 18.2032 14.2482 17.9C12.7526 18.0347 11.2479 18.0347 9.75222 17.9Z"
-                  fill="#7B7F95" />
-              </svg>
-            </a>
+    <main id="content">
+      <section class="edit-garage-header">
+        <div class="edit-garage-header-inner">
+          <div class="header-text">
+            <h1 class="title">Edit Product</h1>
+            <p class="details">Make Changes and publish for review</p>
           </div>
         </div>
-      </div>
-      <div class="d-flex flex-column h-100">
-        <div class="flex-grow-1">
-          <div class="page-header">
-            <div class="d-flex flex-column gap-1">
-              <h1 class="page-title">
-                Add Product
-              </h1>
-              <p class="page-text">
-                Seamlessly Add and Manage Your Products
-              </p>
-            </div>
-          </div>
+      </section>
 
-          <div class="add-product-content">
-            <div class="add-product-header">
-              <div class="add-product-header-inner">
-                <div class="add-product-header-item">
-                  <div class="number active">
-                    1
-                  </div>
-
-                  <h4 class="text active">
-                    Basic Info
-                  </h4>
-                </div>
-
-                <div class="add-product-header-item">
-                  <div class="number">
-                    2
-                  </div>
-
-                  <h4 class="text">
-                    Description
-                  </h4>
-                </div>
-
-                <div class="add-product-header-item">
-                  <div class="number">
-                    3
-                  </div>
-
-                  <h4 class="text">
-                    Price, Stock & Variants
-                  </h4>
-                </div>
-
-                <div class="add-product-header-item">
-                  <div class="number">
-                    4
-                  </div>
-
-                  <h4 class="text">
-                    Shipping & Warranty
-                  </h4>
-                </div>
-              </div>
-
-              <div class="inner-bar-chart">
-                <div class="bar-chart">
-                  <div class="bar" style="width: 100%;">
-                    <span style="width: 0%;"></span>
-                  </div>
-                </div>
-                <p class="text">0%</p>
-              </div>
-            </div>
-
-            <div class="add-product-body">
+      <section class="edit-garage-body">
+        <div class="edit-garage-body-inner">
+          <div class="d-flex flex-column gap-3">
+            <div class="edit-product">
               <form class="d-flex flex-column gap-4">
                 <div class="d-flex flex-column gap-2">
                   <div class="input-field-name">
                     <label for="product-name">Product Name <span>*</span></label>
                   </div>
+
                   <div class="row">
-                    <div class="col-9">
-                      <div class="input-field">
-                        <input type="text" name="product-name" id="product-name"
-                          placeholder="Ex. Sony a6400 mirrorless camera" />
+                    <div class="col-12">
+                      <div class="input-field-languages">
+                        <div class="d-flex align-items-center gap-3 flex-grow-1">
+                          <button class="languages-btn-select">
+                            English
+                          </button>
+                          <input type="text" name="product-name" id="product-name"
+                            placeholder="Sony Mirrors camera A6400" />
+                        </div>
                         <p class="text">82/100</p>
                       </div>
                     </div>
-                    <div class="col-3 align-self-center">
-                      <a class="languages-btn" href="./add-Product2.html">
-                        Translate to other Languages
-                      </a>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="input-field-languages">
+                        <div class="d-flex align-items-center gap-3 flex-grow-1">
+                          <button class="languages-btn-select">
+                            Bangla
+                          </button>
+                          <input type="text" name="product-name" id="product-name"
+                            placeholder="Sony মিররলেস ক্যামেরা a6400" />
+                        </div>
+                        <p class="text">82/100</p>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="d-flex flex-column gap-2">
+                    <div class="input-field-name">
+                      <label for="product-name">Short Description</label>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="input-field-languages">
+                          <div class="d-flex align-items-center gap-3 flex-grow-1">
+                            <button class="languages-btn-select">
+                              English
+                            </button>
+                            <input type="text" name="product-name" id="product-name"
+                              placeholder="High-quality ceramic brake pads designed for a quieter and cleaner braking experience." />
+                          </div>
+                          <p class="text">82/100</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="input-field-languages">
+                          <div class="d-flex align-items-center gap-3 flex-grow-1">
+                            <button class="languages-btn-select">
+                              Bangla
+                            </button>
+                            <input type="text" name="product-name" id="product-name"
+                              placeholder="উচ্চ-মানের সিরামিক ব্রেক প্যাডগুলি একটি শান্ত এবং পরিষ্কার ব্রেকিং অভিজ্ঞতার জন্য ডিজাইন করা হয়েছে।" />
+                          </div>
+                          <p class="text">82/100</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-3">
+                    <input class="box-checkbox" type="checkbox" id="checkbox4">
+                    <label class="label-short-description" for="checkbox4" tabindex="4">Is short description
+                      active</label>
+                  </div>
+                </div>
+
+                <div class="category-select">
+                  <div class="box">
+                    <label class="category-select-label">Category <span>*</span></label>
+                    <select class="wide selectize">
+                      <option data-display="Select">Category</option>
+                      <option value="1">Some option</option>
+                      <option value="2">Another option</option>
+                      <option value="4">Potato</option>
+                    </select>
+                  </div>
+
+                  <div class="box">
+                    <label class="category-select-label">Sub Category</label>
+                    <select class="wide selectize">
+                      <option data-display="Select">Sub Category</option>
+                      <option value="1">Some option</option>
+                      <option value="2">Another option</option>
+                      <option value="4">Potato</option>
+                    </select>
+                  </div>
+
+                  <div class="box">
+                    <label class="category-select-label">Sub Sub Category</label>
+                    <select class="wide selectize">
+                      <option data-display="Select">Sub Sub Category</option>
+                      <option value="1">Some option</option>
+                      <option value="2">Another option</option>
+                      <option value="4">Potato</option>
+                    </select>
                   </div>
                 </div>
               </form>
             </div>
+
+            <div class="product-image-section">
+              <div class="product-img-head">
+                <div class="d-flex align-items-center gap-1">
+                  <h1 class="title">Product Image <span>*</span> </h1>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                      stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+
+                <h1 class="example-text">
+                  See Example
+                </h1>
+              </div>
+
+              <div class="product-img-body">
+                <div class="uplod-img">
+                  <div class="product-img">
+                    <img src="./assets/images/product-image3.png" alt="" />
+                    <div class="img-close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <g filter="url(#filter0_dd_239_17341)">
+                          <circle cx="21" cy="19.9995" r="15" fill="white" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.7219 14.7371C15.8354 14.6237 15.9892 14.5601 16.1496 14.5601C16.31 14.5601 16.4639 14.6237 16.5774 14.7371L20.9917 19.1514L25.406 14.7371C25.4614 14.6776 25.5282 14.6299 25.6024 14.5968C25.6767 14.5637 25.7568 14.546 25.8381 14.5445C25.9194 14.5431 26.0001 14.558 26.0754 14.5885C26.1508 14.6189 26.2193 14.6642 26.2767 14.7217C26.3342 14.7792 26.3795 14.8476 26.41 14.923C26.4404 14.9984 26.4554 15.0791 26.4539 15.1604C26.4525 15.2416 26.4347 15.3218 26.4016 15.396C26.3685 15.4703 26.3208 15.5371 26.2614 15.5925L21.8471 20.0068L26.2614 24.4211C26.3208 24.4765 26.3685 24.5433 26.4016 24.6176C26.4347 24.6918 26.4525 24.772 26.4539 24.8532C26.4554 24.9345 26.4404 25.0152 26.41 25.0906C26.3795 25.1659 26.3342 25.2344 26.2767 25.2919C26.2193 25.3494 26.1508 25.3947 26.0754 25.4251C26.0001 25.4555 25.9194 25.4705 25.8381 25.4691C25.7568 25.4676 25.6767 25.4498 25.6024 25.4168C25.5282 25.3837 25.4614 25.336 25.406 25.2765L20.9917 20.8622L16.5774 25.2765C16.4626 25.3834 16.3109 25.4416 16.1541 25.4389C15.9973 25.4361 15.8477 25.3726 15.7368 25.2617C15.6259 25.1508 15.5623 25.0012 15.5596 24.8444C15.5568 24.6876 15.615 24.5358 15.7219 24.4211L20.1362 20.0068L15.7219 15.5925C15.6086 15.479 15.5449 15.3252 15.5449 15.1648C15.5449 15.0044 15.6086 14.8506 15.7219 14.7371Z"
+                          fill="#525468" />
+                        <defs>
+                          <filter id="filter0_dd_239_17341" x="0.545455" y="0.908603" width="40.9091" height="40.9091"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feMorphology radius="1.36364" operator="dilate" in="SourceAlpha"
+                              result="effect1_dropShadow_239_17341" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="2.04545" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_239_17341" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="1.36364" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                            <feBlend mode="normal" in2="effect1_dropShadow_239_17341"
+                              result="effect2_dropShadow_239_17341" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_239_17341"
+                              result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="product-img">
+                    <img src="./assets/images/product-image3.png" alt="" />
+                    <div class="img-close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <g filter="url(#filter0_dd_239_17341)">
+                          <circle cx="21" cy="19.9995" r="15" fill="white" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.7219 14.7371C15.8354 14.6237 15.9892 14.5601 16.1496 14.5601C16.31 14.5601 16.4639 14.6237 16.5774 14.7371L20.9917 19.1514L25.406 14.7371C25.4614 14.6776 25.5282 14.6299 25.6024 14.5968C25.6767 14.5637 25.7568 14.546 25.8381 14.5445C25.9194 14.5431 26.0001 14.558 26.0754 14.5885C26.1508 14.6189 26.2193 14.6642 26.2767 14.7217C26.3342 14.7792 26.3795 14.8476 26.41 14.923C26.4404 14.9984 26.4554 15.0791 26.4539 15.1604C26.4525 15.2416 26.4347 15.3218 26.4016 15.396C26.3685 15.4703 26.3208 15.5371 26.2614 15.5925L21.8471 20.0068L26.2614 24.4211C26.3208 24.4765 26.3685 24.5433 26.4016 24.6176C26.4347 24.6918 26.4525 24.772 26.4539 24.8532C26.4554 24.9345 26.4404 25.0152 26.41 25.0906C26.3795 25.1659 26.3342 25.2344 26.2767 25.2919C26.2193 25.3494 26.1508 25.3947 26.0754 25.4251C26.0001 25.4555 25.9194 25.4705 25.8381 25.4691C25.7568 25.4676 25.6767 25.4498 25.6024 25.4168C25.5282 25.3837 25.4614 25.336 25.406 25.2765L20.9917 20.8622L16.5774 25.2765C16.4626 25.3834 16.3109 25.4416 16.1541 25.4389C15.9973 25.4361 15.8477 25.3726 15.7368 25.2617C15.6259 25.1508 15.5623 25.0012 15.5596 24.8444C15.5568 24.6876 15.615 24.5358 15.7219 24.4211L20.1362 20.0068L15.7219 15.5925C15.6086 15.479 15.5449 15.3252 15.5449 15.1648C15.5449 15.0044 15.6086 14.8506 15.7219 14.7371Z"
+                          fill="#525468" />
+                        <defs>
+                          <filter id="filter0_dd_239_17341" x="0.545455" y="0.908603" width="40.9091" height="40.9091"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feMorphology radius="1.36364" operator="dilate" in="SourceAlpha"
+                              result="effect1_dropShadow_239_17341" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="2.04545" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_239_17341" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="1.36364" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                            <feBlend mode="normal" in2="effect1_dropShadow_239_17341"
+                              result="effect2_dropShadow_239_17341" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_239_17341"
+                              result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="product-img">
+                    <img src="./assets/images/product-image3.png" alt="" />
+                    <div class="img-close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                        <g filter="url(#filter0_dd_239_17341)">
+                          <circle cx="21" cy="19.9995" r="15" fill="white" />
+                        </g>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M15.7219 14.7371C15.8354 14.6237 15.9892 14.5601 16.1496 14.5601C16.31 14.5601 16.4639 14.6237 16.5774 14.7371L20.9917 19.1514L25.406 14.7371C25.4614 14.6776 25.5282 14.6299 25.6024 14.5968C25.6767 14.5637 25.7568 14.546 25.8381 14.5445C25.9194 14.5431 26.0001 14.558 26.0754 14.5885C26.1508 14.6189 26.2193 14.6642 26.2767 14.7217C26.3342 14.7792 26.3795 14.8476 26.41 14.923C26.4404 14.9984 26.4554 15.0791 26.4539 15.1604C26.4525 15.2416 26.4347 15.3218 26.4016 15.396C26.3685 15.4703 26.3208 15.5371 26.2614 15.5925L21.8471 20.0068L26.2614 24.4211C26.3208 24.4765 26.3685 24.5433 26.4016 24.6176C26.4347 24.6918 26.4525 24.772 26.4539 24.8532C26.4554 24.9345 26.4404 25.0152 26.41 25.0906C26.3795 25.1659 26.3342 25.2344 26.2767 25.2919C26.2193 25.3494 26.1508 25.3947 26.0754 25.4251C26.0001 25.4555 25.9194 25.4705 25.8381 25.4691C25.7568 25.4676 25.6767 25.4498 25.6024 25.4168C25.5282 25.3837 25.4614 25.336 25.406 25.2765L20.9917 20.8622L16.5774 25.2765C16.4626 25.3834 16.3109 25.4416 16.1541 25.4389C15.9973 25.4361 15.8477 25.3726 15.7368 25.2617C15.6259 25.1508 15.5623 25.0012 15.5596 24.8444C15.5568 24.6876 15.615 24.5358 15.7219 24.4211L20.1362 20.0068L15.7219 15.5925C15.6086 15.479 15.5449 15.3252 15.5449 15.1648C15.5449 15.0044 15.6086 14.8506 15.7219 14.7371Z"
+                          fill="#525468" />
+                        <defs>
+                          <filter id="filter0_dd_239_17341" x="0.545455" y="0.908603" width="40.9091" height="40.9091"
+                            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feMorphology radius="1.36364" operator="dilate" in="SourceAlpha"
+                              result="effect1_dropShadow_239_17341" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="2.04545" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" />
+                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_239_17341" />
+                            <feColorMatrix in="SourceAlpha" type="matrix"
+                              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                            <feOffset dy="1.36364" />
+                            <feGaussianBlur stdDeviation="1.36364" />
+                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" />
+                            <feBlend mode="normal" in2="effect1_dropShadow_239_17341"
+                              result="effect2_dropShadow_239_17341" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_239_17341"
+                              result="shape" />
+                          </filter>
+                        </defs>
+                      </svg>
+                    </div>
+                  </div>
+
+                  <div class="add-product-img-inner">
+                    <label for="add-product-img" class="add-product-img">
+                      <input class="add-product-img-input" type="file" name="" id="add-product-img">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path d="M15 5.62451V24.3745M24.375 14.9995H5.625" stroke="#0F766D" stroke-width="1.875"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                  </div>
+
+                  <div class="add-product-img-inner">
+                    <label for="add-product-img" class="add-product-img">
+                      <input class="add-product-img-input" type="file" name="" id="add-product-img">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                        <path d="M15 5.62451V24.3745M24.375 14.9995H5.625" stroke="#0F766D" stroke-width="1.875"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+                <div class="">
+                  <ul class="add-product-img-list">
+                    <li>Image Ration </li>
+                    <li>Max file size: 1MB.</li>
+                    <li>Format: png, jpg</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="youtube-thumbnail">
+              <div class="product-img-head">
+                <div class="d-flex align-items-center gap-1">
+                  <h1 class="title">Youtube thumbnail</h1>
+                </div>
+
+                <h1 class="example-text">
+                  See Example
+                </h1>
+              </div>
+
+              <div class="product-img-body">
+                <div class="product-thumbnail">
+                  <img src="./assets/images/thumbnail.png" alt="" />
+                </div>
+
+                <div class="">
+                  <ul class="add-product-img-list">
+                    <li>Image Ration </li>
+                    <li>Max file size: 1MB.</li>
+                    <li>Format: png, jpg</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="product-img-footer">
+                <label class="input-label" for="youtube-link">Youtube Link</label>
+                <div class="input-inner">
+                  <p class="text">http://www.youtube.com/</p>
+                  <input class="input" type="text" name="" id="youtube-link" placeholder="Type here" />
+
+                  <figure class="input-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                        stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </figure>
+                </div>
+              </div>
+            </div>
+
+            <div class="brand-name">
+              <div class="row g-3">
+                <div class="col-sm-6 col-lg-6 col-xl-4">
+                  <div class="inner-input">
+                    <div class="box">
+                      <label class="category-select-label">Brand <span>*</span></label>
+                      <select class="wide selectize">
+                        <option data-display="Select">Ford</option>
+                        <option value="1">Ford 1</option>
+                        <option value="2">Ford 2</option>
+                        <option value="4">Ford 3</option>
+                      </select>
+                    </div>
+                    <div>
+                      <input class="box-checkbox" type="checkbox" id="brandActive">
+                      <label class="label-short-description" for="brandActive" tabindex="4">
+                        Is Brand active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-6 col-xl-4">
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="manufacturer">Manufacturer</label>
+                      <input class="input" type="text" name="" id="manufacturer" placeholder="Ford" />
+                    </div>
+                    <div>
+                      <input class="box-checkbox" type="checkbox" id="manufacturerActive">
+                      <label class="label-short-description" for="manufacturerActive" tabindex="4">
+                        Is manufacturer active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-6 col-xl-4">
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="part">Warranty</label>
+                      <input class="input" type="text" name="" id="part" placeholder="XYZ-6789" />
+                    </div>
+                    <div>
+                      <input class="box-checkbox" type="checkbox" id="partActive">
+                      <label class="label-short-description" for="partActive" tabindex="4">
+                        Is part number active
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="vehicle-information">
+              <div class="add-product-body">
+                <form class="d-flex flex-column gap-4">
+                  <div class="tag-container">
+                    <label class="category-select-label">Vehicle Type</label>
+                    <select class="wide selectize">
+                      <option data-display="Select">Vehicle Type</option>
+                      <option value="1">Some option</option>
+                      <option value="2">Another option</option>
+                      <option value="4">Potato</option>
+                    </select>
+                  </div>
+
+                  <div class="tag-container">
+                    <label for="tag-input-1">Compatible Brand <span class="text-danger">*</span></label>
+                    <div class="tags-input" id="tags-input-1">
+                      <input type="text" id="tag-input-1" />
+                    </div>
+                  </div>
+
+                  <div class="tag-container">
+                    <label for="tag-input-2">Car Model</label>
+                    <div class="tags-input" id="tags-input-2">
+                      <input type="text" id="tag-input-2" />
+                    </div>
+                  </div>
+
+                  <div class="tag-container">
+                    <label for="tag-input-3">Car Model Year</label>
+                    <div class="tags-input" id="tags-input-3">
+                      <input type="text" id="tag-input-3" />
+                    </div>
+                  </div>
+
+                  <!-- <div class="tag-container">
+                    <label for="tag-input-4">Tags</label>
+                    <div class="tags-input" id="tags-input-4">
+                      <input type="text" id="tag-input-4" />
+                    </div>
+                  </div>
+
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="vat">VAT (%)</label>
+                      <input class="input" type="text" name="" id="vat" placeholder="" />
+                    </div>
+                    <div>
+                      <input class="box-checkbox" type="checkbox" id="vatActive">
+                      <label class="label-short-description" for="vatActive" tabindex="4">
+                        Is active
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="inner-input">
+                    <div class="d-flex flex-column gap-2">
+                      <label class="label-text" for="Weight">Weight</label>
+                      <div class="d-flex align-items-center weight-input">
+                        <select class="selectize">
+                          <option data-display="Select">Kilogram</option>
+                        </select>
+                        <input class="flex-grow-1" type="text" name="" id="Weight" placeholder="4" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                          <path
+                            d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                            stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div>
+                      <input class="box-checkbox" type="checkbox" id="weightActive">
+                      <label class="label-short-description" for="weightActive" tabindex="4">
+                        Is active
+                      </label>
+                    </div>
+                  </div> -->
+                </form>
+              </div>
+            </div>
           </div>
+
+          <div class="description">
+            <div class="main-description">
+              <label for="" class="main-description-label">
+                Main Description English
+              </label>
+              <div class="editor-container">
+                <div class="toolbar" id="toolbar">
+                  <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                    <div class="toolbar-inner">
+                      <div class="d-flex align-items-center">
+                        <button class="ql-undo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                        <button class="ql-redo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="ql-font"></select>
+                      <select class="ql-size"></select>
+
+                      <div class="d-flex align-items-center">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-align" value=""></button>
+                        <button class="ql-align" value="center"></button>
+                        <button class="ql-align" value="right"></button>
+                        <button class="ql-blockquote"></button>
+                      </div>
+                      <button class="ql-strike"></button>
+                      <button class="ql-clean"></button>
+                    </div>
+
+                    <a href="#" class="link-example">See Example</a>
+                  </div>
+                </div>
+                <div class="editor" id="editor"></div>
+              </div>
+            </div>
+
+            <div class="main-description">
+              <label for="" class="main-description-label">
+                Main Description Bangla
+              </label>
+              <div class="editor-container">
+                <div class="toolbar" id="toolbar1">
+                  <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                    <div class="toolbar-inner">
+                      <div class="d-flex align-items-center">
+                        <button class="ql-undo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                        <button class="ql-redo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="ql-font"></select>
+                      <select class="ql-size"></select>
+
+                      <div class="d-flex align-items-center">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-align" value=""></button>
+                        <button class="ql-align" value="center"></button>
+                        <button class="ql-align" value="right"></button>
+                        <button class="ql-blockquote"></button>
+                      </div>
+                      <button class="ql-strike"></button>
+                      <button class="ql-clean"></button>
+                    </div>
+
+                    <a href="#" class="link-example">See Example</a>
+                  </div>
+                </div>
+                <div class="editor" id="editor1"></div>
+              </div>
+            </div>
+
+            <div class="main-description">
+              <label for="" class="main-description-label">
+                Specification English
+              </label>
+              <div class="editor-container">
+                <div class="toolbar" id="toolbar2">
+                  <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                    <div class="toolbar-inner">
+                      <div class="d-flex align-items-center">
+                        <button class="ql-undo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                        <button class="ql-redo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="ql-font"></select>
+                      <select class="ql-size"></select>
+
+                      <div class="d-flex align-items-center">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-align" value=""></button>
+                        <button class="ql-align" value="center"></button>
+                        <button class="ql-align" value="right"></button>
+                        <button class="ql-blockquote"></button>
+                      </div>
+                      <button class="ql-strike"></button>
+                      <button class="ql-clean"></button>
+                    </div>
+
+                    <a href="#" class="link-example">See Example</a>
+                  </div>
+                </div>
+                <div class="editor" id="editor2"></div>
+              </div>
+            </div>
+
+            <div class="main-description">
+              <label for="" class="main-description-label">
+                Specification Bangla
+              </label>
+              <div class="editor-container">
+                <div class="toolbar" id="toolbar3">
+                  <div class="d-flex justify-content-between flex-wrap gap-2 align-items-center w-100">
+                    <div class="toolbar-inner">
+                      <div class="d-flex align-items-center">
+                        <button class="ql-undo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M3.88432 4.66572L5.57467 6.35608L4.63186 7.29889L1.33203 3.99905L4.63186 0.699219L5.57467 1.64203L3.88432 3.33239H8.66536C11.6109 3.33239 13.9987 5.7202 13.9987 8.66575C13.9987 11.6112 11.6109 13.9991 8.66536 13.9991H2.66536V12.6658H8.66536C10.8745 12.6658 12.6654 10.8749 12.6654 8.66575C12.6654 6.45658 10.8745 4.66572 8.66536 4.66572H3.88432Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                        <button class="ql-redo">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                              d="M12.1144 4.66572H7.33333C5.12419 4.66572 3.33333 6.45658 3.33333 8.66575C3.33333 10.8749 5.12419 12.6658 7.33333 12.6658H13.3333V13.9991H7.33333C4.38781 13.9991 2 11.6112 2 8.66575C2 5.7202 4.38781 3.33239 7.33333 3.33239H12.1144L10.424 1.64203L11.3669 0.699219L14.6667 3.99905L11.3669 7.29889L10.424 6.35608L12.1144 4.66572Z"
+                              fill="#0A0A0A" />
+                          </svg>
+                        </button>
+                      </div>
+                      <select class="ql-font"></select>
+                      <select class="ql-size"></select>
+
+                      <div class="d-flex align-items-center">
+                        <button class="ql-bold"></button>
+                        <button class="ql-italic"></button>
+                        <button class="ql-underline"></button>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <button class="ql-list" value="ordered"></button>
+                        <button class="ql-list" value="bullet"></button>
+                        <button class="ql-align" value=""></button>
+                        <button class="ql-align" value="center"></button>
+                        <button class="ql-align" value="right"></button>
+                        <button class="ql-blockquote"></button>
+                      </div>
+                      <button class="ql-strike"></button>
+                      <button class="ql-clean"></button>
+                    </div>
+
+                    <a href="#" class="link-example">See Example</a>
+                  </div>
+                </div>
+                <div class="editor" id="editor3"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="price-stock">
+            <!-- <div class="row g-3">
+              <div class="col-sm-6 col-md-3">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="manufacturer">Price <span>*</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="manufacturer" placeholder="৳" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="manufacturer">Discount Price
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="manufacturer" placeholder="৳" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="manufacturer">Final Price
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <div class="commission">
+                      <p class="text">
+                        Commission - 5%:
+                      </p>
+                      <p class="price">
+                        ৳ 9,999
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="part">Stock <span>*</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="part" placeholder="10,000" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="part">SKU Name <span>*</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="part" placeholder="90000W40" />
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="tag-container">
+              <label for="tag-input-4">Tags</label>
+              <div class="tags-input" id="tags-input-4">
+                <input type="text" id="tag-input-4" />
+              </div>
+            </div>
+
+            <div class="meta-description">
+              <label class="label-text" for="Meta-description">Meta description</label>
+              <textarea class="input" name="" id="Meta-description" cols="30" rows="3"
+                placeholder="Enter meta description"></textarea>
+            </div>
+
+            <div class="tag-container">
+              <label for="tag-meta">Meta Keywords</label>
+              <div class="tags-input" id="tags-meta">
+                <input type="text" id="tag-meta" />
+              </div>
+            </div>
+          </div>
+
+          <div class="brand-name">
+            <div class="row g-3">
+              <div class="col-sm-6 col-lg-6">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="manufacturer">
+                      Stock <span class="text-danger">*</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="manufacturer" placeholder="Ford" />
+                  </div>
+                  <!-- <div>
+                    <input class="box-checkbox" type="checkbox" id="manufacturerActive">
+                    <label class="label-short-description" for="manufacturerActive" tabindex="4">
+                      Is manufacturer active
+                    </label>
+                  </div> -->
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-lg-6">
+                <div class="inner-input">
+                  <div class="d-flex flex-column gap-2">
+                    <label class="label-text" for="part">
+                      SKU Name <span class="text-danger">*</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M9.375 9.37476L9.40917 9.35809C9.51602 9.3047 9.63594 9.28306 9.75472 9.29572C9.8735 9.30838 9.98616 9.35481 10.0794 9.42951C10.1726 9.50422 10.2424 9.60407 10.2806 9.71724C10.3189 9.83042 10.3238 9.95217 10.295 10.0681L9.705 12.4314C9.67595 12.5474 9.68078 12.6693 9.71891 12.7826C9.75704 12.8959 9.82687 12.9959 9.92011 13.0707C10.0134 13.1455 10.1261 13.1921 10.245 13.2047C10.3639 13.2174 10.4839 13.1957 10.5908 13.1423L10.625 13.1248M17.5 9.99976C17.5 10.9847 17.306 11.9599 16.9291 12.8699C16.5522 13.7798 15.9997 14.6066 15.3033 15.3031C14.6069 15.9995 13.7801 16.5519 12.8701 16.9289C11.9602 17.3058 10.9849 17.4998 10 17.4998C9.01509 17.4998 8.03982 17.3058 7.12987 16.9289C6.21993 16.5519 5.39314 15.9995 4.6967 15.3031C4.00026 14.6066 3.44781 13.7798 3.0709 12.8699C2.69399 11.9599 2.5 10.9847 2.5 9.99976C2.5 8.01063 3.29018 6.10298 4.6967 4.69645C6.10322 3.28993 8.01088 2.49976 10 2.49976C11.9891 2.49976 13.8968 3.28993 15.3033 4.69645C16.7098 6.10298 17.5 8.01063 17.5 9.99976ZM10 6.87476H10.0067V6.88142H10V6.87476Z"
+                          stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </label>
+                    <input class="input" type="text" name="" id="part" placeholder="XYZ-6789" />
+                  </div>
+                  <!-- <div>
+                    <input class="box-checkbox" type="checkbox" id="partActive">
+                    <label class="label-short-description" for="partActive" tabindex="4">
+                      Is part number active
+                    </label>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- <div class="shipping-warranty">
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <div class="shipping-charge">
+                  <label class="label-text" for="">Inside Dhaka Shipping Charge</label>
+                  <div class="input-field">
+                    <input class="flex-grow-1" type="text" name="" id="" placeholder="100 Taka">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                        stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="shipping-charge">
+                  <label class="label-text" for="">Outside Dhaka Shipping Charge</label>
+                  <div class="input-field">
+                    <input class="flex-grow-1" type="text" name="" id="" placeholder="100 Taka">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                        stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="custom-shipping-charge">
+                  <label class="label-text" for="">Custom Shipping Charge</label>
+                  <div class="input-field">
+                    <input class="flex-grow-1" type="text" name="" id="" placeholder="100 Taka">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M9.375 9.375L9.40917 9.35833C9.51602 9.30495 9.63594 9.2833 9.75472 9.29596C9.8735 9.30862 9.98616 9.35505 10.0794 9.42976C10.1726 9.50446 10.2424 9.60432 10.2806 9.71749C10.3189 9.83066 10.3238 9.95242 10.295 10.0683L9.705 12.4317C9.67595 12.5476 9.68078 12.6695 9.71891 12.7828C9.75704 12.8961 9.82687 12.9961 9.92011 13.071C10.0134 13.1458 10.1261 13.1923 10.245 13.205C10.3639 13.2177 10.4839 13.196 10.5908 13.1425L10.625 13.125M17.5 10C17.5 10.9849 17.306 11.9602 16.9291 12.8701C16.5522 13.7801 15.9997 14.6069 15.3033 15.3033C14.6069 15.9997 13.7801 16.5522 12.8701 16.9291C11.9602 17.306 10.9849 17.5 10 17.5C9.01509 17.5 8.03982 17.306 7.12987 16.9291C6.21993 16.5522 5.39314 15.9997 4.6967 15.3033C4.00026 14.6069 3.44781 13.7801 3.0709 12.8701C2.69399 11.9602 2.5 10.9849 2.5 10C2.5 8.01088 3.29018 6.10322 4.6967 4.6967C6.10322 3.29018 8.01088 2.5 10 2.5C11.9891 2.5 13.8968 3.29018 15.3033 4.6967C16.7098 6.10322 17.5 8.01088 17.5 10ZM10 6.875H10.0067V6.88167H10V6.875Z"
+                        stroke="#0F766D" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 align-self-center">
+                <div class="d-flex align-items-center justify-content-center gap-3 mt-4">
+                  <label class="switch">
+                    <span class="close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+
+                        <path d="M7.5 2.5L2.5 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <path d="M2.5 2.5L7.5 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+
+                      </svg>
+                    </span>
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                  </label>
+                  <p>Apply Custom Shipping Charge</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <button class="confirm-btn active">
+                  Update
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="store-name-section">
+            <div class="store-name-section-inner">
+              custom-fields
+            </div>
+          </div> -->
+        </div>
+      </section>
+
+      <div class="add-product-footer">
+        <div class="d-flex align-items-center justify-content-between w-100 gap-3">
+          <a href="#" class="save-draft-btn active">
+            Save Draft
+          </a>
+
+          <a href="#" class="confirm-btn active ">
+            Save and Continue
+          </a>
         </div>
       </div>
-    </div>
+    </main>
   </div>
 
   <!-- jquery js -->
@@ -659,7 +1465,12 @@
   <script src="./assets/js/bootstrap.min.js"></script>
   <!-- sidebar -->
   <script src="./assets/js/sidebar.js"></script>
-  <!--  -->
+  <!-- quill js -->
+  <script src="./assets/js/quill-rich-text-editor/quill.js"></script>
+  <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
+  <!-- addTag.js -->
+  <script src="./assets/js/addTag.js"></script>
+  <!--nice  -->
   <script src="./assets/js/nice-select2/nice-select2.js"></script>
   <!-- main js -->
   <script src="./assets/js/main.js"></script>

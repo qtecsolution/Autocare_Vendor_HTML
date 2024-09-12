@@ -92,3 +92,27 @@ var quill = new Quill("#editor2", {
   placeholder: "Write here",
   theme: "snow",
 });
+
+var quill = new Quill("#editor3", {
+  modules: {
+    toolbar: {
+      container: "#toolbar3",
+      handlers: {
+        undo: function () {
+          quill.history.undo();
+        },
+        redo: function () {
+          quill.history.redo();
+        },
+      },
+    },
+    history: {
+      delay: 2000,
+      maxStack: 500,
+      userOnly: true,
+    },
+    undoRedo: true,
+  },
+  placeholder: "Write here",
+  theme: "snow",
+});

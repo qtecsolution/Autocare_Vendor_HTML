@@ -191,14 +191,19 @@
     }
 
     .label-text {
-      color: var(--Text-Title-Color, #1f2937);
-
-      /* Text Base/Semi bold */
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(14);
       font-weight: 600;
-      line-height: 20px; /* 142.857% */
+      line-height: size(20);
+      display: flex;
+      align-items: center;
+      gap: size(5);
+
+      svg {
+        width: size(20);
+        height: size(20);
+      }
     }
     .input {
       border-radius: 8px;

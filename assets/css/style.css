@@ -203,7 +203,6 @@
 
 .confirm-btn {
   display: inline-flex;
-  width: 145px;
   padding: 0.625rem 1rem;
   justify-content: center;
   align-items: center;
@@ -7841,13 +7840,18 @@ table tr td {
   top: 0.3125rem;
 }
 .brand-name .inner-input .label-text {
-  color: var(--Text-Title-Color, #1f2937);
-  /* Text Base/Semi bold */
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.brand-name .inner-input .label-text svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .brand-name .inner-input .input {
   border-radius: 8px;

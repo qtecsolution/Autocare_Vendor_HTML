@@ -37,4 +37,4 @@ var Tawk_API = Tawk_API || {},
 })();
 
 // richTextEditor
-var editor1 = new RichTextEditor("#div_editor1");
+// var editor1 = new RichTextEditor("#div_editor1");
