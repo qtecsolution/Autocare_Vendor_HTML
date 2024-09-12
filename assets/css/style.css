@@ -3797,6 +3797,44 @@ table tr td {
   flex-shrink: 0;
   cursor: pointer;
 }
+.setup-store-section-inner .center .setup-store-form .upload-card {
+  display: flex;
+  padding: 1rem 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  border: 0.125rem dashed #e4e7ec;
+  background: hsl(0, 0%, 100%);
+}
+.setup-store-section-inner .center .setup-store-form .upload-card figure {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 0.625rem;
+}
+.setup-store-section-inner .center .setup-store-form .upload-card figure svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.setup-store-section-inner .center .setup-store-form .upload-card .color-text {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.setup-store-section-inner .center .setup-store-form .upload-card .paragraph {
+  color: #475467;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+.setup-store-section-inner .center .setup-store-form .upload-card input {
+  display: none;
+}
 .setup-store-section-inner .center .setup-store-form .category-select-label {
   color: #1f2937;
   font-family: "Inter", sans-serif;
