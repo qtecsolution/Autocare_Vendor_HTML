@@ -522,6 +522,13 @@
       padding: size(8) size(20);
       width: 100%;
     }
+    .commission-text {
+      color: #8e8e93;
+      font-family: $primaryFont;
+      font-size: size(12);
+      font-weight: 500;
+      line-height: size(16);
+    }
     .commission {
       display: flex;
       align-items: center;

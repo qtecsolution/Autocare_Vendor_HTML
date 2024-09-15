@@ -265,6 +265,30 @@
               border: 1px solid #0f766d;
               color: #0f766d;
             }
+            .icon {
+              svg {
+                height: size(18);
+                width: size(18);
+              }
+            }
+            .date-text {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              h4 {
+                color: #383941;
+                font-family: $primaryFont;
+                font-size: size(12);
+                font-weight: 600;
+                line-height: size(16);
+              }
+              p {
+                color: #7b7f95;
+                font-family: $primaryFont;
+                font-size: size(10);
+                line-height: size(14);
+              }
+            }
           }
           .order-date-btn.active {
             padding: size(10) size(12);
@@ -522,6 +546,14 @@
       @include radius(6);
     }
   }
+  .morning {
+    figure {
+      svg {
+        width: size(18);
+        height: size(18);
+      }
+    }
+  }
   .id-text {
     color: var(--Text-Title-Color, #1f2937);
     font-family: Inter;
@@ -673,6 +705,10 @@
         font-weight: 600;
         line-height: size(24);
       }
+      .color-text {
+        color: #0f766d;
+        font-weight: 700;
+      }
     }
     &-body {
       padding: size(20) size(30);
@@ -689,6 +725,18 @@
         font-size: size(12);
         font-weight: 700;
         line-height: size(16);
+      }
+      .icon {
+        svg {
+          width: size(18);
+          height: size(18);
+        }
+      }
+      .extra-light-text {
+        color: #7b7f95;
+        font-family: $primaryFont;
+        font-size: size(10);
+        line-height: size(14);
       }
       .demo-image {
         border-radius: 8px;
