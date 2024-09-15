@@ -554,21 +554,31 @@
       }
     }
   }
+  .customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: size(2);
+    .number-text {
+      color: #1f2937;
+      font-family: $primaryFont;
+      font-size: size(12);
+      font-weight: 500;
+      line-height: size(16);
+    }
+  }
   .id-text {
-    color: var(--Text-Title-Color, #1f2937);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
     font-weight: 500;
-    line-height: 18px; /* 128.571% */
+    line-height: size(18);
   }
   .itemName-text {
-    color: var(--Primary-700, #0f766d);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
+    color: #0f766d;
+    font-family: $primaryFont;
+    font-size: size(14);
     font-weight: 500;
-    line-height: 18px; /* 128.571% */
+    line-height: size(18);
     max-width: size(200);
     overflow: hidden;
     display: block;
@@ -634,7 +644,10 @@
     background-color: #fef3f2;
     color: #b42318;
   }
-
+  .returned {
+    background-color: #fdf2fa;
+    color: #c11574;
+  }
   .pending {
     background-color: #fffaeb;
     color: #b54708;
@@ -643,6 +656,14 @@
   .delivered {
     background-color: #ecfdf3;
     color: #067647;
+  }
+  .processing {
+    background-color: #eff8ff;
+    color: #175cd3;
+  }
+  .order-placed {
+    background-color: #f9fafb;
+    color: #344054;
   }
   .approved {
     background-color: #eef4ff;

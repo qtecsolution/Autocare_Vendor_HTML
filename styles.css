@@ -1,0 +1,51 @@
+.progress-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-row {
+  width: 100%;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  width: 20%;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle.active {
+  background-color: #198754;
+  color: white;
+}
+
+.empty-circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #e9ecef;
+  border-radius: 50%;
+}
+
+.progress-step {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #e9ecef;
+}
+
+.progress-step.active {
+  background-color: #198754;
+}
+
+.badge {
+  padding: 5px;
+}

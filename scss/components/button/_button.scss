@@ -332,6 +332,7 @@
   font-weight: 600;
   line-height: size(20);
 }
+
 .cancel-order-btn {
   color: #ff3e50;
   transition: all 0.35s ease-in-out;
@@ -340,11 +341,39 @@
     color: $white;
   }
 }
+
 .print-invoice-btn {
   color: #0f766d;
   transition: all 0.35s ease-in-out;
   &:hover {
     background: #0f766d;
     color: $white;
+  }
+}
+.export-btn {
+  display: inline-flex;
+  padding: size(10) size(12);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  @include radius(8);
+  border: 1px solid #e5e7eb;
+  background: $white;
+  color: #6b7280;
+  text-align: center;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  transition: all 0.35s ease-in-out;
+  .icon {
+    svg {
+      width: size(18);
+      height: size(18);
+    }
+  }
+  &:hover {
+    background: #e5e7eb;
   }
 }

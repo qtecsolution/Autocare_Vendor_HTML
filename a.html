@@ -5,152 +5,153 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
-    .tag-container {
-      display: flex;
-      flex-direction: column;
-      max-width: 400px;
-      margin: 20px;
+    /* body {
+      color: #000;
+      overflow-x: hidden;
+      height: 100%;
+      background-color: #8C9EFF;
+      background-repeat: no-repeat;
+    } */
+
+    .card {
+      z-index: 0;
+      /* background-color: #ECEFF1; */
+      padding-bottom: 20px;
+      margin-top: 90px;
+      margin-bottom: 90px;
+      border-radius: 10px;
     }
 
-    label {
-      margin-bottom: 8px;
-      font-weight: bold;
+    #progressbar {
+      margin-bottom: 30px;
+      overflow: hidden;
+      color: #455A64;
+      padding-left: 0px;
+      margin-top: 30px;
     }
 
-    .tags-input {
-      display: flex;
-      flex-wrap: wrap;
-      border: 1px solid #ccc;
-      padding: 5px;
-      border-radius: 8px;
+    #progressbar li {
+      list-style-type: none;
+      font-size: 13px;
+      width: 25%;
+      float: left;
+      position: relative;
+      font-weight: 400;
     }
 
-    .tags-input input {
-      border: none;
-      outline: none;
-      flex: 1;
-      padding: 5px;
+    /* #progressbar .step0:before {
+      font-family: FontAwesome;
+      content: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="#0F766D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.096 7.39016L9.93602 14.3002L8.03602 12.2702C7.68602 11.9402 7.13602 11.9202 6.73602 12.2002C6.34602 12.4902 6.23602 13.0002 6.47602 13.4102L8.72602 17.0702C8.94602 17.4102 9.32601 17.6202 9.75601 17.6202C10.166 17.6202 10.556 17.4102 10.776 17.0702C11.136 16.6002 18.006 8.41016 18.006 8.41016C18.906 7.49016 17.816 6.68016 17.096 7.38016V7.39016Z" fill="white"/></svg>';
+      color: #fff;
+    } */
+    #progressbar .step0:before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-image: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22%3E%3Crect x=%220.75%22 y=%220.75%22 width=%2222.5%22 height=%2222.5%22 rx=%2211.25%22 stroke=%22%23E4E7EC%22 stroke-width=%221.5%22/%3E%3C/svg%3E');
+      background-size: contain;
+      color: #fff;
     }
 
-    .tag {
-      background-color: #e2e8f0;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      padding: 5px 10px;
-      margin: 3px;
-      font-size: 14px;
+
+    #progressbar li:before {
+      width: 40px;
+      height: 40px;
+      line-height: 45px;
+      display: block;
+      font-size: 20px;
+      background: #fff;
+      border-radius: 50%;
+      margin: auto;
+      padding: 0px;
     }
 
-    .tag .remove-tag {
-      background: none;
-      border: none;
-      cursor: pointer;
-      margin-left: 5px;
+    /*ProgressBar connectors*/
+    #progressbar li:after {
+      content: '';
+      width: 100%;
+      height: 2px;
+      background: #E4E7EC;
+      position: absolute;
+      left: 0;
+      top: 20px;
+      z-index: -1;
+    }
+
+    #progressbar li:last-child:after {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      position: absolute;
+      left: -50%;
+    }
+
+    #progressbar li:nth-child(2):after,
+    #progressbar li:nth-child(3):after {
+      left: -50%;
+    }
+
+    #progressbar li:first-child:after {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      position: absolute;
+      left: 50%;
+    }
+
+    #progressbar li:last-child:after {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    #progressbar li:first-child:after {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    /*Color number of the step and the connector before it*/
+    #progressbar li.active:before,
+    #progressbar li.active:after {
+      background: #0F766D;
+    }
+
+    #progressbar li.active:before {
+      content: '';
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="%230F766D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.096 7.39016L9.93602 14.3002L8.03602 12.2702C7.68602 11.9402 7.13602 11.9202 6.73602 12.2002C6.34602 12.4902 6.23602 13.0002 6.47602 13.4102L8.72602 17.0702C8.94602 17.4102 9.32601 17.6202 9.75601 17.6202C10.166 17.6202 10.556 17.4102 10.776 17.0702C11.136 16.6002 18.006 8.41016 18.006 8.41016C18.906 7.49016 17.816 6.68016 17.096 7.38016V7.39016Z" fill="white"/></svg>') no-repeat center center;
+      background-size: contain;
+      color: #fff;
+    }
+
+    @media screen and (max-width: 992px) {
+      .icon-content {
+        width: 50%;
+      }
     }
   </style>
 </head>
 
 <body>
-  <div class="tag-container">
-    <label for="tag-input-1">Vehicle Type 1*</label>
-    <div class="tags-input" id="tags-input-1">
-      <input type="text" id="tag-input-1" placeholder="Type and press enter" />
+  <div class="container px-1 px-md-4 py-5 mx-auto">
+    <div class="card">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+          <ul id="progressbar" class="text-center">
+            <li class="active step0"></li>
+            <li class="active step0"></li>
+            <li class=" step0"></li>
+            <li class=" step0"></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="tag-container">
-    <label for="tag-input-2">Vehicle Type 2*</label>
-    <div class="tags-input" id="tags-input-2">
-      <input type="text" id="tag-input-2" placeholder="Type and press enter" />
-    </div>
-  </div>
-
-  <div class="tag-container">
-    <label for="tag-input-3">Vehicle Type 3*</label>
-    <div class="tags-input" id="tags-input-3">
-      <input type="text" id="tag-input-3" placeholder="Type and press enter" />
-    </div>
-  </div>
-
-  <div class="tag-container">
-    <label for="tag-input-4">Vehicle Type 4*</label>
-    <div class="tags-input" id="tags-input-4">
-      <input type="text" id="tag-input-4" placeholder="Type and press enter" />
-    </div>
-  </div>
-
-  <div class="tag-container">
-    <label for="tag-input-5">Vehicle Type 5*</label>
-    <div class="tags-input" id="tags-input-5">
-      <input type="text" id="tag-input-5" placeholder="Type and press enter" />
-    </div>
-  </div>
-
-
-  <script>
-    // document.addEventListener('DOMContentLoaded', function () {
-    //   // Initialize default tags for each input
-    //   // addTag('Car', 'tags-input-1');
-    //   // addTag('Bike', 'tags-input-1');
-
-    //   // addTag('Truck', 'tags-input-2');
-    //   // addTag('Scooter', 'tags-input-2');
-
-    //   // addTag('Boat', 'tags-input-3');
-    //   // addTag('Plane', 'tags-input-3');
-
-    //   // addTag('Train', 'tags-input-4');
-    //   // addTag('Bus', 'tags-input-4');
-
-    //   // addTag('Subway', 'tags-input-5');
-    //   // addTag('Helicopter', 'tags-input-5');
-    // });
-
-    function setupInputListeners(inputId, containerId) {
-      document.getElementById(inputId).addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-          event.preventDefault();
-          const input = event.target;
-          const tagText = input.value.trim();
-
-          if (tagText) {
-            addTag(tagText, containerId);
-            input.value = '';
-          }
-        }
-      });
-    }
-
-    function addTag(tagText, containerId) {
-      const tagsInput = document.getElementById(containerId);
-      const tag = document.createElement('div');
-      tag.className = 'tag';
-      tag.textContent = tagText;
-
-      const removeBtn = document.createElement('button');
-      removeBtn.className = 'remove-tag';
-      removeBtn.innerHTML = 'x';
-      removeBtn.addEventListener('click', function () {
-        tagsInput.removeChild(tag);
-      });
-
-      tag.appendChild(removeBtn);
-      tagsInput.insertBefore(tag, tagsInput.querySelector('input'));
-    }
-
-    // Set up input listeners for all five inputs
-    setupInputListeners('tag-input-1', 'tags-input-1');
-    setupInputListeners('tag-input-2', 'tags-input-2');
-    setupInputListeners('tag-input-3', 'tags-input-3');
-    setupInputListeners('tag-input-4', 'tags-input-4');
-    setupInputListeners('tag-input-5', 'tags-input-5');
-
-
-
-  </script>
-
 </body>
 
 </html>

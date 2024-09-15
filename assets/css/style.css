@@ -442,6 +442,32 @@
   color: hsl(0, 0%, 100%);
 }
 
+.export-btn {
+  display: inline-flex;
+  padding: 0.625rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  color: #6b7280;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  transition: all 0.35s ease-in-out;
+}
+.export-btn .icon svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.export-btn:hover {
+  background: #e5e7eb;
+}
+
 .header-section {
   padding: 1.25rem 0;
   border-bottom: 1px solid #e5e7eb;
@@ -6127,21 +6153,31 @@ table tr td {
   width: 1.125rem;
   height: 1.125rem;
 }
-.order-management-body-inner .id-text {
-  color: var(--Text-Title-Color, #1f2937);
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+.order-management-body-inner .customer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.order-management-body-inner .customer-info .number-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 18px; /* 128.571% */
+  line-height: 1rem;
+}
+.order-management-body-inner .id-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.125rem;
 }
 .order-management-body-inner .itemName-text {
-  color: var(--Primary-700, #0f766d);
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.125rem;
   max-width: 12.5rem;
   overflow: hidden;
   display: block;
@@ -6198,6 +6234,10 @@ table tr td {
   background-color: #fef3f2;
   color: #b42318;
 }
+.order-management-body-inner .returned {
+  background-color: #fdf2fa;
+  color: #c11574;
+}
 .order-management-body-inner .pending {
   background-color: #fffaeb;
   color: #b54708;
@@ -6205,6 +6245,14 @@ table tr td {
 .order-management-body-inner .delivered {
   background-color: #ecfdf3;
   color: #067647;
+}
+.order-management-body-inner .processing {
+  background-color: #eff8ff;
+  color: #175cd3;
+}
+.order-management-body-inner .order-placed {
+  background-color: #f9fafb;
+  color: #344054;
 }
 .order-management-body-inner .approved {
   background-color: #eef4ff;
