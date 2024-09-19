@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="./assets/css/bootstrap/bootstrap.min.css">
   <!-- sidebar css -->
   <link rel="stylesheet" href="./assets/css/sidebar/sidebar.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="./assets/css/jquery-ui/jquery-ui.css">
   <!-- New style -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -44,7 +46,7 @@
 
         <ul class="list-unstyled menu-list">
           <li class="menu-list-item">
-            <a href="./index.html" class="menu-list-link active">
+            <a href="./index.html" class="menu-list-link">
               <span class="icontitle">
                 <span class="icon">
                   <svg class="" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -490,7 +492,7 @@
             </li>
 
             <li class="menu-list-item">
-              <a href="./settings.html" class="menu-list-link">
+              <a href="./settings.html" class="menu-list-link active">
                 <span class="icontitle">
                   <span class="icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -529,43 +531,342 @@
       </div>
     </nav>
 
-    <div id="content">
-
-      <div class="main-content">
-        <div class="inner-content">
-          <div class="page-top-section">
-            <div class="page-top-section-inner">
-              <form class="search-form">
-                <label for="search-svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                      stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </label>
-
-                <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
-              </form>
-
-              <a href="./notification.html" class="notification-svg">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M5.25022 9C5.25022 7.20979 5.96138 5.4929 7.22725 4.22703C8.49312 2.96116 10.21 2.25 12.0002 2.25C13.7904 2.25 15.5073 2.96116 16.7732 4.22703C18.0391 5.4929 18.7502 7.20979 18.7502 9V9.75C18.7502 11.873 19.5502 13.807 20.8682 15.27C20.9503 15.361 21.0089 15.4707 21.0388 15.5896C21.0686 15.7084 21.0689 15.8328 21.0396 15.9518C21.0103 16.0708 20.9523 16.1808 20.8707 16.2722C20.789 16.3636 20.6862 16.4335 20.5712 16.476C19.0272 17.046 17.4112 17.466 15.7402 17.719C15.7778 18.2331 15.7091 18.7495 15.5381 19.2359C15.3672 19.7222 15.0979 20.1681 14.7469 20.5457C14.396 20.9233 13.9709 21.2245 13.4983 21.4304C13.0257 21.6364 12.5157 21.7427 12.0002 21.7427C11.4847 21.7427 10.9747 21.6364 10.5021 21.4304C10.0295 21.2245 9.60448 20.9233 9.25351 20.5457C8.90254 20.1681 8.63319 19.7222 8.46229 19.2359C8.29138 18.7495 8.22259 18.2331 8.26022 17.719C6.61187 17.4692 4.99321 17.0524 3.42922 16.475C3.31435 16.4326 3.21161 16.3627 3.12998 16.2715C3.04834 16.1802 2.99029 16.0703 2.9609 15.9515C2.9315 15.8326 2.93166 15.7084 2.96135 15.5896C2.99103 15.4708 3.04936 15.3611 3.13122 15.27C4.49802 13.7567 5.2533 11.7892 5.25022 9.75V9ZM9.75222 17.9C9.73942 18.2032 9.7881 18.5058 9.8953 18.7897C10.0025 19.0736 10.166 19.3329 10.376 19.5519C10.586 19.771 10.8382 19.9453 11.1173 20.0644C11.3964 20.1835 11.6968 20.2448 12.0002 20.2448C12.3037 20.2448 12.604 20.1835 12.8831 20.0644C13.1622 19.9453 13.4144 19.771 13.6244 19.5519C13.8344 19.3329 13.9979 19.0736 14.1051 18.7897C14.2123 18.5058 14.261 18.2032 14.2482 17.9C12.7526 18.0347 11.2479 18.0347 9.75222 17.9Z"
-                    fill="#7B7F95" />
+    <main id="content">
+      <div class="inner-content">
+        <section class="page-top-section">
+          <div class="page-top-section-inner">
+            <form class="search-form">
+              <label for="search-svg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                    stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </a>
-            </div>
+              </label>
+
+              <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
+            </form>
+
+            <a href="./notification.html" class="notification-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M5.25022 9C5.25022 7.20979 5.96138 5.4929 7.22725 4.22703C8.49312 2.96116 10.21 2.25 12.0002 2.25C13.7904 2.25 15.5073 2.96116 16.7732 4.22703C18.0391 5.4929 18.7502 7.20979 18.7502 9V9.75C18.7502 11.873 19.5502 13.807 20.8682 15.27C20.9503 15.361 21.0089 15.4707 21.0388 15.5896C21.0686 15.7084 21.0689 15.8328 21.0396 15.9518C21.0103 16.0708 20.9523 16.1808 20.8707 16.2722C20.789 16.3636 20.6862 16.4335 20.5712 16.476C19.0272 17.046 17.4112 17.466 15.7402 17.719C15.7778 18.2331 15.7091 18.7495 15.5381 19.2359C15.3672 19.7222 15.0979 20.1681 14.7469 20.5457C14.396 20.9233 13.9709 21.2245 13.4983 21.4304C13.0257 21.6364 12.5157 21.7427 12.0002 21.7427C11.4847 21.7427 10.9747 21.6364 10.5021 21.4304C10.0295 21.2245 9.60448 20.9233 9.25351 20.5457C8.90254 20.1681 8.63319 19.7222 8.46229 19.2359C8.29138 18.7495 8.22259 18.2331 8.26022 17.719C6.61187 17.4692 4.99321 17.0524 3.42922 16.475C3.31435 16.4326 3.21161 16.3627 3.12998 16.2715C3.04834 16.1802 2.99029 16.0703 2.9609 15.9515C2.9315 15.8326 2.93166 15.7084 2.96135 15.5896C2.99103 15.4708 3.04936 15.3611 3.13122 15.27C4.49802 13.7567 5.2533 11.7892 5.25022 9.75V9ZM9.75222 17.9C9.73942 18.2032 9.7881 18.5058 9.8953 18.7897C10.0025 19.0736 10.166 19.3329 10.376 19.5519C10.586 19.771 10.8382 19.9453 11.1173 20.0644C11.3964 20.1835 11.6968 20.2448 12.0002 20.2448C12.3037 20.2448 12.604 20.1835 12.8831 20.0644C13.1622 19.9453 13.4144 19.771 13.6244 19.5519C13.8344 19.3329 13.9979 19.0736 14.1051 18.7897C14.2123 18.5058 14.261 18.2032 14.2482 17.9C12.7526 18.0347 11.2479 18.0347 9.75222 17.9Z"
+                  fill="#7B7F95" />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        <div class="settings-header">
+          <div class="settings-header-inner">
+            <h1 class="title">Settings</h1>
           </div>
         </div>
 
+        <section class="settings-body">
+          <div class="settings-body-inner">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="basic-info active" id="basic-info-tab" data-bs-toggle="tab" data-bs-target="#basic-info"
+                  type="button" role="tab" aria-controls="basic-info" aria-selected="true">
+                  Profile
+                </button>
+
+                <button class="basic-info" id="description-tab" data-bs-toggle="tab" data-bs-target="#description"
+                  type="button" role="tab" aria-controls="description" aria-selected="false">
+                  Business
+                </button>
+
+                <button class="basic-info" id="price-stock-tab" data-bs-toggle="tab" data-bs-target="#price-stock"
+                  type="button" role="tab" aria-controls="price-stock" aria-selected="false">
+                  Security
+                </button>
+
+                <button class="basic-info" id="vehicle-information-tab" data-bs-toggle="tab"
+                  data-bs-target="#vehicle-information" type="button" role="tab" aria-controls="vehicle-information"
+                  aria-selected="false">
+                  User Management
+                </button>
+
+                <button class="basic-info" id="shipping-warranty-tab" data-bs-toggle="tab"
+                  data-bs-target="#shipping-warranty" type="button" role="tab" aria-controls="shipping-warranty"
+                  aria-selected="false">
+                  Notifications
+                </button>
+              </div>
+            </nav>
+
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade active show" id="basic-info" role="tabpanel" aria-labelledby="basic-info-tab">
+                <div class="profile-section">
+                  <div class="profile-section-inner">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="userName" class="input-label">
+                                User Name
+                              </label>
+                            </div>
+
+                            <input class="input-field" type="text" name="" id="userName"
+                              placeholder="Md Mamunur Rashid">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="number" class="input-label">
+                                Mobile Number
+                              </label>
+                              <p class="add-another">
+                                Add another
+                              </p>
+                            </div>
+
+                            <input class="input-field number" disabled type="number" name="" id="number"
+                              placeholder="+8801700000000">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="Email" class="input-label">
+                                Email Address
+                              </label>
+                              <p class="add-another">
+                                Verify Email
+                              </p>
+                            </div>
+
+                            <input class="input-field" type="email" name="" id="Email" placeholder="email@gmail.com">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="start-date" class="input-label">
+                                Date of Birth
+                              </label>
+                            </div>
+
+                            <input class="input-field" type="text" id="start-date" placeholder="12/06/2000">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="d-flex justify-content-end">
+                          <button class="new-campaign-btn d-inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path
+                                d="M9.16602 1.66675H7.49935C3.33268 1.66675 1.66602 3.33341 1.66602 7.50008V12.5001C1.66602 16.6667 3.33268 18.3334 7.49935 18.3334H12.4993C16.666 18.3334 18.3327 16.6667 18.3327 12.5001V10.8334"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.3675 2.51663L6.80088 9.0833C6.55088 9.3333 6.30088 9.82497 6.25088 10.1833L5.89254 12.6916C5.75921 13.6 6.40088 14.2333 7.30921 14.1083L9.81754 13.75C10.1675 13.7 10.6592 13.45 10.9175 13.2L17.4842 6.6333C18.6175 5.49997 19.1509 4.1833 17.4842 2.51663C15.8175 0.849966 14.5009 1.3833 13.3675 2.51663Z"
+                                stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M12.4258 3.45825C12.9841 5.44992 14.5424 7.00825 16.5424 7.57492" stroke="white"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                              Edit Profile
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pb-5"></div>
+                    <div class="pb-5"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">
+                <div class="profile-section">
+                  <div class="profile-section-inner">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="accountType" class="input-label">
+                                Account Type
+                              </label>
+
+                              <p class="add-another">Apply for garage</p>
+                            </div>
+
+                            <input class="input-field" type="text" name="" id="accountType" placeholder="Store">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="storeName" class="input-label">
+                                Store Name
+                              </label>
+                              <p class="add-another">
+                                Request for change
+                              </p>
+                            </div>
+
+                            <input class="input-field" type="text" name="" id="storeName"
+                              placeholder="Mayer Doa Parts Store">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="Location" class="input-label">
+                                Location
+                              </label>
+                            </div>
+
+                            <input class="input-field" type="text" name="" id="Location"
+                              placeholder="Plot- 105, Road- 01, Block- A Shagufta Housing">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="City" class="input-label">
+                                City
+                              </label>
+                            </div>
+
+                            <input class="input-field" type="text" name="" id="City" placeholder="Dhaka">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="d-flex justify-content-end">
+                          <button class="new-campaign-btn d-inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path
+                                d="M9.16602 1.66675H7.49935C3.33268 1.66675 1.66602 3.33341 1.66602 7.50008V12.5001C1.66602 16.6667 3.33268 18.3334 7.49935 18.3334H12.4993C16.666 18.3334 18.3327 16.6667 18.3327 12.5001V10.8334"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.3675 2.51663L6.80088 9.0833C6.55088 9.3333 6.30088 9.82497 6.25088 10.1833L5.89254 12.6916C5.75921 13.6 6.40088 14.2333 7.30921 14.1083L9.81754 13.75C10.1675 13.7 10.6592 13.45 10.9175 13.2L17.4842 6.6333C18.6175 5.49997 19.1509 4.1833 17.4842 2.51663C15.8175 0.849966 14.5009 1.3833 13.3675 2.51663Z"
+                                stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M12.4258 3.45825C12.9841 5.44992 14.5424 7.00825 16.5424 7.57492" stroke="white"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                              Edit Business
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="price-stock" role="tabpanel" aria-labelledby="price-stock-tab">
+                <div class="profile-section">
+                  <div class="profile-section-inner">
+                    <div class="row g-4">
+                      <div class="col-lg-6">
+                        <div class="d-flex flex-column gap-3">
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="password" class="input-label">
+                                Current Password
+                              </label>
+                            </div>
+
+                            <div class="password-field">
+                              <input class="" type="password" name="" id="password" placeholder="*************">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path
+                                  d="M2.65306 5.482C2.02937 6.21812 1.56494 7.07547 1.28906 8C2.1504 10.892 4.82906 13 7.99973 13C8.66173 13 9.30173 12.908 9.9084 12.7367M4.15173 4.152C5.29349 3.39857 6.63178 2.99792 7.99973 3C11.1704 3 13.8484 5.108 14.7097 7.99867C14.2377 9.57823 13.2244 10.9411 11.8477 11.848M4.15173 4.152L1.99973 2M4.15173 4.152L6.58506 6.58533M11.8477 11.848L13.9997 14M11.8477 11.848L9.4144 9.41467C9.60013 9.22893 9.74746 9.00844 9.84798 8.76577C9.9485 8.52309 10.0002 8.263 10.0002 8.00033C10.0002 7.73767 9.9485 7.47757 9.84798 7.2349C9.74746 6.99223 9.60013 6.77173 9.4144 6.586C9.22866 6.40027 9.00817 6.25294 8.76549 6.15242C8.52282 6.0519 8.26273 6.00016 8.00006 6.00016C7.7374 6.00016 7.4773 6.0519 7.23463 6.15242C6.99196 6.25294 6.77146 6.40027 6.58573 6.586M9.41373 9.414L6.5864 6.58667"
+                                  stroke="#60637A" stroke-linecap="round" stroke-linejoin="round" />
+                              </svg>
+                            </div>
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="NewPassword" class="input-label">
+                                New Password
+                              </label>
+                            </div>
+
+                            <input class="input-field number" disabled type="password" name="" id="NewPassword">
+                          </div>
+
+                          <div class="input-inner">
+                            <div class="label-inner">
+                              <label for="RepeatPassword" class="input-label">
+                                Repeat Password
+                              </label>
+
+                            </div>
+
+                            <input class="input-field number" disabled type="password" name="" id="RepeatPassword">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="d-flex justify-content-end">
+                          <button class="new-campaign-btn d-inline-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path
+                                d="M9.16602 1.66675H7.49935C3.33268 1.66675 1.66602 3.33341 1.66602 7.50008V12.5001C1.66602 16.6667 3.33268 18.3334 7.49935 18.3334H12.4993C16.666 18.3334 18.3327 16.6667 18.3327 12.5001V10.8334"
+                                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                              <path
+                                d="M13.3675 2.51663L6.80088 9.0833C6.55088 9.3333 6.30088 9.82497 6.25088 10.1833L5.89254 12.6916C5.75921 13.6 6.40088 14.2333 7.30921 14.1083L9.81754 13.75C10.1675 13.7 10.6592 13.45 10.9175 13.2L17.4842 6.6333C18.6175 5.49997 19.1509 4.1833 17.4842 2.51663C15.8175 0.849966 14.5009 1.3833 13.3675 2.51663Z"
+                                stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M12.4258 3.45825C12.9841 5.44992 14.5424 7.00825 16.5424 7.57492" stroke="white"
+                                stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                            <span>
+                              Edit Password
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="vehicle-information" role="tabpanel"
+                aria-labelledby="vehicle-information-tab">
+                <div class="user-management">
+                  <div class="user-management-inner">
+                    <h1 class="text-danger">User Management is under development</h1>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="shipping-warranty" role="tabpanel" aria-labelledby="shipping-warranty-tab">
+                <div class="notifications-section">
+                  <div class="notifications-section-inner">
+                    <h1 class="text-danger">Notifications is under development</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   </div>
 
   <!-- jquery js -->
   <script src="./assets/js/jquery.min.js"></script>
+  <!-- jquery-ui -->
+  <script src="./assets/js/jquery-ui/jquery-ui.min.js"></script>
+  <script src="./assets/js/jquery-ui/custom-jquery-ui.js"></script>
   <!-- bootstrap js -->
   <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <!-- sidebar -->
   <script src="./assets/js/sidebar.js"></script>
   <!-- main js -->

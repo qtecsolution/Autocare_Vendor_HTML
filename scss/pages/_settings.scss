@@ -1,0 +1,150 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+// settings page
+.settings-header {
+  margin-top: size(50);
+  .title {
+    color: var(--Gray-900, #101828);
+
+    /* text-2xl/bold */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 140% */
+  }
+}
+
+.settings-body {
+  margin-top: size(40);
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    gap: size(20);
+
+    .nav-tabs {
+      border-radius: 8px;
+      border: 1px solid #e4e7ec;
+      background: #f9fafb;
+      display: flex;
+      align-items: center;
+      gap: size(20);
+      .basic-info {
+        padding: size(8) size(35);
+        border: none;
+        color: #667085;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+        background: transparent;
+      }
+      .active {
+        @include radius(8);
+        border: size(1) solid #d0d5dd;
+        background: $white;
+        box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+        // padding: 8px 12px;
+        color: #344054;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+      }
+
+      .counter {
+        display: flex;
+        padding: 0 size(7);
+        align-items: center;
+        @include radius(16);
+        border: 1px solid #e4e7ec;
+        background: #f9fafb;
+      }
+    }
+  }
+}
+
+.profile-section,
+.security-section,
+.notifications-section,
+.user-management {
+  @include radius(16);
+  border: 1px solid #e5e7eb;
+  background: $white;
+
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+  padding: size(10);
+  @include breakpoint(mobile576) {
+    padding: size(30);
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: size(20);
+}
+.profile-section-inner {
+  .input-inner {
+    display: flex;
+    flex-direction: column;
+    gap: size(10);
+    .label-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .input-label {
+        color: #1f2937;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 600;
+        line-height: size(20);
+      }
+      .add-another {
+        color: #0f766d;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(16);
+        letter-spacing: 0.14px;
+      }
+    }
+    .input-field {
+      @include radius(8);
+      border: 1px solid #e7eaef;
+      background: $white;
+      padding: size(16) size(20);
+      width: 100%;
+      &::placeholder {
+        color: #7b7f95;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 500;
+        line-height: size(20);
+        letter-spacing: 0.14px;
+      }
+      &.number[disabled] {
+        background: #f2f2f7;
+        cursor: not-allowed;
+      }
+    }
+    .password-field {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: size(10);
+      @include radius(8);
+      border: 1px solid #e7eaef;
+      background: $white;
+      padding: size(16) size(20);
+      input {
+        width: 100%;
+      }
+      svg {
+        cursor: pointer;
+        width: size(20);
+        height: size(20);
+      }
+    }
+  }
+}

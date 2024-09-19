@@ -8921,6 +8921,158 @@ table tr td {
   line-height: 1.5rem;
 }
 
+.settings-header {
+  margin-top: 3.125rem;
+}
+.settings-header .title {
+  color: var(--Gray-900, #101828);
+  /* text-2xl/bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+
+.settings-body {
+  margin-top: 2.5rem;
+}
+.settings-body-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.settings-body-inner .nav-tabs {
+  border-radius: 8px;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.settings-body-inner .nav-tabs .basic-info {
+  padding: 0.5rem 2.1875rem;
+  border: none;
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  background: transparent;
+}
+.settings-body-inner .nav-tabs .active {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #d0d5dd;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #344054;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.settings-body-inner .nav-tabs .counter {
+  display: flex;
+  padding: 0 0.4375rem;
+  align-items: center;
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
+}
+
+.profile-section,
+.security-section,
+.notifications-section,
+.user-management {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 36rem) {
+  .profile-section,
+  .security-section,
+  .notifications-section,
+  .user-management {
+    padding: 1.875rem;
+  }
+}
+
+.profile-section-inner .input-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.profile-section-inner .input-inner .label-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile-section-inner .input-inner .label-inner .input-label {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.profile-section-inner .input-inner .label-inner .add-another {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.14px;
+}
+.profile-section-inner .input-inner .input-field {
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 1.25rem;
+  width: 100%;
+}
+.profile-section-inner .input-inner .input-field::-moz-placeholder {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.14px;
+}
+.profile-section-inner .input-inner .input-field::placeholder {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: 0.14px;
+}
+.profile-section-inner .input-inner .input-field.number[disabled] {
+  background: #f2f2f7;
+  cursor: not-allowed;
+}
+.profile-section-inner .input-inner .password-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
+  padding: 1rem 1.25rem;
+}
+.profile-section-inner .input-inner .password-field input {
+  width: 100%;
+}
+.profile-section-inner .input-inner .password-field svg {
+  cursor: pointer;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
 html {
   box-sizing: border-box;
   font-size: 100%;
