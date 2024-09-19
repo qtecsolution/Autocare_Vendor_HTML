@@ -1,0 +1,121 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+// ----------------------------------
+// PROGRESS BAR
+// ----------------------------------
+.progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  color: #455a64;
+  padding-left: 0;
+  margin-top: 30px;
+
+  li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 16.5%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+
+    &:before {
+      width: 40px;
+      height: 40px;
+      line-height: 45px;
+      display: block;
+      font-size: 20px;
+      background: #fff;
+      border-radius: 50%;
+      margin: auto;
+      padding: 0;
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #e4e7ec;
+      position: absolute;
+      left: 0;
+      top: 12px;
+      z-index: -1;
+    }
+
+    &:last-child {
+      &:after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        left: -50%;
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5) {
+      &:after {
+        left: -50%;
+      }
+    }
+
+    &:first-child {
+      &:after {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        left: 50%;
+      }
+    }
+
+    &.step0 {
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22%3E%3Crect x=%220.75%22 y=%220.75%22 width=%2222.5%22 height=%2222.5%22 rx=%2211.25%22 stroke=%22%23E4E7EC%22 stroke-width=%221.5%22/%3E%3C/svg%3E");
+        background-size: contain;
+        color: #fff;
+      }
+    }
+
+    &.active {
+      &:before,
+      &:after {
+        background: #0f766d;
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><rect width="24" height="24" rx="12" fill="%230F766D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.096 7.39016L9.93602 14.3002L8.03602 12.2702C7.68602 11.9402 7.13602 11.9202 6.73602 12.2002C6.34602 12.4902 6.23602 13.0002 6.47602 13.4102L8.72602 17.0702C8.94602 17.4102 9.32601 17.6202 9.75601 17.6202C10.166 17.6202 10.556 17.4102 10.776 17.0702C11.136 16.6002 18.006 8.41016 18.006 8.41016C18.906 7.49016 17.816 6.68016 17.096 7.38016V7.39016Z" fill="white"/></svg>')
+          no-repeat center center;
+        background-size: contain;
+        color: #fff;
+      }
+    }
+  }
+
+  .step-content {
+    .heading {
+      color: var(--Gray-700, #344054);
+      text-align: center; /* Text sm/Semibold */
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 20px; /* 142.857% */
+    }
+    .text {
+      color: var(--Gray-600, #475467);
+      text-align: center; /* Text sm/Regular */
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+}
