@@ -207,8 +207,12 @@
             justify-content: space-between;
 
             .otp-input {
-              width: size(56);
-              height: size(48);
+              width: size(40);
+              height: size(40);
+              @include breakpoint(mobile576) {
+                width: size(56);
+                height: size(48);
+              }
               font-size: 24px;
               text-align: center;
               border: 1px solid #ddd;
@@ -219,6 +223,13 @@
                 border: 1px solid #0f766d;
               }
             }
+          }
+          .resend-text {
+            color: #1f2937;
+            font-family: $primaryFont;
+            font-size: size(14);
+            line-height: size(20);
+            text-align: center;
           }
 
           .login-checkbox-inner {
