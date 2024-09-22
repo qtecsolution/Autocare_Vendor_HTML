@@ -377,3 +377,40 @@
     background: #e5e7eb;
   }
 }
+
+.remove-btn {
+  padding: size(10) size(16);
+  @include radius(8);
+  border: 1px solid #e5e7eb;
+  background: $white;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #1f2937;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+}
+
+.status-btn {
+  // display: flex;
+  padding: 1px 6px;
+  align-items: center;
+  gap: 1px;
+  border-radius: 999px;
+  background: #2563eb;
+  color: $white;
+  font-family: $primaryFont;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.05px;
+  &.active {
+    background: #2563eb !important;
+  }
+  &.inactive {
+    background: #ff3e50 !important;
+  }
+  &:hover {
+    color: $white;
+  }
+}

@@ -986,3 +986,47 @@
     padding: size(16) size(68) 0 size(68);
   }
 }
+
+.variant-section {
+  margin-top: size(50);
+  &-inner {
+    padding: size(30);
+    @include radius(16);
+    border: 1px solid #e5e7eb;
+    background: $white;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+    .variant-input-inner {
+      display: flex;
+      flex-direction: column;
+      gap: size(8);
+      .variant-label {
+        display: flex;
+        gap: size(8);
+        .text {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+        }
+        svg {
+          width: size(20);
+          height: size(20);
+        }
+      }
+
+      .variant-input {
+        display: flex;
+        align-items: center;
+        gap: size(8);
+        input {
+          width: 100%;
+          border-radius: 8px;
+          border: 1px solid var(--Border-Color, #e7eaef);
+          background: #fff;
+          padding: size(9) size(20);
+        }
+      }
+    }
+  }
+}

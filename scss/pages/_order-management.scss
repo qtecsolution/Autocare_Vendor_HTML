@@ -546,6 +546,45 @@
       @include radius(6);
     }
   }
+  .variant-value {
+    display: inline-flex;
+    padding: size(6) size(12);
+    @include radius(6);
+    border: 1px solid #e7eaef;
+    background: $white;
+    color: #0f766d;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(20);
+  }
+  .variant-img {
+    img {
+      width: size(74);
+      height: size(60);
+      @include radius(8);
+    }
+  }
+
+  .checkmark {
+    top: size(-8);
+  }
+  .edit-btn,
+  .delete-btn {
+    display: flex;
+    width: size(24);
+    height: size(24);
+    padding: size(4) size(6);
+    align-items: center;
+    @include radius(6);
+    border: 1px solid #d0d5dd;
+    background: #f9fafb;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    svg {
+      width: size(12);
+      height: size(12);
+    }
+  }
   .morning {
     figure {
       svg {
@@ -928,4 +967,31 @@
 
 #ui-datepicker-div {
   z-index: 5 !important;
+}
+
+.checkbox-inner {
+  .text {
+    color: #1f2937 !important;
+  }
+}
+
+.custom-file-input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+
+  &::-webkit-file-upload-button {
+    padding: size(8) 0.75rem;
+    color: #475467;
+    background-color: #f4f5f7;
+    border: none;
+    border-right: 1px solid #e7eaef;
+    // border-top-left-radius: size(8);
+  }
+
+  // &:hover::-webkit-file-upload-button {
+  //   background-color: #f4f5f7;
+  // }
+}
+.form-control:focus {
+  border-color: #e7eaef;
 }
