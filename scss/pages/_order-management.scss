@@ -421,6 +421,9 @@
     letter-spacing: 0.06px;
     text-transform: uppercase;
   }
+  td {
+    vertical-align: middle;
+  }
   .rating-header {
     border-top-left-radius: size(16);
   }
@@ -612,19 +615,42 @@
     font-weight: 500;
     line-height: size(18);
   }
-  .itemName-text {
-    color: #0f766d;
+  .order-details-product {
+    figure {
+      img {
+        width: size(70);
+        height: size(70);
+        @include radius(12);
+      }
+    }
+    .itemName-text {
+      color: #000;
+      font-family: $primaryFont;
+      font-size: size(16);
+      font-weight: 600;
+      line-height: size(18);
+      max-width: size(236);
+      overflow: hidden;
+      display: block;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .light-text {
+      color: #a7aab9;
+      font-family: $primaryFont;
+      font-size: size(12);
+      line-height: size(18);
+      span {
+        color: #525468;
+      }
+    }
+  }
+  .delivered-time {
+    color: #7d7f85;
     font-family: $primaryFont;
-    font-size: size(14);
-    font-weight: 500;
-    line-height: size(18);
-    max-width: size(200);
-    overflow: hidden;
-    display: block;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-size: size(10);
   }
 
   .delete-btn,

@@ -2209,6 +2209,7 @@ table tr td {
   color: #455a64;
   padding-left: 0;
   margin-top: 30px;
+  min-width: 800px;
 }
 .progressbar li {
   list-style-type: none;
@@ -2260,6 +2261,9 @@ table tr td {
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2224%22 height=%2224%22 viewBox=%220 0 24 24%22 fill=%22none%22%3E%3Crect x=%220.75%22 y=%220.75%22 width=%2222.5%22 height=%2222.5%22 rx=%2211.25%22 stroke=%22%23E4E7EC%22 stroke-width=%221.5%22/%3E%3C/svg%3E");
   background-size: contain;
   color: #fff;
+}
+.progressbar li.active {
+  background: none;
 }
 .progressbar li.active:before, .progressbar li.active:after {
   background: #0f766d;
@@ -6216,6 +6220,9 @@ table tr td {
   letter-spacing: 0.06px;
   text-transform: uppercase;
 }
+.order-management-body-inner td {
+  vertical-align: middle;
+}
 .order-management-body-inner .rating-header {
   border-top-left-radius: 1rem;
 }
@@ -6390,19 +6397,38 @@ table tr td {
   font-weight: 500;
   line-height: 1.125rem;
 }
-.order-management-body-inner .itemName-text {
-  color: #0f766d;
+.order-management-body-inner .order-details-product figure img {
+  width: 4.375rem;
+  height: 4.375rem;
+  border-radius: 0.75rem;
+}
+.order-management-body-inner .order-details-product .itemName-text {
+  color: #000;
   font-family: "Inter", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   line-height: 1.125rem;
-  max-width: 12.5rem;
+  max-width: 14.75rem;
   overflow: hidden;
   display: block;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.order-management-body-inner .order-details-product .light-text {
+  color: #a7aab9;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.order-management-body-inner .order-details-product .light-text span {
+  color: #525468;
+}
+.order-management-body-inner .delivered-time {
+  color: #7d7f85;
+  font-family: "Inter", sans-serif;
+  font-size: 0.625rem;
 }
 .order-management-body-inner .delete-btn,
 .order-management-body-inner .edit-btn {
