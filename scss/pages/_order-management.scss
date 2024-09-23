@@ -615,6 +615,15 @@
     font-weight: 500;
     line-height: size(18);
   }
+
+  .info-text {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(12);
+    font-weight: 500;
+    line-height: size(16);
+  }
+
   .order-details-product {
     figure {
       img {

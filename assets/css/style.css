@@ -6397,6 +6397,13 @@ table tr td {
   font-weight: 500;
   line-height: 1.125rem;
 }
+.order-management-body-inner .info-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
 .order-management-body-inner .order-details-product figure img {
   width: 4.375rem;
   height: 4.375rem;
@@ -7734,6 +7741,35 @@ table tr td {
 }
 .form-group input {
   padding-right: 30px;
+}
+
+.review-section .nav-tabs {
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.review-section .nav-tabs .nav-tabs-button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  background: transparent;
+}
+.review-section .nav-tabs .active {
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #d0d5dd;
+  background: #0f766d;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  padding: 8px 12px;
+  color: hsl(0, 0%, 100%);
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 .tag-container {

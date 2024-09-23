@@ -427,3 +427,43 @@
     padding-right: 30px; // To make space for the calendar icon
   }
 }
+
+.review-section {
+  .nav-tabs {
+    border-bottom: none;
+    display: flex;
+    align-items: center;
+    gap: size(20);
+    .nav-tabs-button {
+      padding: size(8) size(12);
+      border: none;
+      color: #667085;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 500;
+      line-height: size(24);
+      background: transparent;
+    }
+    .active {
+      @include radius(8);
+      border: size(1) solid #d0d5dd;
+      background: #0f766d;
+      box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+      padding: 8px 12px;
+      color: $white;
+      font-family: $primaryFont;
+      font-size: size(14);
+      font-weight: 500;
+      line-height: size(24);
+    }
+
+    // .counter {
+    //   display: flex;
+    //   padding: 0 size(7);
+    //   align-items: center;
+    //   @include radius(16);
+    //   border: 1px solid #e4e7ec;
+    //   background: #f9fafb;
+    // }
+  }
+}
