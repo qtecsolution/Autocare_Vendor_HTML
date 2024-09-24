@@ -414,3 +414,30 @@
     color: $white;
   }
 }
+
+.add-product-btn {
+  display: flex;
+  padding: size(10) size(16);
+  justify-content: center;
+  align-items: center;
+  gap: size(8);
+  @include radius(8);
+  background: #0f766d;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  color: #fff;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 600;
+  line-height: size(20);
+  transition: all 0.35s ease-in-out;
+
+  svg {
+    width: size(20);
+    height: size(20);
+  }
+
+  &:hover {
+    background-color: #0a504a;
+    color: #fff;
+  }
+}

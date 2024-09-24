@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="./assets/css/quill-rich-text-editor/quill.snow.css">
   <!-- nice-select css -->
   <link rel="stylesheet" href="./assets/css/nice-select2/nice-select2.css">
+  <!-- jquery-ui -->
+  <link rel="stylesheet" href="./assets/css/jquery-ui/jquery-ui.css">
   <!-- New style -->
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -68,7 +70,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link active" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
+            <a class="menu-list-link collapsed" href="#dropdownmenu-1" data-toggle="collapse" aria-expanded="false">
               <span class="icontitle">
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -92,7 +94,7 @@
               </span>
             </a>
 
-            <div class="collapse show" id="dropdownmenu-1">
+            <div class="collapse" id="dropdownmenu-1">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./add-Product.html" class="submenu-link">
@@ -101,7 +103,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./all-products-empty.html" class="submenu-link active">
+                  <a href="./all-products-empty.html" class="submenu-link">
                     <span class="text">Products</span>
                   </a>
                 </li>
@@ -141,7 +143,7 @@
             <div class="collapse" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./order-empty.html" class="submenu-link">
+                  <a href="./order-empty.html" class="submenu-link active">
                     <span class="text">Orders</span>
                   </a>
                 </li>
@@ -233,7 +235,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a href="./Voucher-empty.html" class="menu-list-link">
+            <a href="./Voucher-empty.html" class="menu-list-link active">
               <span class="icontitle">
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -606,76 +608,88 @@
           </div>
         </section>
 
-        <section class="manage-product-section">
-          <div class="manage-product-section-header">
-            <h3 class="heading-text">
-              Products
-            </h3>
+        <section class="order-management-section">
+          <div class="order-management-section-inner">
+            <div class="order-management-header">
+              <div class="d-flex justify-content-between align-items-center">
+                <h1 class="title">Voucher</h1>
 
-            <div class="d-flex align-items-center gap-3">
-              <a href="./add-Product.html" class="add-product-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <path d="M9.99984 4.1665V15.8332M4.1665 9.99984H15.8332" stroke="white" stroke-width="1.67"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                <span>Add Product</span>
-              </a>
-            </div>
-          </div>
+                <div class="d-flex align-items-center gap-3">
+                  <a href="./Voucher-add.html" class="add-product-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M9.99984 4.1665V15.8332M4.1665 9.99984H15.8332" stroke="white" stroke-width="1.67"
+                        stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <span>Add Voucher</span>
+                  </a>
+                </div>
+              </div>
 
-          <div class="d-flex align-items-center gap-3 all-buttons-inner">
-            <button class="manage-products-btn active">
-              All <span>0</span>
-            </button>
+              <div class="d-flex align-items-center gap-3 all-buttons-inner">
+                <button class="manage-products-btn active">
+                  <span class="text">All</span>
+                  <span class="number">0</span>
+                </button>
 
-            <button class="manage-products-btn">
-              Active <span>0</span>
-            </button>
+                <button class="manage-products-btn">
+                  <span class="text">Active</span>
+                  <span class="number">0</span>
+                </button>
 
-            <button class="manage-products-btn">
-              Inactive <span>0</span>
-            </button>
+                <!-- <button class="manage-products-btn">
+                  <span class="text">Inactive</span>
+                  <span class="number">0</span>
+                </button> -->
 
-            <button class="manage-products-btn">
-              Draft <span>0</span>
-            </button>
+                <button class="manage-products-btn">
+                  <span class="text">Draft</span>
+                  <span class="number">0</span>
+                </button>
 
-            <button class="manage-products-btn">
-              Pending <span>0</span>
-            </button>
+                <button class="manage-products-btn">
+                  <span class="text">Scheduled</span>
+                  <span class="number">0</span>
+                </button>
 
-            <button class="manage-products-btn">
-              Rejected <span>0</span>
-            </button>
+                <button class="manage-products-btn">
+                  <span class="text">Expired</span>
+                  <span class="number">0</span>
+                </button>
 
-            <button class="manage-products-btn">
-              Deleted <span>0</span>
-            </button>
-          </div>
-        </section>
-
-        <section class="manage-all-product-section">
-          <div class="manage-all-product-section-inner">
-            <div class="manage-all-product-section-inner-header">
-              <form class="all-products-form">
-                <label for="search-svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path
-                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                      stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </label>
-
-                <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
-              </form>
+                <!-- <button class="manage-products-btn">
+                  <span class="text">Deleted</span>
+                  <span class="number">0</span>
+                </button> -->
+              </div>
             </div>
 
-            <div class="manage-all-product-section-inner-empty-body">
-              <figure>
-                <img src="./assets/images/no-products.svg" alt="image" />
-              </figure>
-              <h1 class="title">No Product Found</h1>
-              <p class="details">You didn’t upload any product yet. All of your products will show here</p>
+            <div class="order-management-body">
+              <div class="order-management-body-top">
+                <div class="order-management-search-inner">
+                  <form action="" class="order-form">
+                    <div class="order-input">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                          stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <input type="text" name="" id="" placeholder="Search" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="order-management-body-main-content">
+                <div class="main-content-inner">
+                  <img src="./assets/images/no-return-item.svg" alt="No Order Found img" />
+                  <h3 class="title">
+                    No Voucher Found
+                  </h3>
+                  <p class="details">
+                    You didn’t upload any product yet. All of your products will show here
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -694,6 +708,9 @@
     <script src="./assets/js/quill-rich-text-editor/custom.js"></script>
     <!-- nice-select2.js -->
     <script src="./assets/js/nice-select2/nice-select2.js"></script>
+    <!-- jquery-ui -->
+    <script src="./assets/js/jquery-ui/jquery-ui.min.js"></script>
+    <script src="./assets/js/jquery-ui/custom-jquery-ui.js"></script>
     <!-- main js -->
     <script src="./assets/js/main.js"></script>
 </body>
