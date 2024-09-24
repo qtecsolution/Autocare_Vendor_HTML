@@ -633,6 +633,21 @@
     line-height: size(18);
   }
 
+  .itemName-text {
+    color: #0f766d;
+    font-family: $primaryFont;
+    font-size: size(16);
+    font-weight: 600;
+    line-height: size(18);
+    max-width: size(236);
+    overflow: hidden;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
   .info-text {
     color: #1f2937;
     font-family: $primaryFont;

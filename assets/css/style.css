@@ -6439,6 +6439,20 @@ table tr td {
   font-weight: 500;
   line-height: 1.125rem;
 }
+.order-management-body-inner .itemName-text {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+  max-width: 14.75rem;
+  overflow: hidden;
+  display: block;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .order-management-body-inner .info-text {
   color: #1f2937;
   font-family: "Inter", sans-serif;
