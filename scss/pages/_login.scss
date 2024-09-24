@@ -648,6 +648,13 @@
             height: size(20);
           }
         }
+        .image-details-text {
+          color: #0f766d;
+          font-family: $primaryFont;
+          font-size: size(12);
+          font-weight: 500;
+          line-height: size(16);
+        }
       }
     }
   }

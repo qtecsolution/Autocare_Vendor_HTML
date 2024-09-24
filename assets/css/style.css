@@ -4083,6 +4083,13 @@ table tr td {
   width: 1.25rem;
   height: 1.25rem;
 }
+.setup-store-section-inner .center .setup-store-form .image-details-text {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
 
 .page-header {
   padding: 2rem 0.625rem 0 0.625rem;
