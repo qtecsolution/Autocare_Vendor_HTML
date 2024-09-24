@@ -8492,7 +8492,6 @@ table tr td {
   color: var(--Gray-600, #475467);
   font-family: Inter;
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   border-right: 1px solid #e7eaef;
@@ -8755,6 +8754,175 @@ table tr td {
 .shipping-warranty .custom-shipping-charge .input-field svg {
   width: 1.25rem;
   height: 1.25rem;
+}
+
+.add-voucher-section-inner .generate-random-code-section {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.03);
+  padding: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .input-title {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .color-text {
+  color: #0f766d;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .input-field {
+  border-radius: 8px;
+  border: 1px solid #e7eaef;
+  background: #fff;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .input-field::-moz-placeholder {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.14px;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .input-field::placeholder {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.14px;
+}
+.add-voucher-section-inner .generate-random-code-section .random-code-inner .light-text {
+  color: #7b7f95;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+.add-voucher-section-inner .generate-random-code-section .voucher-type-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.add-voucher-section-inner .generate-random-code-section .voucher-type-inner .input-title {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .voucher-type-inner .radio-button-inner {
+  border-radius: var(--Basic-Forms-Checkbox-Border-Radius, 8px);
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.75rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3125rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .box .category-select-label {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .input-field {
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .input-field::-moz-placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .input-field::placeholder {
+  color: #667085;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .date-input {
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .date-input svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-bottom: 0.125rem;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .date-input input {
+  width: 100%;
+}
+.add-voucher-section-inner .generate-random-code-section .exclude-category .text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .right-section .title {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+.add-voucher-section-inner .generate-random-code-section .right-section .draft-btn {
+  border-radius: 1rem;
+  border: 1px solid #e4e7ec;
+  background: #f9fafb;
+  color: #7b7f95;
+  padding: 0rem 0.625rem;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.add-voucher-section-inner .generate-random-code-section .right-section .text {
+  color: var(--Text-Title-Color, #1f2937); /* Text Base/Semi bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.add-voucher-section-inner .generate-random-code-section .right-section .light-text {
+  color: var(--Text-Title-Color, #1f2937); /* Text Base/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
 }
 
 .manufacturer-section {
