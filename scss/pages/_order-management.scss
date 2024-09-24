@@ -431,6 +431,9 @@
     border-top-right-radius: size(16);
     padding-right: size(30);
   }
+  .Status-header {
+    border-top-right-radius: size(16);
+  }
   .rating-data {
     width: 160px;
     svg {
@@ -525,6 +528,20 @@
     -webkit-box-orient: vertical;
     // height: 56px;
     -webkit-line-clamp: 2;
+  }
+  .date {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(20);
+  }
+  .amount {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 700;
+    line-height: size(20);
   }
 
   .pice-text {

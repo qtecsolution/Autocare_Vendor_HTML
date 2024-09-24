@@ -6255,6 +6255,9 @@ table tr td {
   border-top-right-radius: 1rem;
   padding-right: 1.875rem;
 }
+.order-management-body-inner .Status-header {
+  border-top-right-radius: 1rem;
+}
 .order-management-body-inner .rating-data {
   width: 160px;
 }
@@ -6339,6 +6342,20 @@ table tr td {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+}
+.order-management-body-inner .date {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.order-management-body-inner .amount {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.25rem;
 }
 .order-management-body-inner .pice-text {
   color: #1f2937;
@@ -8827,9 +8844,9 @@ table tr td {
   line-height: 1.25rem;
 }
 .add-voucher-section-inner .generate-random-code-section .voucher-type-inner .radio-button-inner {
-  border-radius: var(--Basic-Forms-Checkbox-Border-Radius, 8px);
-  border: 1px solid var(--Border-Color, #e7eaef);
-  background: #fff;
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
+  background: hsl(0, 0%, 100%);
   padding: 0.75rem;
 }
 .add-voucher-section-inner .generate-random-code-section .exclude-category .box {
@@ -8845,8 +8862,8 @@ table tr td {
   line-height: 1.25rem;
 }
 .add-voucher-section-inner .generate-random-code-section .exclude-category .input-field {
-  border-radius: 8px;
-  border: 1px solid var(--Border-Color, #e7eaef);
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
   background: #fff;
   padding: 0.5rem 1.25rem;
   width: 100%;
@@ -8865,8 +8882,8 @@ table tr td {
   line-height: 1.5rem;
 }
 .add-voucher-section-inner .generate-random-code-section .exclude-category .date-input {
-  border-radius: 8px;
-  border: 1px solid var(--Border-Color, #e7eaef);
+  border-radius: 0.5rem;
+  border: 1px solid #e7eaef;
   background: #fff;
   padding: 0.5rem 1.25rem;
   width: 100%;
@@ -8909,20 +8926,105 @@ table tr td {
   line-height: 1.25rem;
 }
 .add-voucher-section-inner .generate-random-code-section .right-section .text {
-  color: var(--Text-Title-Color, #1f2937); /* Text Base/Semi bold */
-  font-family: Inter;
-  font-size: 14px;
-  font-style: normal;
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
   font-weight: 600;
-  line-height: 20px; /* 142.857% */
+  line-height: 1.25rem;
 }
 .add-voucher-section-inner .generate-random-code-section .right-section .light-text {
-  color: var(--Text-Title-Color, #1f2937); /* Text Base/Regular */
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.finance-section-inner .revenue-card {
+  display: flex;
+  padding: 20px 16px;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 12px;
+  border: 1px solid #e4e7ec;
+  background: hsl(0, 0%, 100%);
+  width: 100%;
+}
+@media screen and (min-width: 37.5rem) {
+  .finance-section-inner .revenue-card {
+    width: 178px;
+  }
+}
+@media screen and (min-width: 87.5rem) {
+  .finance-section-inner .revenue-card {
+    width: 178px;
+  }
+}
+@media screen and (min-width: 120rem) {
+  .finance-section-inner .revenue-card {
+    width: 279px;
+  }
+}
+.finance-section-inner .revenue-card .title {
+  color: var(--Gray-900, #101828); /* Text Base/Regular */
   font-family: Inter;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
+}
+.finance-section-inner .revenue-card .price {
+  color: var(--Gray-900, #101828); /* text-2xl/bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+.finance-section-inner .revenue-card .color-text {
+  color: var(--Primary-700, #0f766d); /* text-2xl/bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+.finance-section-inner .title {
+  color: #101828;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.payouts-history-section .title {
+  color: #101828;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.payouts-history-section .month-box {
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+  padding: 0rem 0.625rem;
+}
+.payouts-history-section .month-box svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.payouts-history-section .month-box .nice-select {
+  border: none;
+  padding-left: 0.625rem;
+  padding-right: 30px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  white-space: nowrap;
+  width: auto;
 }
 
 .manufacturer-section {

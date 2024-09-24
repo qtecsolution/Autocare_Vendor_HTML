@@ -777,9 +777,9 @@
           line-height: size(20);
         }
         .radio-button-inner {
-          border-radius: var(--Basic-Forms-Checkbox-Border-Radius, 8px);
-          border: 1px solid var(--Border-Color, #e7eaef);
-          background: #fff;
+          @include radius(8);
+          border: 1px solid #e7eaef;
+          background: $white;
           padding: size(12);
         }
       }
@@ -797,8 +797,8 @@
           }
         }
         .input-field {
-          border-radius: 8px;
-          border: 1px solid var(--Border-Color, #e7eaef);
+          @include radius(8);
+          border: 1px solid #e7eaef;
           background: #fff;
           padding: size(8) size(20);
           width: 100%;
@@ -812,8 +812,8 @@
         }
 
         .date-input {
-          border-radius: 8px;
-          border: 1px solid var(--Border-Color, #e7eaef);
+          @include radius(8);
+          border: 1px solid #e7eaef;
           background: #fff;
           padding: size(8) size(20);
           width: 100%;
@@ -859,22 +859,104 @@
         }
 
         .text {
-          color: var(--Text-Title-Color, #1f2937); /* Text Base/Semi bold */
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
           font-weight: 600;
-          line-height: 20px; /* 142.857% */
+          line-height: size(20);
         }
         .light-text {
-          color: var(--Text-Title-Color, #1f2937); /* Text Base/Regular */
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 20px; /* 142.857% */
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(20);
         }
       }
+    }
+  }
+}
+
+.finance-section {
+  &-inner {
+    .revenue-card {
+      display: flex;
+      padding: 20px 16px;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 12px;
+      border: 1px solid #e4e7ec;
+      background: $white;
+      width: 100%;
+      @include breakpoint(mobile600) {
+        width: 178px;
+      }
+      @include breakpoint(desktop1400) {
+        width: 178px;
+      }
+      @include breakpoint(desktop1920) {
+        width: 279px;
+      }
+      .title {
+        color: var(--Gray-900, #101828); /* Text Base/Regular */
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+      }
+      .price {
+        color: var(--Gray-900, #101828); /* text-2xl/bold */
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 140% */
+      }
+      .color-text {
+        color: var(--Primary-700, #0f766d); /* text-2xl/bold */
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px; /* 140% */
+      }
+    }
+    .title {
+      color: #101828;
+      font-family: Inter;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+}
+.payouts-history-section {
+  .title {
+    color: #101828;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .month-box {
+    @include radius(8);
+    border: 1px solid #e5e7eb;
+    background: $white;
+    padding: size(0) size(10);
+    svg {
+      width: size(20);
+      height: size(20);
+    }
+    .nice-select {
+      border: none;
+      padding-left: size(10);
+      padding-right: 30px;
+      position: relative;
+      text-align: left !important;
+      transition: all 0.2s ease-in-out;
+      user-select: none;
+      white-space: nowrap;
+      width: auto;
     }
   }
 }
