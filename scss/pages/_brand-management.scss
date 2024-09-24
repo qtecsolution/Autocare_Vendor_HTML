@@ -97,6 +97,31 @@
         top: 0;
         z-index: 10;
       }
+      .table-header-text {
+        color: #6b7280;
+        font-family: $primaryFont;
+        font-size: size(12);
+        font-weight: 600;
+        line-height: size(16);
+        letter-spacing: 0.06px;
+        text-transform: uppercase;
+      }
+      .commission-level {
+        figure {
+          svg {
+            width: size(20);
+            height: size(20);
+          }
+        }
+        .pice-text {
+          color: #1f2937;
+          font-family: $primaryFont;
+          font-size: size(14);
+          font-weight: 600;
+          line-height: size(20);
+          letter-spacing: 0.07px;
+        }
+      }
 
       .product-info-inner {
         .product-info {

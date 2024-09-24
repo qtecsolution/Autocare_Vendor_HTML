@@ -143,7 +143,7 @@
             <div class="collapse" id="dropdownmenu-2">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./order-empty.html" class="submenu-link active">
+                  <a href="./order-empty.html" class="submenu-link">
                     <span class="text">Orders</span>
                   </a>
                 </li>
@@ -235,7 +235,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a href="./Voucher-empty.html" class="menu-list-link active">
+            <a href="./Voucher-empty.html" class="menu-list-link">
               <span class="icontitle">
                 <span class="icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -353,12 +353,10 @@
             <div class="collapse" id="dropdownmenu-4">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
-                  <a href="./campaign-emply.html" class="submenu-link">
+                  <a href="./campaign-management-emply.html" class="submenu-link">
                     <span class="text">Campaign Management</span>
                   </a>
                 </li>
-
-
 
                 <li class="sumenu-item">
                   <a href="./flash-sales.html" class="submenu-link">
@@ -371,7 +369,7 @@
           </li>
 
           <li class="menu-list-item">
-            <a class="menu-list-link collapsed" data-toggle="collapse" href="#dropdownmenu-5" role="button"
+            <a class="menu-list-link active" data-toggle="collapse" href="#dropdownmenu-5" role="button"
               aria-expanded="false">
               <span class="icontitle">
                 <span class="icon supporticon">
@@ -396,7 +394,7 @@
               </span>
             </a>
 
-            <div class="collapse" id="dropdownmenu-5">
+            <div class="collapse show" id="dropdownmenu-5">
               <ul class="submenu list-unstyled mt-2">
                 <li class="sumenu-item">
                   <a href="./Finance-empty.html" class="submenu-link">
@@ -405,7 +403,7 @@
                 </li>
 
                 <li class="sumenu-item">
-                  <a href="./finance-commission-rates.html" class="submenu-link">
+                  <a href="./finance-commission-rates.html" class="submenu-link active">
                     <span class="text">Finance Commission Rates</span>
                   </a>
                 </li>
@@ -612,84 +610,385 @@
           <div class="order-management-section-inner">
             <div class="order-management-header">
               <div class="d-flex justify-content-between align-items-center">
-                <h1 class="title">Voucher</h1>
-
-                <div class="d-flex align-items-center gap-3">
-                  <a href="./Voucher-add.html" class="add-product-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M9.99984 4.1665V15.8332M4.1665 9.99984H15.8332" stroke="white" stroke-width="1.67"
-                        stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    <span>Add Voucher</span>
-                  </a>
-                </div>
-              </div>
-
-              <div class="d-flex align-items-center gap-3 all-buttons-inner">
-                <button class="manage-products-btn active">
-                  <span class="text">All</span>
-                  <span class="number">0</span>
-                </button>
-
-                <button class="manage-products-btn">
-                  <span class="text">Active</span>
-                  <span class="number">0</span>
-                </button>
-
-                <!-- <button class="manage-products-btn">
-                  <span class="text">Inactive</span>
-                  <span class="number">0</span>
-                </button> -->
-
-                <button class="manage-products-btn">
-                  <span class="text">Draft</span>
-                  <span class="number">0</span>
-                </button>
-
-                <button class="manage-products-btn">
-                  <span class="text">Scheduled</span>
-                  <span class="number">0</span>
-                </button>
-
-                <button class="manage-products-btn">
-                  <span class="text">Expired</span>
-                  <span class="number">0</span>
-                </button>
-
-                <!-- <button class="manage-products-btn">
-                  <span class="text">Deleted</span>
-                  <span class="number">0</span>
-                </button> -->
+                <h1 class="title">Commission Rates</h1>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div class="order-management-body">
-              <div class="order-management-body-top">
-                <div class="order-management-search-inner">
-                  <form action="" class="order-form">
-                    <div class="order-input">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path
-                          d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
-                          stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                      <input type="text" name="" id="" placeholder="Search" />
-                    </div>
-                  </form>
-                </div>
-              </div>
 
-              <div class="order-management-body-main-content">
-                <div class="main-content-inner">
-                  <img src="./assets/images/no-return-item.svg" alt="No Order Found img" />
-                  <h3 class="title">
-                    No Voucher Found
-                  </h3>
-                  <p class="details">
-                    You didn’t upload any product yet. All of your products will show here
-                  </p>
-                </div>
+        <section class="manage-all-brand-section">
+          <div class="manage-all-brand-section-inner">
+            <div class="manage-all-brand-section-inner-header">
+              <form class="all-products-form">
+                <label for="search-svg">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                      stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </label>
+
+                <input class="page-search-input" type="text" name="" id="search-input" placeholder="Search">
+              </form>
+            </div>
+
+            <div class="manage-all-brand-section-inner-body">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr scope="col">
+                      <th scope="col" class="table-header-text">Level</th>
+                      <th scope="col" class="table-header-text">Category Name</th>
+                      <th scope="col" class="text-center table-header-text">Commissions (%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <div class="d-flex align-items-center gap-2 commission-level">
+                          <figure>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                              fill="none">
+                              <path d="M5 7.5L10 12.5L15 7.5" stroke="#98A2B3" stroke-width="1.66667"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </figure>
+                          <p class="pice-text">
+                            01
+                          </p>
+                        </div>
+                      </td>
+
+                      <td>
+                        <p class="pice-text">
+                          Engine &amp; Transmission
+                        </p>
+                      </td>
+
+                      <td class="text-center">
+                        <p class="pice-text ">
+                          0%
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="pagination-section mt-5">
+          <div class="pagination-section-inner">
+            <div class="left">
+              <p class="text">Showing 1 to 10 of 23 entries</p>
+            </div>
+            <div class="right">
+              <nav class="pagination-nav">
+                <ul class="list-unstyled d-flex align-items-center gap-2">
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link previous" href="">
+                      « Previous
+                    </a>
+                  </li>
+
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link" href="">
+                      1
+                    </a>
+                  </li>
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link" href="">
+                      2
+                    </a>
+                  </li>
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link" href="">
+                      3
+                    </a>
+                  </li>
+
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link" href="">
+                      •••
+                    </a>
+                  </li>
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link" href="">
+                      10
+                    </a>
+                  </li>
+
+                  <li class="pagination-nav-list">
+                    <a class="pagination-nav-link next" href="">
+                      Next »
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </div>
         </section>
