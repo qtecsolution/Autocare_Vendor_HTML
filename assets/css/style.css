@@ -7309,6 +7309,13 @@ table tr td {
   background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
   top: 0;
   z-index: 10;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: 0.06px;
+  text-transform: uppercase;
 }
 .manage-all-brand-section-inner-body .table-header-text {
   color: #6b7280;
@@ -7408,6 +7415,12 @@ table tr td {
 }
 .manage-all-brand-section-inner-body .violation {
   background-color: #ff3e50;
+}
+
+.brand-image {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 0.5rem;
 }
 
 .store-info-section-inner {

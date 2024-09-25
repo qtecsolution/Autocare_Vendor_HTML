@@ -96,6 +96,13 @@
         background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
         top: 0;
         z-index: 10;
+        color: #6b7280;
+        font-family: $primaryFont;
+        font-size: 0.75rem;
+        font-weight: 600;
+        line-height: 1rem;
+        letter-spacing: 0.06px;
+        text-transform: uppercase;
       }
       .table-header-text {
         color: #6b7280;
@@ -218,4 +225,10 @@
       }
     }
   }
+}
+
+.brand-image {
+  width: size(50);
+  height: size(50);
+  @include radius(8);
 }
