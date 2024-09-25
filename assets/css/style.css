@@ -3086,20 +3086,8 @@ table tr td {
   line-height: 1.25rem;
 }
 .main-content .sales-details {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
   padding: 2rem 0.625rem 0rem 0.625rem;
   gap: 1.5rem;
-}
-@media screen and (min-width: 48rem) {
-  .main-content .sales-details {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (min-width: 75rem) {
-  .main-content .sales-details {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 @media screen and (min-width: 36rem) {
   .main-content .sales-details {
