@@ -7423,6 +7423,10 @@ table tr td {
   border-radius: 0.5rem;
 }
 
+.PRODUCTS {
+  width: 320px;
+}
+
 .store-info-section-inner {
   border-radius: 1rem;
   border: 1px solid #e4e7ec;
