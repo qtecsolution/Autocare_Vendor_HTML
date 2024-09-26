@@ -4079,6 +4079,42 @@ table tr td {
   line-height: 1rem;
 }
 
+.reschedule-time-select .text {
+  color: var(--Text-Title-Color, #1f2937); /* Text Base/Semi bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.reschedule-time-select .reschedule-item {
+  border-radius: 8px;
+  border: 1px solid var(--Nutral-Color-200, #cbcdd6);
+  background: #fff; /* shadow-base */
+  box-shadow: 0px 0px 1px 0px rgba(12, 26, 75, 0.1), 0px 4px 20px -2px rgba(50, 50, 71, 0.08);
+  padding: 0.625rem 1rem;
+}
+.reschedule-time-select .date-text h4 {
+  color: var(--Nutral-Color-900, #383941); /* text-sm/Semi bold */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+}
+.reschedule-time-select .date-text p {
+  color: var(--Nutral-Color-400, #7b7f95); /* XS/Regular */
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px; /* 140% */
+}
+.reschedule-time-select .radio-button-container .checkmark {
+  top: -0.5rem;
+  left: 0.5rem;
+}
+
 .page-header {
   padding: 2rem 0.625rem 0 0.625rem;
 }
