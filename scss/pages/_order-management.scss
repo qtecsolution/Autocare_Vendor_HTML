@@ -718,6 +718,16 @@
       width: 5px;
       height: 21px;
     }
+    .dropdown-toggle {
+      border: none;
+      background: transparent;
+    }
+    .dropdown-menu {
+      position: absolute;
+      inset: 0px auto auto 0px;
+      margin: 0px;
+      transform: translate(180px, 1px);
+    }
   }
 
   .status {

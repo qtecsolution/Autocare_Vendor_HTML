@@ -5875,6 +5875,115 @@ table tr td {
   margin-top: 0.125rem;
 }
 
+.earned-badge-section-inner .title {
+  color: var(--Gray-900, #101828); /* text-2xl/bold */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+}
+.earned-badge-section-inner .earned-badge-inner .sub-title {
+  color: var(--Text-Title-Color, #1f2937); /* text-xl/bold */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 155.556% */
+  margin-bottom: 1rem;
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner {
+  border-radius: 16px;
+  border: 1px solid var(--Gray-200, #e4e7ec);
+  background: var(--White, #fff); /* Shadow/xs */
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section {
+  padding: 1.875rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section:last-child {
+  border-bottom: none;
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge {
+  display: inline-flex;
+  padding: 7px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 21px;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px; /* 116.667% */
+  border: none;
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.flagshipStore {
+  background: rgba(159, 122, 234, 0.2);
+  color: var(--Colors-Purple, var(--Colors-Purple, #af52de));
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.certifiedStore {
+  background: rgba(55, 134, 252, 0.1);
+  color: var(--Status-Blue, #3786fc);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.topSeller {
+  background: rgba(38, 191, 106, 0.1);
+  color: var(--Status-Green, #26bf6a);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.newArrival {
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--Status-Green, #0d9488);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.customerFavorite {
+  background: rgba(49, 188, 198, 0.1);
+  color: var(--Status-Green, #31bcc6);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.fastShipper {
+  background: rgba(249, 133, 26, 0.1);
+  color: var(--Status-Green, #f9851a);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.qualityAssured {
+  background: rgba(255, 62, 80, 0.1);
+  color: var(--Status-Green, #ff3e50);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.discountKing {
+  background: rgba(49, 198, 162, 0.1);
+  color: var(--Status-Green, #15876c);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.discountQueen {
+  background: rgba(255, 82, 144, 0.2);
+  color: var(--Status-Green, #ff5290);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.responsiveSeller {
+  background: rgba(146, 210, 63, 0.2);
+  color: var(--Status-Green, #6c9932);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge.reliableVendor {
+  background: rgba(66, 248, 150, 0.2);
+  color: var(--Status-Green, #0f6436);
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge svg {
+  width: 16px;
+  height: 16px;
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge-title {
+  color: var(--Text-Title-Color, #1f2937); /* text-lg/bold */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px; /* 150% */
+}
+.earned-badge-section-inner .earned-badge-inner .badge-section-inner .badge-section .badge-details {
+  color: var(--Text-Title-Color, #1f2937);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
+}
+
 .order-management-section {
   margin: 0.625rem 0;
 }
@@ -6546,6 +6655,16 @@ table tr td {
 .order-management-body-inner .action-btn svg {
   width: 5px;
   height: 21px;
+}
+.order-management-body-inner .action-btn .dropdown-toggle {
+  border: none;
+  background: transparent;
+}
+.order-management-body-inner .action-btn .dropdown-menu {
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate(180px, 1px);
 }
 .order-management-body-inner .status {
   padding: 3px 10px;
