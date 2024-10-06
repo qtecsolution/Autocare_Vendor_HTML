@@ -9840,6 +9840,61 @@ table tr td {
 .profile-section-inner .cover-photo-label input {
   display: none;
 }
+.profile-section-inner .bankInformation-notFound .title {
+  color: var(--Text-Title-Color, #1f2937);
+  text-align: center;
+  /* text-xl/Semi bold */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px; /* 155.556% */
+}
+.profile-section-inner .bankInformation-notFound .paragraph {
+  color: var(--Text-Secondary-Text-Color, #6b7280);
+  text-align: center;
+  /* Text Base/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  width: 333px;
+}
+.profile-section-inner .bankInformation-list-item-inner .title {
+  color: var(--Text-Title-Color, #1f2937);
+  /* Text Base/Semi bold */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
+}
+.profile-section-inner .bankInformation-list-item-inner .paragraph {
+  color: var(--Nutral-Color-500, #60637a);
+  /* Text Base/Regular */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.profile-section-inner .bankInformation-list-item-inner .primary-bankInformation {
+  display: inline-flex;
+  padding: 0px 10px;
+  align-items: center;
+  border-radius: 16px;
+  background: var(--Blue-50, #eff8ff);
+  color: var(--Blue-700, #175cd3);
+  text-align: center;
+  /* Text sm/Medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  border: none;
+}
 
 html {
   box-sizing: border-box;
