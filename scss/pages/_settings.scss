@@ -8,7 +8,7 @@
     color: var(--Gray-900, #101828);
 
     /* text-2xl/bold */
-    font-family: Inter;
+    font-family: $primaryFont;
     font-size: size(20);
 
     font-weight: 700;
@@ -141,7 +141,7 @@
         width: 100%;
       }
       svg {
-        cursor: pointer;
+        cursor: po$primaryFont;
         width: size(20);
         height: size(20);
       }
@@ -218,30 +218,21 @@
   }
 
   .bankInformation-notFound {
-    .notfound-img {
-    }
     .title {
-      color: var(--Text-Title-Color, #1f2937);
+      color: #1f2937;
       text-align: center;
-
-      /* text-xl/Semi bold */
-      font-family: Inter;
-      font-size: 18px;
-      font-style: normal;
+      font-family: $primaryFont;
+      font-size: size(18);
       font-weight: 600;
-      line-height: 28px; /* 155.556% */
+      line-height: size(28);
     }
     .paragraph {
-      color: var(--Text-Secondary-Text-Color, #6b7280);
+      color: #6b7280;
       text-align: center;
-
-      /* Text Base/Regular */
-      font-family: Inter;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 20px; /* 142.857% */
-      width: 333px;
+      font-family: $primaryFont;
+      font-size: size(14);
+      line-height: size(20);
+      width: size(333);
     }
   }
 
@@ -249,43 +240,43 @@
     &-item {
       &-inner {
         .title {
-          color: var(--Text-Title-Color, #1f2937);
+          color: #1f2937;
 
-          /* Text Base/Semi bold */
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
+          font-family: $primaryFont;
+          font-size: size(14);
           font-weight: 600;
-          line-height: 20px; /* 142.857% */
+          line-height: size(20);
         }
         .paragraph {
-          color: var(--Nutral-Color-500, #60637a);
-
-          /* Text Base/Regular */
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 20px; /* 142.857% */
+          color: #60637a;
+          font-family: $primaryFont;
+          font-size: size(14);
+          line-height: size(20);
         }
         .primary-bankInformation {
           display: inline-flex;
           padding: 0px 10px;
           align-items: center;
-          border-radius: 16px;
-          background: var(--Blue-50, #eff8ff);
-          color: var(--Blue-700, #175cd3);
+          @include radius(16);
+          background: #eff8ff;
+          color: #175cd3;
           text-align: center;
 
-          /* Text sm/Medium */
-          font-family: Inter;
-          font-size: 14px;
-          font-style: normal;
+          font-family: $primaryFont;
+          font-size: size(14);
           font-weight: 500;
-          line-height: 20px; /* 142.857% */
+          line-height: size(20);
           border: none;
         }
       }
     }
+  }
+
+  .Primary-active-text {
+    color: #1f2937;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 600;
+    line-height: size(20);
   }
 }
