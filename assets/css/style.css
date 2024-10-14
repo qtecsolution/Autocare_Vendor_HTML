@@ -8433,6 +8433,36 @@ table tr td {
   font-weight: 600;
   line-height: 1.25rem;
 }
+.edit-product .category-select .inner-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.edit-product .category-select .inner-input .label-text {
+  color: #1f2937;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+.edit-product .category-select .inner-input .label-text span {
+  color: red !important;
+}
+.edit-product .category-select .inner-input .input {
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color, #e7eaef);
+  background: #fff;
+  padding: 0.5rem 1.25rem;
+  width: 100%;
+}
+.edit-product .category-select .inner-input .input.input-disabled {
+  background: #e9ecef;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 .edit-product .label-short-description {
   color: #1f2937;
   font-family: "Inter", sans-serif;
