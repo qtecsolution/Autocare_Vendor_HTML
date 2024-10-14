@@ -419,6 +419,12 @@
         font-family: $primaryFont;
         font-size: size(14);
         line-height: size(20);
+        max-width: size(180);
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        overflow: hidden;
       }
 
       .logout-icon {
