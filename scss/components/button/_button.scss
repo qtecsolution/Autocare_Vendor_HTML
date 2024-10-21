@@ -441,3 +441,24 @@
     color: #fff;
   }
 }
+
+.resetFilters-btn {
+  display: flex;
+  padding: size(10) size(12);
+  justify-content: center;
+  align-items: center;
+  gap: size(8);
+  @include radius(8);
+  background: #f2f2f7;
+  color: #6b7280;
+  text-align: center;
+  font-family: $primaryFont;
+  font-size: size(14);
+  font-weight: 500;
+  letter-spacing: 0.07px;
+  border: none;
+  svg {
+    width: size(14);
+    height: size(14);
+  }
+}

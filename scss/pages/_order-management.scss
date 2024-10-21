@@ -484,6 +484,25 @@
       }
     }
   }
+  .FullAccess {
+    color: #0f766d;
+    font-family: $primaryFont;
+    font-size: size(14);
+    font-weight: 500;
+    line-height: size(18);
+  }
+  .AccountOwner {
+    svg {
+      width: size(20);
+      height: size(20);
+    }
+  }
+  .actionBtn {
+    svg {
+      width: size(5);
+      height: size(21);
+    }
+  }
   .campaign-product {
     width: size(400);
     .campaign-img {
