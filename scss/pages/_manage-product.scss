@@ -494,6 +494,14 @@
         flex-direction: row;
       }
 
+      .heading-text {
+        color: #101828;
+        font-family: $primaryFont;
+        font-size: size(18);
+        font-weight: 700;
+        line-height: size(28);
+      }
+
       .all-products-form {
         display: flex;
         align-items: center;
