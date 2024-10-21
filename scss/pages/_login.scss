@@ -500,14 +500,19 @@
             @include radius(8);
             border: 1px solid #e7eaef;
             background: #fff;
+            &.disable {
+              background-color: #f2f2f7;
+            }
 
-            input {
+            input,
+            textarea {
               width: 100%;
               color: #040715;
               font-family: $primaryFont;
               font-size: size(14);
               font-weight: 500;
               line-height: size(16);
+              background: transparent;
               letter-spacing: 0.14px;
 
               &::placeholder {

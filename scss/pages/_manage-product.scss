@@ -532,6 +532,14 @@
           }
         }
       }
+
+      .newest-box {
+        @include radius(5);
+        svg {
+          width: size(18);
+          height: size(18);
+        }
+      }
     }
 
     &-empty-body {
@@ -637,6 +645,15 @@
             }
           }
         }
+      }
+
+      .GetQuery {
+        color: #0f766d;
+        text-align: center;
+        font-family: $primaryFont;
+        font-size: size(14);
+        font-weight: 500;
+        letter-spacing: 0.07px;
       }
 
       .pice-text {

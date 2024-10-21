@@ -3934,16 +3934,21 @@ table tr td {
   border: 1px solid #e7eaef;
   background: #fff;
 }
-.setup-store-section-inner .center .setup-store-form .inner-input .input-field input {
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field.disable {
+  background-color: #f2f2f7;
+}
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field input,
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field textarea {
   width: 100%;
   color: #040715;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1rem;
+  background: transparent;
   letter-spacing: 0.14px;
 }
-.setup-store-section-inner .center .setup-store-form .inner-input .input-field input::-moz-placeholder {
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field input::-moz-placeholder, .setup-store-section-inner .center .setup-store-form .inner-input .input-field textarea::-moz-placeholder {
   color: #7b7f95;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
@@ -3952,7 +3957,8 @@ table tr td {
   line-height: 1rem;
   letter-spacing: 0.14px;
 }
-.setup-store-section-inner .center .setup-store-form .inner-input .input-field input::placeholder {
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field input::placeholder,
+.setup-store-section-inner .center .setup-store-form .inner-input .input-field textarea::placeholder {
   color: #7b7f95;
   font-family: "Inter", sans-serif;
   font-size: 0.875rem;
@@ -5594,6 +5600,13 @@ table tr td {
     width: 100%;
   }
 }
+.manage-all-product-section-inner-header .newest-box {
+  border-radius: 0.3125rem;
+}
+.manage-all-product-section-inner-header .newest-box svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
 .manage-all-product-section-inner-empty-body {
   padding: 6.25rem 0;
   display: flex;
@@ -5679,6 +5692,14 @@ table tr td {
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1rem;
+}
+.manage-all-product-section-inner-body .GetQuery {
+  color: #0f766d;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.07px;
 }
 .manage-all-product-section-inner-body .pice-text {
   color: #1f2937;
