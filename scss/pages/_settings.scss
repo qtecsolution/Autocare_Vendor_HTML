@@ -67,7 +67,6 @@
 
 .profile-section,
 .security-section,
-.notifications-section,
 .user-management {
   @include radius(16);
   border: 1px solid #e5e7eb;
@@ -278,5 +277,62 @@
     font-size: size(14);
     font-weight: 600;
     line-height: size(20);
+  }
+}
+
+.notifications-section {
+  .notifications-header {
+    border-radius: 16px 16px 0px 0px;
+    border: 1px solid var(--Border-Border-Color, #e5e7eb);
+    background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+    padding: size(16) size(30);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      color: var(--Table-Header-Title-Color, #6b7280);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px; /* 133.333% */
+      letter-spacing: 0.06px;
+      text-transform: uppercase;
+    }
+  }
+
+  .notifications-body {
+    border-radius: 0px 0px 16px 16px;
+    border: 1px solid var(--Border-Border-Color, #e5e7eb);
+    background: var(--Text-Title-Light-Color, #fff);
+    .title {
+      color: var(--Primary-600, #0d9488);
+      /* text-lg/Medium */
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; /* 150% */
+
+      padding: size(20) size(30);
+    }
+    .notifications-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: size(20) size(30);
+      border-bottom: 1px solid var(--Border-Border-Color, #e5e7eb);
+      &:last-child {
+        border-bottom: none;
+      }
+      p .paragraph {
+        color: var(--Text-Title-Color, #1f2937);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 18px; /* 128.571% */
+      }
+    }
   }
 }

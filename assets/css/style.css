@@ -9999,7 +9999,6 @@ table tr td {
 
 .profile-section,
 .security-section,
-.notifications-section,
 .user-management {
   border-radius: 1rem;
   border: 1px solid #e5e7eb;
@@ -10013,7 +10012,6 @@ table tr td {
 @media screen and (min-width: 36rem) {
   .profile-section,
   .security-section,
-  .notifications-section,
   .user-management {
     padding: 1.875rem;
   }
@@ -10199,6 +10197,59 @@ table tr td {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
+}
+
+.notifications-section .notifications-header {
+  border-radius: 16px 16px 0px 0px;
+  border: 1px solid var(--Border-Border-Color, #e5e7eb);
+  background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+  padding: 1rem 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notifications-section .notifications-header .title {
+  color: var(--Table-Header-Title-Color, #6b7280);
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: 0.06px;
+  text-transform: uppercase;
+}
+.notifications-section .notifications-body {
+  border-radius: 0px 0px 16px 16px;
+  border: 1px solid var(--Border-Border-Color, #e5e7eb);
+  background: var(--Text-Title-Light-Color, #fff);
+}
+.notifications-section .notifications-body .title {
+  color: var(--Primary-600, #0d9488);
+  /* text-lg/Medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  padding: 1.25rem 1.875rem;
+}
+.notifications-section .notifications-body .notifications-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.875rem;
+  border-bottom: 1px solid var(--Border-Border-Color, #e5e7eb);
+}
+.notifications-section .notifications-body .notifications-info:last-child {
+  border-bottom: none;
+}
+.notifications-section .notifications-body .notifications-info p .paragraph {
+  color: var(--Text-Title-Color, #1f2937);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px; /* 128.571% */
 }
 
 html {
