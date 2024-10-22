@@ -114,10 +114,10 @@
 
         .title {
           color: #1f2937;
-          font-family: Inter;
-          font-size: 16px;
+          font-family: $primaryFont;
+          font-size: size(16);
           font-weight: 600;
-          line-height: 24px;
+          line-height: size(24);
           letter-spacing: 0.08px;
         }
 
@@ -238,7 +238,7 @@
 
           .text {
             color: #1f2937;
-            font-family: Inter;
+            font-family: $primaryFont;
             font-size: size(16);
             font-weight: 600;
             line-height: size(24);
@@ -876,6 +876,52 @@
       }
       .label-text {
         color: #101828;
+      }
+    }
+  }
+}
+
+.terms-conditions-section {
+  &-inner {
+    @include radius(20);
+    border: 1px solid #e5e7eb;
+    background: $white;
+    .terms-conditions-header {
+      padding: size(30) size(20);
+      @include breakpoint(mobile576) {
+        padding: size(30) size(40);
+      }
+      border-bottom: 1px solid #e4e5e9;
+      .heading-text {
+        color: #101828;
+        font-family: $primaryFont;
+        font-size: size(20);
+        font-weight: 700;
+        line-height: size(28);
+      }
+    }
+
+    .terms-conditions-body {
+      padding: size(30) size(20) size(50) size(20);
+      @include breakpoint(mobile576) {
+        padding: size(30) size(40) size(50) size(40);
+      }
+      display: flex;
+      flex-direction: column;
+      gap: size(24);
+      .sub-text {
+        color: #525468;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: size(24);
+      }
+      .text {
+        color: #525468;
+        font-family: $primaryFont;
+        font-size: size(16);
+        font-style: normal;
+        line-height: size(24);
       }
     }
   }

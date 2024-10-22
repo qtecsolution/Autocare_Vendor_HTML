@@ -5462,10 +5462,10 @@ table tr td {
 }
 .inner-content-1 .dashboard-empty-section .profile-creation .left .title {
   color: #1f2937;
-  font-family: Inter;
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0.08px;
 }
 .inner-content-1 .dashboard-empty-section .profile-creation .left .text {
@@ -5565,7 +5565,7 @@ table tr td {
 }
 .inner-content-1 .dashboard-empty-section .faq-section .faq-inner .faq-item .text {
   color: #1f2937;
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
@@ -6120,6 +6120,53 @@ table tr td {
 }
 .select-product-section-inner .select-product-header .label-text {
   color: #101828;
+}
+
+.terms-conditions-section-inner {
+  border-radius: 1.25rem;
+  border: 1px solid #e5e7eb;
+  background: hsl(0, 0%, 100%);
+}
+.terms-conditions-section-inner .terms-conditions-header {
+  padding: 1.875rem 1.25rem;
+  border-bottom: 1px solid #e4e5e9;
+}
+@media screen and (min-width: 36rem) {
+  .terms-conditions-section-inner .terms-conditions-header {
+    padding: 1.875rem 2.5rem;
+  }
+}
+.terms-conditions-section-inner .terms-conditions-header .heading-text {
+  color: #101828;
+  font-family: "Inter", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.terms-conditions-section-inner .terms-conditions-body {
+  padding: 1.875rem 1.25rem 3.125rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 36rem) {
+  .terms-conditions-section-inner .terms-conditions-body {
+    padding: 1.875rem 2.5rem 3.125rem 2.5rem;
+  }
+}
+.terms-conditions-section-inner .terms-conditions-body .sub-text {
+  color: #525468;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.terms-conditions-section-inner .terms-conditions-body .text {
+  color: #525468;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.5rem;
 }
 
 .notification-inner {
