@@ -5953,6 +5953,10 @@ table tr td {
   line-height: 1.25rem;
   letter-spacing: 0.07px;
 }
+.manage-all-product-section-inner-body .isActive svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
 .manage-all-product-section-inner-body .delete-btn,
 .manage-all-product-section-inner-body .edit-btn {
   display: flex;

@@ -679,6 +679,12 @@
         line-height: size(20);
         letter-spacing: 0.07px;
       }
+      .isActive {
+        svg {
+          width: size(20);
+          height: size(20);
+        }
+      }
 
       .delete-btn,
       .edit-btn {
